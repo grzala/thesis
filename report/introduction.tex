@@ -1,79 +1,45 @@
 \chapter{Introduction\label{chap:introduction}}
 
-Each chapter heading is typeset in this way --- this in an integral
-part of the style, so if you don't like it abdnthesis.cls may not be
-for you. However, do feel free to modify the .cls file to your needs.
+The game industry now is bigger than ever before and still growing. Along with technological advancements as well as rise in popularity, games themselves become bigger and more polished. With increasing size and quality, the number of man-hours rises drastically. A lot of work is being put into creating tools that enable faster creation of content. However, there is still a lot left to be optimized and automated.
 
-\section{Defaults}
+One domain of game development that suffers that drains lots of man-hours into monotonous processes that could potentially be automated is animation. Most games will rarely animate everything by hand as there is too much content to cover. While some animated content needs to be very polished (action sequences, parts of game that greatly influence the plot development), some animation might be cruder (dialogue sequences). Games like RPGs will feature a lot of dialogue - during the dialogue the characters cannot stand still as it would negatively impact player's immersion in the game world. The characters must move and perform gestures that naturally underline their speech. These animations cannot be all done by hand because of the sheer amount of content needed. For instance:
 
 \begin{itemize}
-\item oneside --- assuming single sided printing.
+\item Mass Effect Andromeda and Fallout:  New Vegas features 65,000 lines of dialogue
 
-\item onecolumn --- \LaTeX\ will give you an error if you try to use
-  the twocolumn option, not that anyone would contemplate this for a
-  thesis.
+\item The Witcher 3 features roughly 35 hours of dialogues.
 
-\item 11pt --- this works best with the text height and width on A4
-  paper.
-
-\item 1.5 line spacing --- looks much better than double spacing.
-
-\item Times Roman font --- for both text and maths with the exception
-  of mathcal, but see below for options.
 \end{itemize}
 
-\section{Options}
+Those animated sequences can be realistic enough to feel natural and be believable but it is not feasible to create them by hand. They have to generated automatically at least in part. The most successful state-of-the-art attempt at this is the conversation system used in The Witcher 3. The tool created by CD Projekt Red takes information on initial state of involved characters (position, pose, emotions, etc.) and audio recording of the dialogue lines. The tool chooses matching premade animated clips and outputs a fully editable animated scene of characters conversing with one another. The tool uses audio recordings to aid the animated clips (analyzing the audio waves may help decide when characters accent or underline some information).
+
+This tool makes creating the generating scenes much faster and enables non-animators to create dialogue scenes. However, it still requires a fair amount of work as for every scene the initial state must be specified manually. Moveover, the system requires audio to be recorded first. These are some serious limitations especially for small developers.
+
+\section{Motivation}
+
+The purpose of this project is to develop a tool that helps generate animated dialogue scenes and minimizes the amount of manual work by using natural language processing. Generating the scenes directly from script would pose several benefits:
 
 \begin{itemize}
-
-\item These are mutually exclusive options that are used to specify
- the type of degree that the thesis is to be submitted in partial
- fulfilment of the requirements of:
-
-\begin{itemize}
-\item phd or PhD -- the default.
-\item mphil or MPhil -- for Master of Philosophy Theses.
-\item msc or MSc -- for MSc project reports.
-\item bsc or BSc -- for BSc project reports.
+\item The script needs to be written anyway. Feeding it into the program directly is very quick.
+\item The script is semi-structured natural language. By allowing natural language, the program helps shorten the gap between artists and writers and animators and technicians.
+\item The program can be used for prototyping scenes quickly and easily.
+\item The program can be used by people who know nothing about animation.
 \end{itemize}
 
-\item Two self-explanatory options for changing the line spacing from
- the default 1.5.
+\section{Objectives}
 
-\begin{itemize}
-\item singlespace
-\item doublespace
-\end{itemize}
+The Projects Objectives are as following:
 
-\item titlebox --- this option ensures that the title of the document
- fits within the window on the standard departmental BSc or MSc
- project report front cover.
- 
-\item twoside --- this option is if you wish to print your thesis
-  using a double sided printer.  Note that the University regulations 
-  do not permit the submission of theses printed double sided.
+\noindent {\bf Develop a tool able to interpret a natural language script}
 
-\item cmmath --- this action changes the font used in math mode to be
-  Computer Modern. The default is for all math mode fonts to be times
-  with the exception of the mathcal font. If you want to also use
-  times for mathcal, you need to comment out these two lines in the
-  abdnthesis.cls file:
-\begin{verbatim}
-        \SetMathAlphabet{\mathcal}{normal}{OMS}{cmsy}{m}{n}
-        \SetMathAlphabet{\mathcal}{bold}{OMS}{cmsy}{b}{n}
-\end{verbatim}
+\noindent The tool must be able to read a semi-structured script and recognize dialogue lines, emotions of characters and actions performed by characters.
 
-\item cmall --- if you want to go with Computer Modern for both
-  text and maths, use this option.
-\end{itemize}
+\noindent {\bf Develop a tool able to blend a final dialogue scene}
 
-There is also an \emph{optional} command for including prior
-qualifications within the title page; some like to do this. Prior to
-version 2.3 (2013/08/11) \LaTeX\ would give an error if this was not
-declared, even if you didn't want this information on the title
-page. This meant that you would have to have made the declaration
-\verb+\qualifications{}+, which was an ugly solution. Now, ``empty''
-declaration can simply be omitted.
+\noindent The tool must be able to output a fully editable dialogue scene. The scene is assembled using pre-made motion capture clips.
+
+\bigskip
+The scenes created by the software will create very crude, unpolished scenes. Scenes generated by the tool will need to be polished manually, the amount of polish can be decided by assessing the importance of a given scene. However there is a chance that the scene quality will be much inferior to scenes generated by similar tools that use different approaches. Therefore an important question this project tries to answer is whether taking the NLP approach to animation is feasible given current technology.
 
 
 

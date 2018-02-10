@@ -1,7 +1,8 @@
 \contentsline {chapter}{\numberline {1}Introduction}{6}
-\contentsline {section}{\numberline {1.1}Defaults}{6}
-\contentsline {section}{\numberline {1.2}Options}{6}
-\contentsline {chapter}{\numberline {2}Frequently asked questions}{8}
-\contentsline {section}{\numberline {2.1}References}{8}
-\contentsline {section}{\numberline {2.2}Figures}{8}
-\contentsline {section}{\numberline {2.3}Frequently used symbols}{9}
+\contentsline {section}{\numberline {1.1}Motivation}{7}
+\contentsline {section}{\numberline {1.2}Objectives}{7}
+\contentsline {chapter}{\numberline {2}Background and Related Work }{8}
+\contentsline {chapter}{\numberline {3}Frequently asked questions}{9}
+\contentsline {section}{\numberline {3.1}References}{9}
+\contentsline {section}{\numberline {3.2}Figures}{9}
+\contentsline {section}{\numberline {3.3}Frequently used symbols}{10}
