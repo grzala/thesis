@@ -1,1 +1,51 @@
 \chapter{Analysis \label{chap:analysis}}
+
+\noindent The project  methodology,  development  tools  and  technologies  and  project  risk assessment are defined in this following chapter.
+
+
+\section{Methodology}
+
+The activities required in order to develop the project are listed below:
+
+\begin{itemize}
+\item Develop a project plan.
+\item Review literature. Review existing software, learn about other approaches, analyze existing research.
+\item Find and assemble a set of relevant motion capture animated clips.
+\item Prototype a module that uses processes the script and outputs a structured file that can be used to generate the animated scene.
+\item Tag and classify animation clips. Categorize clips by emotion, length, etc.
+\item Prototype a Blender extension that uses the created structured files to output an animated scene.
+\item Iterate on the existing software adding new features.
+\end{itemize}
+
+My goal is to first build a very minimal prototype of the program. The prototype will focus on emotions, work with a small amount of animations and keep the characters gesturing, but not moving or performing other actions throughout the scene. Afterwards I will focus my effort on making the outputted scenes more realistic and intricate.
+
+\section{Technologies and Resources}
+
+The first module of the project focuses on NLP. This module should be extract emotions and actions from the script. The most important tool used will be IBM Watson Tone Analyzer. If that tool turns out to be for any reason ineffective or imperfect, a customary tool (naive bayes classifier or a keyword classifier) can be built for that task. Actions can be extracted using a variety of information extraction software such as MITIE or Ollie.
+
+The motion capture clips will come from two sources - the Carneige Mellon University motion capture database and mocapdata.com. I will hand-pick relevant animatio clips and preprocess them so that they can all be easily used with a character model. I will create a SQLite database that will store metadata about the animations (associated emotions, length, etc).
+
+The last part of the project - assembling the final animated scene - will be done using Blender; an open source 3D modelling and animation software. The first module will create a json file that specifies a sequence of dialogue lines and animation clips accompanying them. A Blender extension will read that file and import necessary character models and animations to create a fully editable animated scene.
+
+\section{Risk Analysis}
+
+\begin{table}[!ht]
+	\centering
+	\small
+	
+	\begin{tabular}{ |p{16em} |p{18.8em}|p{4em}| }
+	 \hline
+	 \multicolumn{3}{|c|}{Custom crafted sentences} \\
+	 \hline
+		\thead{Risk} & \thead{Mitigation} & \thead{Level} \\
+	 \hline
+	 	Time delays caused by workload/illness & Follow the project plan closely. Focus on developing a minimum working prototype first. & High \\
+	 \hline
+		Natural Language Approaches are too inaccurate & Use more structured software. Try to find other approaches to this problem. If there seems to be no solution, I can use the findings and existing software to argue that the technology has not yet reached a level that would make this project viable.  &  low \\
+
+	\end{tabular}
+
+	 \caption{Risk Assessment}
+	 \label{tab:riskassessment}
+	 
+\end{table}

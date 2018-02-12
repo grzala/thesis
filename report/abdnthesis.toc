@@ -3,7 +3,10 @@
 \contentsline {section}{\numberline {1.2}Objectives}{7}
 \contentsline {chapter}{\numberline {2}Background and Related Work }{8}
 \contentsline {chapter}{\numberline {3}Analysis }{9}
-\contentsline {chapter}{\numberline {4}Frequently asked questions}{10}
-\contentsline {section}{\numberline {4.1}References}{10}
-\contentsline {section}{\numberline {4.2}Figures}{10}
-\contentsline {section}{\numberline {4.3}Frequently used symbols}{11}
+\contentsline {section}{\numberline {3.1}Methodology}{9}
+\contentsline {section}{\numberline {3.2}Technologies and Resources}{9}
+\contentsline {section}{\numberline {3.3}Risk Analysis}{10}
+\contentsline {chapter}{\numberline {4}Frequently asked questions}{11}
+\contentsline {section}{\numberline {4.1}References}{11}
+\contentsline {section}{\numberline {4.2}Figures}{11}
+\contentsline {section}{\numberline {4.3}Frequently used symbols}{12}
