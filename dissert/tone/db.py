@@ -77,22 +77,28 @@ def get_matching_gestures(emotions):
 
         return sorted(result, key=lambda res: res['score'])[::-1]
 
-emos = {
-    'joy': 0.0,
-    'anger': 0.1,
-    'fear': 0.9,
-    'surprise': 0.2,
-    'sadness': 0.6,
-    'disgust': 0.1,
-}
 
-emos2 = {
-    'joy': 0.0,
-    'anger': 0.0,
-    'fear': 0.0,
-    'surprise': 0.0,
-    'sadness': 0.0,
-    'disgust': 0.0,
-}
+def __main__():
 
-print get_matching_gestures(emos)
+    emos = {
+        'joy': 0.0,
+        'anger': 0.1,
+        'fear': 0.9,
+        'surprise': 0.2,
+        'sadness': 0.6,
+        'disgust': 0.1,
+    }
+
+    emos2 = {
+        'joy': 0.0,
+        'anger': 0.0,
+        'fear': 0.0,
+        'surprise': 0.0,
+        'sadness': 0.0,
+        'disgust': 0.0,
+    }
+
+    print get_matching_gestures(emos)
+
+if __name__ == "__main__":
+    __main__()
