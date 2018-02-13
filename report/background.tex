@@ -1,6 +1,8 @@
 \chapter{Background and Related Work \label{chap:background}}
 
 \section{Background}
+Manually crafting every animation in the game is unrealistic due to cost and time requirements. Many games have employed various approaches to computer generated animation in order to generate hours of realistic content. No game however has succeded in making the dialogue animation indistinguishable from cutscenes. The system that yielded the best results so far is an in-house tool developed by CD Projekt Red while working on The Witcher 3.
+
 Those animated sequences can be realistic enough to feel natural and be believable but it is not feasible to create them by hand. They have to generated automatically at least in part. The most successful state-of-the-art attempt at this is the conversation system used in The Witcher 3. The tool created by CD Projekt Red takes information on initial state of involved characters (position, pose, emotions, etc.) and audio recording of the dialogue lines. The tool chooses matching premade animated clips and outputs a fully editable animated scene of characters conversing with one another. The tool uses audio recordings to aid the animated clips (analyzing the audio waves may help decide when characters accent or underline some information).
 The tool I propose makes generating the scenes much faster and enables non-animators to create dialogue scenes. However, it still requires a fair amount of work as for every scene the initial state must be specified manually. Moveover, the system requires audio to be recorded first. These are some serious limitations especially for small developers. ~\cite{gdcwitcher}
 
