@@ -16,7 +16,8 @@
 %   \citeauthor*{key} ==>>          Jones, Baker, and Smith                          
 %   \citeyear{key} ==>>             1990                                             
 
-\usepackage[round,colon,authoryear]{natbib}
+\usepackage[numbers]{natbib}
+\usepackage{url}
 \setlength{\bibsep}{0pt}
 \bibliographystyle{apalike}
 
@@ -76,7 +77,7 @@
 
 %%%% It should have a table of contents, but delete the other two as
 %%%% necessary.
-
+ 
 \tableofcontents
 %\listoftables
 %\listoffigures
@@ -87,15 +88,13 @@
 \include{requirements}
 \include{design}
 \include{faq}
-\include{literature-survey}
-\include{design}
-\include{implementation}
-\include{evaluation}
-\include{discussion}
-\include{conclusion}
+%\include{implementation}
+%\include{evaluation}
+%\include{discussion}
+%\include{conclusion}
 
 \appendix
-\include{proof}
+%\include{proof}
 
 \bibliography{mybib}
 
