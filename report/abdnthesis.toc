@@ -6,7 +6,12 @@
 \contentsline {section}{\numberline {3.1}Methodology}{9}
 \contentsline {section}{\numberline {3.2}Technologies and Resources}{9}
 \contentsline {section}{\numberline {3.3}Risk Analysis}{10}
-\contentsline {chapter}{\numberline {4}Frequently asked questions}{11}
-\contentsline {section}{\numberline {4.1}References}{11}
-\contentsline {section}{\numberline {4.2}Figures}{11}
-\contentsline {section}{\numberline {4.3}Frequently used symbols}{12}
+\contentsline {chapter}{\numberline {4}Requirements Specification}{11}
+\contentsline {section}{\numberline {4.1}Functional Requirements}{11}
+\contentsline {section}{\numberline {4.2}Non-Functional Requirements}{11}
+\contentsline {chapter}{\numberline {7}Design}{15}
+\contentsline {chapter}{\numberline {6}Frequently asked questions}{13}
+\contentsline {section}{\numberline {6.1}References}{13}
+\contentsline {section}{\numberline {6.2}Figures}{13}
+\contentsline {section}{\numberline {6.3}Frequently used symbols}{14}
+\contentsline {chapter}{\numberline {7}Design}{15}
