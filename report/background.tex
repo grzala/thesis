@@ -1,13 +1,18 @@
 \chapter{Background and Related Work \label{chap:background}}
 
-The main focus are of this project is the usage of NLP for generating animated sequences. While this project puts particular emphasis on generating scenes of dialogue, there exist a multitude of projects that explores the usage of NLP in animation in a variety of ways.
+\section{Background}
+Those animated sequences can be realistic enough to feel natural and be believable but it is not feasible to create them by hand. They have to generated automatically at least in part. The most successful state-of-the-art attempt at this is the conversation system used in The Witcher 3. The tool created by CD Projekt Red takes information on initial state of involved characters (position, pose, emotions, etc.) and audio recording of the dialogue lines. The tool chooses matching premade animated clips and outputs a fully editable animated scene of characters conversing with one another. The tool uses audio recordings to aid the animated clips (analyzing the audio waves may help decide when characters accent or underline some information).
+The tool I propose makes generating the scenes much faster and enables non-animators to create dialogue scenes. However, it still requires a fair amount of work as for every scene the initial state must be specified manually. Moveover, the system requires audio to be recorded first. These are some serious limitations especially for small developers. ~\cite{gdcwitcher}
 
-\section{Generating Animated Scenes for Training and Instructions}
+\section{Related Work}
+The main focus of this project is the usage of NLP for generating animated sequences. While this project puts particular emphasis on generating scenes of dialogue, there exist a multitude of projects that explores the usage of NLP in animation in a variety of ways.
+
+\subsection{Generating Animated Scenes for Training and Instructions}
 A very early research (1991) explores usage of NLP for creating animations that would help engineers demonstrate tasks in an easy and safe way (demonstrating tasks personally might be unsafe, reading manuals might be insufficient to understand the task in full)~\cite{animosha}. The system would take as input a set of natural language \textit{directives} or \textit{commands} (e.g. \textit{move cup to table}). The system would interpret such an instruction into a series of steps (tasks) that are carried out in a given order. Based upon that sequence an animation would be generated.
 
 The project hovewer seems to have a few significant problems. Most importantly, the end results was not editable. In my research I believe that the end results will not be immediately satisfactory without any manual improvements and I believe that the outputted scenes should be fully editable. The other issue with this project is that the end result is not realistic or immersive (this was not a priority of that research, but is important for me). The animations were automatically generated in full, which I do not believe to be a viable approach for my project. To improve realism of the scenes, the animation should be created using motion capture clips.
 
-\section{Animation From Text and Motion Database Framework}
+\subsection{Animation From Text and Motion Database Framework}
 This research project explores a topic much closer to mine. It does not put any emphasis on emotions or gestures (just actions), however it proposes a usage of motion capture database ~\cite{animmc}.
 
 
