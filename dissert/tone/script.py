@@ -3,24 +3,6 @@ import parse
 import json
 import db
 
-'''
-sad
-frustrated
-satisfied
-excited
-polite
-impolite
-sympathetic
-'''
-'''
-conversations = parse.parsefile("matrix.txt")
-
-for conversation in conversations:
-    tones = tone.analyze(conversation["text"])
-
-    conversation["tones"] = tones
-'''
-
 conversations = [
         {'text': " I hate this place.  This zoo. This prison.  This reality, whatever you want to call it, I can't stand it any longer.  It's the smell, if there is such a thing.  I feel saturated by it.  I can taste your stink and every time I do, I fear that I've somehow been infected by it.", 
         'character': 'AGENT SMITH',
@@ -33,18 +15,25 @@ conversations = [
         'tones': [{'score': 0.613018, 'name': u'sad'}]},
 ]
 
+conversations = parse.parsefile("matrix.txt")
+
+for conversation in conversations:
+    tones = tone.analyze(conversation["text"])
+
+    conversation["tones"] = tones
+
 def normalize_emotions(conversation):
     tones = {}
     for tone in conversation['tones']:
         tones[tone['name']] = tone['score']
 
     newtones = {}
-    newtones['anger'] = tones['frustrated'] if 'frustrated' in tones else 0.0
-    newtones['fear'] = 0.0
-    newtones['joy'] = tones['excited'] if 'excited' in tones else 0.0
-    newtones['disgust'] = tones['impolite'] if 'impolite' in tones else 0.0
+    newtones['anger'] = tones['anger']
+    newtones['fear'] = tones['fear']
+    newtones['joy'] = tones['joy']
+    newtones['disgust'] = tones['disgust']
     newtones['surprise'] = 0.0
-    newtones['sadness'] = tones['sad'] if 'sad' in tones else 0.0
+    newtones['sadness'] = tones['sadness']
     conversation['tones'] = newtones
 
 for conversation in conversations:
