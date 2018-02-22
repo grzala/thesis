@@ -7,10 +7,10 @@ from mathutils import *
 
 dialogue = [
     {
-        "text": " I hate this place.  This zoo. This prison.  This reality, whatever you want to call it, I can't stand it any longer.", 
+        "text": " I hate this place.  This zoo. I can't stand it any longer.", 
         "character": "AGENT SMITH", 
         "clip": [
-            {"name": "anger1", "joy": 0.0, "sadness": 0.0, "score": 0.472359, "file": "anger1.fbx", "anger": 0.85, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 5}, 
+            {"name": "fear3", "joy": 0.0, "sadness": 0.0, "score": 0.472359, "file": "fear3.fbx", "anger": 0.85, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 5}, 
             {"name": "anger", "joy": 0.7, "sadness": 0.0, "score": 0.347359, "file": "anger1.fbx", "anger": 0.6, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 4}
         ], 
         "tones": {"joy": 0.0, "sadness": 0.836783, "disgust": 0.91887, "anger": 0.986412, "surprise": 0.0, "fear": 0.0}
@@ -19,11 +19,22 @@ dialogue = [
         "text": " Repulsive, isn't it?", 
         "character": "AGENT SMITH2", 
         "clip": [
-            {"name": "anger2", "joy": 0.0, "sadness": 0.0, "file": "anger2.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 6}
+            {"name": "anger1", "joy": 0.0, "sadness": 0.0, "file": "anger1.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 6}
         ], 
         "tones": {"joy": 0.0, "sadness": 0.0, "disgust": 0.0, "anger": 0.0, "surprise": 0.0, "fear": 0.0}
-    }
+    },
+    {
+        "text": " Damn.", 
+        "character": "AGENT SMITH", 
+        "clip": [
+            {"name": "anger2", "joy": 0.0, "sadness": 0.0, "score": 0.472359, "file": "anger2.fbx", "anger": 0.85, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 5}, 
+        ], 
+        "tones": {"joy": 0.0, "sadness": 0.836783, "disgust": 0.91887, "anger": 0.986412, "surprise": 0.0, "fear": 0.0}
+    }, 
 ]
+
+ANIM_FOLDER = "mocap"
+MODEL_FOLDER = "models"
 
 def unselect_all_objects():
     for obj in bpy.data.objects:
@@ -33,7 +44,7 @@ def unselect_all_objects():
 def select_obj(obj):
     unselect_all_objects()
     unselect_all_nla()
-    objselect = True
+    obj.select = True
     bpy.context.scene.objects.active = obj
 
 class Character:
@@ -43,6 +54,7 @@ class Character:
         self.current_strip = 0
         self.name = name
         self.object = obj
+        self.camoffset = Vector((-0.5, -1.8, 1.65))
         self.select()
         bpy.context.area.type = 'NLA_EDITOR'
         bpy.ops.nla.action_pushdown(channel_index=Character.current_pushdown_strip)
@@ -62,6 +74,23 @@ class Character:
     def rotate(self, vec):
         self.select()
         self.object.rotation_euler = vec
+    
+    def get_camera_position(self):
+        pos = Vector(self.object.location)
+        offset = Vector((self.camoffset))
+        mat = Matrix.Rotation(self.object.rotation_euler.z, 4, 'Z')
+        offset.rotate(mat)
+
+        return pos + offset
+    
+    def get_camera_rotation(self, cam):
+        headloc = Vector(self.object.location)
+        headloc += Vector((0.0, 0.0, 1.3))
+        camloc = cam.location
+        direction = headloc - camloc
+        rot_quat = direction.to_track_quat('-Z', 'Y')
+        rot = rot_quat.to_euler()
+        return rot
         
     def select_nla_by_index(self, index):
         unselect_all_nla()
@@ -162,7 +191,7 @@ def import_anim(anim_name, anim_file):
     old_actions = []
     for action in bpy.data.actions:
         old_actions.append(action.name)
-    import_fbx(anim_file)
+    import_fbx(ANIM_FOLDER + '\\' + anim_file)
     switch_to_layer(0)
     for action in bpy.data.actions:
         if action.name not in old_actions:
@@ -174,7 +203,7 @@ def import_character(character_name, character_file):
     old_objects = []
     for object in bpy.data.objects:
         old_objects.append(object.name)
-    import_fbx(character_file)
+    import_fbx(MODEL_FOLDER + '\\' + character_file)
     for object in bpy.data.objects:
         if object.name not in old_objects:
             object.name = character_name
@@ -186,6 +215,10 @@ def add_subtitle(text, start_frame, end_frame):
     bpy.ops.sequencer.effect_strip_add(frame_start=start_frame+1, frame_end=end_frame-1, channel=1, type='TEXT')
     seq = bpy.context.selected_sequences[0]
     seq.text = text
+    seq.wrap_width = 1
+    seq.font_size = 60
+    seq.color = (0.75, 0.75, 0.75, 1)
+
 
 def prepare_dialogue(dialogue):
     required_characters = []
@@ -213,18 +246,6 @@ def main():
     cleanup()
     #add them alphabetically?
     
-    bpy.ops.object.add(type="CAMERA")
-    cam = bpy.data.objects["Camera"]
-    
-    bpy.ops.object.add(type="LAMP")
-    unselect_all_objects()
-    lamp = bpy.context.scene.objects.active
-    select_obj(lamp)
-    lamp.location += Vector((0.0, 0.0, 10.0))
-    select_obj(cam)
-    cam.location += Vector((10.0, 0.0, 0.0))
-    
-    
     required_characters, anims = prepare_dialogue(dialogue)
     
     for anim in anims:
@@ -238,7 +259,7 @@ def main():
         
     if len(required_characters) > 1:
         char = characters[required_characters[1]]
-        char.move((0.0, -1.2, 0.0))
+        char.move((0.0, -1.8, 0.0))
         char.rotate((0.0, 0.0, 3.14))
         
     lines = prepare_lines(dialogue)
@@ -249,27 +270,56 @@ def main():
         old_frame = current_frame
         character = characters[line['character']]
         current_frame += character.add_action(line['anim'], current_frame)[1]
-        texts.append({'text': line['text'], 'from': old_frame, 'to': current_frame})
+        texts.append({'character': character.name, 'text': line['text'], 'from': old_frame, 'to': current_frame})
+    bpy.context.scene.frame_end = current_frame+1
     
+    
+    bpy.context.area.type = 'SEQUENCE_EDITOR'
+    bpy.ops.sequencer.scene_strip_add(frame_start=1, channel=1, scene='Scene')
     for text in texts:
         add_subtitle(text['text'], text['from'], text['to'])
         
-    bpy.ops.sequencer.scene_strip_add(frame_start=1, channel=1, scene='Scene')
 
     
-    #current_len = 0
-    #(new_action, new_len) = character1.add_action('anger1', current_len)
-    #current_len += new_len
-    #(new_action, new_len) = character2.add_action('anger2', current_len)
-    #current_len += new_len
-    #(new_action, new_len) = character1.add_action('anger3', current_len)
-    #current_len += new_len
-    #(new_action, new_len) = character2.add_action('anger4', current_len)
     
-    #add_subtitle("abc", 0, 100)
+    bpy.context.area.type = 'VIEW_3D'
+    bpy.ops.object.add(type="CAMERA")
+    cam = bpy.data.objects["Camera"]
+    cam.location += Vector((0.0, 0.0, 5.0))
+    lamps = []
+    bpy.ops.object.add(type="LAMP")
+    lamps.append(bpy.context.scene.objects.active)
+    bpy.ops.object.add(type="LAMP")
+    lamps.append(bpy.context.scene.objects.active)
+    lamps[0].data.type = "SUN"; lamps[1].data.type = "SUN"
+    lamps[0].location += Vector((-3.0, 0.0, 6.0))
+    lamps[0].rotation_euler = Vector((0.0, -0.8, 0.0))
+    lamps[1].location += Vector((3.0, 0.0, 6.0))
+    lamps[1].rotation_euler = Vector((0.0, 0.8, 0.0))
+    
+    
+    select_obj(cam)
+    for text in texts:
+        char = characters[text['character']]
+        cam.location = char.get_camera_position()
+        cam.rotation_euler = char.get_camera_rotation(cam)
+        bpy.context.scene.frame_current = text['from']+1
+        bpy.ops.anim.keyframe_insert_menu(type='LocRotScale')
+        
+    bpy.context.area.type = 'GRAPH_EDITOR'
+    bpy.ops.graph.interpolation_type(type='CONSTANT')
+
+    
+    bpy.ops.mesh.primitive_plane_add()
+    plane = bpy.context.scene.objects.active
+    plane.location += Vector((0.0, 0.0, -0.2))
+    plane.scale = Vector((50.0, 50.0, 0.0))
+
     
 
 #select_nla_by_index(0)
 main()
 
+
+bpy.context.scene.frame_current = 1
 bpy.context.area.type = 'TEXT_EDITOR'
