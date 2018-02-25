@@ -223,9 +223,11 @@ def prepare_lines(dialogue):
 
 def main(anim_folder, model_folder, db_path, dialogue_path):
     global ANIM_FOLDER, MODEL_FOLDER
+    Character.current_pushdown_strip = 1
     dialogue = json.load(open(os.getcwd() + '\\' + dialogue_path[2:]))
     ANIM_FOLDER = anim_folder
     MODEL_FOLDER = model_folder
+    pprint(dialogue)
     cleanup()
     #add them alphabetically?
     
