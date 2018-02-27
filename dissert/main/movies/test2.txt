@@ -1,0 +1,12 @@
+					CHARACTER1
+			I got accepted to my first choice college! 
+			My dreams are becoming true!
+
+					CHARACTER2
+			I am happy for you Susan! 
+			But weren't we supposed to go to the same college together?
+
+					CHARACTER1
+			I know you will miss me, but I can't stay here just for you.
+
+ENDSCRIPT

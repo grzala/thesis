@@ -1,1 +1,106 @@
-[{"text": " I still can't believe the accident happened.  Life without her is getting harder everyday.", "character": "CHARACTER1", "clip": [{"name": "shrug_hand_twice", "joy": 0.0, "sadness": 0.6, "score": 0.925987, "file": "anger/anger2.fbx", "anger": 0.6, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 2}, {"name": "quick_broken", "joy": 0.0, "sadness": 0.65, "score": 0.9247380000000001, "file": "sadness/sadness3.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 13}, {"name": "dissatisfied", "joy": 0.0, "sadness": 0.55, "score": 0.900987, "file": "sadness/sadness1.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 11}, {"name": "broken", "joy": 0.0, "sadness": 0.8, "score": 0.849738, "file": "sadness/sadness2.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 12}, {"name": "cry", "joy": 0.0, "sadness": 0.9, "score": 0.7997380000000001, "file": "sadness/sadness4.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 14}, {"name": "cover_head", "joy": 0.0, "sadness": 0.0, "score": 0.400262, "file": "fear/fear2.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.7, "disgust": 0.0, "id": 5}, {"name": "cover_head2", "joy": 0.0, "sadness": 0.0, "score": 0.32526199999999994, "file": "fear/fear3.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.85, "disgust": 0.0, "id": 7}, {"name": "cower", "joy": 0.0, "sadness": 0.0, "score": 0.30026200000000003, "file": "fear/fear1.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.9, "disgust": 0.0, "id": 4}], "tones": {"joy": 0.114417, "sadness": 0.623751, "disgust": 0.079066, "anger": 0.088556, "surprise": 0.0, "fear": 0.124275}}, {"text": " Don't pity yourself! You know the accident  was your fault and we hate you for it!", "character": "CHARACTER2", "clip": [{"name": "disbelief", "joy": 0.0, "sadness": 0.0, "score": 0.896072, "file": "anger/anger4.fbx", "anger": 0.8, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 6}, {"name": "angry_shrug", "joy": 0.0, "sadness": 0.0, "score": 0.82307, "file": "anger/anger1.fbx", "anger": 0.65, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 1}, {"name": "shrug_hand_twice2", "joy": 0.0, "sadness": 0.0, "score": 0.7980700000000001, "file": "anger/anger3.fbx", "anger": 0.6, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 3}, {"name": "shrug_hand_twice", "joy": 0.0, "sadness": 0.6, "score": 0.7980700000000001, "file": "anger/anger2.fbx", "anger": 0.6, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 2}], "tones": {"joy": 0.002189, "sadness": 0.193627, "disgust": 0.205858, "anger": 0.798002, "surprise": 0.0, "fear": 0.103016}}, {"text": " You don't have to make me feel so worthless. I am trying to change.", "character": "CHARACTER1", "clip": [{"name": "broken", "joy": 0.0, "sadness": 0.8, "score": 0.9368095, "file": "sadness/sadness2.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 12}, {"name": "cry", "joy": 0.0, "sadness": 0.9, "score": 0.8999825, "file": "sadness/sadness4.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 14}, {"name": "quick_broken", "joy": 0.0, "sadness": 0.65, "score": 0.8618095, "file": "sadness/sadness3.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 13}, {"name": "dissatisfied", "joy": 0.0, "sadness": 0.55, "score": 0.8118095000000001, "file": "sadness/sadness1.fbx", "anger": 0.0, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 11}, {"name": "shrug_hand_twice", "joy": 0.0, "sadness": 0.6, "score": 0.6500174999999999, "file": "anger/anger2.fbx", "anger": 0.6, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 2}, {"name": "shrug_hand_twice2", "joy": 0.0, "sadness": 0.0, "score": 0.3500175, "file": "anger/anger3.fbx", "anger": 0.6, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 3}, {"name": "angry_shrug", "joy": 0.0, "sadness": 0.0, "score": 0.32501749999999996, "file": "anger/anger1.fbx", "anger": 0.65, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 1}, {"name": "disbelief", "joy": 0.0, "sadness": 0.0, "score": 0.2500175, "file": "anger/anger4.fbx", "anger": 0.8, "surprise": 0.0, "fear": 0.0, "disgust": 0.0, "id": 6}], "tones": {"joy": 0.051413, "sadness": 0.813173, "disgust": 0.016282, "anger": 0.113208, "surprise": 0.0, "fear": 0.090406}}]
+[
+    {
+        "text": " Life is really hard for me after our dog died ", 
+        "character": "CHARACTER1", 
+        "clip": [
+            {
+                "name": "cry", 
+                "joy": 0.0, 
+                "sadness": 0.9, 
+                "score": 0.843419, 
+                "file": "sadness/sadness4.fbx", 
+                "anger": 0.0, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 14
+            }
+        ], 
+        "tones": {
+            "joy": 0.070622, 
+            "sadness": 0.791919, 
+            "disgust": 0.080463, 
+            "anger": 0.049091, 
+            "surprise": 0.0, 
+            "fear": 0.205081
+        }
+    }, 
+    {
+        "text": " You know he died because of you and  we hate you for it!", 
+        "character": "CHARACTER2", 
+        "clip": [
+            {
+                "name": "dissatisfied", 
+                "joy": 0.0, 
+                "sadness": 0.55, 
+                "score": 0.686797, 
+                "file": "sadness/sadness1.fbx", 
+                "anger": 0.0, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 11
+            }
+        ], 
+        "tones": {
+            "joy": 0.005219, 
+            "sadness": 0.538923, 
+            "disgust": 0.083548, 
+            "anger": 0.615329, 
+            "surprise": 0.0, 
+            "fear": 0.080384
+        }
+    }, 
+    {
+        "text": " You don't have to make me feel so worthless.  I am trying to make up for it.", 
+        "character": "CHARACTER1", 
+        "clip": [
+            {
+                "name": "quick_broken", 
+                "joy": 0.0, 
+                "sadness": 0.65, 
+                "score": 0.8394950000000001, 
+                "file": "sadness/sadness3.fbx", 
+                "anger": 0.0, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 13
+            }
+        ], 
+        "tones": {
+            "joy": 0.055796, 
+            "sadness": 0.770697, 
+            "disgust": 0.084455, 
+            "anger": 0.200313, 
+            "surprise": 0.0, 
+            "fear": 0.06386
+        }
+    }, 
+    {
+        "text": " Stop it. We will never forgive you!", 
+        "character": "CHARACTER2", 
+        "clip": [
+            {
+                "name": "angry_shrug", 
+                "joy": 0.0, 
+                "sadness": 0.0, 
+                "score": 0.8076995, 
+                "file": "anger/anger1.fbx", 
+                "anger": 0.5, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 1
+            }
+        ], 
+        "tones": {
+            "joy": 0.018426, 
+            "sadness": 0.29643, 
+            "disgust": 0.21577, 
+            "anger": 0.588171, 
+            "surprise": 0.0, 
+            "fear": 0.174434
+        }
+    }
+]
