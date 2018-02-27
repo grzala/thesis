@@ -65,16 +65,25 @@ Most animation come from the Max Planck's Research Institute Emotional Body Moti
 The database is implemented using SQLite. It is the perfect tool for this task as the database needs to be simple, relatively small and easily searchable. The animation metadata is held in a table that look like this FIGURE. The emotional values of each animated clip need to be manually adjusted. When all values are set to zero, it means that the clip carries no emotional impact (neutral).
 
 
+
+\section{Matcher}
+
+does some stuff. explain matching algorithm here.
+
+
 \section{Animation Generator (Importer)}
 
 
 As a forementioned, in this project I have used Blender for creating the animation. The generator is a Blender addon script. The generator first reads the JSON file prepared by previous modules and loads required animation clips from files. Each action is assigned to a corresponding character model and then pushed on a separate NLA strip FIGURE. Subtitles are added as Video Editor Sequence Strips spanning between frames that correspond to the animation FIGURE. The camera is animated to focus on a character that is currently talking.
 
 
-
 \section{User Interface}
 
-The Animation Generator module is the only module that features a Graphical UI. The module is embedded into Blender and uses extends Blender's interface. The UI FIGURE is minimalistic and simple to use. It requires the user to specify an input file, as well as animation directory. Upon execution, the extension will pre-load the animations and determine characters involved in the scene. Now it is up to the user to specify which model is supposed to be used for each character. Upon pressing finalize, the animation will be created. From now on The user can continue to use Blender normally.
+The Animation Generator module is the only module that features a Graphical UI. The module is embedded into Blender and uses extends Blender's interface. The UI is minimalistic and simple to use. It requires the user to specify an input file, as well as animation directory. Upon execution, the extension will pre-load the animations and determine characters involved in the scene. Now it is up to the user to specify which model is supposed to be used for each character. Upon pressing finalize, the animation will be created. From now on The user can continue to use Blender normally.
+
+The JSON file must be created first outside of blender by running a script. This is because the modules need to be kept as separate as possible so that importers can be easily implemented for other platforms.
+
+They key aspect of the interface is its simplicity as it allows users to generate relatively complicated animation sequences by essentially using two buttons, with no knowledge about animation and little Blender expertise required. The UI also provides flexibility as the user can decide upon which character models to use. The final UI is presented in FIGURE.
 
 
 
