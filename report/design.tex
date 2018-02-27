@@ -44,6 +44,8 @@ The Animation Clip Matcher uses the motion capture database to find the best ani
 
 The Animation Generator reads the JSON file and imports all needed animations. The user is now able to assign character model for each character and run the generator. The generator will assemble the animations in correct order, focus the camera on a currently speaking character and add subtitles. The output is an animated scene that can be either manually edited, exported to a file or rendered.
 
+Python programming language is used to implement the modules. This is mainly due to the fact that Blender only supports extensions created using Blender. For modules that do not rely on Blender, Python was chosen due to high development speed.
+
 
 \section{Input}
 
@@ -66,7 +68,14 @@ The database is implemented using SQLite. It is the perfect tool for this task a
 \section{Animation Generator (Importer)}
 
 
-As a forementioned, in this project I have used Blender for creating the animation. The generator is a Blender addon script. The generator first reads the JSON file prepared by previous modules and loads required animation clips from files. Each action is assigned to a corresponding character model and then pushed on a separate NLA strip FIGURE. Subtitles are added as Video Editor Sequence Strips spanning between frames that correspond to the animation FIGURE.
+As a forementioned, in this project I have used Blender for creating the animation. The generator is a Blender addon script. The generator first reads the JSON file prepared by previous modules and loads required animation clips from files. Each action is assigned to a corresponding character model and then pushed on a separate NLA strip FIGURE. Subtitles are added as Video Editor Sequence Strips spanning between frames that correspond to the animation FIGURE. The camera is animated to focus on a character that is currently talking.
+
+
+
+\section{User Interface}
+
+The Animation Generator module is the only module that features a Graphical UI. The module is embedded into Blender and uses extends Blender's interface. The UI FIGURE is minimalistic and simple to use. It requires the user to specify an input file, as well as animation directory. Upon execution, the extension will pre-load the animations and determine characters involved in the scene. Now it is up to the user to specify which model is supposed to be used for each character. Upon pressing finalize, the animation will be created. From now on The user can continue to use Blender normally.
+
 
 
 
