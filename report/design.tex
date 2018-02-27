@@ -1,2 +1,58 @@
-\chapter{Design\label{chap:design}}
+\chapter{Design And Architecture\label{chap:design}}
+
+This chapter describes the design of the system. This includes both the underlying decisions of the system as well as the user interface design. The chapter also presents on a more detailed view of the system's architecture.
+
+\section{System Design}
+
+The system has to work in two major steps. The first step is to take semi-structured natural language script and analyze it. This means that the system must analyze each dialogue line and infer some emotional values from them. Using those emotional values and the length of the dialogue line, the system must find best matching animation clips from the motion capture database. The results of this step is a file that specifies which characters say which lines of dialogue and it also specifies which animated clips accompany those dialogue lines.
+
+After this step is completed, the file must be intepreted into a final scene. The importer must be able to read the file, import required models and animations and generate the final scene. As every animation software and game engine is a little different, each of them would need a custom importer. Those would be very similar in principle, but differ slightly because of the implementation of given software. For my project I have created the importer for Blender. This is because Blender is open source and available to anyone, as well as I am the most familiar with this software.
+
+
+\section{Emotions}
+
+For my project I have decided to only use the following emotions:
+\begin{itemize}
+\item Joy
+\item Anger
+\item Fear
+\item Sadness
+\item Disgust
+\item Surprise
+\end{itemize}
+
+These are six basic human emotions as specified by Paul Ekman and Wallace V. Friesen. For each animation and dialogue line the system assigns a value between 0 and 1 for each of those emotions in order to indicate whether a given emotion is present in an action/text and how intense that emotion is. Any combination of those emotions may be used to achieve more specific results.
+
+This set of six basic emotions is generally agreed to be satisfiably accurate in most cases. A lot of existing software (such as IBM Watson Tone Analyzer) and lexicons use those exact emotions.
+
+
+\section{architecture}
+
+The architecture of the system is essentially a pipeline. The modules process resources and pass them onto the next module. They can be completely unaware of each other. This allows for a lot of flexibility and helps achieve some of the requirements. The emotion analysis API can be replaced with a different one, the user can use a custom motion capture database, and a different importer can be created if the user wishes to use software other than blender.
+
+
+There are three main modules:
+\begin{itemize}
+\item Text Analysis
+\item Animation Clip Matcher
+\item Animation Generator
+\end{itemize}
+
+The Text Analysis module parses the text and analyses emotion using some API. It takes a script as an input and passess the parsed and analyzed text to the Animation Clip Matcher.
+
+The Animation Clip Matcher uses the motion capture database to find the best animation clips to accompany the speech. The Animation Clip Matcher must take into account the emotion analysis of the text and find animations with similar emotional score. Another important constraint is the time of the animation. The animated clips have different lengths and a chosen clip must not be significantly longer than the spoken/read text. In case the animated clip is shorter, the Matcher must choose more than one matching clip. The Matcher outputs a JSON file which specifies all dialogue lines; it states which characters perform which emotional gesture actions and where is the animation file located.
+
+The Animation Generator reads the JSON file and imports all needed animations. The user is now able to assign character model for each character and run the generator. The generator will assemble the animations in correct order, focus the camera on a currently speaking character and add subtitles. The output is an animated scene that can be either manually edited, exported to a file or rendered.
+
+
+\section{Input}
+
+The input of the system looks as follows:
+
+The input is a file that represents a dialogue. Each character that participates in the scene must ble clearly stated. Each dialogue line must have a dialog line must have a character clearly associated with it. Character names are specified after five tabs. Dialogue Lines are specified after three tabs. Each file must end with "ENDSCRIPT" with no indentation.
+
+I used this format as this format is often used to represent movie scripts. One can find hundreds of scripts saved in this format on The Internet Movie Script Database (\url{www.imsdb.com})
+
+
+
 
