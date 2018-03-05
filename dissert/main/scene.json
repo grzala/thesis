@@ -1,80 +1,80 @@
 [
     {
-        "text": " Did you hear that terrifying sound?", 
+        "text": " I got accepted to my first choice college!  My dreams are becoming true!", 
         "character": "CHARACTER1", 
         "clip": [
             {
-                "name": "cover_head2", 
-                "joy": 0.0, 
+                "name": "satisfaction", 
+                "joy": 0.6, 
                 "sadness": 0.0, 
-                "score": 0.79123, 
-                "file": "fear/fear3.fbx", 
+                "score": 0.859115, 
+                "file": "joy/joy2.fbx", 
                 "anger": 0.0, 
                 "surprise": 0.0, 
-                "fear": 0.85, 
+                "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 7
+                "id": 9
             }
         ], 
         "tones": {
-            "joy": 0.059362, 
-            "sadness": 0.058528, 
-            "disgust": 0.09986, 
-            "anger": 0.041802, 
+            "joy": 0.675502, 
+            "sadness": 0.206268, 
+            "disgust": 0.012421, 
+            "anger": 0.055194, 
             "surprise": 0.0, 
-            "fear": 0.64123
+            "fear": 0.08074
         }
     }, 
     {
-        "text": " Shut up Johnny! You are going to get us all killed!", 
+        "text": " I am happy for you Susan!  But weren't we supposed to go to the same college together?", 
         "character": "CHARACTER2", 
         "clip": [
             {
-                "name": "disbelief", 
-                "joy": 0.0, 
+                "name": "happy_exclaim", 
+                "joy": 0.7, 
                 "sadness": 0.0, 
-                "score": 0.7903965, 
-                "file": "anger/anger4.fbx", 
-                "anger": 0.65, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 6
-            }
-        ], 
-        "tones": {
-            "joy": 0.025058, 
-            "sadness": 0.330416, 
-            "disgust": 0.1216, 
-            "anger": 0.561209, 
-            "surprise": 0.0, 
-            "fear": 0.296752
-        }
-    }, 
-    {
-        "text": " We need to get out of here or we are going to die!", 
-        "character": "CHARACTER1", 
-        "clip": [
-            {
-                "name": "dissatisfied", 
-                "joy": 0.0, 
-                "sadness": 0.55, 
-                "score": 0.744409, 
-                "file": "sadness/sadness1.fbx", 
+                "score": 0.824131, 
+                "file": "joy/joy3.fbx", 
                 "anger": 0.0, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 11
+                "id": 10
             }
         ], 
         "tones": {
-            "joy": 0.017849, 
-            "sadness": 0.60431, 
-            "disgust": 0.089525, 
-            "anger": 0.096907, 
+            "joy": 0.875869, 
+            "sadness": 0.046382, 
+            "disgust": 0.016219, 
+            "anger": 0.016938, 
             "surprise": 0.0, 
-            "fear": 0.456872
+            "fear": 0.020291
+        }
+    }, 
+    {
+        "text": " I know you will miss me, but I can't stay here just for you.", 
+        "character": "CHARACTER1", 
+        "clip": [
+            {
+                "name": "quick_broken", 
+                "joy": 0.0, 
+                "sadness": 0.65, 
+                "score": 0.8004025, 
+                "file": "sadness/sadness3.fbx", 
+                "anger": 0.0, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 13
+            }
+        ], 
+        "tones": {
+            "joy": 0.011615, 
+            "sadness": 0.764259, 
+            "disgust": 0.021679, 
+            "anger": 0.071682, 
+            "surprise": 0.0, 
+            "fear": 0.284936
         }
     }
 ]
