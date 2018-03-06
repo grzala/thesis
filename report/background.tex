@@ -16,13 +16,11 @@ The tool I propose be able to hardly compete with that of CD Projekt Red, howeve
 \section{Related Work}
 The main focus of this project is the usage of NLP for generating animated sequences. While this project puts particular emphasis on generating scenes of dialogue, there exist a multitude of projects that explores the usage of NLP in animation in a variety of ways.
 
-\subsection{Generating Animated Scenes for Training and Instructions}
 A very early research (1991) explores usage of NLP for creating animations that would help engineers demonstrate tasks in an easy and safe way (demonstrating tasks personally might be unsafe, reading manuals might be insufficient to understand the task in full)~\cite{animosha}. The system would take as input a set of natural language \textit{directives} or \textit{commands} (e.g. \textit{move cup to table}). The system would interpret such an instruction into a series of steps (tasks) that are carried out in a given order. Based upon that sequence an animation would be generated.
 
 The project hovewer seems to have a few significant problems. Most importantly, the end results was not editable. In my research I believe that the end results will not be immediately satisfactory without any manual improvements and I believe that the outputted scenes should be fully editable. The other issue with this project is that the end result is not realistic or immersive (this was not a priority of that research, but is important for me). The animations were automatically generated in full, which I do not believe to be a viable approach for my project. To improve realism of the scenes, the animation should be created using motion capture clips.
 
-\subsection{Animation From Text and Motion Database Framework}
-This research project explores a topic much closer to mine. It does not put any emphasis on emotions or gestures (just actions), however it proposes a usage of motion capture database ~\cite{animmc}.
+A lot more research has been done in this area with certain degree of success. Another interesting paper explores a topic more similar to the focus of this report. ~\url{Generating Animation from Natural Language Texts and Framework of Motion Database} proposes using a database of pre-recorder motion data instead of filly generating the movements~\cite{animmc}. This approach seems to yield more realistic results and better overall animation quality.
 
 
 % ----------------------------------------------- %
@@ -103,11 +101,15 @@ Upon taking a closer look on the available software, I conclude that Blender is 
 
 \section{Motion Database}
 
-The dialogue scenes in this project are going to be assembled from existing short motion capture clips. While a potential user of the tool proposed by this paper (a game studio) would most likely possess resources to create their own motion capture clips and be in posession of legacy motion capture data recorded for past projects, I must resort to use other resources. There exists a multitude of motion capture data freely available online\footnote{\url{http://jeroenvanboxtel.com/MocapDatabases.html}}. Among them, the most famous is the Carneigie Mellon University's CMU Graphics Motion Capture Database\footnote{\url{http://mocap.cs.cmu.edu/}}. 
+The dialogue scenes in this project are going to be assembled from existing short motion capture clips. While a potential user of the tool proposed by this paper (a game studio) would most likely possess resources to create their own motion capture clips and be in posession of legacy motion capture data recorded for past projects, I must resort to use other resources. There exists a multitude of motion capture data freely available online\footnote{\url{http://jeroenvanboxtel.com/MocapDatabases.html}}. Among them, the most famous is the Carneigie Mellon University's CMU Graphics Motion Capture Database\footnote{\url{http://mocap.cs.cmu.edu/}}. It contains thousands of recordings of people walking, dancing, running, performing everyday activities, playing sports and performing gestures.
 
-but max plank is betteraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
-
+Only a small portion of that database would be useful to this project. There is however another database that focuses on matters more aligned with this project - the Emotional Body Motion Database \footnote{\url{http://ebmdb.tuebingen.mpg.de/index.php}}. The database was created by the Max Planck Institute for Biological Cybernetics and features solely recordings of people performing gestures associated with some emotion. The recordings feature all the basic emotions listed earlier as well as other emotions such as pride, relief, shame and more. There are three main types of motion capture recordings in this database:
+\begin{itemize}
+\item Narration - Actors were recorded while reading a story - their gestures were captured while narrating a part of the story that emphasizes some emotion.
+\item Nonverbal - Actors were recorded performing a gesture associated with some emotion in a nonverbal setting.
+\item Sentence - Actor were recorder while performing gestures when talking.
+\end{itemize}
+The database contains over 1400 clips, each labeled with what emotion it is supposed to represent, and what emotion would an observer assoiate the recording with. ~\cite{planck1}~\cite{planck2}
 
 
 
