@@ -35,13 +35,11 @@ The task of emotion analysis is a subset of natural language processing. The tas
 \subsection{Sentiment Analysis}
 Sentiment Analysis can be broadly defined as a computational approach for discovering opinions and attitudes expressed in text by opinion holders. In its most basic form it focuses on binary classification of the sentiment of the opinion holder (positive or negative) ~\cite{sentimentanal1}, but can be extended to mine for more complicated opinions such as emotions or detecting sarcasm. One of the popular uses of sentiment analysis is predicting stock market behaviour, as well as getting immediate feedback on products, political campaigns, decisions by monitoring social media ~\cite{sentimentanal2}.
 
+Approach to sentiment analysis might differ depending whether focus is on document-level analysis or sentence level analysis - where document-level analysis assumes the entire document to have one clear area of focus, while sentence level analysis analyzes each sentence individually. Apart from those, there are more types of sentiment analysis such as aspect-based analysis (which is use when the document or sentence does not focus on a single entity), or comparative analysis (when direct opinion is not desired, but it is needed to contrast opninions with each other)~\cite{sentimentanal2}. For the purposes of this project, it seems that the sentence-leve approach is the most suitable, as dialogues comprise of mostly single-sentence lines (rarely more than three sentences per line) and emotional payload may change as the dialogue progresses.
 
+Traditionally sentiment analysis is performed by various classification mathods (usually supervised learning). Naive Bayes classifier and support vector machines were proven to yield pretty acurrate results (over 80\% accuracy in general) ~\cite{sentimentanal1}. The major constrait of those methods is that their quality is tightly linked with the quality of the lexicon used and size and quality of training datasets.
 
-
-
-techniques ~\cite{sentimentanal2}
-
-
+One state-of-the-art solution to emotion analysis problem has recently became publicly available. Created by IBM, Watson Tone Analyzer is a tool capable of accurate emotion labeling (fear, joy, anger, etc.) as well as tone labeling (analytical, confident, tantative, etc.). The system is based on the \textit{Big Five personality traits} model ~\cite{watson}.
 
 
 
