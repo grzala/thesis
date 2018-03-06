@@ -1,10 +1,17 @@
 \chapter{Background and Related Work \label{chap:background}}
 
 \section{Background}
-Manually crafting every animation in the game is unrealistic due to cost and time requirements. Many games have employed various approaches to computer generated animation in order to generate hours of realistic content. No game however has succeded in making the dialogue animation indistinguishable from cutscenes. The system that yielded the best results so far is an in-house tool developed by CD Projekt Red while working on The Witcher 3.
+Manually crafting every animation in the game is unrealistic due to cost and time requirements. Many games have employed various approaches to computer generated animation in order to generate hours of realistic content. No game however has succeded in making the dialogue animation indistinguishable from manually animated cutscenes.
 
-Those animated sequences can be realistic enough to feel natural and be believable but it is not feasible to create them by hand. They have to generated automatically at least in part. The most successful state-of-the-art attempt at this is the conversation system used in The Witcher 3. The tool created by CD Projekt Red takes information on initial state of involved characters (position, pose, emotions, etc.) and audio recording of the dialogue lines. The tool chooses matching premade animated clips and outputs a fully editable animated scene of characters conversing with one another. The tool uses audio recordings to aid the animated clips (analyzing the audio waves may help decide when characters accent or underline some information).
-The tool I propose makes generating the scenes much faster and enables non-animators to create dialogue scenes. However, it still requires a fair amount of work as for every scene the initial state must be specified manually. Moveover, the system requires audio to be recorded first. These are some serious limitations especially for small developers. ~\cite{gdcwitcher}
+\section{Existing Systems}
+
+There has been a variety of approaches featured in games. Many of them ended up generating dialogue scenes that are higly repetitive, not very realistic and in general not mathing the sentiment and emotion of the speech with movement. The only system that did not seek to find cheap workarounds around the issue and instead embraced the full complexity of the problem is the dialogue sene generator used in The Witcher 3. The system developed by CD Projekt Red made computer generated dialogue sequences in many cases barely distinguishable from those made by an artist, allowing less important scenes to be left completely untouched by a human animator. ~\cite{pcgamerwitcher}
+
+
+The tool created by CD Projekt Red takes information on initial state of involved characters (position, stance, emotions, etc.) and audio recording of the dialogue lines. The tool chooses matching premade animated clips and outputs a fully editable animated scene of characters conversing with one another. The tool uses audio recordings to aid the animated clips (analyzing the audio waves may help decide when characters accent or underline some information). This tool is the current state-of-the-art and has produced the best effects in terms of amount of work to quality of animation ration. However, there are some serious drawbacks to this project. It still requires a fair amount of work as for every scene the initial state must be specified manually. Moveover, the system requires audio to be recorded first. Moreover, the tool is not released to be used commercially outside CD Projekt. ~\cite{gdcwitcher}
+
+
+The tool I propose be able to hardly compete with that of CD Projekt Red, however it would have some significant advantages. It would make generating the scenes even faster (requiring less manual work and preparation) and would in general be more appealing to small developers and people who are not animation experts.
 
 \section{Related Work}
 The main focus of this project is the usage of NLP for generating animated sequences. While this project puts particular emphasis on generating scenes of dialogue, there exist a multitude of projects that explores the usage of NLP in animation in a variety of ways.
@@ -16,6 +23,36 @@ The project hovewer seems to have a few significant problems. Most importantly, 
 
 \subsection{Animation From Text and Motion Database Framework}
 This research project explores a topic much closer to mine. It does not put any emphasis on emotions or gestures (just actions), however it proposes a usage of motion capture database ~\cite{animmc}.
+
+
+
+\section{Animation Software}
+
+The output scene must be created in some software able to play and use the scene. Developing a tool for this would be too time consuming - such software is not a small undertaking and with the time constraints this would result in a very rudimentary framework that would be very limiting. Therefore a choice must be made between existing frameworks.
+
+The animation software must satisfy the following requirements:
+\begin{itemize}
+\item Flexibility and editability - As the scenes created by the generator will not be perfect, the software must provide powerful animation editing features.
+\item Exporting - It is desirable for the animation to be able to be exported into variety of different formats that can be used by other frameworks useful within game development.
+\item Availability - As the proposed tool is developed with small developers in mind, it is most desirable for the tool to be available without any unnecessary fees or licensing. The proposed tool shoul also provide help for people unfamiliar with animating, who would be unwilling to pay additional fees for something they are not familiar with.
+\item Familiarity - Although most animation software is based on similar concepts, due to time constraints my previous experience with the software is also important.
+\end{itemize}
+
+
+\subsection{Maya}
+Maya is a 3D computer animation software developed by Autodesk. It supports modeling, rendering, simulation, texturing, and animation. This software is an industry standard and has been used for such projects as the Halo franchise. It supports all the animation editing and exporting features needed for this project, however it comes with a pretty harsh pricetag of \$180 per month; a price which would make the potential reach of the proposed tool much smaller. Moreover, although I am familiar with animation concepts, I am not familiar with Maya.
+
+
+\subsection{Blender}
+Blender is an open source animation software. Similarly to Maya, it supports modeling, rendering, simulation, texturing and animation. Due to its open source nature the software may be less usable or stable at times however it is still very powerful and recognized within the industry. It supports exporting the animations to Collada, Alembic, 3D Studio, FBX, Motion Capture (.bvh), Wavefront, X3D and Stl file formats. This means that the final animation could be exported and used by pretty much any other tool. Blender is completely free to use and available to anyone. I am familiar with the tool.
+
+
+\subsection{Unreal Engine}
+
+
+\subsection{Unity 3D}
+\subsection{Final Choice}
+
 
 
 
