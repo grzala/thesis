@@ -39,8 +39,30 @@ Approach to sentiment analysis might differ depending whether focus is on docume
 
 Traditionally sentiment analysis is performed by various classification mathods (usually supervised learning). Naive Bayes classifier and support vector machines were proven to yield pretty acurrate results (over 80\% accuracy in general) ~\cite{sentimentanal1}. The major constrait of those methods is that their quality is tightly linked with the quality of the lexicon used and size and quality of training datasets.
 
-One state-of-the-art solution to emotion analysis problem has recently became publicly available. Created by IBM, Watson Tone Analyzer is a tool capable of accurate emotion labeling (fear, joy, anger, etc.) as well as tone labeling (analytical, confident, tantative, etc.). The system is based on the \textit{Big Five personality traits} model ~\cite{watson}.
+One state-of-the-art solution to emotion analysis problem has recently became publicly available. Created by IBM, Watson Tone Analyzer is a tool capable of accurate emotion labeling (fear, joy, anger, etc.) as well as tone labeling (analytical, confident, tantative, etc.). The system is based on the \textit{Big Five personality traits} model ~\cite{watson}. Thanks to this approach, Watson is capable of much more detailed analysis of natural language than most other tools.
 
+
+\subsection{Emotions}
+To fully understand how to approach the problem of animation generation from emotional natural language it is important to look at how can emotions be understood and represented in computational terms. Emotions are complex and subjective in nature, so it is important t deconstruct emotions into something that can be worked with. A traditional approach to this problem is using the six basic emotion model. Specified by Paul Ekman and Wallace V. Friesen, who by studying nativa papua-new guinean tribes have discovered six universally recognized and understood emotions: ~\cite{basicemo}
+\begin{itemize}
+\item Joy
+\item Anger
+\item Surprise
+\item Disgust
+\item Fear
+\item Sadness
+\end{itemize}
+
+Although various research proposes changes to the six basic emotions model (such as reducing it to just four basic emotions ~\cite{fouremo}), this model is widely accepted and used in literature and software (such as IBM Watson tone analyzer, or various lexicons such as the NRC Word-Emotion Association Lexicon \footnote{\url{http://www.saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm}}.
+
+Psychologists theorize that the basic emotions can be used as building blocks to achieve more complex emotions. The specific emotion can be described as a mixture of basic emotions and their intensities. Robert Plutchik, a supporter of that theory, has represented emotions on a wheel-like diagram (~\ref{fig:wheel}) that depicts how two basic emotions combine to create a more complex emotion ~\cite{basicemo}.
+
+\begin{figure}[!ht]
+\centerline{\includegraphics[width = 30em]{img/wheel.png}}
+\caption{Plutchik's wheel}\label{fig:wheel}
+\end{figure}
+
+It seems that it is enough to extract the very basic emotions from the text, as more complex emotions can be understood as combinations of those basic ones.
 
 
 \section{Animation Software}
@@ -76,6 +98,14 @@ Unity 3D is the most popular freely available engine after Unreal. It suffers fr
 \subsection{Final Choice}
 
 Upon taking a closer look on the available software, I conclude that Blender is the most suitable tool for the task as it satisfies the requirements best. It provides all the necessary editing exporting and editing features, is free and easily available and I already have experience with using it.
+
+
+
+\section{Motion Database}
+
+The dialogue scenes in this project are going to be assembled from existing short motion capture clips. While a potential user of the tool proposed by this paper (a game studio) would most likely possess resources to create their own motion capture clips and be in posession of legacy motion capture data recorded for past projects, I must resort to use other resources. There exists a multitude of motion capture data freely available online\footnote{\url{http://jeroenvanboxtel.com/MocapDatabases.html}}. Among them, the most famous is the Carneigie Mellon University's CMU Graphics Motion Capture Database\footnote{\url{http://mocap.cs.cmu.edu/}}. 
+
+but max plank is betteraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 
 
