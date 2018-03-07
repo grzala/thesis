@@ -11,22 +11,9 @@ After this step is completed, the file must be intepreted into a final scene. Th
 
 \section{Emotions}
 
-For my project I have decided to only use the following emotions:
-\begin{itemize}
-\item Joy
-\item Anger
-\item Fear
-\item Sadness
-\item Disgust
-\item Surprise
-\end{itemize}
+For my project I have decided to only use the following emotions: joy, fear, disgust, anger and sadness. Tradinionally, surprise is also part of the six basic emotions model by Paul Ekman and Wallace V. Friesen. However, IBM Watson Tone Analyzer, that I am using for sentiment analysis, is unable to detect surprise in the text (more on that in section ~\ref{sec:emoanal}) - therefore I had to abstain from using this emotion in this project. The emotions are expressed as decimal numbers between 0 and 1 - this identifies whether a given emotion is present in a specific motion clip or text and how intense that emotion is. It also allows to create a mixture of emotions in order to represent more complex emotions.
 
-These are six basic human emotions as specified by Paul Ekman and Wallace V. Friesen. For each animation and dialogue line the system assigns a value between 0 and 1 for each of those emotions in order to indicate whether a given emotion is present in an action/text and how intense that emotion is. Any combination of those emotions may be used to achieve more specific results.
-
-This set of six basic emotions is generally agreed to be satisfiably accurate in most cases. A lot of existing software (such as IBM Watson Tone Analyzer) and lexicons use those exact emotions.
-
-
-\section{architecture}
+\section{Architecture}
 
 The architecture of the system is essentially a pipeline. The modules process resources and pass them onto the next module. They can be completely unaware of each other. This allows for a lot of flexibility and helps achieve some of the requirements. The emotion analysis API can be replaced with a different one, the user can use a custom motion capture database, and a different importer can be created if the user wishes to use software other than blender.
 
@@ -44,6 +31,13 @@ The Animation Clip Matcher uses the motion capture database to find the best ani
 
 The Animation Generator reads the JSON file and imports all needed animations. The user is now able to assign character model for each character and run the generator. The generator will assemble the animations in correct order, focus the camera on a currently speaking character and add subtitles. The output is an animated scene that can be either manually edited, exported to a file or rendered.
 
+The full diagram of the system can be seen in figure ~\ref{fig:architecture}.
+
+\begin{figure}[!ht]
+\centerline{\fbox{\includegraphics[width = 30em]{img/architecture.png}}}
+\caption{The pipeline architecture of the system}\label{fig:architecture}
+\end{figure}
+
 Python programming language is used to implement the modules. This is mainly due to the fact that Blender only supports extensions created using Python. For modules that do not rely on Blender, Python was chosen due to high development speed.
 
 
@@ -53,8 +47,20 @@ The input of the system looks as follows:
 
 The input is a file that represents a dialogue. Each character that participates in the scene must ble clearly stated. Each dialogue line must have a dialog line must have a character clearly associated with it. Character names are specified after five tabs. Dialogue Lines are specified after three tabs. Each file must end with "ENDSCRIPT" with no indentation.
 
-I used this format as this format is often used to represent movie scripts. One can find hundreds of scripts saved in this format on The Internet Movie Script Database (\url{www.imsdb.com}).
+I used this format as this format is often used to represent movie scripts. One can find hundreds of scripts saved in this format on The Internet Movie Script Database (\url{www.imsdb.com}). The example input can be seen in figure ~\ref{fig:inputscript}.
 
+
+\begin{figure}[!ht]
+\centerline{\fbox{\includegraphics[width = 30em]{img/script.png}}}
+\caption{An example of system's input}\label{fig:inputscript}
+\end{figure}
+
+
+\section{Emotion Analysis} 
+\label{sec:emoanal}
+As aforementioned, there are many ways to perform emotion analysis of the text. I have chosen to use IBM Watson Tone analyzer for this task as it offers a state-of-the-art service accessible for prototyping (a lot of tools offering high quality emotional analysis are bult for commercial purposes and not available without paying high fees).
+
+The system takes each dialogue line and sends to IBM Watson Tone Analyzer for analysis. Watson's REST API is used to accomplish that. Watson returns all the emotions with values between 0 and 1 found in the text. Each dialogue line now has emotional values assigned to it.
 
 \section{Database}
 
@@ -62,8 +68,12 @@ The motion capture database consists of two main parts: the files that contain t
 
 Most animation come from the Max Planck's Research Institute Emotional Body Motion Database. This database is a set of motion capture clips performed by actors. The clips are supposed to represent emotions in various settings. Most of these animations need minor changes in order to be compatible with my system (e.g. a lot of clips were recorded while the actor was sitting, so the leg keyframes must be removed to make the model stand). The animations are exported to FBX files (proprietary file format owned by Autodesk, widely supported by many different frameworks) one animated clip per file.
 
-The database is implemented using SQLite. It is the perfect tool for this task as the database needs to be simple, relatively small and easily searchable. The animation metadata is held in a table that look like this FIGURE. The emotional values of each animated clip need to be manually adjusted. When all values are set to zero, it means that the clip carries no emotional impact (neutral).
+The database is implemented using SQLite. It is the perfect tool for this task as the database needs to be simple, relatively small and easily searchable. The animation metadata is held in a table that look like this FIGURE. The emotional values of each animated clip need to be manually adjusted. When all values are set to zero, it means that the clip carries no emotional impact (neutral). An example of a few database records can be seen in figure ~\ref{fig:db}.
 
+\begin{figure}[!ht]
+\centerline{\fbox{\includegraphics[width = 30em]{img/db.png}}}
+\caption{Database of animation clips}\label{fig:db}
+\end{figure}
 
 
 \section{Matcher}
@@ -74,8 +84,28 @@ does some stuff. explain matching algorithm here.
 \section{Animation Generator (Importer)}
 
 
-As a forementioned, in this project I have used Blender for creating the animation. The generator is a Blender addon script. The generator first reads the JSON file prepared by previous modules and loads required animation clips from files. Each action is assigned to a corresponding character model and then pushed on a separate NLA strip FIGURE. Subtitles are added as Video Editor Sequence Strips spanning between frames that correspond to the animation FIGURE. The camera is animated to focus on a character that is currently talking.
+As a forementioned, in this project I have used Blender for creating the animation. The generator is a Blender addon script. The generator first reads the JSON file prepared by previous modules and loads required animation clips from files. Each action is assigned to a corresponding character model and then pushed on a separate NLA strip (figure ~\ref{fig:nla}). Subtitles are added as Video Editor Sequence Strips spanning between frames that correspond to the animation (figure ~\ref{fig:substrips}). The camera is animated to focus on a character that is currently talking.
 
+\begin{figure}[!ht]
+\centerline{\fbox{\includegraphics[width = 30em]{img/nla.png}}}
+\caption{NLA strips of the final animation}\label{fig:nla}
+\end{figure}
+\begin{figure}[!ht]
+\centerline{\fbox{\includegraphics[width = 30em]{img/substrips.png}}}
+\caption{Video strips featuring subtitles}\label{fig:substrips}
+\end{figure}
+
+The final animation can be edited and adjusted in Blender (figure ~\ref{fig:finalblend}) or rendered (figure ~\ref{fig:finalrend}).
+
+
+\begin{figure}[!ht]
+\centerline{\fbox{\includegraphics[width = 30em]{img/finalblend.png}}}
+\caption{Editing the final animation in Blender}\label{fig:finalblend}
+\end{figure}
+\begin{figure}[!ht]
+\centerline{\fbox{\includegraphics[width = 30em]{img/finalrend.png}}}
+\caption{Rendered final animation}\label{fig:finalrend}
+\end{figure}
 
 \section{User Interface}
 
