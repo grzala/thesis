@@ -1,22 +1,40 @@
 [
-    {
-      "text": "anger1",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "anger1",
-          "file": "anger/anger1.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.07644,
-        "sadness": 0.68563,
-        "disgust": 0.633793,
-        "anger": 0.655157,
-        "surprise": 0,
-        "fear": 0.649993
+  {
+    "text": "emotion_1",
+    "character": "AGENT SMITH",
+    "clip": [
+      {
+        "name": "emotion_1",
+        "file": "emotion_1.fbx"
       }
-    },
+    ],
+    "tones": {
+      "joy": 0.07644,
+      "sadness": 0.68563,
+      "disgust": 0.633793,
+      "anger": 0.655157,
+      "surprise": 0,
+      "fear": 0.649993
+    }
+  },
+  {
+    "text": "anger1",
+    "character": "AGENT SMITH",
+    "clip": [
+      {
+        "name": "anger1",
+        "file": "anger/anger1.fbx"
+      }
+    ],
+    "tones": {
+      "joy": 0.07644,
+      "sadness": 0.68563,
+      "disgust": 0.633793,
+      "anger": 0.655157,
+      "surprise": 0,
+      "fear": 0.649993
+    }
+  },
     {
       "text": "anger2",
       "character": "AGENT SMITH",
