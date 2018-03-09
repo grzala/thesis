@@ -1,11 +1,11 @@
 [
   {
-    "text": "emotion_1",
+    "text": "emotion2",
     "character": "AGENT SMITH",
     "clip": [
       {
-        "name": "emotion_1",
-        "file": "emotion_1.fbx"
+        "name": "emotion2",
+        "file": "emotion2.fbx"
       }
     ],
     "tones": {
