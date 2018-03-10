@@ -10,11 +10,14 @@ The activities required in order to develop the project are listed below:
 \begin{itemize}
 \item Develop a project plan.
 \item Review literature. Review existing software, learn about other approaches, analyze existing research.
-\item Find and assemble a set of relevant motion capture animated clips.
+\item Review technology. Find out about software may be useful to this project and learn how to use it.
+\item Analyze risks. Specify what might be the potential pitfalls that may deem this product unsuccesful.
 \item Prototype a module that uses processes the script and outputs a structured file that can be used to generate the animated scene.
+\item Obtain a sufficient amount of animated clips. Create a custom downloader/importer if necessary.
 \item Tag and classify animation clips. Categorize clips by emotion, length, etc.
 \item Prototype a Blender extension that uses the created structured files to output an animated scene.
 \item Iterate on the existing software adding new features.
+\item Obtain more animated clips, classify and store them.
 \item Evaluate the prototype with real audience.
 \end{itemize}
 
@@ -24,18 +27,26 @@ The generated animation must be evaluated with help of a real audience. How anim
 \section{Technologies and Resources}
 
 \begin{enumerate}
-\item Emotion analysis - The first module of the project focuses on NLP. This module should be extract emotions and actions from the script. The most important tool used will be IBM Watson Tone Analyzer. If that tool turns out to be for any reason ineffective or imperfect, a customary tool (naive bayes classifier or a keyword classifier) can be built for that task. Actions can be extracted using a variety of information extraction software such as MITIE or Ollie.
+\item \textbf{Emotion analysis} - The first module of the project focuses on NLP. This module should be extract emotions and actions from the script. The most important tool used will be IBM Watson Tone Analyzer. If that tool turns out to be for any reason ineffective or imperfect, a customary tool (naive bayes classifier or a keyword classifier) can be built for that task. Actions can be extracted using a variety of information extraction software such as MITIE or Ollie.
 
-\item Motion capture - The EMBD (emotional body motion database) will be used to source the animations of body movement and gestures. The database provides the recordings as BVH files which is convenient as most animation software (such as Blender or Maya) can import BVH files. The emotional metadata about the animated clips will be stored in an SQLite database. Storing the data using this method will allow the data to be easily and quickly searchable while less complicated than using a full fledged database software (such as MySQL od PostgreSQL) (very few tables are needed, there is no need to use advanced DB software).
+\item \textbf{Motion capture} - The EMBD (emotional body motion database) will be used to source the animations of body movement and gestures. The database provides the recordings as BVH files which is convenient as most animation software (such as Blender or Maya) can import BVH files. The emotional metadata about the animated clips will be stored in an SQLite database. Storing the data using this method will allow the data to be easily and quickly searchable while less complicated than using a full fledged database software (such as MySQL od PostgreSQL) (very few tables are needed, there is no need to use advanced DB software).
 
-\item Animation software - As aforementioned in section ~\ref{sec:animchoice}, the animation software that satisfies all the specified requirements is Blender. Blender supports all the necessary modelling and animation features. It also supports creating extensions allowing the animation to be created and assembled by code.
+\item \textbf{Animation software} - As aforementioned in section ~\ref{sec:animchoice}, the animation software that satisfies all the specified requirements is Blender. Blender supports all the necessary modelling and animation features. It also supports creating extensions allowing the animation to be created and assembled by code.
 
-\item Programming - Python 3 will be used to implement the software. Python is the only language supported for add-on development for Blender. For other modules that do not rely on Blender, Python was chosen due to its development speed and in order to keep consistency among modules.
+\item \textbf{Programming} - Python 3 will be used to implement the software. Python is the only language supported for add-on development for Blender. For other modules that do not rely on Blender, Python was chosen due to its development speed and in order to keep consistency among modules.
 
 \end{enumerate}
 
 \section{Risk Analysis}
 \label{sec:riskanal}
+
+This section evaluates on ways in which this project can fail. Since reception of animation is subjective it may be hard to pinpoint what exactly went wrong with the software. It is possible that the audience will decide that the animations are not good enough but they will not be able to describe why. Because of that it is important to understand those outline those issues before conducting any tests.
+
+\subsection{Failure due to emotion analysis}
+The first way in which the software may fail is due to the emotion analysis component. If the final animation does not reflect by body language the emotions of the characters it may mean that the dialogue were not analyzed properly, meaning that the results provided by emotion analysis are simply not accurate enough.
+
+In this project I will be using IBM Watson which is a pretty good benchmark regarding emotion analysis. It is safe to say that is Watson is unable to perform the task well enough there is no software that would be. 
+
 
 \begin{table}[!ht]
 	\centering
