@@ -15,19 +15,27 @@ The activities required in order to develop the project are listed below:
 \item Tag and classify animation clips. Categorize clips by emotion, length, etc.
 \item Prototype a Blender extension that uses the created structured files to output an animated scene.
 \item Iterate on the existing software adding new features.
+\item Evaluate the prototype with real audience.
 \end{itemize}
 
-My goal is to first build a very minimal prototype of the program. The prototype will focus on emotions, work with a small amount of animations and keep the characters gesturing, but not moving or performing other actions throughout the scene. Afterwards I will focus my effort on making the outputted scenes more realistic and intricate.
+The generated animation must be evaluated with help of a real audience. How animation is perceived is subjective and cannot be decided by one person only. The evaluators will be asked to watch animated dialogue clips from various games and then watch this dialogue recreated using the proposed software. The evaluators will be asked to fill an evaluation survey. This way it will be possible to determined the usefulness and succesfulness of the proposed software.
+
 
 \section{Technologies and Resources}
 
-The first module of the project focuses on NLP. This module should be extract emotions and actions from the script. The most important tool used will be IBM Watson Tone Analyzer. If that tool turns out to be for any reason ineffective or imperfect, a customary tool (naive bayes classifier or a keyword classifier) can be built for that task. Actions can be extracted using a variety of information extraction software such as MITIE or Ollie.
+\begin{enumerate}
+\item Emotion analysis - The first module of the project focuses on NLP. This module should be extract emotions and actions from the script. The most important tool used will be IBM Watson Tone Analyzer. If that tool turns out to be for any reason ineffective or imperfect, a customary tool (naive bayes classifier or a keyword classifier) can be built for that task. Actions can be extracted using a variety of information extraction software such as MITIE or Ollie.
 
-The motion capture clips will come from two sources - the Carneige Mellon University motion capture database and mocapdata.com. I will hand-pick relevant animatio clips and preprocess them so that they can all be easily used with a character model. I will create a SQLite database that will store metadata about the animations (associated emotions, length, etc).
+\item Motion capture - The EMBD (emotional body motion database) will be used to source the animations of body movement and gestures. The database provides the recordings as BVH files which is convenient as most animation software (such as Blender or Maya) can import BVH files. The emotional metadata about the animated clips will be stored in an SQLite database. Storing the data using this method will allow the data to be easily and quickly searchable while less complicated than using a full fledged database software (such as MySQL od PostgreSQL) (very few tables are needed, there is no need to use advanced DB software).
 
-The last part of the project - assembling the final animated scene - will be done using Blender; an open source 3D modelling and animation software. The first module will create a json file that specifies a sequence of dialogue lines and animation clips accompanying them. A Blender extension will read that file and import necessary character models and animations to create a fully editable animated scene.
+\item Animation software - As aforementioned in section ~\ref{sec:animchoice}, the animation software that satisfies all the specified requirements is Blender. Blender supports all the necessary modelling and animation features. It also supports creating extensions allowing the animation to be created and assembled by code.
+
+\item Programming - Python 3 will be used to implement the software. Python is the only language supported for add-on development for Blender. For other modules that do not rely on Blender, Python was chosen due to its development speed and in order to keep consistency among modules.
+
+\end{enumerate}
 
 \section{Risk Analysis}
+\label{sec:riskanal}
 
 \begin{table}[!ht]
 	\centering

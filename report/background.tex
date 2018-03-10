@@ -24,7 +24,7 @@ A lot more research has been done in this area with certain degree of success. A
 
 While many other reasearch focused on animation in general, some reasearch focused on usage on NLP generated animation for use in games specifically.
 
-So far, the main focus of similar research has been generating animated scenes from text with focus on actions and sometimes motion synthesis. There exists no record of employing sentiment analysis to create animated dialogue scenes.
+So far, the main focus of similar research has been generating animated scenes from text with focus on actions, often by employing motion synthesis. There exists no record of using  sentiment analysis to create animated dialogue scenes.
 
 
 % ----------------------------------------------- %
@@ -68,6 +68,7 @@ It seems that it is enough to extract the very basic emotions from the text, as 
 
 
 \section{Animation Software}
+\label{sec:animchoice}
 
 The output scene must be created in some software able to play and use the scene. Developing a tool for this would be too time consuming - such software is not a small undertaking and with the time constraints this would result in a very rudimentary framework that would be very limiting. Therefore a choice must be made between existing frameworks.
 
@@ -125,11 +126,13 @@ The database contains over 1400 clips, each labeled with what emotion it is supp
 
 When dealing with animation, modelling, sculpting, etc. it is important to remember about the phenomenon of the uncanny valley. Not taking this phenomenon into account might cause unexpected negative results.
 
+\subsection{What is the uncanny valley}
+
 The uncanny valley is a phenomen regards aesthetics. It states that when a humanoid object (a character model, a robot) behaves in a more realistic, human-like fashion, it might not be necessairly perceived as more human-like. The \textit{valley} suggests that there exists a certain \textit{dip} in human observer's affinity for a human replica ~\cite{uncanny1}.
 
 The concept was first identified byrobotics professor Masahiro Mori in 1970. In his essay on the uncanny valley he explains the relationship between a humanoid object's human likeness and observer's affinity towards the object. He has noted, that as the object becomes more human like, the observer's affinity increases. However, when the human likeness of the object reaches certain point, the human affinity for it decreases drastically. Then again, when the human likeness becomes very high, the affinity drastically rises again. The observers might perceive humanoid objects that are not quite human like as funny, cute, in need of repair, etc. The obsever perceive very human like objects are almost indistinguishable from reality - and while they may not be perfect, there is nothing alarming about them. However, the observers have described \textit{fairly} human like humanoid replicas as \textit{creepy} or \textit{eerie} ~\cite{uncanny1}~\cite{uncanny2}.
 
-The concept is easily depicted on a graph. Figure ~\ref{fig:uncanny} draws the relationship between human likeness and observer affinity. According to this representation, when a replica's human likeness reaches about 80\%, observers affinity quickly becomes negative. Figure ~\ref{fig:uncanny_example} shows an example of this concept, by showing 
+The concept is easily depicted on a graph. Figure ~\ref{fig:uncanny} draws the relationship between human likeness and observer affinity. According to this representation, when a replica's human likeness reaches about 80\%, observers affinity quickly becomes negative. Figures ~\ref{fig:toyrobot}~\ref{fig:uncannyrobot}~\ref{fig:realrobot} shows an example of this concept, by showing three different robot examples and their relation to the uncanny valley principle. 
 
 \begin{figure}[!ht]
 \centerline{\includegraphics[width = 30em,scale=0.25]{img/uncanny.png}}
@@ -137,19 +140,28 @@ The concept is easily depicted on a graph. Figure ~\ref{fig:uncanny} draws the r
 \end{figure}
 
 \begin{figure}[!ht]
-\centerline{\includegraphics[scale=0.35]{img/toyrobot.jpg}}
-\caption{This robot does not fall into the uncanny valley category. It is a humanoid but it is not realistic - it is usually perceived as funny oir cute.}\label{fig:toyrobot}
+\centerline{\includegraphics[scale=0.4]{img/toyrobot.jpg}}
+\caption{This robot does not fall into the uncanny valley category. It is a humanoid but it is not realistic - it is usually perceived as funny or cute.}\label{fig:toyrobot}
 \end{figure}
 
 \begin{figure}[!ht]
-\centerline{\includegraphics[scale=0.35]{img/uncannyrobot.png}}
+\centerline{\includegraphics[scale=0.4]{img/uncannyrobot.png}}
 \caption{A robot that falls into the uncanny valley category - It is realistic enough to be human-like, but it is not human-like enough to be perceived positively and described as realistic. It provokes a feeling of eerieness or being alarmed in the observers.}\label{fig:uncannyrobot}
 \end{figure}
 
 \begin{figure}[!ht]
-\centerline{\includegraphics[scale=0.3]{img/realrobot.png}}
-\caption{A robot so realistic that many at first have difficulties with realising it is not a human. Such a robot does not fall into the uncanny valley as it is realistic enough to feel familiar and normal.}\label{fig:realrobot}
+\centerline{\includegraphics[scale=0.45]{img/realrobot.png}}
+\caption{This robot does not fall into the uncanny valley as it is realistic enough to feel familiar and normal.}\label{fig:realrobot}
 \end{figure}
+
+\subsection{Why uncanny valley matters in games and animation}
+
+Since animation and modelling deals with humanoid objects, the uncanny valley principle applies to it as well. Many game studios h will prefer to use comic-like graphics and other solutions in order to purposefully make the game less realistic. Oftentimes a less realistic game will be received better than a game that is quite realistic but not exactly so. Characters that fall into the uncanny valley category are often no longer perceived as humans, they are not realatable and laughable ~\cite{uncannygames}.
+
+This problem is exactly what caused the specacular failure of Mass Effect Andromeda. BioWare's  process of creating large amounts of dialogue animation has produced animations which are quite realistic but do not feel human. The players quickly lost interest in the characters, as serious scenes behaved in a fashion that was out of place, unpredictable, and did not highlight emotions they were trying to convey through speech. The case study of this game shows not only why a good system of generating animation is important, but also that a generation system that is generally realistic might be too little and too much at the same time ~\cite{uncannyandromeda}.
+
+This project is also subject to uncanny valley. This principle might cause a set of pretty decent computer generated animations to be perceived very negatively by the audience. I will evaluate on that in section ~\ref{sec:riskanal}.
+
 
 
 
