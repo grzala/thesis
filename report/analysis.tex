@@ -1,6 +1,6 @@
 \chapter{Analysis \label{chap:analysis}}
 
-\noindent The project  methodology,  development  tools  and  technologies  and  project  risk assessment are defined in this following chapter.
+The methodology used to develop the project, technologies involved in the develpment and a breakdown of risks that concern the project are described in this chapter..
 
 
 \section{Methodology}
@@ -21,6 +21,8 @@ The activities required in order to develop the project are listed below:
 \item Evaluate the prototype with real audience.
 \end{itemize}
 
+The minimum working prototype will be developed first. When all three modules are ready and in place, more features will be added iteratively. The software will work better if many animation clips are available, therefore as many clips as possible will be obtained and classified.
+
 The generated animation must be evaluated with help of a real audience. How animation is perceived is subjective and cannot be decided by one person only. The evaluators will be asked to watch animated dialogue clips from various games and then watch this dialogue recreated using the proposed software. The evaluators will be asked to fill an evaluation survey. This way it will be possible to determined the usefulness and succesfulness of the proposed software.
 
 
@@ -40,31 +42,32 @@ The generated animation must be evaluated with help of a real audience. How anim
 \section{Risk Analysis}
 \label{sec:riskanal}
 
-This section evaluates on ways in which this project can fail. Since reception of animation is subjective it may be hard to pinpoint what exactly went wrong with the software. It is possible that the audience will decide that the animations are not good enough but they will not be able to describe why. Because of that it is important to understand those outline those issues before conducting any tests.
+This subsection evaluates on ways in which this project can fail. Since reception of animation is subjective it may be hard to pinpoint what exactly went wrong with the software. It is possible that the audience will decide that the animations are not good enough but they will not be able to describe why. Because of that it is important to understand those outline those issues before conducting any tests.
 
+\bigskip
 \subsection{Failure due to emotion analysis}
 The first way in which the software may fail is due to the emotion analysis component. If the final animation does not reflect by body language the emotions of the characters it may mean that the dialogue were not analyzed properly, meaning that the results provided by emotion analysis are simply not accurate enough.
 
-In this project I will be using IBM Watson which is a pretty good benchmark regarding emotion analysis. It is safe to say that is Watson is unable to perform the task well enough there is no software that would be. 
+In this project I will be using IBM Watson which is a pretty good benchmark regarding emotion analysis. It is safe to say that is Watson is unable to perform the task well enough there is no software that would be. If a failure is identified to be caused by the emotion analysis, this might mean that:
+\begin{itemize}
+\item The NLP methods are not yet advanced enough to perform this task. This project will remain unfeasible until we see an improvement in emotion analysis techniques.
+\item NLP alone is not enough to solve this problem. Other approaches should be used alongside NLP emotion analysis, such as analysis of the tone of the recorded voice or emotional analysis of facial expressures of the voice actors.
+\end{itemize}
+
+Since there is no significant research done regarding combining emotion analysis and animation, there is no way to know for certain whether this approach will work. Because of that the risk of such a failure is moderately high.
 
 
-\begin{table}[!ht]
-	\centering
-	\small
-	
-	\begin{tabular}{ |p{11em} |p{23.8em}|p{4em}| }
-	 \hline
-		\thead{Risk} & \thead{Mitigation} & \thead{Level} \\
-	 \hline
-	 	Time delays caused by workload/illness & Follow the project plan closely. Focus on developing a minimum working prototype first. & High \\
-	 \hline
-		Natural Language Approaches are too inaccurate & Use more structured software. Try to find other approaches to this problem. If there seems to be no solution, I can use the findings and existing software to argue that the technology has not yet reached a level that would make this project viable.  &  Low \\
-	\hline
-		Motions obtained from the EBMD are not expressive and unambiguous enough to create realistic and convincing scenes & Even with bad quality animations it should be possible to determine whether this project has future potential, given a better motion capture database is used. & Moderate \\
-	\hline
-	\end{tabular}
+\bigskip
+\subsection{Failure due to the motion capture data quality}
+The software proposed by this paper can only ever be as good as the motion capture data provided. While the software will be designed to work with custom motion dapture databases, the EBMD is used for this project. This means that if the clips provided by EBMD are too ambiguous - that the recorded body language do not convey the emotion clearly enough, or that the recerded movements are unnatural, too subtle or too over emphasised, the output animation will not be perceived as successful. In this case this might not be the problem of the software or the approach at all - the failure is generated only and specifically by the motion capture recordings.
 
-	 \caption{Risk Assessment}
-	 \label{tab:riskassessment}
-	 
-\end{table}
+The EBMD provides quite some metadata regarding each clip. Among the metadata provided there is information about what emotion the movement tries to convey and what emotion was perceived by the audience when watching the clip. Because of that the risk of failure due to motion capture data quality is fairly low as the animation should in general unambiguously convey the intended emotion. There is however still a risk that the motions will be perceived as conveying correct emotion, but being too unnatural and unrealistic.
+
+\bigskip
+\subsection{Failure due to the uncanny valley principle}
+The uncanny valley principle poses a high threat to the project. The final animation satisfying the uncanny valley principle is possibly the worst scenario in which the project may fail. This failure is easiest determined by comparing the final animation with other games. Two types of game animation will be shown to the audience - animation is advanced and generally considered good, and animation that is basic, unrealistic, seemingly random and monotonous. If the audience judges the animations generated by this software to be worse than both of these animation types then it probably means that the animations comply with the uncanny valley principle. It means that while the animation generally is realistic and matches the intended emotion of the speech, the animation still feels unnatural and it might have been better to go with a much simpler approach, such as keeping the characters mostly static.
+
+If the uncanny valley is achieved by the output animation, this might mean a few things. If the uncanny valley effect was created by the nature of the EBMD recordings, this means that replacing the database with a different might just solve the problem. However, it might mean that the NLP emotion analysis approach to generating animation is inherently flawed. It might just prove that text data alone is never enough to produce convincing animation and while this method might be useful in combination with other methods, emotion analysis approach will always produce unconvincing animation.
+
+
+
