@@ -1,317 +1,38 @@
 [
-  {
-    "text": "emotion2",
-    "character": "AGENT SMITH",
-    "clip": [
-      {
-        "name": "emotion2",
-        "file": "emotion2.fbx"
-      }
-    ],
-    "tones": {
-      "joy": 0.07644,
-      "sadness": 0.68563,
-      "disgust": 0.633793,
-      "anger": 0.655157,
-      "surprise": 0,
-      "fear": 0.649993
+    {
+        "text": "0anger_f-67.0.fbx", 
+        "character": "AGENT SMITH", 
+        "tones": {
+            "joy": 0.0, 
+            "sadness": 0.0, 
+            "disgust": 0.0, 
+            "anger": 0.0, 
+            "surprise": 0.0, 
+            "fear": 0.0
+        }, 
+        "clip": [
+            {
+                "name": "0anger_f-67.0.fbx", 
+                "file": "0anger_f-67.0.fbx"
+            }
+        ]
+    }, 
+    {
+        "text": "test", 
+        "character": "AGENT SMITH 2", 
+        "tones": {
+            "joy": 0.0, 
+            "sadness": 0.0, 
+            "disgust": 0.0, 
+            "anger": 0.0, 
+            "surprise": 0.0, 
+            "fear": 0.0
+        }, 
+        "clip": [
+            {
+                "name": "test", 
+                "file": "0anger_f-67.0.fbx"
+            }
+        ]
     }
-  },
-  {
-    "text": "anger1",
-    "character": "AGENT SMITH",
-    "clip": [
-      {
-        "name": "anger1",
-        "file": "anger/anger1.fbx"
-      }
-    ],
-    "tones": {
-      "joy": 0.07644,
-      "sadness": 0.68563,
-      "disgust": 0.633793,
-      "anger": 0.655157,
-      "surprise": 0,
-      "fear": 0.649993
-    }
-  },
-    {
-      "text": "anger2",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "anger2",
-          "file": "anger/anger2.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "anger3",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "anger3",
-          "file": "anger/anger3.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "anger4",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "anger4",
-          "file": "anger/anger4.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "fear1",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "fear1",
-          "file": "fear/fear1.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "fear2",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "fear2",
-          "file": "fear/fear2.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "fear3",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "fear3",
-          "file": "fear/fear3.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "joy1",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "joy1",
-          "file": "joy/joy1.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "joy2",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "joy2",
-          "file": "joy/joy2.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "joy3",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "joy3",
-          "file": "joy/joy3.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "joy4",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "joy4",
-          "file": "joy/joy4.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "sadness1",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "sadness1",
-          "file": "sadness/sadness1.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "sadness2",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "sadness2",
-          "file": "sadness/sadness2.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "sadness3",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "sadness3",
-          "file": "sadness/sadness3.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-    {
-      "text": "sadness4",
-      "character": "AGENT SMITH",
-      "clip": [
-        {
-          "name": "sadness4",
-          "file": "sadness/sadness4.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.102361,
-        "sadness": 0.137917,
-        "disgust": 0.119253,
-        "anger": 0.13886,
-        "surprise": 0,
-        "fear": 0.128295
-      }
-    },
-
-
-
-
-
-
-
-
-
-    {
-      "text": " I must get out of here, I must get free.  In this mind is tlie key. My key.",
-      "character": "AGENT SMITH2",
-      "clip": [
-        {
-          "name": "anger2",
-          "file": "anger/anger2.fbx"
-        }
-      ],
-      "tones": {
-        "joy": 0.383433,
-        "sadness": 0.141744,
-        "disgust": 0.00791,
-        "anger": 0.280118,
-        "surprise": 0,
-        "fear": 0.176339
-      }
-    }
-  ]
+]

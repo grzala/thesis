@@ -16,7 +16,7 @@ for f in onlyfiles:
         "clip": [
             {
                 "name": name,
-                "file": "todo/" + f
+                "file": f
             }
         ],
         "tones": {
@@ -31,13 +31,13 @@ for f in onlyfiles:
     conversation.append(text)
 
 
-text = {
+textendtext = {
     "text": "test",
-    "character": "AGENT SMITH",
+    "character": "AGENT SMITH 2",
     "clip": [
         {
             "name": "test",
-            "file": "todo/" + onlyfiles[0]
+            "file": onlyfiles[0]
         }
     ],
     "tones": {
@@ -49,8 +49,16 @@ text = {
         "fear": 0.0
     }
 }
-conversation.append(text)
 
-file = open("showcase.json", "w")
-file.write(json.dumps(conversation, ensure_ascii=False, indent=4))
-file.close()
+j = 0
+for i in range(0, len(conversation), 10):
+    starti = i
+    endi = i+10
+    if (endi >= len(conversation)):
+        endi = len(conversation)-1
+    con = conversation[starti:endi]
+
+    file = open("showcases/showcase"+str(j)+".json", "w")
+    file.write(json.dumps(con, ensure_ascii=False, indent=4))
+    file.close()
+    j += 1
