@@ -1,87 +1,33 @@
 [
     {
-        "text": " Life is really hard for me after our dog died ", 
+        "text": " Did you hear that terrifying sound?", 
         "character": "CHARACTER1", 
         "clip": [
             {
-                "name": "sad_subtle_helpless_6", 
+                "name": "fear_terrified_terrified_2", 
                 "joy": 0.0, 
                 "anger": 0.0, 
-                "sadness": 0.8, 
-                "score": 0.893419, 
-                "file": "sadness/subtle/helpless6.fbx", 
-                "Frames": 109, 
+                "sadness": 0.0, 
+                "score": 0.9912299999999999, 
+                "file": "fear/terrified/terrified2.fbx", 
+                "Frames": 204, 
                 "surprise": 0.0, 
-                "fear": 0.0, 
+                "fear": 0.65, 
                 "disgust": 0.0, 
-                "id": 111
+                "id": 69
             }
         ], 
         "tones": {
-            "joy": 0.070622, 
-            "sadness": 0.791919, 
-            "disgust": 0.080463, 
-            "anger": 0.049091, 
+            "joy": 0.059362, 
+            "sadness": 0.058528, 
+            "disgust": 0.09986, 
+            "anger": 0.041802, 
             "surprise": 0.0, 
-            "fear": 0.205081
+            "fear": 0.64123
         }
     }, 
     {
-        "text": " You know he died because of you and  we hate you for it!", 
-        "character": "CHARACTER2", 
-        "clip": [
-            {
-                "name": "sad_subtle_helpless_2", 
-                "joy": 0.0, 
-                "anger": 0.4, 
-                "sadness": 0.5, 
-                "score": 0.8728739999999999, 
-                "file": "sadness/subtle/helpless2.fbx", 
-                "Frames": 164, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 106
-            }
-        ], 
-        "tones": {
-            "joy": 0.005219, 
-            "sadness": 0.538923, 
-            "disgust": 0.083548, 
-            "anger": 0.615329, 
-            "surprise": 0.0, 
-            "fear": 0.080384
-        }
-    }, 
-    {
-        "text": " You don't have to make me feel so worthless.  I am trying to make up for it.", 
-        "character": "CHARACTER1", 
-        "clip": [
-            {
-                "name": "sad_gaveup_1", 
-                "joy": 0.0, 
-                "anger": 0.0, 
-                "sadness": 0.8, 
-                "score": 0.885192, 
-                "file": "sadness/gaveup1.fbx", 
-                "Frames": 136, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 117
-            }
-        ], 
-        "tones": {
-            "joy": 0.055796, 
-            "sadness": 0.770697, 
-            "disgust": 0.084455, 
-            "anger": 0.200313, 
-            "surprise": 0.0, 
-            "fear": 0.06386
-        }
-    }, 
-    {
-        "text": " Stop it. We will never forgive you!", 
+        "text": " Shut up Johnny! You are going to get us all killed!", 
         "character": "CHARACTER2", 
         "clip": [
             {
@@ -89,7 +35,7 @@
                 "joy": 0.0, 
                 "anger": 0.7, 
                 "sadness": 0.3, 
-                "score": 0.9423005, 
+                "score": 0.9153965, 
                 "file": "anger/sad/disbelief2.fbx", 
                 "Frames": 109, 
                 "surprise": 0.0, 
@@ -99,12 +45,39 @@
             }
         ], 
         "tones": {
-            "joy": 0.018426, 
-            "sadness": 0.29643, 
-            "disgust": 0.21577, 
-            "anger": 0.588171, 
+            "joy": 0.025058, 
+            "sadness": 0.330416, 
+            "disgust": 0.1216, 
+            "anger": 0.561209, 
             "surprise": 0.0, 
-            "fear": 0.174434
+            "fear": 0.296752
+        }
+    }, 
+    {
+        "text": " We need to get out of here or we are going to die!", 
+        "character": "CHARACTER1", 
+        "clip": [
+            {
+                "name": "sad_subtle_grieve_3", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.65, 
+                "score": 0.748719, 
+                "file": "sadness/subtle/grieve3.fbx", 
+                "Frames": 90, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 103
+            }
+        ], 
+        "tones": {
+            "joy": 0.017849, 
+            "sadness": 0.60431, 
+            "disgust": 0.089525, 
+            "anger": 0.096907, 
+            "surprise": 0.0, 
+            "fear": 0.456872
         }
     }
 ]
