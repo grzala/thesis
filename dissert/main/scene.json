@@ -1,80 +1,110 @@
 [
     {
-        "text": " I got accepted to my first choice college!  My dreams are becoming true!", 
+        "text": " Life is really hard for me after our dog died ", 
         "character": "CHARACTER1", 
         "clip": [
             {
-                "name": "satisfaction", 
-                "joy": 0.6, 
-                "sadness": 0.0, 
-                "score": 0.859115, 
-                "file": "joy/joy2.fbx", 
+                "name": "sad_subtle_helpless_6", 
+                "joy": 0.0, 
                 "anger": 0.0, 
+                "sadness": 0.8, 
+                "score": 0.893419, 
+                "file": "sadness/subtle/helpless6.fbx", 
+                "Frames": 109, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 9
+                "id": 111
             }
         ], 
         "tones": {
-            "joy": 0.675502, 
-            "sadness": 0.206268, 
-            "disgust": 0.012421, 
-            "anger": 0.055194, 
+            "joy": 0.070622, 
+            "sadness": 0.791919, 
+            "disgust": 0.080463, 
+            "anger": 0.049091, 
             "surprise": 0.0, 
-            "fear": 0.08074
+            "fear": 0.205081
         }
     }, 
     {
-        "text": " I am happy for you Susan!  But weren't we supposed to go to the same college together?", 
+        "text": " You know he died because of you and  we hate you for it!", 
         "character": "CHARACTER2", 
         "clip": [
             {
-                "name": "happy_exclaim", 
-                "joy": 0.7, 
-                "sadness": 0.0, 
-                "score": 0.824131, 
-                "file": "joy/joy3.fbx", 
-                "anger": 0.0, 
+                "name": "sad_subtle_helpless_2", 
+                "joy": 0.0, 
+                "anger": 0.4, 
+                "sadness": 0.5, 
+                "score": 0.8728739999999999, 
+                "file": "sadness/subtle/helpless2.fbx", 
+                "Frames": 164, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 10
+                "id": 106
             }
         ], 
         "tones": {
-            "joy": 0.875869, 
-            "sadness": 0.046382, 
-            "disgust": 0.016219, 
-            "anger": 0.016938, 
+            "joy": 0.005219, 
+            "sadness": 0.538923, 
+            "disgust": 0.083548, 
+            "anger": 0.615329, 
             "surprise": 0.0, 
-            "fear": 0.020291
+            "fear": 0.080384
         }
     }, 
     {
-        "text": " I know you will miss me, but I can't stay here just for you.", 
+        "text": " You don't have to make me feel so worthless.  I am trying to make up for it.", 
         "character": "CHARACTER1", 
         "clip": [
             {
-                "name": "quick_broken", 
+                "name": "sad_gaveup_1", 
                 "joy": 0.0, 
-                "sadness": 0.65, 
-                "score": 0.8004025, 
-                "file": "sadness/sadness3.fbx", 
                 "anger": 0.0, 
+                "sadness": 0.8, 
+                "score": 0.885192, 
+                "file": "sadness/gaveup1.fbx", 
+                "Frames": 136, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 13
+                "id": 117
             }
         ], 
         "tones": {
-            "joy": 0.011615, 
-            "sadness": 0.764259, 
-            "disgust": 0.021679, 
-            "anger": 0.071682, 
+            "joy": 0.055796, 
+            "sadness": 0.770697, 
+            "disgust": 0.084455, 
+            "anger": 0.200313, 
             "surprise": 0.0, 
-            "fear": 0.284936
+            "fear": 0.06386
+        }
+    }, 
+    {
+        "text": " Stop it. We will never forgive you!", 
+        "character": "CHARACTER2", 
+        "clip": [
+            {
+                "name": "angry_sad_disbelief_2", 
+                "joy": 0.0, 
+                "anger": 0.7, 
+                "sadness": 0.3, 
+                "score": 0.9423005, 
+                "file": "anger/sad/disbelief2.fbx", 
+                "Frames": 109, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 42
+            }
+        ], 
+        "tones": {
+            "joy": 0.018426, 
+            "sadness": 0.29643, 
+            "disgust": 0.21577, 
+            "anger": 0.588171, 
+            "surprise": 0.0, 
+            "fear": 0.174434
         }
     }
 ]
