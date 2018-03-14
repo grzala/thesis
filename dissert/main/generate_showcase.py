@@ -3,7 +3,7 @@ from os.path import isfile, join
 import sys
 import json
 
-onlyfiles = [f for f in listdir(sys.argv[1]) if isfile(join(sys.argv[1], f))]
+onlyfiles = sorted([f for f in listdir(sys.argv[1]) if isfile(join(sys.argv[1], f))])
 print onlyfiles
 
 conversation = []
