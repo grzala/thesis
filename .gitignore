@@ -1,3 +1,7 @@
 dissert/main/showcases
 dissert/db/tmp
 dissert/db/impored
+
+dissert/main/showcases/*
+dissert/db/tmp/*
+dissert/db/impored/*
