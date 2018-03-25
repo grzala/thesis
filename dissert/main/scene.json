@@ -1,83 +1,110 @@
 [
     {
-        "text": " Did you hear that terrifying sound?", 
+        "text": " I got accepted to my first choice college!  My dreams are becoming true!", 
         "character": "CHARACTER1", 
         "clip": [
             {
-                "name": "fear_terrified_terrified_2", 
-                "joy": 0.0, 
+                "name": "joy_satisfaction", 
+                "joy": 0.6, 
                 "anger": 0.0, 
                 "sadness": 0.0, 
-                "score": 0.9912299999999999, 
-                "file": "fear/terrified/terrified2.fbx", 
-                "Frames": 204, 
+                "score": 0.7366911125, 
+                "file": "joy/joy2.fbx", 
+                "Frames": 147, 
                 "surprise": 0.0, 
-                "fear": 0.65, 
+                "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 69
+                "id": 9
             }
         ], 
         "tones": {
-            "joy": 0.059362, 
-            "sadness": 0.058528, 
-            "disgust": 0.09986, 
-            "anger": 0.041802, 
+            "joy": 0.675502, 
+            "sadness": 0.206268, 
+            "disgust": 0.012421, 
+            "anger": 0.055194, 
             "surprise": 0.0, 
-            "fear": 0.64123
+            "fear": 0.08074
         }
     }, 
     {
-        "text": " Shut up Johnny! You are going to get us all killed!", 
+        "text": " I am happy for you Susan!  But weren't we supposed to go to the same college together?", 
         "character": "CHARACTER2", 
         "clip": [
             {
-                "name": "angry_sad_disbelief_2", 
-                "joy": 0.0, 
-                "anger": 0.7, 
-                "sadness": 0.3, 
-                "score": 0.9153965, 
-                "file": "anger/sad/disbelief2.fbx", 
-                "Frames": 109, 
+                "name": "joy_satisfaction", 
+                "joy": 0.6, 
+                "anger": 0.0, 
+                "sadness": 0.0, 
+                "score": 0.4902176309210526, 
+                "file": "joy/joy2.fbx", 
+                "Frames": 147, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 42
+                "id": 9
             }
         ], 
         "tones": {
-            "joy": 0.025058, 
-            "sadness": 0.330416, 
-            "disgust": 0.1216, 
-            "anger": 0.561209, 
+            "joy": 0.875869, 
+            "sadness": 0.046382, 
+            "disgust": 0.016219, 
+            "anger": 0.016938, 
             "surprise": 0.0, 
-            "fear": 0.296752
+            "fear": 0.020291
         }
     }, 
     {
-        "text": " We need to get out of here or we are going to die!", 
+        "text": " I know you will miss me, but I can't stay here just for you.", 
         "character": "CHARACTER1", 
         "clip": [
             {
-                "name": "sad_subtle_grieve_3", 
+                "name": "sad_subtle_resigned_6", 
                 "joy": 0.0, 
                 "anger": 0.0, 
-                "sadness": 0.65, 
-                "score": 0.748719, 
-                "file": "sadness/subtle/grieve3.fbx", 
-                "Frames": 90, 
+                "sadness": 0.75, 
+                "score": 0.6845740125, 
+                "file": "sadness/subtle/resigned6.fbx", 
+                "Frames": 138, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 103
+                "id": 104
             }
         ], 
         "tones": {
-            "joy": 0.017849, 
-            "sadness": 0.60431, 
-            "disgust": 0.089525, 
-            "anger": 0.096907, 
+            "joy": 0.011615, 
+            "sadness": 0.764259, 
+            "disgust": 0.021679, 
+            "anger": 0.071682, 
             "surprise": 0.0, 
-            "fear": 0.456872
+            "fear": 0.284936
+        }
+    }, 
+    {
+        "text": " I have to go now.", 
+        "character": "CHARACTER2", 
+        "clip": [
+            {
+                "name": "neutral_neutral_19", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.0, 
+                "score": 0.7142857142857143, 
+                "file": "neutral/neutral19.fbx", 
+                "Frames": 96, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 94
+            }
+        ], 
+        "tones": {
+            "joy": 0.0, 
+            "sadness": 0.0, 
+            "disgust": 0.0, 
+            "anger": 0.0, 
+            "surprise": 0.0, 
+            "fear": 0.0
         }
     }
 ]

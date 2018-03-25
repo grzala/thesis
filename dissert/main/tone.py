@@ -25,7 +25,7 @@ def analyze(text):
     return analysis
 
 def __main__():
-    text = "I hate this zoo"
+    text = "I have to go now."
     print(analyze(text))
 
 

@@ -9,4 +9,7 @@
 					CHARACTER1
 			I know you will miss me, but I can't stay here just for you.
 
+					CHARACTER2
+			I have to go now.
+
 ENDSCRIPT

@@ -43,7 +43,14 @@ def remove_duplicates(result):
 def get_query_string(emotion):
     return "SELECT * FROM animations WHERE animations." + emotion + " > 0.0"
 
-def get_score(text, emotions, item, relevant_emotions):
+def get_score(text, emotions, item, relevant_emotions, neutral = False):
+    anim_len = get_anim_len(item["Frames"])
+    text_len = get_speech_len(text)
+    len_modifier = min(anim_len, text_len) / max(anim_len, text_len)
+
+    if neutral:
+        return len_modifier
+
     difs = []
     for rel in relevant_emotions:
         score0 = emotions[rel]
@@ -57,10 +64,6 @@ def get_score(text, emotions, item, relevant_emotions):
 
     score = 1.0 - average
 
-    anim_len = get_anim_len(item["Frames"])
-    text_len = get_speech_len(text)
-    len_modifier = min(anim_len, text_len) / max(anim_len, text_len)
-
     score *= len_modifier
 
     return score 
@@ -73,7 +76,15 @@ def get_matching_gestures(text, emotions):
 
     if sorted_emo[0][1] <= RELEVANCY_THRESHOLD: #neutral
         cur.execute(neutral_query_string)
-        return cur.fetchall()
+        retrieved = cur.fetchall()
+        result = []
+
+        for item in retrieved:
+            item['score'] = get_score(text, emotions, item, {}, True)
+            result.append(item)
+        
+        return sorted(result, key=lambda res: res['score'])[::-1]
+        
     else:
         relevant_emotions = [sorted_emo[0][0]]
         if sorted_emo[1][1] > RELEVANCY_THRESHOLD:
