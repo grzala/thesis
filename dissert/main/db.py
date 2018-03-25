@@ -1,6 +1,8 @@
 import sqlite3, operator
 
 RELEVANCY_THRESHOLD = 0.1
+WORDS_PER_SECOND = 2.1
+FRAMES_PER_SECOND = 24.0
 
 con = sqlite3.connect("animation.db")
 neutral_query_string = "SELECT * FROM animations WHERE \
@@ -10,6 +12,12 @@ neutral_query_string = "SELECT * FROM animations WHERE \
                                     animations.disgust <= 0.0 AND \
                                     animations.anger <= 0.0 AND \
                                     animations.fear <= 0.0"
+
+def get_speech_len(text):
+    return len(text.split(" ")) / WORDS_PER_SECOND
+
+def get_anim_len(frames):
+    return frames / FRAMES_PER_SECOND
 
 def dict_factory(cursor, row):
     d = {}
@@ -35,7 +43,7 @@ def remove_duplicates(result):
 def get_query_string(emotion):
     return "SELECT * FROM animations WHERE animations." + emotion + " > 0.0"
 
-def get_score(emotions, item, relevant_emotions):
+def get_score(text, emotions, item, relevant_emotions):
     difs = []
     for rel in relevant_emotions:
         score0 = emotions[rel]
@@ -48,10 +56,17 @@ def get_score(emotions, item, relevant_emotions):
     average /= len(difs)
 
     score = 1.0 - average
+
+    anim_len = get_anim_len(item["Frames"])
+    text_len = get_speech_len(text)
+    len_modifier = min(anim_len, text_len) / max(anim_len, text_len)
+
+    score *= len_modifier
+
     return score 
 
 
-def get_matching_gestures(emotions):
+def get_matching_gestures(text, emotions):
     sorted_emo = sorted(emotions.items(), key=operator.itemgetter(1))[::-1][:2:]
     con.row_factory = dict_factory
     cur = con.cursor()
@@ -72,7 +87,7 @@ def get_matching_gestures(emotions):
 
         result = []
         for item in retrieved:
-            item['score'] = get_score(emotions, item, relevant_emotions)
+            item['score'] = get_score(text, emotions, item, relevant_emotions)
             result.append(item)
 
         return sorted(result, key=lambda res: res['score'])[::-1]
@@ -98,7 +113,8 @@ def __main__():
         'disgust': 0.0,
     }
 
-    print get_matching_gestures(emos)
+    get_matching_gestures("I AM GROOT", emos)
+
 
 if __name__ == "__main__":
     __main__()

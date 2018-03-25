@@ -60,7 +60,7 @@ for conversation in conversations:
     normalize_emotions(conversation)
 
 for conversation in conversations:
-    conversation['clip'] = db.get_matching_gestures(conversation['tones'])
+    conversation['clip'] = db.get_matching_gestures(conversation["text"], conversation['tones'])
 
 analyze_repeating(conversations)
 
