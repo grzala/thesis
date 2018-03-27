@@ -11,7 +11,7 @@ tone_analyzer = ToneAnalyzerV3(
 
 def analyze(text):
     utterances = [{'text': text}]
-    response = tone_analyzer.tone(tone_input=text, content_type="text/plain")
+    response = tone_analyzer.tone(tone_input=text, content_type="text/plain", sentences=False)
 
     analysis = []
 
@@ -25,7 +25,8 @@ def analyze(text):
     return analysis
 
 def __main__():
-    text = "I have to go now."
+    import sys
+    text = sys.argv[1]
     print(analyze(text))
 
 

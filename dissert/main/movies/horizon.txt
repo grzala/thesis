@@ -1,0 +1,14 @@
+					ALOY
+			Are you sure you're okay?
+
+					EREND
+			I'm sover enough, all right? I don't need another lecture.
+
+					ALOY
+			That's not what I meant. I was talking about what happened outside with the crowd.
+
+					EREND
+			I don't want to talk about that. We're here because of what you said about Olin,
+			so do what you need to do.
+
+ENDSCRIPT

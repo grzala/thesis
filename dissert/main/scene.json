@@ -1,101 +1,20 @@
 [
     {
-        "text": " I got accepted to my first choice college!  My dreams are becoming true!", 
-        "character": "CHARACTER1", 
+        "text": " Are you sure you're okay?", 
+        "character": "ALOY", 
         "clip": [
             {
-                "name": "joy_satisfaction", 
-                "joy": 0.6, 
-                "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.7366911125, 
-                "file": "joy/joy2.fbx", 
-                "Frames": 147, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 9
-            }
-        ], 
-        "tones": {
-            "joy": 0.675502, 
-            "sadness": 0.206268, 
-            "disgust": 0.012421, 
-            "anger": 0.055194, 
-            "surprise": 0.0, 
-            "fear": 0.08074
-        }
-    }, 
-    {
-        "text": " I am happy for you Susan!  But weren't we supposed to go to the same college together?", 
-        "character": "CHARACTER2", 
-        "clip": [
-            {
-                "name": "joy_satisfaction", 
-                "joy": 0.6, 
-                "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.4902176309210526, 
-                "file": "joy/joy2.fbx", 
-                "Frames": 147, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 9
-            }
-        ], 
-        "tones": {
-            "joy": 0.875869, 
-            "sadness": 0.046382, 
-            "disgust": 0.016219, 
-            "anger": 0.016938, 
-            "surprise": 0.0, 
-            "fear": 0.020291
-        }
-    }, 
-    {
-        "text": " I know you will miss me, but I can't stay here just for you.", 
-        "character": "CHARACTER1", 
-        "clip": [
-            {
-                "name": "sad_subtle_resigned_6", 
-                "joy": 0.0, 
-                "anger": 0.0, 
-                "sadness": 0.75, 
-                "score": 0.6845740125, 
-                "file": "sadness/subtle/resigned6.fbx", 
-                "Frames": 138, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 104
-            }
-        ], 
-        "tones": {
-            "joy": 0.011615, 
-            "sadness": 0.764259, 
-            "disgust": 0.021679, 
-            "anger": 0.071682, 
-            "surprise": 0.0, 
-            "fear": 0.284936
-        }
-    }, 
-    {
-        "text": " I have to go now.", 
-        "character": "CHARACTER2", 
-        "clip": [
-            {
-                "name": "neutral_neutral_19", 
+                "name": "neutral_neutral_20", 
                 "joy": 0.0, 
                 "anger": 0.0, 
                 "sadness": 0.0, 
                 "score": 0.7142857142857143, 
-                "file": "neutral/neutral19.fbx", 
+                "file": "neutral/neutral20.fbx", 
                 "Frames": 96, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 94
+                "id": 95
             }
         ], 
         "tones": {
@@ -105,6 +24,87 @@
             "anger": 0.0, 
             "surprise": 0.0, 
             "fear": 0.0
+        }
+    }, 
+    {
+        "text": " I'm sover enough, all right? I don't need another lecture.", 
+        "character": "EREND", 
+        "clip": [
+            {
+                "name": "angry_enough_2", 
+                "joy": 0.0, 
+                "anger": 0.4, 
+                "sadness": 0.0, 
+                "score": 0.9130341818181819, 
+                "file": "anger/furious/enough2.fbx", 
+                "Frames": 120, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 26
+            }
+        ], 
+        "tones": {
+            "joy": 0.097049, 
+            "sadness": 0.068672, 
+            "disgust": 0.078764, 
+            "anger": 0.356512, 
+            "surprise": 0.0, 
+            "fear": 0.070033
+        }
+    }, 
+    {
+        "text": " That's not what I meant. I was talking about what happened outside with the crowd.", 
+        "character": "ALOY", 
+        "clip": [
+            {
+                "name": "sad_subtle_helpless_2", 
+                "joy": 0.0, 
+                "anger": 0.4, 
+                "sadness": 0.5, 
+                "score": 0.7933240546875, 
+                "file": "sadness/subtle/helpless2.fbx", 
+                "Frames": 164, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 106
+            }
+        ], 
+        "tones": {
+            "joy": 0.01784375, 
+            "sadness": 0.563002, 
+            "disgust": 0.095546, 
+            "anger": 0.232087, 
+            "surprise": 0.0, 
+            "fear": 0.221979
+        }
+    }, 
+    {
+        "text": " I don't want to talk about that. We're here because of what you said about Olin, so do what you need to do.", 
+        "character": "EREND", 
+        "clip": [
+            {
+                "name": "fear_terrified_terrified_2", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.0, 
+                "score": 0.4684925875, 
+                "file": "fear/terrified/terrified2.fbx", 
+                "Frames": 204, 
+                "surprise": 0.0, 
+                "fear": 0.65, 
+                "disgust": 0.0, 
+                "id": 69
+            }
+        ], 
+        "tones": {
+            "joy": 0.077255, 
+            "sadness": 0.301007, 
+            "disgust": 0.116018, 
+            "anger": 0.190254, 
+            "surprise": 0.0, 
+            "fear": 0.210819
         }
     }
 ]

@@ -39,14 +39,18 @@ def normalize_emotions(conversation):
     newtones['sadness'] = tones['sadness']
     conversation['tones'] = newtones
 
+    if newtones['anger'] > 0.2:
+        newtones["joy"] /= 4.0
+
 def analyze_repeating(conversations):
     previously_used = []
     for conversation in conversations:
+        clipcopy = list(conversation['clip'])
         lastindex = 0
         for clip in conversation['clip']:
-            lastindex += 1
             if clip['name'] not in previously_used:
                 break
+            lastindex += 1
 
         newclip = conversation['clip'][lastindex]
         if newclip['score'] >= 0.2:
@@ -54,6 +58,11 @@ def analyze_repeating(conversations):
         else: 
             conversation['clip'] = [conversation['clip'][0]]
         previously_used.append(conversation['clip'][0]['name'])
+
+        print("FINAL CHOICE:", conversation["text"], "ANIM:", conversation['clip'][0]['name'])
+        for clip in clipcopy:
+            print clip["name"], ", ",
+        print()
 
 
 for conversation in conversations:
