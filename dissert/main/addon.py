@@ -36,6 +36,7 @@ class Character:
         self.name = name # Name
         self.object = obj # Blender object (armature and model)
         self.camoffset = Vector((-0.5, -1.8, 1.65)) # Camera offset
+        self.camrot = Vector((0.0, 0.0, 1.3)) # Camera rotation
         self.select()
         bpy.context.area.type = 'NLA_EDITOR'
         # Pushdown action on NLA immediately after creating the character
@@ -63,7 +64,9 @@ class Character:
         
     def set_cam_offset(self, x, y, z):
         self.camoffset = Vector((x, y, z))
-        print("SETTING CAM OFFSET", self.camoffset)
+        
+    def set_cam_rot(self, x, y, z):
+        self.camrot = Vector((x, y, z))
     
     # Get camera position - character position + camera offset
     def get_camera_position(self):
@@ -79,7 +82,7 @@ class Character:
     # Get camera rotation to point at Character's face
     def get_camera_rotation(self, cam):
         headloc = Vector(self.object.location)
-        headloc += Vector((0.0, 0.0, 1.3))
+        headloc += self.camrot
         camloc = cam.location
         direction = headloc - camloc
         rot_quat = direction.to_track_quat('-Z', 'Y')
@@ -302,6 +305,7 @@ def finalize(character_choice, models, lines):
         
         newchar = Character(import_character(name, file), name)
         newchar.set_cam_offset(model['cam_offset_x'], model['cam_offset_y'], model['cam_offset_z'])
+        newchar.set_cam_rot(model['cam_rot_x'], model['cam_rot_y'], model['cam_rot_z'])
 
         characters[name] = newchar
     
