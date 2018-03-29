@@ -7,7 +7,6 @@ RELEVANCY_THRESHOLD = 0.2 # Emotional score below this value is irrelevant
 WORDS_PER_SECOND = 2.1 # Speech speed
 FRAMES_PER_SECOND = 24.0 # Animation speed
 
-con = sqlite3.connect("animation.db")
 neutral_query_string = "SELECT * FROM animations WHERE \
                                     animations.joy <= 0.0 AND \
                                     animations.sadness <= 0.0 AND \
@@ -79,8 +78,9 @@ def get_score(text, emotions, item, relevant_emotions, neutral = False):
     return score 
 
 # Get a list of animations sorted so that the most matching one is first
-def get_matching_gestures(text, emotions):
+def get_matching_gestures(text, emotions, dbpath):
     # Find the most relevant emotions
+    con = sqlite3.connect(dbpath)   
     sorted_emo = sorted(emotions.items(), key=operator.itemgetter(1))[::-1][:2:]
     con.row_factory = dict_factory
     cur = con.cursor()

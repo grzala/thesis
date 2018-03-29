@@ -6,7 +6,7 @@ import sys
 import pprint
 
 # This is the main script of the analyzer module
-# Command line arguments - filepath to script to analyze
+# Command line arguments - filepath to script to analyze and path to animation database
 # This program takes in a script as input, analyzes emotions, matches the animations
 # This program outputs a json file instructions of how to assemble the animation
 
@@ -68,7 +68,7 @@ def main():
 
     # Find animations matching each dialogue line
     for conversation in conversations:
-        conversation['clip'] = db.get_matching_gestures(conversation["text"], conversation['tones'])
+        conversation['clip'] = db.get_matching_gestures(conversation["text"], conversation['tones'], sys.argv[2])
 
     # Ensure animations do not repeat too often
     analyze_repeating(conversations)
