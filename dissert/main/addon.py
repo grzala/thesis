@@ -6,6 +6,7 @@ import traceback
 from pprint import pprint
 from mathutils import *
 import json
+import sqlite3
 
 # This file is a Blender extension which assembles the final animation given JSON instructions
 
@@ -59,6 +60,10 @@ class Character:
     def rotate(self, vec):
         self.select()
         self.object.rotation_euler = vec
+        
+    def set_cam_offset(self, x, y, z):
+        self.camoffset = Vector((x, y, z))
+        print("SETTING CAM OFFSET", self.camoffset)
     
     # Get camera position - character position + camera offset
     def get_camera_position(self):
@@ -66,6 +71,8 @@ class Character:
         offset = Vector((self.camoffset))
         mat = Matrix.Rotation(self.object.rotation_euler.z, 4, 'Z')
         offset.rotate(mat)
+        
+        print("GETTING CAM OFFSET", self.camoffset)
 
         return pos + offset
     
@@ -237,6 +244,18 @@ def prepare_lines(dialogue):
         lines.append(new_line)
     return lines
 
+
+
+
+####################### BLENDER ADDON #########################
+
+
+prepared = False
+prepared_data = None
+char_choice_to_draw = []
+cached_models = {}
+
+
 # Assemble animation
 def prepare(anim_folder, model_folder, db_path, dialogue_path):
     global ANIM_FOLDER, MODEL_FOLDER
@@ -261,21 +280,34 @@ def prepare(anim_folder, model_folder, db_path, dialogue_path):
     result['characters'] = required_characters
     result['anim_folder'] = anim_folder
     result['model_folder'] = model_folder
-    result['db'] = db_path
+    result['db'] = db_path.replace("/", "")
     
+    print("PREPARED")
     return result
     
-'''
+    
+    
+def finalize(character_choice, models, lines):
     # Import all needed character models
+    print("MODELS:", models)
     characters = {}
-    for char in required_characters:
-        name = char
-        file = 'untitled.fbx'
-        characters[name] = Character(import_character(name, file), name)
+    sorted_char_names = sorted(character_choice.keys())
+    print("CHARCHOICE2:", character_choice)
+    for charname in sorted_char_names:
+        print("NOWADDING:", charname)
+        modelname = character_choice[charname]
+        name = charname
+        model = models[modelname]
+        file = model['file']
+        
+        newchar = Character(import_character(name, file), name)
+        newchar.set_cam_offset(model['cam_offset_x'], model['cam_offset_y'], model['cam_offset_z'])
+
+        characters[name] = newchar
     
     # Support only two characters. Place the second character in front of the first character
-    if len(required_characters) > 1:
-        char = characters[required_characters[1]]
+    if len(sorted_char_names) > 1:
+        char = characters[sorted_char_names[1]]
         char.move((0.0, -1.8, 0.0))
         char.rotate((0.0, 0.0, 3.14))
     
@@ -336,26 +368,44 @@ def prepare(anim_folder, model_folder, db_path, dialogue_path):
     
     bpy.context.scene.frame_current = 1
     bpy.context.area.type = 'VIEW_3D'
-'''
+    
+    global prepared 
+    prepared = False
 
 
-####################### BLENDER ADDON #########################
+############ BLENDER UI #####################
 
+def dict_factory(cursor, row):
+    d = {}
+    for idx, col in enumerate(cursor.description):
+        d[col[0]] = row[idx]
+    return d
 
-prepared = False
-char_choice_to_draw = []
+def get_available_models(db):
+    print("OPENING:", db)
+    con = sqlite3.connect(os.getcwd() + '\\' + db)
+    query = "SELECT * FROM models"
+    con.row_factory = dict_factory
+    cur = con.cursor()
+    cur.execute(query)
+    result = cur.fetchall()
+    con.close()
+    return result
 
 # Update character choice list
-def update_char_choice_list(characters):
-    global char_choice_to_draw
+def update_char_choice_list(db, characters):
+    global char_choice_to_draw, cached_models
     char_choice_to_draw = []
+    cached_models = {}
     
-    print("CHARACTERS: ", characters)
-    lst = [
-            ("ID1", "NAME1", "DESC1"),
-            ("ID2", "NAME2", "DESC2"),
-            ("BZBK", "ASFASFASF", "OOOO"),
-            ]
+    av_chars = get_available_models(db)
+    lst = []
+    
+    i = 0
+    for char in av_chars:
+        cached_models[char['name']] = char
+        lst.append((str(i), char['name'], char['name']))
+        i += 1
             
     i = 0
     for character in characters:
@@ -367,7 +417,18 @@ def update_char_choice_list(characters):
         )
         char_choice_to_draw.append('character_choice_' + str(i))
         i += 1
+    setattr(bpy.types.Scene, 'character_choice_' + str(i), None) 
+    
+# Clean button
+class ExecuteOperator(bpy.types.Operator):
+    """Tooltip"""
+    bl_idname = "object.clean_operator"
+    bl_label = "CleanOperator"
 
+    # On click
+    def execute(self, context):
+        cleanup()
+        return {'FINISHED'}
 
 # Execute button
 class ExecuteOperator(bpy.types.Operator):
@@ -377,31 +438,45 @@ class ExecuteOperator(bpy.types.Operator):
 
     # On click
     def execute(self, context):
-        global prepared, character_choice_items
+        global prepared, character_choice_items, prepared_data
         try:
             prepared_data = prepare(context.scene.anim_folder, context.scene.model_folder, context.scene.database, context.scene.dialogue)
             prepared = True
             
-            update_char_choice_list(prepared_data['characters'])
+            update_char_choice_list(prepared_data['db'], prepared_data['characters'])
             
         except Exception as e:
             print(str(e))
             return {'FINISHED'}
         return {'FINISHED'}
     
-# Execute button
+# Finalize button
 class FinalizeOperator(bpy.types.Operator):
     """Tooltip"""
     bl_idname = "object.finalize_operator"
     bl_label = "Assembly Finalize Operator"
 
-    @classmethod
-    def poll(cls, context):
-        return context.active_object is not None
-
     # On click
     def execute(self, context):
-        print("FINALIZEAAA")
+        print("FINALIZE")
+        
+        character_choice = {}
+        i = 0
+        for name in char_choice_to_draw:
+            data = getattr(bpy.types.Scene, name)[1]
+            choice_idx = int(getattr(context.scene, name))
+            [1]
+            character = data['name']
+            choice = data['items'][choice_idx][1]
+            print("DATA:", data)
+            character_choice[character] = choice
+            i += 1
+            
+        print("CHARACTER_CHOICE:", character_choice)
+        
+        finalize(character_choice, cached_models, prepared_data['lines'])
+        
+        print("FINALIZED")
         return {'FINISHED'}
     
 class View3DPanel(): 
@@ -420,12 +495,15 @@ class GenerateAnimationPanel(View3DPanel, Panel):
     def draw(self, context): 
         layout = self.layout
         col = layout.column()
+        
+        col.operator("object.clean_operator", text="Clean", icon="ERROR")
+        
         col.prop(context.scene, 'anim_folder')
         col.prop(context.scene, 'model_folder')
         col.prop(context.scene, 'database')
         col.prop(context.scene, 'dialogue')
         
-        layout.operator("object.execute_operator", text="Execute", icon="ANIM") 
+        col.operator("object.execute_operator", text="Prepare", icon="ANIM") 
         
 class FinalizeAnimationPanel(View3DPanel, Panel): 
     bl_label = "Finalize"
@@ -440,12 +518,15 @@ class FinalizeAnimationPanel(View3DPanel, Panel):
         global char_choice_to_draw
         layout = self.layout
         col = layout.column()
+        col.label("------- Choose models -------")
         
         for name in char_choice_to_draw:
             col.prop(context.scene, name)
         
+        col = layout.column()
+        col.label("------------- Assemlbe -------------")
         
-        layout.operator("object.finalize_operator", text="Finalize", icon="ERROR") 
+        layout.operator("object.finalize_operator", text="Assemble", icon="AUTO") 
         
         
 
