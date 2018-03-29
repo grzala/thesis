@@ -38,6 +38,11 @@ The full diagram of the system can be seen in figure ~\ref{fig:architecture}.
 \caption{The pipeline architecture of the system}\label{fig:architecture}
 \end{figure}
 
+\section{Character Armature and Model}
+
+TO DO
+
+\section{EMBD Iimporter}
 
 \section{Input}
 
@@ -73,6 +78,13 @@ The database is implemented using SQLite. It is the perfect tool for this task a
 \caption{Database of animation clips}\label{fig:db}
 \end{figure}
 
+The other purpose of the database is to store the information about the models. The important information about a model is its name, file location, camera offset and rotation. Because models may be of different shapes and sizes, camera positioning during dialogue will not be the same. The database allows to specify a desirable camera position relative to the character that will allow to fully capture the character at a good angle. Example of a few model database records can be seen in figure ~\ref{fig:dbmodel}.
+
+\begin{figure}[!ht]
+\centerline{\fbox{\includegraphics[width = 30em]{img/dbmodel.png}}}
+\caption{Database of character models}\label{fig:dbmodel}
+\end{figure}
+
 
 \section{Matcher}
 
@@ -81,8 +93,15 @@ TO DO
 
 \section{Animation Generator (Importer)}
 
+As a forementioned, in this project I have used Blender to support the animation generator model. The generator is a Blender addon.  It can either be used as a script, or be installed as an addon to be fully and permanently available within Blender.
 
-As a forementioned, in this project I have used Blender for creating the animation. The generator is a Blender addon script. The generator first reads the JSON file prepared by previous modules and loads required animation clips from files. Each action is assigned to a corresponding character model and then pushed on a separate NLA strip (figure ~\ref{fig:nla}). Subtitles are added as Video Editor Sequence Strips spanning between frames that correspond to the animation (figure ~\ref{fig:substrips}). The camera is animated to focus on a character that is currently talking.
+The generator first reads the JSON file prepared by previous modules and loads required animation clips from files. The user needs assign a 3D character model to each character participating in the dialogue. The required 3D character models are animated and the camera is positioned accordingly to the model's metadata stored in the database. The animated characters are positioned to directly face each other (the program currently supports only up to two characters in one scene). Each animated action is assigned to a corresponding character model and then pushed on a separate NLA strip (figure ~\ref{fig:nla}). The program keeps track of how many frames are being used so that newly added actions begin just when the previous actions have ended.
+
+To setup some basic background and feel, a floor (plane) is added beneath the characters and two directional lights cast light down from above the characters.
+
+The camera is added to the scene and positioned using the metadata retrievec from the database. At the start of each character's actions the camera is positioned and rotated to focus at the character performing an action.
+
+Subtitles are added as Video Editor Sequence Strips spanning between frames that correspond to the animation (figure ~\ref{fig:substrips}).
 
 \begin{figure}[!ht]
 \centerline{\fbox{\includegraphics[width = 30em]{img/nla.png}}}
@@ -93,7 +112,7 @@ As a forementioned, in this project I have used Blender for creating the animati
 \caption{Video strips featuring subtitles}\label{fig:substrips}
 \end{figure}
 
-The final animation can be edited and adjusted in Blender (figure ~\ref{fig:finalblend}) or rendered (figure ~\ref{fig:finalrend}).
+The final animation can be edited and adjusted in Blender (figure ~\ref{fig:finalblend}), rendered (figure ~\ref{fig:finalrend}) or exported to file.
 
 
 \begin{figure}[!ht]
@@ -107,11 +126,25 @@ The final animation can be edited and adjusted in Blender (figure ~\ref{fig:fina
 
 \section{User Interface}
 
-The Animation Generator module is the only module that features a Graphical UI. The module is embedded into Blender and uses extends Blender's interface. The UI is minimalistic and simple to use. It requires the user to specify an input file, as well as animation directory. Upon execution, the extension will pre-load the animations and determine characters involved in the scene. Now it is up to the user to specify which model is supposed to be used for each character. Upon pressing finalize, the animation will be created. From now on The user can continue to use Blender normally.
+The Animation Generator module is the only module that features a Graphical UI. The module is embedded into Blender and uses extends Blender's interface. 
 
-The JSON file must be created first outside of blender by running a script. This is because the modules need to be kept as separate as possible so that importers can be easily implemented for other platforms.
+The UI is minimalistic and simple to use. Upon installation and activation a new tab is added to the menu on the left hand side. Figure ~\ref {fig:ui_main}. Rectangle 1 represents the left hand side menu. Number 2 shows the tabs where the bottommost one belongs to the extension. Number 3 shows the actual UI of the extension.
 
-They key aspect of the interface is its simplicity as it allows users to generate relatively complicated animation sequences by essentially using two buttons, with no knowledge about animation and little Blender expertise required. The UI also provides flexibility as the user can decide upon which character models to use. The final UI is presented in FIGURE.
+\begin{figure}[!ht]
+\centerline{\includegraphics[width = 18em]{img/ui_main.png}}
+\caption{The addon UI}\label{fig:ui_main}
+\end{figure}
+
+From here the user is able to either clean the scene (might be useful especially if something unexpected happens or the work of the extension is interrupted) or prepare the scene. To prepare the scene the user must first initialize the four variables. The user needs to point the program to where the animations and models are stored as well as the database file and the scene file (JSON file generated by previous modules).
+
+Upon pressing `Prepare` the program will prepare data for generating a scene. Required animations will be imported and the scene file will be parsed. There is one more step left to finalize the animation. When preparation is finished, a new menu will pop up below the currently existing one. The menu can be seen in figure ~\ref{fig:ui_finalize}. In the menu the user is required to assign a character model to each character existing in the scene. Upon pressing `Finalize` the full scene will be generated complete with lighting, camera movement and subtitles.
+
+\begin{figure}[!ht]
+\centerline{\includegraphics[width = 18em]{img/ui_finalize.png}}
+\caption{The finalization step (new menu highlighted by white rectangle)}\label{fig:ui_finalize}
+\end{figure}
+
+They key aspect of the interface is its simplicity as it allows users to generate relatively complicated animation sequences by essentially using two buttons, with no knowledge about animation and little Blender expertise required. The UI also provides flexibility as the user can decide upon which character models to use.
 
 
 
