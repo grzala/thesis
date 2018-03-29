@@ -1,72 +1,91 @@
-import bpy
+import bpy # Blender
 import os
 import os.path
 import urllib
-import wget
+import wget # Download files from internet
 
+# The purpose of the importer is to modify the EMBD animations
+# So that they are usable within this system
+# The procedure:
+#   1. Download animation from EMDB
+#   2. Remove unnecessary bones from the action
+#   3. Rename other bones so that they mirror the names of the bones of target armature
+#   4. Apply the action to armature
+#   5. Export the action (animation) as fbx
+
+# Download animation, apply to armature, export animation
 def import_anim(LINK, TARGET_NAME, directory_name):
     FILENAME = LINK.split('/')[-1]
+
+    # Download fbx file if not yet downloaded
     if not os.path.isfile('tmp/' + FILENAME):
         wget.download(LINK, 'tmp/' + FILENAME)
 
-
+    # Clean the scene - remove all existing objects and actions
     for object in bpy.data.objects:
         object.select = True
     bpy.ops.object.delete()
     for action in bpy.data.actions:
         bpy.data.actions.remove(action)
 
+    # Open the downloaded animation
     fpath = os.getcwd() + '/tmp/' + FILENAME
     bpy.ops.import_anim.bvh(filepath=fpath, use_fps_scale=True, rotate_mode='QUATERNION')
 
 
-    #rename action
     bpy.context.area.type = 'DOPESHEET_EDITOR'
     bpy.context.space_data.mode = 'ACTION'
-    #rename
-    bpy.data.actions[0].name = TARGET_NAME
+    bpy.data.actions[0].name = TARGET_NAME # Rename action to target name
     frame_range = bpy.data.actions[0].frame_range
     action = bpy.data.actions[0]
+    # move 1 frame forwards and backwards - removes keyframes at fraction of a frame
     bpy.ops.transform.transform(mode='TIME_TRANSLATE', value=(-1, 0, 0, 0), axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1)
     bpy.ops.transform.transform(mode='TIME_TRANSLATE', value=(1, 0, 0, 0), axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1)
 
-
+    # Bones present in EMBD animation, not present in target armature
     anims_to_delete = ["Hips", "RightHip", "RightKnee", "RightAnkle", "RightToe",
                                "LeftHip", "LeftKnee", "LeftAnkle", "LeftToe",
                                "Chest4", "Chest3"]
     channels_to_delete = []
 
+    # Remove unnecessary bones
     for f in action.fcurves:
         print(f.data_path)
         for a in anims_to_delete:
             if a in f.data_path:
+                # Find data path that belongs to the bone
                 channels_to_delete.append(f)
                 print("appending: " + f.data_path)
-                
+    
+    # Remove data paths belonging to unnecessary bones
     for f in channels_to_delete:
         action.fcurves.remove(f)
 
 
-
+    # Prepare to import target armature
     bpy.context.area.type = 'VIEW_3D'
     bpy.context.scene.frame_set(1)
+    # Import target armature
     bpy.ops.import_scene.fbx(filepath='armature.fbx', filter_glob="*.fbx;", ignore_leaf_bones=False)
-    for obj in bpy.data.objects:
+    for obj in bpy.data.objects: # Unselect all objects
         obj.select = False
-    bpy.data.objects[FILENAME.split(".")[0]].select = True
-    bpy.ops.object.delete()
-    obj = bpy.data.objects[0]
-    obj.animation_data.action = action
+    
+    bpy.data.objects[FILENAME.split(".")[0]].select = True # Select EMBD armature
+    bpy.ops.object.delete() # Delete EMDB armature (no longer needed)
+    obj = bpy.data.objects[0] # Select target armature
+    obj.animation_data.action = action # Apply EMBD animation to target armature
 
+    # Reset pose, apply reseted pse as first keyframe
     bpy.ops.object.posemode_toggle()
     bpy.ops.pose.transforms_clear()
     bpy.ops.anim.keyframe_insert_menu(type='LocRotScale')
     bpy.context.scene.frame_end = int(frame_range[1])
 
-
+    # Export the finalized animation
     bpy.context.area.type = 'VIEW_3D'
-    bpy.ops.object.posemode_toggle()
+    bpy.ops.object.posemode_toggle() # Exit pose mode
     bpy.data.objects[0].select = True
+    # Export animation - do not use nla strips, do not add new bones, overwrite existing
     bpy.ops.export_scene.fbx(filepath=directory_name+'/'+TARGET_NAME+'_f-'+ str(frame_range[1]) +'.fbx', check_existing = False, \
     use_selection=True, object_types={'ARMATURE'}, \
     bake_anim = True, bake_anim_use_all_bones = True, \
@@ -77,7 +96,9 @@ def import_anim(LINK, TARGET_NAME, directory_name):
 
 
 
-#anger
+# EMBD animation links
+
+# Anger
 angers = [
     "http://ebmdb.tuebingen.mpg.de/data/bvh/AnBh_0208_ftf_wd_t3-002_91_560809_563542_2733_Anger.bvh",
     "http://ebmdb.tuebingen.mpg.de/data/bvh/AnBh_0208_ftf_wd_t3-002_91_560809_563542_2733_Anger.bvh",
@@ -139,7 +160,8 @@ angers = [
     "http://ebmdb.tuebingen.mpg.de/data/bvh/SiGl_nv_so_anger_10984-11701.bvh",
     
     ]
-    
+
+# Fear  
 fears = [
     "http://ebmdb.tuebingen.mpg.de/data/bvh/AnBh_ft_sp_fear_12575-13504.bvh",
     "http://ebmdb.tuebingen.mpg.de/data/bvh/DiMi_0709_ft_na_t1_fear_15453-16392.bvh",
@@ -170,6 +192,7 @@ fears = [
     
     ]
 
+# Joy
 joys = [
     "http://ebmdb.tuebingen.mpg.de/data/bvh/DiMi_0709_nv_al_t1_joy_08424-09448.bvh",
     "http://ebmdb.tuebingen.mpg.de/data/bvh/HeGa_0308_ftf_flower_t3-001_0_115683_121166_5483_Joy.bvh",
@@ -194,7 +217,7 @@ joys = [
     
     ]
     
-
+# Sadness
 sadnesses = [
     "http://ebmdb.tuebingen.mpg.de/data/bvh/AnBh_0208_ftf_wd_t3-002_64_407150_411592_4442_Sadness.bvh",
     "http://ebmdb.tuebingen.mpg.de/data/bvh/AnBh_0208_ftf_wd_t3-002_68_430984_434925_3941_Sadness.bvh",
@@ -234,7 +257,7 @@ sadnesses = [
     
     ]
     
-# 20 clips
+# Neutral (20 clips)
 neutrals = [
     "http://ebmdb.tuebingen.mpg.de/data/bvh/AnBh_0208_ftf_wd_t3-002_13_108975_113234_4259_Neutral.bvh",
     "http://ebmdb.tuebingen.mpg.de/data/bvh/AnBh_0208_ftf_wd_t3-002_16_125484_129659_4175_Neutral.bvh",
@@ -257,7 +280,7 @@ neutrals = [
     "http://ebmdb.tuebingen.mpg.de/data/bvh/DiMi_0709_ftf_goose_t1-001_35_304942_308908_3966_Neutral.bvh",
     "http://ebmdb.tuebingen.mpg.de/data/bvh/DiMi_0709_ftf_goose_t1-001_64_483767_487717_3950_Neutral.bvh",
     ]
-    
+
 full_list = [
     ["neutral", neutrals],
     ["anger", angers],
@@ -266,19 +289,21 @@ full_list = [
     ["fear", fears],
 ]
 
+# Import every animation
 for anim_list in full_list:
     i = 0
-    name = anim_list[0]
+    name = anim_list[0] # emotion name
     imported = []
-    directory_name = "imported/"+name 
+    directory_name = "imported/"+name # store animations in folders for given emotion
     if not os.path.exists(directory_name):
-        os.makedirs(directory_name)
+        os.makedirs(directory_name) # create folder if not exists
     for anim in anim_list[1]:
-        if anim not in imported:
+        if anim not in imported: # make sure not to import the same anim twice
             try:
+                # download and import the animation
                 import_anim(anim, str(i) + '_' + name, directory_name)
             except:
-                print(anim + " not imported")
+                print("error: " + anim + " not imported")
             i += 1
             imported.append(anim)
 
