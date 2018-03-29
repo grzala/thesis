@@ -238,7 +238,7 @@ def prepare_lines(dialogue):
     return lines
 
 # Assemble animation
-def main(anim_folder, model_folder, db_path, dialogue_path):
+def prepare(anim_folder, model_folder, db_path, dialogue_path):
     global ANIM_FOLDER, MODEL_FOLDER
     Character.current_pushdown_strip = 1
     dialogue = json.load(open(os.getcwd() + '\\' + dialogue_path[2:]))
@@ -254,6 +254,18 @@ def main(anim_folder, model_folder, db_path, dialogue_path):
     for anim in anims:
         import_anim(anim[0], anim[1])
         
+    lines = prepare_lines(dialogue)
+    
+    result = {}
+    result['lines'] = lines
+    result['characters'] = required_characters
+    result['anim_folder'] = anim_folder
+    result['model_folder'] = model_folder
+    result['db'] = db_path
+    
+    return result
+    
+'''
     # Import all needed character models
     characters = {}
     for char in required_characters:
@@ -266,8 +278,6 @@ def main(anim_folder, model_folder, db_path, dialogue_path):
         char = characters[required_characters[1]]
         char.move((0.0, -1.8, 0.0))
         char.rotate((0.0, 0.0, 3.14))
-        
-    lines = prepare_lines(dialogue)
     
     # Start assembling the animation
     current_frame = 0
@@ -326,16 +336,64 @@ def main(anim_folder, model_folder, db_path, dialogue_path):
     
     bpy.context.scene.frame_current = 1
     bpy.context.area.type = 'VIEW_3D'
-
+'''
 
 
 ####################### BLENDER ADDON #########################
 
+
+prepared = False
+char_choice_to_draw = []
+
+# Update character choice list
+def update_char_choice_list(characters):
+    global char_choice_to_draw
+    char_choice_to_draw = []
+    
+    print("CHARACTERS: ", characters)
+    lst = [
+            ("ID1", "NAME1", "DESC1"),
+            ("ID2", "NAME2", "DESC2"),
+            ("BZBK", "ASFASFASF", "OOOO"),
+            ]
+            
+    i = 0
+    for character in characters:
+        setattr(bpy.types.Scene, 'character_choice_' + str(i), bpy.props.EnumProperty \
+          (
+          name = character,
+          items = lst
+          )
+        )
+        char_choice_to_draw.append('character_choice_' + str(i))
+        i += 1
+
+
 # Execute button
-class SimpleOperator(bpy.types.Operator):
+class ExecuteOperator(bpy.types.Operator):
     """Tooltip"""
-    bl_idname = "object.simple_operator"
-    bl_label = "Simple Object Operator"
+    bl_idname = "object.execute_operator"
+    bl_label = "Assembly Execute Operator"
+
+    # On click
+    def execute(self, context):
+        global prepared, character_choice_items
+        try:
+            prepared_data = prepare(context.scene.anim_folder, context.scene.model_folder, context.scene.database, context.scene.dialogue)
+            prepared = True
+            
+            update_char_choice_list(prepared_data['characters'])
+            
+        except Exception as e:
+            print(str(e))
+            return {'FINISHED'}
+        return {'FINISHED'}
+    
+# Execute button
+class FinalizeOperator(bpy.types.Operator):
+    """Tooltip"""
+    bl_idname = "object.finalize_operator"
+    bl_label = "Assembly Finalize Operator"
 
     @classmethod
     def poll(cls, context):
@@ -343,11 +401,7 @@ class SimpleOperator(bpy.types.Operator):
 
     # On click
     def execute(self, context):
-        try:
-            main(context.scene.anim_folder, context.scene.model_folder, context.scene.database, context.scene.dialogue)
-        except Exception as e:
-            print(str(e))
-            return {'FINISHED'}
+        print("FINALIZEAAA")
         return {'FINISHED'}
     
 class View3DPanel(): 
@@ -355,10 +409,10 @@ class View3DPanel():
     bl_region_type = 'TOOLS' 
 
 # Extension GUI
-class OpenStudioAddRigPanel(View3DPanel, Panel): 
-    bl_label = "Add Rig"
+class GenerateAnimationPanel(View3DPanel, Panel): 
+    bl_label = "Sources"
     bl_context = "objectmode" 
-    bl_category = "Open Studio" 
+    bl_category = "Generate NLP anim" 
     
     def test():
         print("test")
@@ -371,13 +425,36 @@ class OpenStudioAddRigPanel(View3DPanel, Panel):
         col.prop(context.scene, 'database')
         col.prop(context.scene, 'dialogue')
         
-        layout.operator("object.simple_operator", text="execute", icon="ERROR") 
+        layout.operator("object.execute_operator", text="Execute", icon="ANIM") 
+        
+class FinalizeAnimationPanel(View3DPanel, Panel): 
+    bl_label = "Finalize"
+    bl_context = "objectmode" 
+    bl_category = "Generate NLP anim" 
+        
+    @classmethod
+    def poll(cls, context):
+        return prepared
+    
+    def draw(self, context): 
+        global char_choice_to_draw
+        layout = self.layout
+        col = layout.column()
+        
+        for name in char_choice_to_draw:
+            col.prop(context.scene, name)
+        
+        
+        layout.operator("object.finalize_operator", text="Finalize", icon="ERROR") 
+        
+        
+
         
 # GUI buttons
 def register():
     bpy.utils.register_module(__name__)
-    #bpy.utils.register_class(SimpleOperator)
-    #bpy.utils.register_class(SimpleOperator)
+    #bpy.utils.register_class(GenerateAnimationPanel)
+    #bpy.utils.register_class(ExecuteOperator)
     bpy.types.Scene.anim_folder = bpy.props.StringProperty \
       (
       name = "Animations Directory",
@@ -408,11 +485,13 @@ def register():
       description = "Dialogue Path",
       subtype = 'FILE_PATH'
       )
+
     
 
 def unregister():
     bpy.utils.unregister_module(__name__)
-    #bpy.utils.unregister_class(SimpleOperator)
+    #bpy.utils.unregister_class(GenerateAnimationPanel)
+    #bpy.utils.unregister_class(FinalizeAnimationPanel)
     #del bpy.types.Scene.conf_path
     
 if __name__ == "__main__": 
