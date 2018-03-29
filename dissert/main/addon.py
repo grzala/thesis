@@ -8,12 +8,22 @@ from mathutils import *
 import json
 import sqlite3
 
-# This file is a Blender extension which assembles the final animation given JSON instructions
 
-# Get current path
-dir = os.path.dirname(bpy.data.filepath)
-if not dir in sys.path:
-    sys.path.append(dir)
+bl_info= {
+    "name": "NLPanim",
+    "author": "grzala",
+    "version": (1, 0, 0),
+    "blender": (2, 70, 0),
+    "location": "View3D > Tool Shelf",
+    "description": "Generate animation from natural language",
+    "warning": "",
+    "wiki_url": "",
+    "tracker_url": "",
+    "category": "Object"}
+
+
+
+# This file is a Blender extension which assembles the final animation given JSON instructions
 
 # Unselect all objects
 def unselect_all_objects():
@@ -424,7 +434,7 @@ def update_char_choice_list(db, characters):
     setattr(bpy.types.Scene, 'character_choice_' + str(i), None) 
     
 # Clean button
-class ExecuteOperator(bpy.types.Operator):
+class CleanOperator(bpy.types.Operator):
     """Tooltip"""
     bl_idname = "object.clean_operator"
     bl_label = "CleanOperator"
@@ -537,9 +547,14 @@ class FinalizeAnimationPanel(View3DPanel, Panel):
         
 # GUI buttons
 def register():
-    bpy.utils.register_module(__name__)
-    #bpy.utils.register_class(GenerateAnimationPanel)
-    #bpy.utils.register_class(ExecuteOperator)
+    #bpy.utils.register_module(__name__)
+    bpy.utils.register_class(GenerateAnimationPanel)
+    bpy.utils.register_class(ExecuteOperator)
+    bpy.utils.register_class(CleanOperator)
+    bpy.utils.register_class(FinalizeOperator)
+    bpy.utils.register_class(FinalizeAnimationPanel)
+    
+    
     bpy.types.Scene.anim_folder = bpy.props.StringProperty \
       (
       name = "Animations Directory",
@@ -575,10 +590,10 @@ def register():
 
 def unregister():
     bpy.utils.unregister_module(__name__)
-    #bpy.utils.unregister_class(GenerateAnimationPanel)
-    #bpy.utils.unregister_class(FinalizeAnimationPanel)
-    #del bpy.types.Scene.conf_path
     
 if __name__ == "__main__": 
-    unregister()
     register()
+    # Get current path
+    dir = os.path.dirname(bpy.data.filepath)
+    if not dir in sys.path:
+        sys.path.append(dir)
