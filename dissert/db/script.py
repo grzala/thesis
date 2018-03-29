@@ -4,7 +4,7 @@ import os.path
 import urllib
 import wget
 
-def import_anim(LINK, TARGET_NAME):
+def import_anim(LINK, TARGET_NAME, directory_name):
     FILENAME = LINK.split('/')[-1]
     if not os.path.isfile('tmp/' + FILENAME):
         wget.download(LINK, 'tmp/' + FILENAME)
@@ -67,7 +67,7 @@ def import_anim(LINK, TARGET_NAME):
     bpy.context.area.type = 'VIEW_3D'
     bpy.ops.object.posemode_toggle()
     bpy.data.objects[0].select = True
-    bpy.ops.export_scene.fbx(filepath="imported/"+TARGET_NAME+'_f-'+ str(frame_range[1]) +'.fbx', check_existing = False, \
+    bpy.ops.export_scene.fbx(filepath=directory_name+'/'+TARGET_NAME+'_f-'+ str(frame_range[1]) +'.fbx', check_existing = False, \
     use_selection=True, object_types={'ARMATURE'}, \
     bake_anim = True, bake_anim_use_all_bones = True, \
     bake_anim_use_nla_strips = False, bake_anim_use_all_actions = False, \
@@ -258,17 +258,29 @@ neutrals = [
     "http://ebmdb.tuebingen.mpg.de/data/bvh/DiMi_0709_ftf_goose_t1-001_64_483767_487717_3950_Neutral.bvh",
     ]
     
-i = 0
-name = "neutral"
-imported = []
-for anim in neutrals:
-    if anim not in imported:
-        try:
-            import_anim(anim, str(i) + name)
-        except:
-            print(anim + " not imported")
-        i += 1
-        imported.append(anim)
+full_list = [
+    ["neutral", neutrals],
+    ["anger", angers],
+    ["sadness", sadnesses],
+    ["joy", joys],
+    ["fear", fears],
+]
+
+for anim_list in full_list:
+    i = 0
+    name = anim_list[0]
+    imported = []
+    directory_name = "imported/"+name 
+    if not os.path.exists(directory_name):
+        os.makedirs(directory_name)
+    for anim in anim_list[1]:
+        if anim not in imported:
+            try:
+                import_anim(anim, str(i) + '_' + name, directory_name)
+            except:
+                print(anim + " not imported")
+            i += 1
+            imported.append(anim)
 
 
 
