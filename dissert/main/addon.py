@@ -7,52 +7,60 @@ from pprint import pprint
 from mathutils import *
 import json
 
-ANIM_FOLDER = "mocap"
-MODEL_FOLDER = "models"
+# This file is a Blender extension which assembles the final animation given JSON instructions
 
+# Get current path
 dir = os.path.dirname(bpy.data.filepath)
 if not dir in sys.path:
     sys.path.append(dir)
 
+# Unselect all objects
 def unselect_all_objects():
     for obj in bpy.data.objects:
         obj.select = False
         
-
+# Select a given object
 def select_obj(obj):
     unselect_all_objects()
     unselect_all_nla()
     obj.select = True
     bpy.context.scene.objects.active = obj
 
+# Imported character
 class Character:
-    current_pushdown_strip = 1
+    current_pushdown_strip = 1 # static class variable - each new Character instance gets a new pushdown strip
     
     def __init__(self, obj, name):
-        self.current_strip = 0
-        self.name = name
-        self.object = obj
-        self.camoffset = Vector((-0.5, -1.8, 1.65))
+        self.current_strip = 0 # NLA strip
+        self.name = name # Name
+        self.object = obj # Blender object (armature and model)
+        self.camoffset = Vector((-0.5, -1.8, 1.65)) # Camera offset
         self.select()
         bpy.context.area.type = 'NLA_EDITOR'
+        # Pushdown action on NLA immediately after creating the character
         bpy.ops.nla.action_pushdown(channel_index=Character.current_pushdown_strip)
-        Character.current_pushdown_strip += 3
+        Character.current_pushdown_strip += 3 # Increment pushdown strip to prepare for next character
+        # Delete the newly added NLA strip to prepare for further animation clips
         bpy.ops.nla.delete()
         
+    # Select character object
     def select(self):
         unselect_all_objects()
         unselect_all_nla()
         self.object.select = True
         bpy.context.scene.objects.active = self.object
     
+    # Move the character on the scene by an offset
     def move(self, vec):
         self.select()
         self.object.location += Vector((vec))
         
+    # Rotate the character on the scene by euler 
     def rotate(self, vec):
         self.select()
         self.object.rotation_euler = vec
     
+    # Get camera position - character position + camera offset
     def get_camera_position(self):
         pos = Vector(self.object.location)
         offset = Vector((self.camoffset))
@@ -61,6 +69,7 @@ class Character:
 
         return pos + offset
     
+    # Get camera rotation to point at Character's face
     def get_camera_rotation(self, cam):
         headloc = Vector(self.object.location)
         headloc += Vector((0.0, 0.0, 1.3))
@@ -70,13 +79,14 @@ class Character:
         rot = rot_quat.to_euler()
         return rot
         
+    # Select an nla strip that belongs to the character
     def select_nla_by_index(self, index):
         unselect_all_nla()
         ob = self.object
         ad = ob.animation_data
         if ad:
-            print("SELECC: ", len(ad.nla_tracks))
             if ad.nla_tracks == None: return
+            # Iterate through all nla_tracks; select the correct one
             for i, track in enumerate(ad.nla_tracks):
                 res = i == index
                 track.select = res
@@ -84,12 +94,14 @@ class Character:
                 for key in track.strips.keys():
                     track.strips[key].select = False
         
+    # Make character perform an animation from a given frame
     def add_action(self, action_name, frame):
         self.select()
         bpy.context.area.type = 'NLA_EDITOR'
         action = bpy.data.actions[action_name]
         action_len = action.frame_range[1] - action.frame_range[0]
         
+        # Add a new NLA track. Add the action on the newly created NLA track
         if (self.current_strip == 0):
             self.select_nla_by_index(self.current_strip)
             bpy.ops.nla.actionclip_add(action=action_name)
@@ -105,18 +117,19 @@ class Character:
             strip = track.strips[track.strips.keys()[0]]
             strip.select = True
         
-        
+        # Move the animation to begin at a correct frame
         bpy.ops.transform.transform(mode='TRANSLATION', value=(frame, -1.00505, 0, 0), axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1)
         return action, action_len+1
             
         
-
+# Switch between layers
 def switch_to_layer(index):
     length = len(bpy.data.scenes["Scene"].layers)
     bpy.data.scenes["Scene"].layers[index] = True
     for i in range(0, length):
         bpy.data.scenes["Scene"].layers[i] = i == index
         
+# Unselect NLA tracks
 def unselect_all_nla():
     for ob in bpy.data.objects:
         ad = ob.animation_data
@@ -135,11 +148,12 @@ def get_nla_by_index(index):
         for i, track in enumerate(ad.nla_tracks):
             if i == index: return track
 
-    
+
 def import_fbx(name):
     fpath = os.getcwd() + '\\' + name
     bpy.ops.import_scene.fbx(filepath=fpath, filter_glob="*.fbx;")
 
+# Movie sequences and subtitles
 def clear_sequences():
     if not bpy.context.sequences: return
     for sequence in bpy.context.sequences:
@@ -148,7 +162,7 @@ def clear_sequences():
 
 
 def cleanup():
-    #remove objects and actions
+    # Remove objects from all layers, actions and Movie sequences
     switch_to_layer(0)
     bpy.context.scene.frame_set(1)
     for object in bpy.data.objects:
@@ -164,7 +178,7 @@ def cleanup():
     clear_sequences()
         
         
-        
+# Import an action from FBX and rename it; Leave the imported armature an a different layer
 def import_anim(anim_name, anim_file):
     switch_to_layer(1)
     old_actions = []
@@ -177,6 +191,7 @@ def import_anim(anim_name, anim_file):
             action.name = anim_name
             return action
     
+# Import a character model
 def import_character(character_name, character_file):
     switch_to_layer(0)
     old_objects = []
@@ -188,7 +203,7 @@ def import_character(character_name, character_file):
             object.name = character_name
             return object
     
-        
+# Add subtitle strip between given frames
 def add_subtitle(text, start_frame, end_frame):
     bpy.context.area.type = 'SEQUENCE_EDITOR'
     bpy.ops.sequencer.effect_strip_add(frame_start=start_frame+1, frame_end=end_frame-1, channel=1, type='TEXT')
@@ -198,7 +213,7 @@ def add_subtitle(text, start_frame, end_frame):
     seq.font_size = 60
     seq.color = (0.75, 0.75, 0.75, 1)
 
-
+# Analyze dialogue, decide which characters and actions need importing
 def prepare_dialogue(dialogue):
     required_characters = []
     anims = []
@@ -211,6 +226,7 @@ def prepare_dialogue(dialogue):
         if name not in required_characters: required_characters.append(name)
     return required_characters, anims
 
+# Prepare dialogue lines in a more suitable data structure
 def prepare_lines(dialogue):
     lines = []
     for line in dialogue:
@@ -221,6 +237,7 @@ def prepare_lines(dialogue):
         lines.append(new_line)
     return lines
 
+# Assemble animation
 def main(anim_folder, model_folder, db_path, dialogue_path):
     global ANIM_FOLDER, MODEL_FOLDER
     Character.current_pushdown_strip = 1
@@ -228,20 +245,23 @@ def main(anim_folder, model_folder, db_path, dialogue_path):
     ANIM_FOLDER = anim_folder
     MODEL_FOLDER = model_folder
     pprint(dialogue)
-    cleanup()
-    #add them alphabetically?
+    cleanup() # Clean and prepare scene
     
+    # Get required characters and animation
     required_characters, anims = prepare_dialogue(dialogue)
     
+    # Import all necessary animation clips
     for anim in anims:
         import_anim(anim[0], anim[1])
         
+    # Import all needed character models
     characters = {}
     for char in required_characters:
         name = char
         file = 'untitled.fbx'
         characters[name] = Character(import_character(name, file), name)
-        
+    
+    # Support only two characters. Place the second character in front of the first character
     if len(required_characters) > 1:
         char = characters[required_characters[1]]
         char.move((0.0, -1.8, 0.0))
@@ -249,8 +269,10 @@ def main(anim_folder, model_folder, db_path, dialogue_path):
         
     lines = prepare_lines(dialogue)
     
+    # Start assembling the animation
     current_frame = 0
     texts = []
+    # For each dialogue line, append animation to character
     for line in lines:
         old_frame = current_frame
         character = characters[line['character']]
@@ -258,7 +280,7 @@ def main(anim_folder, model_folder, db_path, dialogue_path):
         texts.append({'character': character.name, 'text': line['text'], 'from': old_frame, 'to': current_frame})
     bpy.context.scene.frame_end = current_frame+1
     
-    
+    # Add Subtitles
     bpy.context.area.type = 'SEQUENCE_EDITOR'
     bpy.ops.sequencer.scene_strip_add(frame_start=1, channel=1, scene='Scene')
     for text in texts:
@@ -266,12 +288,13 @@ def main(anim_folder, model_folder, db_path, dialogue_path):
         
 
     
-    
+    # Add camera
     bpy.context.area.type = 'VIEW_3D'
     bpy.ops.object.add(type="CAMERA")
     cam = bpy.data.objects["Camera"]
     cam.location += Vector((0.0, 0.0, 5.0))
     lamps = []
+    # Add lamps
     bpy.ops.object.add(type="LAMP")
     lamps.append(bpy.context.scene.objects.active)
     bpy.ops.object.add(type="LAMP")
@@ -282,10 +305,11 @@ def main(anim_folder, model_folder, db_path, dialogue_path):
     lamps[1].location += Vector((3.0, 0.0, 6.0))
     lamps[1].rotation_euler = Vector((0.0, 0.8, 0.0))
     
-    
+    # Focus camera on a character when they start talking
     select_obj(cam)
     for text in texts:
         char = characters[text['character']]
+        # Position camera, insert keyframe
         cam.location = char.get_camera_position()
         cam.rotation_euler = char.get_camera_rotation(cam)
         bpy.context.scene.frame_current = text['from']+1
@@ -294,7 +318,7 @@ def main(anim_folder, model_folder, db_path, dialogue_path):
     bpy.context.area.type = 'GRAPH_EDITOR'
     bpy.ops.graph.interpolation_type(type='CONSTANT')
 
-    
+    # Add floor
     bpy.ops.mesh.primitive_plane_add()
     plane = bpy.context.scene.objects.active
     plane.location += Vector((0.0, 0.0, -0.2))
@@ -305,8 +329,9 @@ def main(anim_folder, model_folder, db_path, dialogue_path):
 
 
 
+####################### BLENDER ADDON #########################
 
-
+# Execute button
 class SimpleOperator(bpy.types.Operator):
     """Tooltip"""
     bl_idname = "object.simple_operator"
@@ -316,6 +341,7 @@ class SimpleOperator(bpy.types.Operator):
     def poll(cls, context):
         return context.active_object is not None
 
+    # On click
     def execute(self, context):
         try:
             main(context.scene.anim_folder, context.scene.model_folder, context.scene.database, context.scene.dialogue)
@@ -328,6 +354,7 @@ class View3DPanel():
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'TOOLS' 
 
+# Extension GUI
 class OpenStudioAddRigPanel(View3DPanel, Panel): 
     bl_label = "Add Rig"
     bl_context = "objectmode" 
@@ -346,7 +373,7 @@ class OpenStudioAddRigPanel(View3DPanel, Panel):
         
         layout.operator("object.simple_operator", text="execute", icon="ERROR") 
         
-        
+# GUI buttons
 def register():
     bpy.utils.register_module(__name__)
     #bpy.utils.register_class(SimpleOperator)

@@ -1,164 +1,110 @@
 [
     {
-        "text": " Son... You've saved me. I was afraid I'd be trapped in here forever.", 
-        "character": "DAD", 
+        "text": " Are you sure you're okay?", 
+        "character": "ALOY", 
         "clip": [
             {
-                "name": "fear_terrified_terrified_3", 
+                "name": "neutral_neutral_20", 
                 "joy": 0.0, 
                 "anger": 0.0, 
                 "sadness": 0.0, 
-                "score": 0.6221607, 
-                "file": "fear/terrified/terrified3.fbx", 
-                "Frames": 124, 
-                "surprise": 0.0, 
-                "fear": 0.7, 
-                "disgust": 0.0, 
-                "id": 70
-            }
-        ], 
-        "tones": {
-            "joy": 0.017574, 
-            "sadness": 0.125807, 
-            "disgust": 0.009887, 
-            "anger": 0.029729, 
-            "surprise": 0.0, 
-            "fear": 0.897212
-        }
-    }, 
-    {
-        "text": " It's so good to see you, but... what are you DOING here?", 
-        "character": "DAD", 
-        "clip": [
-            {
-                "name": "joy_elevated_3", 
-                "joy": 0.55, 
-                "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.7659748571428571, 
-                "file": "joy/elevated/elevated3.fbx", 
-                "Frames": 155, 
+                "score": 0.7142857142857143, 
+                "file": "neutral/neutral20.fbx", 
+                "Frames": 96, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 55
+                "id": 95
             }
         ], 
         "tones": {
-            "joy": 0.750882, 
-            "sadness": 0.008342, 
-            "disgust": 0.008201, 
-            "anger": 0.119962, 
+            "joy": 0.0, 
+            "sadness": 0.0, 
+            "disgust": 0.0, 
+            "anger": 0.0, 
             "surprise": 0.0, 
-            "fear": 0.038013
+            "fear": 0.0
         }
     }, 
     {
-        "text": " I came here to find you.", 
-        "character": "SON", 
+        "text": " I'm sover enough, all right? I don't need another lecture.", 
+        "character": "EREND", 
         "clip": [
             {
-                "name": "joy_elevated_5", 
-                "joy": 0.3, 
-                "anger": 0.0, 
+                "name": "angry_short_shrug_5", 
+                "joy": 0.0, 
+                "anger": 0.4, 
                 "sadness": 0.0, 
-                "score": 0.7836613333333332, 
-                "file": "joy/elevated/elevated5.fbx", 
-                "Frames": 90, 
+                "score": 0.8907201693121694, 
+                "file": "anger/shrug/shrug5.fbx", 
+                "Frames": 135, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 57
+                "id": 36
             }
         ], 
         "tones": {
-            "joy": 0.418381, 
-            "sadness": 0.160734, 
-            "disgust": 0.053464, 
-            "anger": 0.054703, 
+            "joy": 0.097049, 
+            "sadness": 0.068672, 
+            "disgust": 0.078764, 
+            "anger": 0.356512, 
             "surprise": 0.0, 
-            "fear": 0.177381
+            "fear": 0.070033
         }
     }, 
     {
-        "text": " Well I'm glad you did. This certainly wasn't how I expected thins to turn out.", 
-        "character": "DAD", 
+        "text": " That's not what I meant. I was talking about what happened outside with the crowd.", 
+        "character": "ALOY", 
         "clip": [
             {
-                "name": "joy_elevated_4", 
-                "joy": 0.4, 
-                "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.6587777820312501, 
-                "file": "joy/elevated/elevated4.fbx", 
-                "Frames": 133, 
+                "name": "sad_subtle_helpless_2", 
+                "joy": 0.0, 
+                "anger": 0.6000000000000001, 
+                "sadness": 0.7, 
+                "score": 0.6704539734374999, 
+                "file": "sadness/subtle/helpless2.fbx", 
+                "Frames": 164, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 56
+                "id": 106
             }
         ], 
         "tones": {
-            "joy": 0.494269, 
-            "sadness": 0.097466, 
-            "disgust": 0.027867, 
-            "anger": 0.0112, 
+            "joy": 0.01784375, 
+            "sadness": 0.563002, 
+            "disgust": 0.095546, 
+            "anger": 0.232087, 
             "surprise": 0.0, 
-            "fear": 0.031977
+            "fear": 0.221979
         }
     }, 
     {
-        "text": " Good thing I showed up to save you.", 
-        "character": "SON", 
+        "text": " I don't want to talk about that. We're here because of what you said about Olin, so do what you need to do.", 
+        "character": "EREND", 
         "clip": [
             {
-                "name": "joy_elevated_2", 
-                "joy": 0.35, 
+                "name": "sad_subtle_resigned_3", 
+                "joy": 0.0, 
                 "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.5745940277777778, 
-                "file": "joy/elevated/elevated2.fbx", 
-                "Frames": 100, 
+                "sadness": 0.5, 
+                "score": 0.41452556979166666, 
+                "file": "sadness/subtle/resigned3.fbx", 
+                "Frames": 143, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 54
+                "id": 99
             }
         ], 
         "tones": {
-            "joy": 0.758989, 
-            "sadness": 0.074727, 
-            "disgust": 0.060301, 
-            "anger": 0.038767, 
+            "joy": 0.077255, 
+            "sadness": 0.301007, 
+            "disgust": 0.116018, 
+            "anger": 0.190254, 
             "surprise": 0.0, 
-            "fear": 0.059581
-        }
-    }, 
-    {
-        "text": " It certainly is! It's nice to feel like I'm on two legs again.", 
-        "character": "DAD", 
-        "clip": [
-            {
-                "name": "joy_elevated_6", 
-                "joy": 0.3, 
-                "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.3964119750000001, 
-                "file": "joy/elevated/elevated6.fbx", 
-                "Frames": 108, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 58
-            }
-        ], 
-        "tones": {
-            "joy": 0.712723, 
-            "sadness": 0.199914, 
-            "disgust": 0.032684, 
-            "anger": 0.003426, 
-            "surprise": 0.0, 
-            "fear": 0.061417
+            "fear": 0.210819
         }
     }
 ]
