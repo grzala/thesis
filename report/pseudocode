@@ -1,0 +1,72 @@
+constants: RELEVANCY_THRESHOLD
+           WORDS_PER_SECOND
+           FRAMES_PER_SECONDS
+
+function get_length_match(text, animation)
+  animation_length = animation['frames'] / FRAMES_PER_SECONDS
+  text_length = count_words(text) / WORDS_PER_SECOND
+  score = min(animation_length, text_length) / max(animation_length, text_length)
+  
+  return score
+end_function
+
+function get_emotion_match(emotions, animation)
+  differences = []
+  for emotion in emotions
+    value1 = emotion.value1
+    value2 = animation[emotion].value
+    differences.append(abs(value1 - value2))
+  end_for
+  
+  average = sum(differences) / length(differences)
+  score = 1.0 - average
+  
+  return score
+end_function
+
+function get_matching_gestures(text, emotions)
+  # Sort emotions so that the most relevant
+  # is at the start of the array
+  emotions = sort(emotions)
+  emotions = reverse(emotions)
+  
+  matching_animations = set() # Don't allow for duplicates
+  neutral = False
+  if emotions[0].value < 0.2 #neutral
+    neutral = True
+    matching_animations = get_emotions_from_database('neutral')
+  else
+    matching_animations = get_emotions_from_database(emotions[0].emotion)
+    if emotions[1].value >= 0.2
+      matching_animations.append(get_emotions_from_database(emotions[1].emotion))
+    end_if
+  end_if
+  
+  emotion_scores = {} # a dictionary {animation: score}
+  # Calculate scores 
+  for each animation in matching_animations
+    score = 1
+    if not neutral # All neutral animations get the same score
+      score = get_emotion_match(emotions, animation)
+    end_if
+    emotion_scores[animation] = score
+  end_for
+  
+  # Adjust for length
+  for each animation in matching_animations
+    # Multiply to adjust accordingly
+    emotion_scores[animation] *= get_length_match(text, animation)
+  end_for
+  
+  # Sort so that most matching animation is first
+  emotion_scores = reverse(sort(emotion_scores))
+  return emotion_scores # Return list of matching animations
+end_function
+
+
+
+
+
+
+
+

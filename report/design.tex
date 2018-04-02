@@ -11,7 +11,7 @@ After this step is completed, the file must be intepreted into a final scene. Th
 
 \section{Emotions}
 
-For my project I have decided to only use the following emotions: joy, fear, disgust, anger and sadness. Tradinionally, surprise is also part of the six basic emotions model by Paul Ekman and Wallace V. Friesen. However, IBM Watson Tone Analyzer, that I am using for sentiment analysis, is unable to detect surprise in the text (more on that in section ~\ref{sec:emoanal}) - therefore I had to abstain from using this emotion in this project. The emotions are expressed as decimal numbers between 0 and 1 - this identifies whether a given emotion is present in a specific motion clip or text and how intense that emotion is. It also allows to create a mixture of emotions in order to represent more complex emotions.
+For my project I have decided to only use the following emotions: joy, fear, disgust, anger and sadness. Tradinionally, surprise is also part of the six basic emotions model by Paul Ekman and Wallace V. Friesen. However, IBM Watson Tone Analyzer, that I am using for sentiment analysis, is unable to detect surprise in the text (more on that in section ~\ref{sec:emoanal}) - therefore I had to abstain from using this emotion in this project. The emotions are expressed as decimal numbers between 0 and 1 - this identifies whether a given emotion is present in a specific motion clip or text and how intense that emotion is. It also allows to create a mixture of emotions in order to represent more complex emotions. The EMBD describes the animations in terms of their emotion category, but provides no value (the EMDB will not differentiate between an angry gesture, and a \textit{very} angry gesture). Therefore each animation clip has to be manually reviewed in order to assess it's emotional properties.
 
 \section{Architecture}
 
@@ -47,11 +47,30 @@ As the system is designed to be used in games, one of the main requirements was 
 \caption{The armature supported by the system}\label{fig:armature}
 \end{figure}
 
-TO DO
 
-\section{EMBD Iimporter}
+\section{EMBD Importer and Showcase Generator}
+The following are small tools created to help automate / bootstrap the process of acquisition and categorization of the animations.
 
-TO DO
+
+\subsection{EMDB Importer}
+The EMDB importer's purpose is to help prepare the animations obtained from EMBD to work with the system. The EMDB animations have a few issues making them incompatible with the system - The armatures are a little different with unmatching bone names, many animations were recorder while actors were seating \footnote{Leg animation is irrelevant for this system} and are saved in BVH files \footnote{BVH files are suitable for motion capture, but can be more problematic for generic animation than FBX}.
+
+\medskip
+\noindent To import an animation, the importer must follow through the following steps:
+\begin{enumerate}
+\item Download animation from link to file (receive http link as input) and import the animation from the downloaded BVH file
+\item Remove animation data from the legs
+\item Rename the bones that the animation data applies to so that they match those of the target architecture
+\item Import the target armature
+\item Apply the action from imported from EMDB to the target architecture
+\item Export the animation data to FBX file
+\end{enumerate}
+
+The EMDB importer help automate the process of acquiring animations by allowing to download and process a huge bulk of animations, saving them in folders that correspond to their emotion category and showing their length in frames in the filename.
+
+\subsection{Showcase Generator}
+The purpose of the showcase generator is to help categorize and store the animations in the database (section ~\ref{sec:dbdesign}). The showcase generator outputs instructions for the animation generator (section \ref{sec:generatordesign}) which allow the animation generator to create an animation which shows all the animations in a given directory one after another. Since the animations have to be analyzed manually (in order to assess their emotional value), a clip showing all animations allows for a quick and easy analysis.
+
 
 \section{Input}
 
@@ -72,13 +91,14 @@ I used this format as this format is often used to represent movie scripts. One 
 \label{sec:emoanal}
 As aforementioned, there are many ways to perform emotion analysis of the text. I have chosen to use IBM Watson Tone analyzer for this task as it offers a state-of-the-art service accessible for prototyping (a lot of tools offering high quality emotional analysis are bult for commercial purposes and not available without paying high fees).
 
-The system takes each dialogue line and sends to IBM Watson Tone Analyzer for analysis. Watson's REST API is used to accomplish that. Watson returns all the emotions with values between 0 and 1 found in the text. Each dialogue line now has emotional values assigned to it.
+The module takes each dialogue line and sends to IBM Watson Tone Analyzer for analysis. Watson's REST API is used to accomplish that. Watson returns all the emotions with values between 0 and 1 found in the text. Each dialogue line now has emotional values assigned to it.
 
 \section{Database}
+\label{sec:dbdesign}
 
-The motion capture database consists of two main parts: the files that contain the animated clips and a database that holds the metadata about the animations.
+The motion capture database consists of two main parts: the files that contain the animated clips and a database that holds the metadata about the animations and character models.
 
-Most animation come from the Max Planck's Research Institute Emotional Body Motion Database. This database is a set of motion capture clips performed by actors. The clips are supposed to represent emotions in various settings. Most of these animations need minor changes in order to be compatible with my system (e.g. a lot of clips were recorded while the actor was sitting, so the leg keyframes must be removed to make the model stand). The animations are exported to FBX files (proprietary file format owned by Autodesk, widely supported by many different frameworks) one animated clip per file.
+The animation data is stored in FBX files - one animated action per file. The folder structure can be customized - for the purposes of this project the animations are stored in a way that describes the emotions they convey \footnote{For example: animations > anger > subtle > disbelief1.fbx}. The folder structure is irrelevant as long as it stays consistent with the entries in the SQL database. 
 
 The database is implemented using SQLite. It is the perfect tool for this task as the database needs to be simple, relatively small and easily searchable. The animation metadata is held in a table that look like this FIGURE. The emotional values of each animated clip need to be manually adjusted. When all values are set to zero, it means that the clip carries no emotional impact (neutral). An example of a few database records can be seen in figure ~\ref{fig:db}.
 
@@ -97,10 +117,27 @@ The other purpose of the database is to store the information about the models. 
 
 \section{Matcher}
 
-TO DO
+The matcher module depends on the emotion analysis and database modules. It takes the emotion data and searches the database for a suitable animated clip. The matcher's input is a dictionary where the keys are emotions (anger, fear, etc.) and values are e 0 to 1 decimal.
+
+\subsection{Score matching}
+\label{sec:scorematching}
+Firstly, the matcher will decide whether the text carries enough emotions. If no emotion surpasses the constant relevancy threshold (in this project the threshold is set to 0.2) the animation is deemed as neutral. If there is only one emotion, the module will look for an animation matching that emotional value. If more than one emotion exceed the threshold, only the two most important (highest value) will be considered. That is because certain emotions often go in pairs (such as anger and sadness), but combinations of more than two emotions are rare, confusing and hard to represent with an animation. The searches the database for animations that may be fitting and compares the text emotional values and animations emotional values. The pseudocode behind these calculations can be found in figure ~\ref{fig:matcher}.
+
+\subsection{Length Matching}
+The matcher must account that even the most emotionally fitting animations may not be the most suitable. It is very important to take into account the speed of speech - gestures performed in an animation must match the length of character's dialogue line. Otherwise there will be situations where a short animation is chosen for a few sentences worth of dialogue, or a very long animation is chosen for just a few words of dialogue.
+
+To account for this, constant frames per second (to define animation length in real world terms) and words per second (to calculate the length of a dialogue line in seconds) must be defined. The matcher uses those to calculate the ratio between an animated clip length and speech length. This ratio is used to adjust the score calculated using emotional values (section ~\ref{sec:scorematching}). How the two matching operations work together can be seen in the pseudocode in figure ~\ref{fig:matcher}.
+
+\begin{figure}[!ht]
+\centerline{\fbox{\includegraphics[width = 30em]{img/matcher.png}}}
+\caption{Pseudocode explaining how the matcher calculates the scores}\label{fig:matcher}
+\end{figure}
+
+Additionally, the matcher will ensure that the animation is not too monotonous. The matcher will not choose twice the same animation in one dialogue - it  will prioritize a similarly matching animation that has not yet been used. The animations will be reused if no other matching animations are available.
 
 
 \section{Animation Generator (Importer)}
+\label{sec:generatordesign}
 
 As a forementioned, in this project I have used Blender to support the animation generator model. The generator is a Blender addon.  It can either be used as a script, or be installed as an addon to be fully and permanently available within Blender.
 
