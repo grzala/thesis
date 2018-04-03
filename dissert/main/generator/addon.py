@@ -267,13 +267,19 @@ prepared = False
 prepared_data = None
 char_choice_to_draw = []
 cached_models = {}
+error_message = None
 
 
 # Assemble animation
 def prepare(anim_folder, model_folder, db_path, dialogue_path):
-    global ANIM_FOLDER, MODEL_FOLDER
+    global ANIM_FOLDER, MODEL_FOLDER, error_message
     Character.current_pushdown_strip = 1
-    dialogue = json.load(open(os.getcwd() + '\\' + dialogue_path[2:]))
+    dialogue = None
+    try:
+        dialogue = json.load(open(os.getcwd() + '\\' + dialogue_path[2:]))
+    except:
+        return None
+    
     ANIM_FOLDER = anim_folder
     MODEL_FOLDER = model_folder
     pprint(dialogue)
@@ -288,6 +294,13 @@ def prepare(anim_folder, model_folder, db_path, dialogue_path):
         
     lines = prepare_lines(dialogue)
     
+    if len(required_characters) > 2:
+        error_message = "Too many characters in the scene."
+        return None
+    elif len(required_characters) < 1:
+        error_message = "Not enough characters. The scene file may be corrupted."
+        return None
+    
     result = {}
     result['lines'] = lines
     result['characters'] = required_characters
@@ -296,6 +309,7 @@ def prepare(anim_folder, model_folder, db_path, dialogue_path):
     result['db'] = db_path.replace("/", "")
     
     print("PREPARED")
+    error_message = None
     return result
     
     
@@ -455,9 +469,11 @@ class ExecuteOperator(bpy.types.Operator):
         global prepared, character_choice_items, prepared_data
         try:
             prepared_data = prepare(context.scene.anim_folder, context.scene.model_folder, context.scene.database, context.scene.dialogue)
-            prepared = True
             
-            update_char_choice_list(prepared_data['db'], prepared_data['characters'])
+            if prepared_data:
+                prepared = True
+                
+                update_char_choice_list(prepared_data['db'], prepared_data['characters'])
             
         except Exception as e:
             print(str(e))
@@ -541,6 +557,20 @@ class FinalizeAnimationPanel(View3DPanel, Panel):
         col.label("------------- Assemlbe -------------")
         
         layout.operator("object.finalize_operator", text="Assemble", icon="AUTO") 
+
+class ErrorPanel(View3DPanel, Panel): 
+    bl_label = "Error"
+    bl_context = "objectmode" 
+    bl_category = "Generate NLP anim" 
+        
+    @classmethod
+    def poll(cls, context):
+        return error_message != None
+    
+    def draw(self, context): 
+        layout = self.layout
+        col = layout.column()
+        col.label("ERROR: " + error_message)
         
         
 
@@ -553,6 +583,7 @@ def register():
     bpy.utils.register_class(CleanOperator)
     bpy.utils.register_class(FinalizeOperator)
     bpy.utils.register_class(FinalizeAnimationPanel)
+    bpy.utils.register_class(ErrorPanel)
     
     
     bpy.types.Scene.anim_folder = bpy.props.StringProperty \
