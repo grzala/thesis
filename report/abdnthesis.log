@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.3)  3 APR 2018 20:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.3)  3 APR 2018 21:01
 entering extended mode
 **./abdnthesis.tex
 (abdnthesis.tex
@@ -379,10 +379,22 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 \openout3 = `abdnthesis.toc'.
 
  [6]
+(abdnthesis.lof)
+\tf@lof=\write4
+\openout4 = `abdnthesis.lof'.
+
+ [7
+
+] (abdnthesis.lot)
+\tf@lot=\write5
+\openout5 = `abdnthesis.lot'.
+
+ [8
+
+]
 \openout2 = `introduction.aux'.
 
-
-(introduction.tex
+ (introduction.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
@@ -408,15 +420,15 @@ Overfull \hbox (29.50256pt too wide) in paragraph at lines 10--10
 -[]3s-[]dialogue-[]scenes-[]was-[]animated-[]by-[]an-[]algorithm/$| 
  []
 
-[7
+[9
 
 
-]) [8]
+]) [10]
 \openout2 = `background.aux'.
 
  (background.tex
 Chapter 2.
-[9
+[11
 
 
 
@@ -429,27 +441,27 @@ xtsandFrameworkofMotionDatabase$
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 37.
-[10] [11]
-<img/wheel.png, id=45, 641.39626pt x 650.43pt>
+[12] [13]
+<img/wheel.png, id=52, 641.39626pt x 650.43pt>
 File: img/wheel.png Graphic file (type png)
 <use img/wheel.png>
 Package pdftex.def Info: img/wheel.png  used on input line 63.
 (pdftex.def)             Requested size: 328.49991pt x 333.13414pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 64.
- [12 <./img/wheel.png>] [13]
-<img/emo1.png, id=55, 707.64375pt x 194.22563pt>
+ [14 <./img/wheel.png>] [15]
+<img/emo1.png, id=61, 707.64375pt x 194.22563pt>
 File: img/emo1.png Graphic file (type png)
 <use img/emo1.png>
 Package pdftex.def Info: img/emo1.png  used on input line 120.
 (pdftex.def)             Requested size: 328.49991pt x 90.16283pt.
- [14 <./img/emo1.png>]
-<img/uncanny.png, id=60, 497.86pt x 341.275pt>
+ [16 <./img/emo1.png>]
+<img/uncanny.png, id=66, 497.86pt x 341.275pt>
 File: img/uncanny.png Graphic file (type png)
 <use img/uncanny.png>
 Package pdftex.def Info: img/uncanny.png  used on input line 138.
 (pdftex.def)             Requested size: 124.46469pt x 85.31853pt.
-<img/toyrobot.jpg, id=61, 356.33125pt x 356.33125pt>
+<img/toyrobot.jpg, id=67, 356.33125pt x 356.33125pt>
 File: img/toyrobot.jpg Graphic file (type jpg)
 <use img/toyrobot.jpg>
 Package pdftex.def Info: img/toyrobot.jpg  used on input line 143.
@@ -457,37 +469,37 @@ Package pdftex.def Info: img/toyrobot.jpg  used on input line 143.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15 <./img/uncanny.png>]
-<img/uncannyrobot.png, id=66, 305.64188pt x 361.35pt>
+ [17 <./img/uncanny.png>]
+<img/uncannyrobot.png, id=72, 305.64188pt x 361.35pt>
 File: img/uncannyrobot.png Graphic file (type png)
 <use img/uncannyrobot.png>
 Package pdftex.def Info: img/uncannyrobot.png  used on input line 148.
 (pdftex.def)             Requested size: 122.25458pt x 144.53743pt.
-<img/realrobot.png, id=67, 261.22594pt x 261.97874pt>
+<img/realrobot.png, id=73, 261.22594pt x 261.97874pt>
 File: img/realrobot.png Graphic file (type png)
 <use img/realrobot.png>
 Package pdftex.def Info: img/realrobot.png  used on input line 153.
 (pdftex.def)             Requested size: 117.55057pt x 117.88934pt.
- [16 <./img/toyrobot.jpg> <./img/uncannyrobot.png (PNG copy)> <./img/realrobot.
-png (PNG copy)>]) [17]
+ [18 <./img/toyrobot.jpg> <./img/uncannyrobot.png (PNG copy)> <./img/realrobot.
+png (PNG copy)>]) [19]
 \openout2 = `analysis.aux'.
 
  (analysis.tex
 Chapter 3.
-[18
+[20
 
 
 
-] [19] [20]) [21]
+] [21] [22]) [23]
 \openout2 = `requirements.aux'.
 
  (requirements.tex
 Chapter 4.
-[22
+[24
 
 
 
-]) [23]
+]) [25]
 \openout2 = `design.aux'.
 
  (design.tex
@@ -495,66 +507,69 @@ Chapter 5.
 
 Underfull \vbox (badness 1137) has occurred while \output is active []
 
- [24
+ [26
 
 
 
 ]
-<img/architecture.png, id=96, 553.06625pt x 482.80376pt>
+<img/architecture.png, id=103, 553.06625pt x 482.80376pt>
 File: img/architecture.png Graphic file (type png)
 <use img/architecture.png>
 Package pdftex.def Info: img/architecture.png  used on input line 37.
 (pdftex.def)             Requested size: 328.49991pt x 286.76717pt.
-<img/armature.png, id=97, 421.575pt x 871.255pt>
+<img/armature.png, id=104, 421.575pt x 871.255pt>
 File: img/armature.png Graphic file (type png)
 <use img/armature.png>
 Package pdftex.def Info: img/armature.png  used on input line 46.
 (pdftex.def)             Requested size: 218.99994pt x 452.60321pt.
 
-[25] [26 <./img/architecture.png>] [27 <./img/armature.png>]
-<img/script.png, id=110, 316.93407pt x 201.75375pt>
+[27] [28 <./img/architecture.png>] [29 <./img/armature.png>]
+<img/script.png, id=116, 316.93407pt x 201.75375pt>
 File: img/script.png Graphic file (type png)
 <use img/script.png>
 Package pdftex.def Info: img/script.png  used on input line 85.
 (pdftex.def)             Requested size: 328.49991pt x 209.13243pt.
-<img/db.png, id=111, 414.04688pt x 153.57375pt>
+<img/db.png, id=117, 414.04688pt x 153.57375pt>
 File: img/db.png Graphic file (type png)
 <use img/db.png>
 Package pdftex.def Info: img/db.png  used on input line 106.
 (pdftex.def)             Requested size: 328.49991pt x 121.84683pt.
- [28 <./img/script.png>]
-<img/dbmodel.png, id=116, 508.14844pt x 127.97812pt>
+ [30 <./img/script.png>]
+<img/dbmodel.png, id=122, 508.14844pt x 127.97812pt>
 File: img/dbmodel.png Graphic file (type png)
 <use img/dbmodel.png>
 Package pdftex.def Info: img/dbmodel.png  used on input line 113.
 (pdftex.def)             Requested size: 328.49991pt x 82.73564pt.
- [29 <./img/db.png> <./img/dbmodel.png>]
-<img/matcher.png, id=122, 539.01375pt x 837.88031pt>
+ [31 <./img/db.png> <./img/dbmodel.png>]
+<img/matcher.png, id=129, 539.01375pt x 837.88031pt>
 File: img/matcher.png Graphic file (type png)
 <use img/matcher.png>
 Package pdftex.def Info: img/matcher.png  used on input line 132.
 (pdftex.def)             Requested size: 328.49991pt x 510.64598pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
-[31 <./img/matcher.png>]
-<img/nla.png, id=131, 499.11469pt x 200.24812pt>
+<img/nla.png, id=130, 499.11469pt x 200.24812pt>
 File: img/nla.png Graphic file (type png)
 <use img/nla.png>
 Package pdftex.def Info: img/nla.png  used on input line 153.
 (pdftex.def)             Requested size: 328.49991pt x 131.80055pt.
-<img/substrips.png, id=132, 539.76656pt x 103.88812pt>
+<img/substrips.png, id=131, 539.76656pt x 103.88812pt>
 File: img/substrips.png Graphic file (type png)
 <use img/substrips.png>
 Package pdftex.def Info: img/substrips.png  used on input line 157.
 (pdftex.def)             Requested size: 328.49991pt x 63.2274pt.
-<img/finalblend.png, id=133, 719.68875pt x 469.00218pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+Overfull \vbox (18.954pt too high) has occurred while \output is active []
+
+
+[33 <./img/matcher.png> <./img/nla.png>]
+<img/finalblend.png, id=140, 719.68875pt x 469.00218pt>
 File: img/finalblend.png Graphic file (type png)
 <use img/finalblend.png>
 Package pdftex.def Info: img/finalblend.png  used on input line 165.
 (pdftex.def)             Requested size: 328.49991pt x 214.08334pt.
-<img/finalrend.png, id=134, 752.0597pt x 468.24937pt>
+<img/finalrend.png, id=141, 752.0597pt x 468.24937pt>
 File: img/finalrend.png Graphic file (type png)
 <use img/finalrend.png>
 Package pdftex.def Info: img/finalrend.png  used on input line 169.
@@ -562,31 +577,24 @@ Package pdftex.def Info: img/finalrend.png  used on input line 169.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32 <./img/nla.png> <./img/substrips.png>]
-<img/ui_main.png, id=140, 243.91125pt x 469.755pt>
+ [34 <./img/substrips.png> <./img/finalblend.png> <./img/finalrend.png>]
+<img/ui_main.png, id=148, 243.91125pt x 469.755pt>
 File: img/ui_main.png Graphic file (type png)
 <use img/ui_main.png>
 Package pdftex.def Info: img/ui_main.png  used on input line 180.
 (pdftex.def)             Requested size: 197.09995pt x 379.60349pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33 <./img/finalblend.png> <./img/finalrend.png>]
-<img/ui_finalize.png, id=146, 187.45032pt x 264.99pt>
+ [35 <./img/ui_main.png (PNG copy)>]
+<img/ui_finalize.png, id=152, 187.45032pt x 264.99pt>
 File: img/ui_finalize.png Graphic file (type png)
 <use img/ui_finalize.png>
 Package pdftex.def Info: img/ui_finalize.png  used on input line 189.
 (pdftex.def)             Requested size: 197.09995pt x 278.64801pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34 <./img/ui_main.png (PNG copy)>]) [35 <./img/ui_finalize.png (PNG copy)>]
+) [36 <./img/ui_finalize.png (PNG copy)>]
 \openout2 = `testingperf.aux'.
 
-
-(testingperf.tex
+ (testingperf.tex
 Chapter 6.
-) [36
+) [37
 
 
 
@@ -610,20 +618,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--43
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37
+ [38
 
 
 ])
-[38]
+[39]
 \openout2 = `usermanual.aux'.
 
  (usermanual.tex
 Appendix A.
-[39
+[40
 
 
 ]
-<img/appendix/installedaddon.png, id=166, 995.21812pt x 506.6428pt>
+<img/appendix/installedaddon.png, id=169, 995.21812pt x 506.6428pt>
 File: img/appendix/installedaddon.png Graphic file (type png)
 <use img/appendix/installedaddon.png>
 Package pdftex.def Info: img/appendix/installedaddon.png  used on input line 53
@@ -631,25 +639,25 @@ Package pdftex.def Info: img/appendix/installedaddon.png  used on input line 53
 (pdftex.def)             Requested size: 328.49991pt x 167.2313pt.
 
 
-LaTeX Warning: Reference `inputscript2' on page 40 undefined on input line 61.
+LaTeX Warning: Reference `inputscript2' on page 41 undefined on input line 61.
 
 File: img/script.png Graphic file (type png)
 <use img/script.png>
 Package pdftex.def Info: img/script.png  used on input line 64.
 (pdftex.def)             Requested size: 328.49991pt x 209.13243pt.
-[40 <./img/appendix/installedaddon.png (PNG copy)>]
-<img/appendix/withoutaddon.png, id=170, 997.47656pt x 543.53062pt>
+[41 <./img/appendix/installedaddon.png (PNG copy)>]
+<img/appendix/withoutaddon.png, id=173, 997.47656pt x 543.53062pt>
 File: img/appendix/withoutaddon.png Graphic file (type png)
 <use img/appendix/withoutaddon.png>
 Package pdftex.def Info: img/appendix/withoutaddon.png  used on input line 90.
 (pdftex.def)             Requested size: 328.49991pt x 179.00073pt.
- [41 <./img/appendix/withoutaddon.png (PNG copy)>] [42] [43]
+ [42 <./img/appendix/withoutaddon.png (PNG copy)>] [43] [44]
 Overfull \hbox (17.69766pt too wide) in paragraph at lines 182--183
 []\T1/ptm/m/n/10.95 Run the com-mand `python an-a-lyzer/generate_showcase.py pa
 th_to_directory_with_animations` 
  []
 
-) [44]
+) [45]
 \openout2 = `maintenance.aux'.
 
  (maintenance.tex
@@ -663,11 +671,11 @@ Overfull \hbox (4.3392pt too wide) in paragraph at lines 61--61
 []|\T1/ptm/m/n/10 generate_showcase.py| 
  []
 
-[45
+[46
 
 
 
-]) [46] (abdnthesis.aux (introduction.aux) (background.aux) (analysis.aux)
+]) [47] (abdnthesis.aux (introduction.aux) (background.aux) (analysis.aux)
 (requirements.aux) (design.aux) (testingperf.aux) (usermanual.aux)
 (maintenance.aux))
 
@@ -675,9 +683,9 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4988 strings out of 493305
- 71416 string characters out of 3138872
- 133396 words of memory out of 3000000
+ 4994 strings out of 493305
+ 71564 string characters out of 3138872
+ 133398 words of memory out of 3000000
  8355 multiletter control sequences out of 15000+200000
  75084 words of font info for 113 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -689,9 +697,9 @@ c}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on abdnthesis.pdf (46 pages, 904006 bytes).
+Output written on abdnthesis.pdf (47 pages, 905360 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
+ 310 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,67 +1,67 @@
-\contentsline {chapter}{\numberline {1}Introduction}{7}
-\contentsline {section}{\numberline {1.1}Motivation}{7}
-\contentsline {section}{\numberline {1.2}Objectives}{8}
-\contentsline {chapter}{\numberline {2}Background and Related Work }{9}
-\contentsline {section}{\numberline {2.1}Background}{9}
-\contentsline {section}{\numberline {2.2}Existing Systems}{9}
-\contentsline {section}{\numberline {2.3}Related Work}{9}
-\contentsline {section}{\numberline {2.4}Emotion Analysis}{10}
-\contentsline {subsection}{\numberline {2.4.1}Sentiment Analysis}{10}
-\contentsline {subsection}{\numberline {2.4.2}Emotions}{11}
-\contentsline {section}{\numberline {2.5}Animation Software}{12}
-\contentsline {subsection}{\numberline {2.5.1}Maya}{13}
-\contentsline {subsection}{\numberline {2.5.2}Blender}{13}
-\contentsline {subsection}{\numberline {2.5.3}Unreal Engine}{13}
-\contentsline {subsection}{\numberline {2.5.4}Unity 3D}{13}
-\contentsline {subsection}{\numberline {2.5.5}Final Choice}{13}
-\contentsline {section}{\numberline {2.6}Motion Database}{14}
-\contentsline {section}{\numberline {2.7}Uncanny Valley}{14}
-\contentsline {subsection}{\numberline {2.7.1}What is the uncanny valley}{15}
-\contentsline {subsection}{\numberline {2.7.2}Why uncanny valley matters in games and animation}{16}
-\contentsline {chapter}{\numberline {3}Analysis }{18}
-\contentsline {section}{\numberline {3.1}Methodology}{18}
-\contentsline {section}{\numberline {3.2}Technologies and Resources}{19}
-\contentsline {section}{\numberline {3.3}Risk Analysis}{19}
-\contentsline {subsection}{\numberline {3.3.1}Failure due to emotion analysis}{19}
-\contentsline {subsection}{\numberline {3.3.2}Failure due to the motion capture data quality}{20}
-\contentsline {subsection}{\numberline {3.3.3}Failure due to the uncanny valley principle}{20}
-\contentsline {chapter}{\numberline {4}Requirements Specification}{22}
-\contentsline {section}{\numberline {4.1}Functional Requirements}{22}
-\contentsline {section}{\numberline {4.2}Non-Functional Requirements}{22}
-\contentsline {chapter}{\numberline {5}Design And Architecture}{24}
-\contentsline {section}{\numberline {5.1}System Design}{24}
-\contentsline {section}{\numberline {5.2}Emotions}{24}
-\contentsline {section}{\numberline {5.3}Architecture}{25}
-\contentsline {section}{\numberline {5.4}Character Armature and Model}{25}
-\contentsline {section}{\numberline {5.5}EMBD Importer and Showcase Generator}{25}
-\contentsline {subsection}{\numberline {5.5.1}EMDB Importer}{26}
-\contentsline {subsection}{\numberline {5.5.2}Showcase Generator }{27}
-\contentsline {section}{\numberline {5.6}Input}{27}
-\contentsline {section}{\numberline {5.7}Emotion Analysis}{28}
-\contentsline {section}{\numberline {5.8}Database}{28}
-\contentsline {section}{\numberline {5.9}Matcher}{29}
-\contentsline {subsection}{\numberline {5.9.1}Score matching}{29}
-\contentsline {subsection}{\numberline {5.9.2}Length Matching}{30}
-\contentsline {section}{\numberline {5.10}Animation Generator (Importer)}{31}
-\contentsline {section}{\numberline {5.11}User Interface}{33}
-\contentsline {chapter}{\numberline {6}Testing and Performance }{36}
-\contentsline {section}{\numberline {6.1}Animation Generator}{36}
-\contentsline {section}{\numberline {6.2}Performance}{36}
-\contentsline {chapter}{\numberline {A}User Manual }{39}
-\contentsline {section}{\numberline {A.1}Requirements and installation }{39}
-\contentsline {subsection}{\numberline {A.1.1}Software and Libraries}{39}
-\contentsline {subsubsection}{Required software}{39}
-\contentsline {subsubsection}{Libraries}{39}
-\contentsline {subsection}{\numberline {A.1.2}Install Generator as Blender Addon }{39}
-\contentsline {section}{\numberline {A.2}Generating animations }{40}
-\contentsline {subsubsection}{Analyze script }{40}
-\contentsline {subsubsection}{Generate Animation}{41}
-\contentsline {section}{\numberline {A.3}Using Custom Animation and Models}{42}
-\contentsline {section}{\numberline {A.4}Importing More Animations From EMBD}{43}
-\contentsline {section}{\numberline {A.5}Generate a Showcase }{44}
-\contentsline {chapter}{\numberline {B}Maintenance Manual }{45}
-\contentsline {section}{\numberline {B.1}Installation and requirements}{45}
-\contentsline {section}{\numberline {B.2}Space and Memory requirements}{45}
-\contentsline {section}{\numberline {B.3}Temporary Files}{45}
-\contentsline {section}{\numberline {B.4}Files and Directories}{45}
-\contentsline {section}{\numberline {B.5}Known Issues}{46}
+\contentsline {chapter}{\numberline {1}Introduction}{9}
+\contentsline {section}{\numberline {1.1}Motivation}{9}
+\contentsline {section}{\numberline {1.2}Objectives}{10}
+\contentsline {chapter}{\numberline {2}Background and Related Work }{11}
+\contentsline {section}{\numberline {2.1}Background}{11}
+\contentsline {section}{\numberline {2.2}Existing Systems}{11}
+\contentsline {section}{\numberline {2.3}Related Work}{11}
+\contentsline {section}{\numberline {2.4}Emotion Analysis}{12}
+\contentsline {subsection}{\numberline {2.4.1}Sentiment Analysis}{12}
+\contentsline {subsection}{\numberline {2.4.2}Emotions}{13}
+\contentsline {section}{\numberline {2.5}Animation Software}{14}
+\contentsline {subsection}{\numberline {2.5.1}Maya}{15}
+\contentsline {subsection}{\numberline {2.5.2}Blender}{15}
+\contentsline {subsection}{\numberline {2.5.3}Unreal Engine}{15}
+\contentsline {subsection}{\numberline {2.5.4}Unity 3D}{15}
+\contentsline {subsection}{\numberline {2.5.5}Final Choice}{15}
+\contentsline {section}{\numberline {2.6}Motion Database}{16}
+\contentsline {section}{\numberline {2.7}Uncanny Valley}{16}
+\contentsline {subsection}{\numberline {2.7.1}What is the uncanny valley}{17}
+\contentsline {subsection}{\numberline {2.7.2}Why uncanny valley matters in games and animation}{18}
+\contentsline {chapter}{\numberline {3}Analysis }{20}
+\contentsline {section}{\numberline {3.1}Methodology}{20}
+\contentsline {section}{\numberline {3.2}Technologies and Resources}{21}
+\contentsline {section}{\numberline {3.3}Risk Analysis}{21}
+\contentsline {subsection}{\numberline {3.3.1}Failure due to emotion analysis}{21}
+\contentsline {subsection}{\numberline {3.3.2}Failure due to the motion capture data quality}{22}
+\contentsline {subsection}{\numberline {3.3.3}Failure due to the uncanny valley principle}{22}
+\contentsline {chapter}{\numberline {4}Requirements Specification}{24}
+\contentsline {section}{\numberline {4.1}Functional Requirements}{24}
+\contentsline {section}{\numberline {4.2}Non-Functional Requirements}{24}
+\contentsline {chapter}{\numberline {5}Design And Architecture}{26}
+\contentsline {section}{\numberline {5.1}System Design}{26}
+\contentsline {section}{\numberline {5.2}Emotions}{26}
+\contentsline {section}{\numberline {5.3}Architecture}{27}
+\contentsline {section}{\numberline {5.4}Character Armature and Model}{27}
+\contentsline {section}{\numberline {5.5}EMBD Importer and Showcase Generator}{27}
+\contentsline {subsection}{\numberline {5.5.1}EMDB Importer}{28}
+\contentsline {subsection}{\numberline {5.5.2}Showcase Generator }{29}
+\contentsline {section}{\numberline {5.6}Input}{29}
+\contentsline {section}{\numberline {5.7}Emotion Analysis}{30}
+\contentsline {section}{\numberline {5.8}Database}{30}
+\contentsline {section}{\numberline {5.9}Matcher}{31}
+\contentsline {subsection}{\numberline {5.9.1}Score matching}{31}
+\contentsline {subsection}{\numberline {5.9.2}Length Matching}{32}
+\contentsline {section}{\numberline {5.10}Animation Generator (Importer)}{32}
+\contentsline {section}{\numberline {5.11}User Interface}{35}
+\contentsline {chapter}{\numberline {6}Testing and Performance }{37}
+\contentsline {section}{\numberline {6.1}Animation Generator}{37}
+\contentsline {section}{\numberline {6.2}Performance}{37}
+\contentsline {chapter}{\numberline {A}User Manual }{40}
+\contentsline {section}{\numberline {A.1}Requirements and installation }{40}
+\contentsline {subsection}{\numberline {A.1.1}Software and Libraries}{40}
+\contentsline {subsubsection}{Required software}{40}
+\contentsline {subsubsection}{Libraries}{40}
+\contentsline {subsection}{\numberline {A.1.2}Install Generator as Blender Addon }{40}
+\contentsline {section}{\numberline {A.2}Generating animations }{41}
+\contentsline {subsubsection}{Analyze script }{41}
+\contentsline {subsubsection}{Generate Animation}{42}
+\contentsline {section}{\numberline {A.3}Using Custom Animation and Models}{43}
+\contentsline {section}{\numberline {A.4}Importing More Animations From EMBD}{44}
+\contentsline {section}{\numberline {A.5}Generate a Showcase }{45}
+\contentsline {chapter}{\numberline {B}Maintenance Manual }{46}
+\contentsline {section}{\numberline {B.1}Installation and requirements}{46}
+\contentsline {section}{\numberline {B.2}Space and Memory requirements}{46}
+\contentsline {section}{\numberline {B.3}Temporary Files}{46}
+\contentsline {section}{\numberline {B.4}Files and Directories}{46}
+\contentsline {section}{\numberline {B.5}Known Issues}{47}

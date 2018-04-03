@@ -1,0 +1,29 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Plutchik's wheel\relax }}{14}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces An example emdb entry\relax }}{16}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The uncanny valley\relax }}{17}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces This robot does not fall into the uncanny valley category. It is a humanoid but it is not realistic - it is usually perceived as funny or cute.\relax }}{18}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces A robot that falls into the uncanny valley category - It is realistic enough to be human-like, but it is not human-like enough to be perceived positively and described as realistic. It provokes a feeling of eerieness or being alarmed in the observers.\relax }}{18}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces This robot does not fall into the uncanny valley as it is realistic enough to feel familiar and normal.\relax }}{18}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The pipeline architecture of the system\relax }}{28}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The armature supported by the system\relax }}{29}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces An example of system's input\relax }}{30}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Database of animation clips\relax }}{31}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Database of character models\relax }}{31}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Pseudocode explaining how the matcher calculates the scores\relax }}{33}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces NLA strips of the final animation\relax }}{33}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Video strips featuring subtitles\relax }}{34}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Editing the final animation in Blender\relax }}{34}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Rendered final animation\relax }}{34}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces The addon UI\relax }}{35}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces The finalization step (new menu highlighted by white rectangle)\relax }}{36}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces The generator addon menu\relax }}{41}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces An example of system's input\relax }}{42}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Running the generator without installing it as an add-on\relax }}{42}
+\addvspace {10\p@ }

@@ -128,7 +128,7 @@ The matcher must account that even the most emotionally fitting animations may n
 
 To account for this, constant frames per second (to define animation length in real world terms) and words per second (to calculate the length of a dialogue line in seconds) must be defined. The matcher uses those to calculate the ratio between an animated clip length and speech length. This ratio is used to adjust the score calculated using emotional values (section ~\ref{sec:scorematching}). How the two matching operations work together can be seen in the pseudocode in figure ~\ref{fig:matcher}.
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 \centerline{\fbox{\includegraphics[width = 30em]{img/matcher.png}}}
 \caption{Pseudocode explaining how the matcher calculates the scores}\label{fig:matcher}
 \end{figure}
