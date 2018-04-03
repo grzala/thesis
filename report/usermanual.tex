@@ -106,4 +106,57 @@ Please follow these steps only if you installed the generator as an add-on:
 	\item Choose the directory `models` for `Models Directory`
 	\item Choose the file `db/animation.db` for `Database`
 	\item For `Dialogue` choose the `scene.json` file you created when following the section ~\ref{sec:analyze-script}
-	\item press `Prepare` 
+	\item Press `Prepare` and wait until a `Finalize` menu appears below the `Prepare` button
+	\item Assign models for the characters from the drop-down lists
+	\item Press `Assemble` and wait until done
+\end{itemize}
+
+\noindent The animation is now finalized. It can now be viewed, edited or rendered. Please refer to Blender official documentation and tutorials for more information on this.
+
+\section{Using Custom Animation and Models}
+This section describes how to extend or replace the animation database.
+
+To insert a new animation file, ensure that the file is saved as .fbx file and contains only one animation (action). Please make sure that the armature is compatible with the one found in `EMBD importer/armature.fbx` file.
+
+To continue you will need to install `DB Browser for Sqlite`. Use that program to open the file `db/animation.db`. Browse the table `animations` and add a new record. Provide a name for the animation file (please note the names must be unique) and a path to the animation file. You must also fill the emotion values for the animation (set to 0.0 if the emotion is not carried by the animation).
+
+To insert a new model, browse the `models` table. Again, provide a unique name and a file path for the .fbx model. You will also need to provide information on how to position and rotate the camera to focus it on the characters face (relative to the origin of the character model).
+
+\noindent You can use your own database file as long as the database keeps the following structure:
+\begin{itemize}
+	\item `animations` table:
+	
+	\begin{itemize}
+		\item id (Integer, unique, primary key)
+		\item name (Text, unique)
+		\item file (Text)
+		\item Frames (Integer)
+		\item anger (Numeric)
+		\item joy (Numeric)
+		\item sadness (Numeric)
+		\item fear (Numeric)
+		\item disgust (Numeric)
+		\item surprise (Numeric)
+	\end{itemize}
+
+	\item `models` table:
+	
+	\begin{itemize}
+		\item ID (Integer, unique, primary key)
+		\item name (Text, unique)
+		\item file (Text)
+		\item cam\_offset\_x (Numeric)
+		\item cam\_offset\_y (Numeric)
+		\item cam\_offset\_z (Numeric)
+		\item cam\_rot\_x (Numeric)
+		\item cam\_rot\_y (Numeric)
+		\item cam\_rot\_z (Numeric)
+	\end{itemize}
+\end{itemize}
+
+\noindent Keep the emotion values from 0.0 to 1.0.
+
+\section{Importing More Animations From EMBD}
+
+
+

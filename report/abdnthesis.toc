@@ -54,5 +54,7 @@
 \contentsline {subsubsection}{Libraries}{38}
 \contentsline {subsection}{\numberline {A.1.2}Install Generator as Blender Addon }{38}
 \contentsline {section}{\numberline {A.2}Generating animations}{39}
-\contentsline {subsubsection}{Analyze script}{39}
+\contentsline {subsubsection}{Analyze script }{39}
 \contentsline {subsubsection}{Generate Animation}{40}
+\contentsline {section}{\numberline {A.3}Using Custom Animation and Models}{41}
+\contentsline {section}{\numberline {A.4}Importing More Animations From EMBD}{42}
