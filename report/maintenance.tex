@@ -1,0 +1,143 @@
+\chapter{Maintenance Manual \label{chap:maintenance}}
+
+\section{Installation and requirements}
+For information on installation and dependencies please refer to sections ~\ref{sec:requirements} and ~\ref{sec:installaddon}.
+
+\section{Space and Memory requirements}
+The project needs enough memory to install Blender and Python as well as another 100MB to fit all the animation data. Please keep in mind that rendering the animations drastically increases the memory needed as one short clip may take up to 50MB. The project comes with a few example rendered videos which take another 150MB of memory
+
+\section{Temporary Files}
+When using the EMBD importer the program will store the downloaded EMBD BVH files in the `EMBD importer/tmp` directory. These files can take a considerable amount of space and can be deleted at the convenience of a user.
+
+\section{Files and Directories}
+The files and directories are described in tables ~\ref{tab:analyzerdirectory}, ~\ref{tab:dbdirectory}, ~\ref{tab:embd-importerdirectory}, ~\ref{tab:generatordirectory} and ~\ref{tab:maindirectory}.
+
+\begin{table}[H]
+	\centering
+	\small
+	
+	\begin{tabular}{ |p{8.5em}|p{30.1em}| }
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Main project directory}} \\
+		\hline
+		\thead{Item} & \thead{Description} \\
+		\hline
+		analyzer/ & The directory that contains the first and second module source code (emotion analysis and matcher) \\
+		\hline
+		db/ & The directory that contains the sqlite database file which holds information on the animations and models \\
+		\hline
+		EMBD importer/ & The directory that contains the EMBD importer tool \\
+		\hline
+		generator/ & The directory that contains the Blender add-on \\
+		\hline
+		mocap/ & The directory that contains the .fbx animations \\
+		\hline
+		models/ & The directory that contains the .fbx character models \\
+		\hline
+		movies/ & The directory that contains sample dialogue scripts \\
+		\hline
+		showcases/ & The directory that contains sample rendered scenes \\
+		\hline
+		rendered.blend & Blender project prepared for use with the system \\
+		\hline
+	\end{tabular}
+	
+	\caption{Contents of the main directory}
+	\label{tab:maindirectory}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	
+	\begin{tabular}{ |p{8.5em}|p{30.1em}| }
+		\hline
+		\multicolumn{2}{|c|}{\textbf{`analyzer` directory}} \\
+		\hline
+		\thead{Item} & \thead{Description} \\
+		\hline
+		db.py & The source code of the matcher module \\
+		\hline
+		generate\_showcase.py & The source code of the showcase generator (more information in sections ~\ref{sec:showcasegenerator} and ~\ref{sec:showcasegeneratormanual}) \\
+		\hline
+		parse.py & Script used to parse the dialogue script \\
+		\hline
+		script\_analyze.py & The main file of the analyzer program. It handles the resource pipeline. \\
+		\hline
+		tone.py & The script that uses the IBM Watson API to perform emotion analysis \\
+		\hline
+	\end{tabular}
+	
+	\caption{\textbf{Contents of the `analyzer` directory}}
+	\label{tab:analyzerdirectory}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	
+	\begin{tabular}{ |p{8.5em}|p{30.1em}| }
+		\hline
+		\multicolumn{2}{|c|}{`db` directory} \\
+		\hline
+		\thead{Item} & \thead{Description} \\
+		\hline
+		animation.db & The sqlite file that holds the information on the animations and character models \\
+		\hline
+	\end{tabular}
+	
+	\caption{Contents of the `db` directory}
+	\label{tab:dbdirectory}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	
+	\begin{tabular}{ |p{8.5em}|p{30.1em}| }
+		\hline
+		\multicolumn{2}{|c|}{\textbf{`EMBD importer` directory}} \\
+		\hline
+		\thead{Item} & \thead{Description} \\
+		\hline
+		imported/ & The directory that holds the imported animations \\
+		\hline
+		tmp/ & The directory that caches downloaded EMBD animations \\
+		\hline
+		armature.fbx & Character armature used for reference during importing. This armature is used for all the animations in the project \\
+		\hline
+		importer.blend & Blender project prepared to handle importing animations from EMBD \\
+		\hline
+		script.py & Source code of the importer. This script is meant to be run from inside of Blender \\
+		\hline
+	\end{tabular}
+	
+	\caption{Contents of the `EMBD importer` directory}
+	\label{tab:embd-importerdirectory}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	
+	\begin{tabular}{ |p{8.5em}|p{30.1em}| }
+		\hline
+		\multicolumn{2}{|c|}{\textbf{`generator` directory}} \\
+		\hline
+		\thead{Item} & \thead{Description} \\
+		\hline
+		addon.py & The source code of the generator module \\
+		\hline
+	\end{tabular}
+	
+	\caption{Contents of the `generator` directory}
+	\label{tab:generatordirectory}
+\end{table}
+
+
+\section{Known Issues}
+\noindent Please make sure that the dialogue script is correctly formatted before running the emotion analysis. Wrong indentation levels may cause unpredictable results.
+
+\noindent The generator module will provide you with an error message if the input (scene.json) is malformed. However if the file parses correctly but it's data is corrupted it may lead to unpredictable results. This situation will never take place is the scene.json file was generated by the script\_analyze.py program.
+
+

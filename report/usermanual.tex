@@ -35,7 +35,7 @@ Following python libraries must be installed:
 The following steps are optional. Installing the module as addon will enable the module to be permanently incorporated into Blender.
 
 \noindent To install the addon:
-\begin{itemize}
+\begin{enumerate}
 	\item Open Blender
 	\item Open user settings (File > User preferences)
 	\item Open Add-ons tab
@@ -45,7 +45,7 @@ The following steps are optional. Installing the module as addon will enable the
 	\item Check the box next to the item
 	\item Press `Save user settings` in the bottom left corner
 	\item Exit user preferences
-\end{itemize}
+\end{enumerate}
 
 \noindent The module is now installed as an add-on. In the 3D-view (default view) on the bottom of the right-hand side menu there should appear a tab called `Generate NLP anim` (figure ~\ref{fig:installedaddon}).
 	
@@ -54,7 +54,7 @@ The following steps are optional. Installing the module as addon will enable the
 	\caption{The generator addon menu}\label{fig:installedaddon}
 \end{figure}
 
-\section{Generating animations}
+\section{Generating animations \label{sec:generatormanual}}
 \noindent Now that all the requirements are met, the animation can be generated. There are two main steps to generating. Firstly, use the analyzer module to create a JSON file instructions for the generator. Secondly, use the generator to assemble the animation.
 
 \subsubsection{Analyze script \label{sec:analyze-script}}
@@ -79,14 +79,14 @@ The following steps are optional. Installing the module as addon will enable the
 
 \subsubsection{Generate Animation}
 \noindent If you did not follow section ~\ref{sec:installaddon}, please follow these steps:
-\begin{itemize}
+\begin{enumerate}
 	\item Open the file `rendered.blend` with Blender
 	\item Click `Run Script` on the bottom of the scripting view (figure ~\ref{fig:withoutaddon})
 	\item The tab called `Generate NLP anim` should appear on the right hand side menu of the 3D view
 	\item Click on the `Generate NLP anim` tab
-\end{itemize}
+\end{enumerate}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 	\centerline{\fbox{\includegraphics[width = 30em]{img/appendix/withoutaddon.png}}}
 	\caption{Running the generator without installing it as an add-on}\label{fig:withoutaddon}
 \end{figure}
@@ -100,7 +100,7 @@ Please follow these steps only if you installed the generator as an add-on:
 \end{itemize}
 
 \noindent After finishing the above instructions, do the following to finalize the animation:
-\begin{itemize}
+\begin{enumerate}
 	\item Press `Clean` at the top of the menu
 	\item Choose the directory `mocap` for `Animations Directory`
 	\item Choose the directory `models` for `Models Directory`
@@ -109,7 +109,7 @@ Please follow these steps only if you installed the generator as an add-on:
 	\item Press `Prepare` and wait until a `Finalize` menu appears below the `Prepare` button
 	\item Assign models for the characters from the drop-down lists
 	\item Press `Assemble` and wait until done
-\end{itemize}
+\end{enumerate}
 
 \noindent The animation is now finalized. It can now be viewed, edited or rendered. Please refer to Blender official documentation and tutorials for more information on this.
 
@@ -156,7 +156,34 @@ To insert a new model, browse the `models` table. Again, provide a unique name a
 
 \noindent Keep the emotion values from 0.0 to 1.0.
 
-\section{Importing More Animations From EMBD}
 
+\section{Importing More Animations From EMBD}
+If you wish to import more animations from EMBD you can use the EMBD importer tool. It will allow you to quickly process huge amounts of EMBD animations and export them to .fbx files compatible with the project.
+
+\noindent To use the importer tool
+\begin{enumerate}
+	\item Open file `EMBD importer/importer.blend` with Blender
+	\item In the text editor on the left scroll to the bottom
+	\item There you will find arrays with links to EMBD animations
+	\item Visit \url{http://ebmdb.tuebingen.mpg.de/index.php}
+	\item Browse the EMBD website in search of desired animations
+	\item Copy the links to BVH files and paste them in the arrays in the script
+	\item Press `Run Script` on the bottom panel
+	\item \textbf{Important:} The process might take a long time depending on the amount of required animations - please do not interrupt or close Blender even when the system labels the process as unresponsive
+	\item The imported files can be found in the folder `imported`
+\end{enumerate}
+
+
+\section{Generate a Showcase \label{sec:showcasegeneratormanual}}
+Since all animations must be reviewed manually in order to assign their emotion value the showcase generator tool was created to help with this task. The process of generating a showcase will take a number of animations and display them all in one animated clip while showing their filenames as subtitles
+
+\noindent To generate a showcase:
+\begin{enumerate}
+	\item Run the command `python analyzer/generate\_showcase.py path\_to\_directory\_with\_animations`
+	\item The program will create a number of json files (showcase0.json, showcase1.json, etc) in the `showcases` folder
+	\item Each showcase file contains instructions for the generate to create an animation consisting of up to 10 animation (splitting the scene into 10 clips each makes it easier to render and use)
+	\item Use the showcase files as scene files with the generator module (section ~\ref{sec:generatormanual})
+	\item Render the animation
+\end{enumerate}
 
 

@@ -68,7 +68,7 @@ The EMDB importer's purpose is to help prepare the animations obtained from EMBD
 
 The EMDB importer help automate the process of acquiring animations by allowing to download and process a huge bulk of animations, saving them in folders that correspond to their emotion category and showing their length in frames in the filename.
 
-\subsection{Showcase Generator}
+\subsection{Showcase Generator \label{sec:showcasegenerator}}
 The purpose of the showcase generator is to help categorize and store the animations in the database (section ~\ref{sec:dbdesign}). The showcase generator outputs instructions for the animation generator (section \ref{sec:generatordesign}) which allow the animation generator to create an animation which shows all the animations in a given directory one after another. Since the animations have to be analyzed manually (in order to assess their emotional value), a clip showing all animations allows for a quick and easy analysis.
 
 
@@ -81,7 +81,7 @@ The input is a file that represents a dialogue. Each character that participates
 I used this format as this format is often used to represent movie scripts. One can find hundreds of scripts saved in this format on The Internet Movie Script Database (\url{www.imsdb.com}). The example input can be seen in figure ~\ref{fig:inputscript}.
 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centerline{\fbox{\includegraphics[width = 30em]{img/script.png}}}
 \caption{An example of system's input}\label{fig:inputscript}
 \end{figure}
@@ -102,14 +102,14 @@ The animation data is stored in FBX files - one animated action per file. The fo
 
 The database is implemented using SQLite. It is the perfect tool for this task as the database needs to be simple, relatively small and easily searchable. The animation metadata is held in a table that look like this FIGURE. The emotional values of each animated clip need to be manually adjusted. When all values are set to zero, it means that the clip carries no emotional impact (neutral). An example of a few database records can be seen in figure ~\ref{fig:db}.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centerline{\fbox{\includegraphics[width = 30em]{img/db.png}}}
 \caption{Database of animation clips}\label{fig:db}
 \end{figure}
 
 The other purpose of the database is to store the information about the models. The important information about a model is its name, file location, camera offset and rotation. Because models may be of different shapes and sizes, camera positioning during dialogue will not be the same. The database allows to specify a desirable camera position relative to the character that will allow to fully capture the character at a good angle. Example of a few model database records can be seen in figure ~\ref{fig:dbmodel}.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centerline{\fbox{\includegraphics[width = 30em]{img/dbmodel.png}}}
 \caption{Database of character models}\label{fig:dbmodel}
 \end{figure}
@@ -128,7 +128,7 @@ The matcher must account that even the most emotionally fitting animations may n
 
 To account for this, constant frames per second (to define animation length in real world terms) and words per second (to calculate the length of a dialogue line in seconds) must be defined. The matcher uses those to calculate the ratio between an animated clip length and speech length. This ratio is used to adjust the score calculated using emotional values (section ~\ref{sec:scorematching}). How the two matching operations work together can be seen in the pseudocode in figure ~\ref{fig:matcher}.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centerline{\fbox{\includegraphics[width = 30em]{img/matcher.png}}}
 \caption{Pseudocode explaining how the matcher calculates the scores}\label{fig:matcher}
 \end{figure}
@@ -149,11 +149,11 @@ The camera is added to the scene and positioned using the metadata retrievec fro
 
 Subtitles are added as Video Editor Sequence Strips spanning between frames that correspond to the animation (figure ~\ref{fig:substrips}).
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centerline{\fbox{\includegraphics[width = 30em]{img/nla.png}}}
 \caption{NLA strips of the final animation}\label{fig:nla}
 \end{figure}
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centerline{\fbox{\includegraphics[width = 30em]{img/substrips.png}}}
 \caption{Video strips featuring subtitles}\label{fig:substrips}
 \end{figure}
@@ -161,11 +161,11 @@ Subtitles are added as Video Editor Sequence Strips spanning between frames that
 The final animation can be edited and adjusted in Blender (figure ~\ref{fig:finalblend}), rendered (figure ~\ref{fig:finalrend}) or exported to file.
 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centerline{\fbox{\includegraphics[width = 30em]{img/finalblend.png}}}
 \caption{Editing the final animation in Blender}\label{fig:finalblend}
 \end{figure}
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centerline{\fbox{\includegraphics[width = 30em]{img/finalrend.png}}}
 \caption{Rendered final animation}\label{fig:finalrend}
 \end{figure}
@@ -176,7 +176,7 @@ The Animation Generator module is the only module that features a Graphical UI. 
 
 The UI is minimalistic and simple to use. Upon installation and activation a new tab is added to the menu on the left hand side. Figure ~\ref {fig:ui_main}. Rectangle 1 represents the left hand side menu. Number 2 shows the tabs where the bottommost one belongs to the extension. Number 3 shows the actual UI of the extension.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centerline{\includegraphics[width = 18em]{img/ui_main.png}}
 \caption{The addon UI}\label{fig:ui_main}
 \end{figure}
@@ -185,7 +185,7 @@ From here the user is able to either clean the scene (might be useful especially
 
 Upon pressing `Prepare` the program will prepare data for generating a scene. Required animations will be imported and the scene file will be parsed. There is one more step left to finalize the animation. When preparation is finished, a new menu will pop up below the currently existing one. The menu can be seen in figure ~\ref{fig:ui_finalize}. In the menu the user is required to assign a character model to each character existing in the scene. Upon pressing `Finalize` the full scene will be generated complete with lighting, camera movement and subtitles.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centerline{\includegraphics[width = 18em]{img/ui_finalize.png}}
 \caption{The finalization step (new menu highlighted by white rectangle)}\label{fig:ui_finalize}
 \end{figure}

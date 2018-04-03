@@ -18,6 +18,7 @@
 
 \usepackage[numbers]{natbib}
 \usepackage{url}
+\usepackage{float}
 \setlength{\bibsep}{0pt}
 \bibliographystyle{apalike}
 
@@ -47,7 +48,7 @@
 %% \includeonly{} command with a list of the file/chapter names that
 %% you wish to include.  NB, this must be in the preamble.
 
-\includeonly{introduction,background,analysis,faq, design, requirements, testingperf, usermanual}
+\includeonly{introduction,background,analysis,faq, design, requirements, testingperf, usermanual, maintenance}
 
 \def\sfthing#1#2{\def#1{\mbox{{\small\normalfont\sffamily #2}}}}
 
@@ -99,5 +100,6 @@
 
 \appendix
 \include{usermanual}
+\include{maintenance}
 
 \end{document}
