@@ -1,0 +1,109 @@
+\chapter{User Manual \label{chap:usermanual}}
+The system is designed to be cross platform, however it is advised to use Windows as it is the only system on which the project was thoroughly tested.
+
+\section{Requirements and installation \label{sec:requirements}}
+Before using the software, several requirements must be fulfilled.
+
+\subsection{Software and Libraries}
+\subsubsection{Required software}
+\begin{itemize}
+	\item Python 2.7
+	\item Pip
+	\item Blender version 2.79 or newer
+\end{itemize}
+
+\subsubsection{Libraries}
+Only for Linux systems: Download and install library python-dev (or python-devel)
+
+Following python libraries must be installed:
+\begin{itemize}
+	\item setuptools
+	\item watson-developer-cloud
+	\item wget
+\end{itemize}
+\noindent The packages can be installed in bulk by running:
+
+\indent `path\_to\_python/Scripts/pip install -r requirements`
+
+\noindent in the main directory. As Blender usually comes with its own Python environment, you will need to run the command:
+
+\indent `path\_to\_blender/version/python/Scripts/pip install -r requirements`
+
+\noindent To install the libraries for Blender.
+
+\subsection{Install Generator as Blender Addon \label{sec:installaddon}}
+The following steps are optional. Installing the module as addon will enable the module to be permanently incorporated into Blender.
+
+\noindent To install the addon:
+\begin{itemize}
+	\item Open Blender
+	\item Open user settings (File > User preferences)
+	\item Open Add-ons tab
+	\item On the bottom panel press `install add-on from file`
+	\item Navigate to `project folder > generator` and double click on `addon.py`
+	\item In the search box on the top right corner type `NLPanim` - a greyed-out item called `Object: NLPAnim` should appear
+	\item Check the box next to the item
+	\item Press `Save user settings` in the bottom left corner
+	\item Exit user preferences
+\end{itemize}
+
+\noindent The module is now installed as an add-on. In the 3D-view (default view) on the bottom of the right-hand side menu there should appear a tab called `Generate NLP anim` (figure ~\ref{fig:installedaddon}).
+	
+\begin{figure}[!ht]
+	\centerline{\fbox{\includegraphics[width = 30em]{img/appendix/installedaddon.png}}}
+	\caption{The generator addon menu}\label{fig:installedaddon}
+\end{figure}
+
+\section{Generating animations}
+\noindent Now that all the requirements are met, the animation can be generated. There are two main steps to generating. Firstly, use the analyzer module to create a JSON file instructions for the generator. Secondly, use the generator to assemble the animation.
+
+\subsubsection{Analyze script \label{sec:analyze-script}}
+\noindent The input script must resemble the script in figure ~\ref{inputscript2}
+
+\begin{figure}[!ht]
+	\centerline{\fbox{\includegraphics[width = 30em]{img/script.png}}}
+	\caption{An example of system's input}\label{fig:inputscript2}
+\end{figure}
+
+\noindent The characters must be specified after 5 tabs. The dialogue text is specified after 3 tabs. The file must end with an `ENDSCRIPT` with no indentation. For reference please refer to either:
+\begin{itemize}
+	\item Example script files in folder `movies`
+	\item Movie scripts hosted on \url{www.imsdb.com}
+\end{itemize}
+
+\noindent The script now can be process using the following command:
+
+\indent `python analyzer/script\_analyze.py path\_to\_dialogue\_script db/animation.db`
+
+\noindent The program will output a file called `scene.json`. This file is used to generate the animation.
+
+\subsubsection{Generate Animation}
+\noindent If you did not follow section ~\ref{sec:installaddon}, please follow these steps:
+\begin{itemize}
+	\item Open the file `rendered.blend` with Blender
+	\item Click `Run Script` on the bottom of the scripting view (figure ~\ref{fig:withoutaddon})
+	\item The tab called `Generate NLP anim` should appear on the right hand side menu of the 3D view
+	\item Click on the `Generate NLP anim` tab
+\end{itemize}
+
+\begin{figure}[!ht]
+	\centerline{\fbox{\includegraphics[width = 30em]{img/appendix/withoutaddon.png}}}
+	\caption{Running the generator without installing it as an add-on}\label{fig:withoutaddon}
+\end{figure}
+
+Please follow these steps only if you installed the generator as an add-on:
+\begin{itemize}
+	\item Open Blender
+	\item Press `File > Save` and save the file in a preferred location
+	\item \textbf{Important:} close Blender and reopen the saved file
+	\item Open `Generate NLP anim` tab
+\end{itemize}
+
+\noindent After finishing the above instructions, do the following to finalize the animation:
+\begin{itemize}
+	\item Press `Clean` at the top of the menu
+	\item Choose the directory `mocap` for `Animations Directory`
+	\item Choose the directory `models` for `Models Directory`
+	\item Choose the file `db/animation.db` for `Database`
+	\item For `Dialogue` choose the `scene.json` file you created when following the section ~\ref{sec:analyze-script}
+	\item press `Prepare` 

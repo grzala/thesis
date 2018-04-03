@@ -1,3 +1,102 @@
 \begin{thebibliography}{}
 
+\bibitem[Brodkin, 2014]{uncannygames}
+Brodkin, J. (2014).
+\newblock Game developers crossing the uncanny valley.
+\newblock
+  \url{https://insights.dice.com/2014/02/14/game-developers-crossing-uncanny-valley/}.
+
+\bibitem[Burton, 2016]{basicemo}
+Burton, N. (2016).
+\newblock What are basic emotions?
+\newblock
+  \url{https://www.psychologytoday.com/blog/hide-and-seek/201601/what-are-basic-emotions}.
+
+\bibitem[Cavazza and I., 1999]{animpaper3}
+Cavazza, M. and I., P. (1999).
+\newblock Natural language control of interactive 3d animation and computer
+  games.
+\newblock Technical report, University of Bradford.
+
+\bibitem[Chang, 2015]{watson}
+Chang, L. (2015).
+\newblock Ibm's watson may now be able to tell how snarky your email is with
+  its new tone analzyer.
+\newblock
+  \url{https://www.digitaltrends.com/cool-tech/watsons-new-tone-analyzer-can-tell-if-your-email-is-too-snarky/}.
+
+\bibitem[Feldman, 2013]{sentimentanal2}
+Feldman, R. (2013).
+\newblock Techniques and applications for sentiment analysis.
+\newblock {\em Communications of the ACM}, 56:82--89.
+
+\bibitem[Fenlon, 2016]{pcgamerwitcher}
+Fenlon, W. (2016).
+\newblock Most of the witcher 3's dialogue scenes were animated by an
+  algorithm.
+
+\bibitem[Hernandez, 2017]{uncannyandromeda}
+Hernandez, P. (2017).
+\newblock People are trashing mass effect: Andromeda's animation.
+\newblock
+  \url{https://kotaku.com/people-are-ripping-apart-mass-effect-andromedas-animati-1793334047}.
+
+\bibitem[Jack et~al., 2014]{fouremo}
+Jack, R.~E., Garrod, O.~G., and Schyns, P.~G. (2014).
+\newblock Dynamic facial expressions of emotion transmit an evolving hierarchy
+  of signals over time.
+\newblock Technical report, University of Glasgow.
+
+\bibitem[Levison, 1991]{animosha}
+Levison, L. (1991).
+\newblock Action composition for the animation of natural language
+  instructions.
+\newblock Technical report, Universirt of Pennsylvania.
+
+\bibitem[MacDorman and Chattopadhyay, 2014]{uncanny1}
+MacDorman, K.~F. and Chattopadhyay, D. (2014).
+\newblock Reducing consistency in human realism increases the uncanny valley
+  effect; increasing category uncertainty does note.
+\newblock Technical report, Indiana University School of Informatics and
+  Computing.
+
+\bibitem[Mori, 1970]{uncanny2}
+Mori, M. (1970).
+\newblock The uncanny valley.
+\newblock
+  \url{https://spectrum.ieee.org/automaton/robotics/humanoids/the-uncanny-valley}.
+
+\bibitem[Oshita, 2009]{animmc}
+Oshita, M. (2009).
+\newblock Generating animation from natural language texts and framework of
+  motion database.
+\newblock Technical report, Kyushu Institute of Technology.
+
+\bibitem[Rohit and Jagdale, 2018]{sentimentanal1}
+Rohit, W. and Jagdale, R. (2018).
+\newblock An approach to sentiment analysis.
+\newblock Technical report, Department of CS \& IT, Dr. BAMU, Aurangabad,
+  Maharashtra, India.
+
+\bibitem[Tominski, 2016]{gdcwitcher}
+Tominski, P. (2016).
+\newblock Behind the scenes of cinematic dialogues in 'the witcher 3: Wild
+  hunt.
+\newblock
+  \url{http://www.gdcvault.com/play/1022988/Behind-the-Scenes-of-Cinematic}.
+
+\bibitem[Volkova et~al., 2014a]{planck1}
+Volkova, E., Mohler, B., de~la Rossa, J., and Bulthoff, S. (2014a).
+\newblock The mpi database of emo- tional body expressions common for narrative
+  scenarios.
+\newblock Technical report, Max-Planck Institute for Biological Cybernetics in
+  Tuebingen, Germany.
+
+\bibitem[Volkova et~al., 2014b]{planck2}
+Volkova, E., Mohler, B., Tesch, T., and Bulthoff, S. (2014b).
+\newblock Emotion categorisation of body expressions in narrative scenarios
+  frontiers in psychology.
+\newblock Technical report, Max-Planck Institute for Biological Cybernetics in
+  Tuebingen, Germany.
+
 \end{thebibliography}

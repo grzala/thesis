@@ -1,0 +1,15 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: abdnthesis.aux
+The style file: apalike.bst
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: background.aux
+A level-1 auxiliary file: analysis.aux
+A level-1 auxiliary file: requirements.aux
+A level-1 auxiliary file: design.aux
+I couldn't open auxiliary file testingperf.aux
+---line 8 of file abdnthesis.aux
+ : \@input{testingperf.aux
+ :                        }
+I'm skipping whatever remains of this command
+Database file #1: mybib.bib
+Warning--empty journal in pcgamerwitcher
+(There was 1 error message)

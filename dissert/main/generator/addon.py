@@ -278,6 +278,7 @@ def prepare(anim_folder, model_folder, db_path, dialogue_path):
     try:
         dialogue = json.load(open(os.getcwd() + '\\' + dialogue_path[2:]))
     except:
+        error_message = "The scene file may be corrupted."
         return None
     
     ANIM_FOLDER = anim_folder

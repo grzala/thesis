@@ -1,164 +1,326 @@
 [
     {
-        "text": " Son... You've saved me. I was afraid I'd be trapped in here forever.", 
-        "character": "DAD", 
+        "text": " Did you hear that terrifying sound?", 
+        "character": "CHARACTER1", 
         "clip": [
             {
-                "name": "fear_terrified_terrified_3", 
+                "name": "sad_subtle_helpless_1", 
                 "joy": 0.0, 
                 "anger": 0.0, 
                 "sadness": 0.0, 
-                "score": 0.7728393000000002, 
-                "file": "fear/terrified/terrified3.fbx", 
+                "score": 0.76528, 
+                "file": "sadness/subtle/helpless1.fbx", 
+                "Frames": 95, 
+                "surprise": 0.0, 
+                "fear": 0.55, 
+                "disgust": 0.0, 
+                "id": 105
+            }
+        ], 
+        "tones": {
+            "joy": 0.059362, 
+            "sadness": 0.058528, 
+            "disgust": 0.09986, 
+            "anger": 0.041802, 
+            "surprise": 0.0, 
+            "fear": 0.64123
+        }
+    }, 
+    {
+        "text": " Shut up Johnny! You are going to get us all killed!", 
+        "character": "CHARACTER2", 
+        "clip": [
+            {
+                "name": "angry_short_shrug_4", 
+                "joy": 0.0, 
+                "anger": 0.55, 
+                "sadness": 0.0, 
+                "score": 0.8065045592705168, 
+                "file": "anger/shrug/shrug4.fbx", 
+                "Frames": 141, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 34
+            }
+        ], 
+        "tones": {
+            "joy": 0.0062645, 
+            "sadness": 0.330416, 
+            "disgust": 0.1216, 
+            "anger": 0.561209, 
+            "surprise": 0.0, 
+            "fear": 0.296752
+        }
+    }, 
+    {
+        "text": " We need to get out of here or we are going to die!", 
+        "character": "CHARACTER1", 
+        "clip": [
+            {
+                "name": "sad_subtle_helpless_2", 
+                "joy": 0.0, 
+                "anger": 0.6000000000000001, 
+                "sadness": 0.7, 
+                "score": 0.7060673170731707, 
+                "file": "sadness/subtle/helpless2.fbx", 
+                "Frames": 164, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 106
+            }
+        ], 
+        "tones": {
+            "joy": 0.017849, 
+            "sadness": 0.60431, 
+            "disgust": 0.089525, 
+            "anger": 0.096907, 
+            "surprise": 0.0, 
+            "fear": 0.456872
+        }
+    }, 
+    {
+        "text": " We need to get out of here or we are going to die!", 
+        "character": "CHARACTER1", 
+        "clip": [
+            {
+                "name": "sad_thinking_thinking_3", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.7, 
+                "score": 0.66491683125, 
+                "file": "sadness/thinking/thinking3.fbx", 
+                "Frames": 147, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 116
+            }
+        ], 
+        "tones": {
+            "joy": 0.017849, 
+            "sadness": 0.60431, 
+            "disgust": 0.089525, 
+            "anger": 0.096907, 
+            "surprise": 0.0, 
+            "fear": 0.456872
+        }
+    }, 
+    {
+        "text": " We need to get out of here or we are going to die!", 
+        "character": "CHARACTER1", 
+        "clip": [
+            {
+                "name": "sad_subtle_resigned_3", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.5, 
+                "score": 0.64297179375, 
+                "file": "sadness/subtle/resigned3.fbx", 
+                "Frames": 143, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 99
+            }
+        ], 
+        "tones": {
+            "joy": 0.017849, 
+            "sadness": 0.60431, 
+            "disgust": 0.089525, 
+            "anger": 0.096907, 
+            "surprise": 0.0, 
+            "fear": 0.456872
+        }
+    }, 
+    {
+        "text": " We need to get out of here or we are going to die!", 
+        "character": "CHARACTER1", 
+        "clip": [
+            {
+                "name": "sad_subtle_resigned_4", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.5, 
+                "score": 0.6204902625000001, 
+                "file": "sadness/subtle/resigned4.fbx", 
+                "Frames": 138, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 100
+            }
+        ], 
+        "tones": {
+            "joy": 0.017849, 
+            "sadness": 0.60431, 
+            "disgust": 0.089525, 
+            "anger": 0.096907, 
+            "surprise": 0.0, 
+            "fear": 0.456872
+        }
+    }, 
+    {
+        "text": " We need to get out of here or we are going to die!", 
+        "character": "CHARACTER1", 
+        "clip": [
+            {
+                "name": "sad_subtle_resigned_1", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.7, 
+                "score": 0.61063790625, 
+                "file": "sadness/subtle/resigned1.fbx", 
+                "Frames": 135, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 97
+            }
+        ], 
+        "tones": {
+            "joy": 0.017849, 
+            "sadness": 0.60431, 
+            "disgust": 0.089525, 
+            "anger": 0.096907, 
+            "surprise": 0.0, 
+            "fear": 0.456872
+        }
+    }, 
+    {
+        "text": " We need to get out of here or we are going to die!", 
+        "character": "CHARACTER1", 
+        "clip": [
+            {
+                "name": "angry_gave_up_3", 
+                "joy": 0.0, 
+                "anger": 0.5, 
+                "sadness": 0.75, 
+                "score": 0.6026451375, 
+                "file": "anger/sad/gaveup3.fbx", 
+                "Frames": 138, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 43
+            }
+        ], 
+        "tones": {
+            "joy": 0.017849, 
+            "sadness": 0.60431, 
+            "disgust": 0.089525, 
+            "anger": 0.096907, 
+            "surprise": 0.0, 
+            "fear": 0.456872
+        }
+    }, 
+    {
+        "text": " We need to get out of here or we are going to die!", 
+        "character": "CHARACTER1", 
+        "clip": [
+            {
+                "name": "sad_subtle_resigned_2", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.6000000000000001, 
+                "score": 0.5962919750000001, 
+                "file": "sadness/subtle/resigned2.fbx", 
                 "Frames": 124, 
                 "surprise": 0.0, 
-                "fear": 0.8999999999999999, 
+                "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 70
+                "id": 98
             }
         ], 
         "tones": {
-            "joy": 0.017574, 
-            "sadness": 0.125807, 
-            "disgust": 0.009887, 
-            "anger": 0.029729, 
+            "joy": 0.017849, 
+            "sadness": 0.60431, 
+            "disgust": 0.089525, 
+            "anger": 0.096907, 
             "surprise": 0.0, 
-            "fear": 0.897212
+            "fear": 0.456872
         }
     }, 
     {
-        "text": " It's so good to see you, but... what are you DOING here?", 
-        "character": "DAD", 
+        "text": " We need to get out of here or we are going to die!", 
+        "character": "CHARACTER1", 
         "clip": [
             {
-                "name": "joy_elevated_3", 
-                "joy": 0.75, 
-                "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.957679926267281, 
-                "file": "joy/elevated/elevated3.fbx", 
-                "Frames": 155, 
+                "name": "angry_sad_disbelief", 
+                "joy": 0.0, 
+                "anger": 0.8, 
+                "sadness": 0.5, 
+                "score": 0.593512425, 
+                "file": "anger/sad/disbelief1.fbx", 
+                "Frames": 132, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 55
+                "id": 24
             }
         ], 
         "tones": {
-            "joy": 0.750882, 
-            "sadness": 0.008342, 
-            "disgust": 0.008201, 
-            "anger": 0.119962, 
+            "joy": 0.017849, 
+            "sadness": 0.60431, 
+            "disgust": 0.089525, 
+            "anger": 0.096907, 
             "surprise": 0.0, 
-            "fear": 0.038013
+            "fear": 0.456872
         }
     }, 
     {
-        "text": " I came here to find you.", 
-        "character": "SON", 
+        "text": " We need to get out of here or we are going to die!", 
+        "character": "CHARACTER1", 
         "clip": [
             {
-                "name": "joy_elevated_5", 
-                "joy": 0.5, 
+                "name": "fear_subtle_closed_6", 
+                "joy": 0.0, 
                 "anger": 0.0, 
                 "sadness": 0.0, 
-                "score": 0.8163386666666667, 
-                "file": "joy/elevated/elevated5.fbx", 
-                "Frames": 90, 
+                "score": 0.58208239375, 
+                "file": "fear/subtle/closed6.fbx", 
+                "Frames": 143, 
                 "surprise": 0.0, 
-                "fear": 0.0, 
+                "fear": 0.55, 
                 "disgust": 0.0, 
-                "id": 57
+                "id": 66
             }
         ], 
         "tones": {
-            "joy": 0.418381, 
-            "sadness": 0.160734, 
-            "disgust": 0.053464, 
-            "anger": 0.054703, 
+            "joy": 0.017849, 
+            "sadness": 0.60431, 
+            "disgust": 0.089525, 
+            "anger": 0.096907, 
             "surprise": 0.0, 
-            "fear": 0.177381
+            "fear": 0.456872
         }
     }, 
     {
-        "text": " Well I'm glad you did. This certainly wasn't how I expected thins to turn out.", 
-        "character": "DAD", 
+        "text": " We need to get out of here or we are going to die!", 
+        "character": "CHARACTER1", 
         "clip": [
             {
-                "name": "joy_elevated_4", 
-                "joy": 0.6000000000000001, 
+                "name": "sad_gaveup_1", 
+                "joy": 0.0, 
                 "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.6504409679687501, 
-                "file": "joy/elevated/elevated4.fbx", 
-                "Frames": 133, 
+                "sadness": 0.8, 
+                "score": 0.5726611500000001, 
+                "file": "sadness/gaveup1.fbx", 
+                "Frames": 136, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 56
+                "id": 117
             }
         ], 
         "tones": {
-            "joy": 0.494269, 
-            "sadness": 0.097466, 
-            "disgust": 0.027867, 
-            "anger": 0.0112, 
+            "joy": 0.017849, 
+            "sadness": 0.60431, 
+            "disgust": 0.089525, 
+            "anger": 0.096907, 
             "surprise": 0.0, 
-            "fear": 0.031977
-        }
-    }, 
-    {
-        "text": " Good thing I showed up to save you.", 
-        "character": "SON", 
-        "clip": [
-            {
-                "name": "joy_elevated_2", 
-                "joy": 0.55, 
-                "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.7690384722222223, 
-                "file": "joy/elevated/elevated2.fbx", 
-                "Frames": 100, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 54
-            }
-        ], 
-        "tones": {
-            "joy": 0.758989, 
-            "sadness": 0.074727, 
-            "disgust": 0.060301, 
-            "anger": 0.038767, 
-            "surprise": 0.0, 
-            "fear": 0.059581
-        }
-    }, 
-    {
-        "text": " It certainly is! It's nice to feel like I'm on two legs again.", 
-        "character": "DAD", 
-        "clip": [
-            {
-                "name": "joy_elevated_6", 
-                "joy": 0.5, 
-                "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.531411975, 
-                "file": "joy/elevated/elevated6.fbx", 
-                "Frames": 108, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 58
-            }
-        ], 
-        "tones": {
-            "joy": 0.712723, 
-            "sadness": 0.199914, 
-            "disgust": 0.032684, 
-            "anger": 0.003426, 
-            "surprise": 0.0, 
-            "fear": 0.061417
+            "fear": 0.456872
         }
     }
 ]

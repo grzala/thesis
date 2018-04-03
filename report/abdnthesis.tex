@@ -47,7 +47,7 @@
 %% \includeonly{} command with a list of the file/chapter names that
 %% you wish to include.  NB, this must be in the preamble.
 
-\includeonly{introduction,background,analysis,faq, design, requirements}
+\includeonly{introduction,background,analysis,faq, design, requirements, testingperf, usermanual}
 
 \def\sfthing#1#2{\def#1{\mbox{{\small\normalfont\sffamily #2}}}}
 
@@ -87,15 +87,17 @@
 \include{analysis}
 \include{requirements}
 \include{design}
-\include{testing}
+\include{testingperf}
 %\include{implementation}
 %\include{evaluation}
 %\include{discussion}
 %\include{conclusion}
 
-\appendix
-%\include{proof}
 
 \bibliography{mybib}
+
+
+\appendix
+\include{usermanual}
 
 \end{document}

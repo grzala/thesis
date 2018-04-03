@@ -56,8 +56,9 @@ def analyze_repeating(conversations):
 def main():
     # Read script from provided file
     conversations = parse.parsefile(sys.argv[1])
-
+    
     # For each dialogue line analyze emotions
+    print("Emotion analysis...")
     for conversation in conversations:
         tones = tone.analyze(conversation["text"]) # use tone.py to analyze emotions
         conversation["tones"] = tones
@@ -66,6 +67,7 @@ def main():
     for conversation in conversations:
         normalize_emotions(conversation)
 
+    print("Matching animations...")
     # Find animations matching each dialogue line
     for conversation in conversations:
         conversation['clip'] = db.get_matching_gestures(conversation["text"], conversation['tones'], sys.argv[2])
@@ -78,6 +80,6 @@ def main():
     file.write(json.dumps(conversations, ensure_ascii=False, indent=4))
     file.close()
 
-    print("output: scene.json")
+    print("Finished. Output: scene.json")
 
 main()
