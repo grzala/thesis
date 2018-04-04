@@ -1,284 +1,95 @@
 [
     {
-        "text": " Did you hear that terrifying sound?", 
-        "character": "CHARACTER1", 
+        "text": " How do you feel?", 
+        "character": "AMARI", 
         "clip": [
             {
-                "name": "sad_subtle_helpless_1", 
+                "name": "neutral_neutral_20", 
                 "joy": 0.0, 
                 "anger": 0.0, 
                 "sadness": 0.0, 
-                "score": 0.76528, 
-                "file": "sadness/subtle/helpless1.fbx", 
-                "Frames": 95, 
+                "score": 0.5952380952380952, 
+                "file": "neutral/neutral20.fbx", 
+                "Frames": 96, 
                 "surprise": 0.0, 
-                "fear": 0.55, 
+                "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 105
+                "id": 95
             }
         ], 
         "tones": {
-            "joy": 0.059362, 
-            "sadness": 0.058528, 
-            "disgust": 0.09986, 
-            "anger": 0.041802, 
+            "joy": 0.0, 
+            "sadness": 0.0, 
+            "disgust": 0.0, 
+            "anger": 0.0, 
             "surprise": 0.0, 
-            "fear": 0.64123
+            "fear": 0.0
         }
     }, 
     {
-        "text": " Shut up Johnny! You are going to get us all killed!", 
-        "character": "CHARACTER2", 
+        "text": " I'm okay, doctor. Thank you.", 
+        "character": "ISAAC", 
         "clip": [
             {
-                "name": "angry_short_shrug_4", 
-                "joy": 0.0, 
-                "anger": 0.55, 
+                "name": "joy_elevated_5", 
+                "joy": 0.5, 
+                "anger": 0.0, 
                 "sadness": 0.0, 
-                "score": 0.8065045592705168, 
-                "file": "anger/shrug/shrug4.fbx", 
-                "Frames": 141, 
+                "score": 0.7053432380952381, 
+                "file": "joy/elevated/elevated5.fbx", 
+                "Frames": 90, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 34
+                "id": 57
             }
         ], 
         "tones": {
-            "joy": 0.0062645, 
-            "sadness": 0.330416, 
-            "disgust": 0.1216, 
-            "anger": 0.561209, 
+            "joy": 0.574237, 
+            "sadness": 0.012247, 
+            "disgust": 0.010734, 
+            "anger": 0.039503, 
             "surprise": 0.0, 
-            "fear": 0.296752
+            "fear": 0.034555
         }
     }, 
     {
-        "text": " We need to get out of here or we are going to die!", 
-        "character": "CHARACTER1", 
+        "text": " That's good, but I want you to keep monitoring yourself. We have to be sure there's no long-term damage.", 
+        "character": "AMARI", 
         "clip": [
             {
-                "name": "sad_subtle_helpless_2", 
-                "joy": 0.0, 
-                "anger": 0.6000000000000001, 
-                "sadness": 0.7, 
-                "score": 0.7060673170731707, 
-                "file": "sadness/subtle/helpless2.fbx", 
-                "Frames": 164, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 106
-            }
-        ], 
-        "tones": {
-            "joy": 0.017849, 
-            "sadness": 0.60431, 
-            "disgust": 0.089525, 
-            "anger": 0.096907, 
-            "surprise": 0.0, 
-            "fear": 0.456872
-        }
-    }, 
-    {
-        "text": " We need to get out of here or we are going to die!", 
-        "character": "CHARACTER1", 
-        "clip": [
-            {
-                "name": "sad_thinking_thinking_3", 
-                "joy": 0.0, 
+                "name": "joy_elevated_3", 
+                "joy": 0.75, 
                 "anger": 0.0, 
-                "sadness": 0.7, 
-                "score": 0.66491683125, 
-                "file": "sadness/thinking/thinking3.fbx", 
-                "Frames": 147, 
+                "sadness": 0.0, 
+                "score": 0.4609653015625, 
+                "file": "joy/elevated/elevated3.fbx", 
+                "Frames": 155, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 116
+                "id": 55
             }
         ], 
         "tones": {
-            "joy": 0.017849, 
-            "sadness": 0.60431, 
-            "disgust": 0.089525, 
-            "anger": 0.096907, 
+            "joy": 0.322235, 
+            "sadness": 0.212706, 
+            "disgust": 0.033703, 
+            "anger": 0.136518, 
             "surprise": 0.0, 
-            "fear": 0.456872
+            "fear": 0.100151
         }
     }, 
     {
-        "text": " We need to get out of here or we are going to die!", 
-        "character": "CHARACTER1", 
-        "clip": [
-            {
-                "name": "sad_subtle_resigned_3", 
-                "joy": 0.0, 
-                "anger": 0.0, 
-                "sadness": 0.5, 
-                "score": 0.64297179375, 
-                "file": "sadness/subtle/resigned3.fbx", 
-                "Frames": 143, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 99
-            }
-        ], 
-        "tones": {
-            "joy": 0.017849, 
-            "sadness": 0.60431, 
-            "disgust": 0.089525, 
-            "anger": 0.096907, 
-            "surprise": 0.0, 
-            "fear": 0.456872
-        }
-    }, 
-    {
-        "text": " We need to get out of here or we are going to die!", 
-        "character": "CHARACTER1", 
-        "clip": [
-            {
-                "name": "sad_subtle_resigned_4", 
-                "joy": 0.0, 
-                "anger": 0.0, 
-                "sadness": 0.5, 
-                "score": 0.6204902625000001, 
-                "file": "sadness/subtle/resigned4.fbx", 
-                "Frames": 138, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 100
-            }
-        ], 
-        "tones": {
-            "joy": 0.017849, 
-            "sadness": 0.60431, 
-            "disgust": 0.089525, 
-            "anger": 0.096907, 
-            "surprise": 0.0, 
-            "fear": 0.456872
-        }
-    }, 
-    {
-        "text": " We need to get out of here or we are going to die!", 
-        "character": "CHARACTER1", 
-        "clip": [
-            {
-                "name": "sad_subtle_resigned_1", 
-                "joy": 0.0, 
-                "anger": 0.0, 
-                "sadness": 0.7, 
-                "score": 0.61063790625, 
-                "file": "sadness/subtle/resigned1.fbx", 
-                "Frames": 135, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 97
-            }
-        ], 
-        "tones": {
-            "joy": 0.017849, 
-            "sadness": 0.60431, 
-            "disgust": 0.089525, 
-            "anger": 0.096907, 
-            "surprise": 0.0, 
-            "fear": 0.456872
-        }
-    }, 
-    {
-        "text": " We need to get out of here or we are going to die!", 
-        "character": "CHARACTER1", 
-        "clip": [
-            {
-                "name": "angry_gave_up_3", 
-                "joy": 0.0, 
-                "anger": 0.5, 
-                "sadness": 0.75, 
-                "score": 0.6026451375, 
-                "file": "anger/sad/gaveup3.fbx", 
-                "Frames": 138, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 43
-            }
-        ], 
-        "tones": {
-            "joy": 0.017849, 
-            "sadness": 0.60431, 
-            "disgust": 0.089525, 
-            "anger": 0.096907, 
-            "surprise": 0.0, 
-            "fear": 0.456872
-        }
-    }, 
-    {
-        "text": " We need to get out of here or we are going to die!", 
-        "character": "CHARACTER1", 
-        "clip": [
-            {
-                "name": "sad_subtle_resigned_2", 
-                "joy": 0.0, 
-                "anger": 0.0, 
-                "sadness": 0.6000000000000001, 
-                "score": 0.5962919750000001, 
-                "file": "sadness/subtle/resigned2.fbx", 
-                "Frames": 124, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 98
-            }
-        ], 
-        "tones": {
-            "joy": 0.017849, 
-            "sadness": 0.60431, 
-            "disgust": 0.089525, 
-            "anger": 0.096907, 
-            "surprise": 0.0, 
-            "fear": 0.456872
-        }
-    }, 
-    {
-        "text": " We need to get out of here or we are going to die!", 
-        "character": "CHARACTER1", 
-        "clip": [
-            {
-                "name": "angry_sad_disbelief", 
-                "joy": 0.0, 
-                "anger": 0.8, 
-                "sadness": 0.5, 
-                "score": 0.593512425, 
-                "file": "anger/sad/disbelief1.fbx", 
-                "Frames": 132, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 24
-            }
-        ], 
-        "tones": {
-            "joy": 0.017849, 
-            "sadness": 0.60431, 
-            "disgust": 0.089525, 
-            "anger": 0.096907, 
-            "surprise": 0.0, 
-            "fear": 0.456872
-        }
-    }, 
-    {
-        "text": " We need to get out of here or we are going to die!", 
-        "character": "CHARACTER1", 
+        "text": " Are you ready to talk about what happened in there?", 
+        "character": "AMARI", 
         "clip": [
             {
                 "name": "fear_subtle_closed_6", 
                 "joy": 0.0, 
                 "anger": 0.0, 
                 "sadness": 0.0, 
-                "score": 0.58208239375, 
+                "score": 0.6684641758241759, 
                 "file": "fear/subtle/closed6.fbx", 
                 "Frames": 143, 
                 "surprise": 0.0, 
@@ -288,39 +99,147 @@
             }
         ], 
         "tones": {
-            "joy": 0.017849, 
-            "sadness": 0.60431, 
-            "disgust": 0.089525, 
-            "anger": 0.096907, 
+            "joy": 0.279716, 
+            "sadness": 0.273691, 
+            "disgust": 0.014401, 
+            "anger": 0.100907, 
             "surprise": 0.0, 
-            "fear": 0.456872
+            "fear": 0.350472
         }
     }, 
     {
-        "text": " We need to get out of here or we are going to die!", 
-        "character": "CHARACTER1", 
+        "text": " I saw Kellog's life. The man who ruined my family. The man I killed.", 
+        "character": "ISAAC", 
         "clip": [
             {
-                "name": "sad_gaveup_1", 
+                "name": "sad_subtle_helpless_2", 
                 "joy": 0.0, 
-                "anger": 0.0, 
-                "sadness": 0.8, 
-                "score": 0.5726611500000001, 
-                "file": "sadness/gaveup1.fbx", 
-                "Frames": 136, 
+                "anger": 0.6000000000000001, 
+                "sadness": 0.7, 
+                "score": 0.7426172833333332, 
+                "file": "sadness/subtle/helpless2.fbx", 
+                "Frames": 164, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 117
+                "id": 106
             }
         ], 
         "tones": {
-            "joy": 0.017849, 
-            "sadness": 0.60431, 
-            "disgust": 0.089525, 
-            "anger": 0.096907, 
+            "joy": 0.007877, 
+            "sadness": 0.465155, 
+            "disgust": 0.376153, 
+            "anger": 0.387355, 
             "surprise": 0.0, 
-            "fear": 0.456872
+            "fear": 0.103004
+        }
+    }, 
+    {
+        "text": " That's right. He was a human being just like the rest of us, and he had reasons for being what he was, however cruel.", 
+        "character": "AMARI", 
+        "clip": [
+            {
+                "name": "angry_subtle_shrug_2", 
+                "joy": 0.0, 
+                "anger": 0.65, 
+                "sadness": 0.0, 
+                "score": 0.588158067, 
+                "file": "anger/subtle/shrug2.fbx", 
+                "Frames": 278, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 40
+            }
+        ], 
+        "tones": {
+            "joy": 0.01615875, 
+            "sadness": 0.486379, 
+            "disgust": 0.228638, 
+            "anger": 0.345337, 
+            "surprise": 0.0, 
+            "fear": 0.04213
+        }
+    }, 
+    {
+        "text": " How does that make you feel?", 
+        "character": "AMARI", 
+        "clip": [
+            {
+                "name": "sad_subtle_grieve_4\n", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.55, 
+                "score": 0.6958086363636363, 
+                "file": "sadness/subtle/grieve4.fbx", 
+                "Frames": 88, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 113
+            }
+        ], 
+        "tones": {
+            "joy": 0.311444, 
+            "sadness": 0.392223, 
+            "disgust": 0.065545, 
+            "anger": 0.080703, 
+            "surprise": 0.0, 
+            "fear": 0.157247
+        }
+    }, 
+    {
+        "text": " It wasn't all his fault. I cannot blame him for everything that happened.", 
+        "character": "ISAAC", 
+        "clip": [
+            {
+                "name": "sad_subtle_resigned_3", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.5, 
+                "score": 0.73916610625, 
+                "file": "sadness/subtle/resigned3.fbx", 
+                "Frames": 143, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 99
+            }
+        ], 
+        "tones": {
+            "joy": 0.01269875, 
+            "sadness": 0.482222, 
+            "disgust": 0.112181, 
+            "anger": 0.328144, 
+            "surprise": 0.0, 
+            "fear": 0.204245
+        }
+    }, 
+    {
+        "text": " If I were a priest, I would say forgiveness is a good thing.", 
+        "character": "AMARI", 
+        "clip": [
+            {
+                "name": "joy_elevated_4", 
+                "joy": 0.6000000000000001, 
+                "anger": 0.0, 
+                "sadness": 0.0, 
+                "score": 0.7871189375000001, 
+                "file": "joy/elevated/elevated4.fbx", 
+                "Frames": 133, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 56
+            }
+        ], 
+        "tones": {
+            "joy": 0.54691, 
+            "sadness": 0.174378, 
+            "disgust": 0.044515, 
+            "anger": 0.169379, 
+            "surprise": 0.0, 
+            "fear": 0.093012
         }
     }
 ]

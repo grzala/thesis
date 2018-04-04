@@ -1,0 +1,30 @@
+					AMARI
+			How do you feel?
+
+					ISAAC
+			I'm okay, doctor. Thank you.
+
+					AMARI
+			That's good, but I want you to keep monitoring yourself. We have to be sure there's
+			no long-term damage.
+
+					AMARI
+			Are you ready to talk about what happened in there?
+
+					ISAAC
+			I saw Kellog's life. The man who ruined my family. The man I killed.
+
+					AMARI
+			That's right. He was a human being just like the rest of us, and he had
+			reasons for being what he was, however cruel.
+
+					AMARI
+			How does that make you feel?
+
+					ISAAC
+			It wasn't all his fault. I cannot blame him for everything that happened.
+
+					AMARI
+			If I were a priest, I would say forgiveness is a good thing.
+
+ENDSCRIPT		

@@ -3,3 +3,5 @@ dissert/main/showcases
 dissert/main/showcases/*
 dissert/db/tmp/*
 dissert/db/imported/*
+
+dissert/main/showcases/zgame/*
