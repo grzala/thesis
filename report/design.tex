@@ -4,14 +4,14 @@ This chapter describes the design of the system. This includes both the underlyi
 
 \section{System Design}
 
-The system has to work in two major steps. The first step is to take semi-structured natural language script and analyze it. This means that the system must analyze each dialogue line and infer some emotional values from them. Using those emotional values and the length of the dialogue line, the system must find best matching animation clips from the motion capture database. The results of this step is a file that specifies which characters say which lines of dialogue and it also specifies which animated clips accompany those dialogue lines.
+The system has to work in two major steps. The first step is to take semi-structured natural language script and analyse it. This means that the system must analyze each dialogue line and infer some emotional values from them. Using those emotional values and the length of the dialogue line, the system must find best matching animation clips from the motion capture database. The results of this step is a file that specifies which characters say which lines of dialogue and it also specifies which animated clips accompany those dialogue lines.
 
-After this step is completed, the file must be intepreted into a final scene. The importer must be able to read the file, import required models and animations and generate the final scene. As every animation software and game engine is a little different, each of them would need a custom importer. Those would be very similar in principle, but differ slightly because of the implementation of given software. For my project I have created the importer for Blender. This is because Blender is open source and available to anyone, as well as I am the most familiar with this software.
+After this step is completed, the file must be interpreted into a final scene. The importer must be able to read the file, import required models and animations and generate the final scene. As every animation software and game engine is a little different, each of them would need a custom importer. Those would be very similar in principle, but differ slightly because of the implementation of given software. For my project I have created the importer for Blender. This is because Blender is open source and available to anyone, as well as I am the most familiar with this software.
 
 
 \section{Emotions}
 
-For my project I have decided to only use the following emotions: joy, fear, disgust, anger and sadness. Tradinionally, surprise is also part of the six basic emotions model by Paul Ekman and Wallace V. Friesen. However, IBM Watson Tone Analyzer, that I am using for sentiment analysis, is unable to detect surprise in the text (more on that in section ~\ref{sec:emoanal}) - therefore I had to abstain from using this emotion in this project. The emotions are expressed as decimal numbers between 0 and 1 - this identifies whether a given emotion is present in a specific motion clip or text and how intense that emotion is. It also allows to create a mixture of emotions in order to represent more complex emotions. The EMBD describes the animations in terms of their emotion category, but provides no value (the EMDB will not differentiate between an angry gesture, and a \textit{very} angry gesture). Therefore each animation clip has to be manually reviewed in order to assess it's emotional properties.
+For my project I have decided to only use the following emotions: joy, fear, disgust, anger and sadness. Traditionally, surprise is also part of the six basic emotions model by Paul Ekman and Wallace V. Friesen. However, IBM Watson Tone Analyzer, that I am using for sentiment analysis, is unable to detect surprise in the text (more on that in section ~\ref{sec:emoanal}) - therefore I had to abstain from using this emotion in this project. The emotions are expressed as decimal numbers between 0 and 1 - this identifies whether a given emotion is present in a specific motion clip or text and how intense that emotion is. It also allows to create a mixture of emotions in order to represent more complex emotions. The EMBD describes the animations in terms of their emotion category, but provides no value (the EMDB will not differentiate between an angry gesture, and a \textit{very} angry gesture). Therefore each animation clip has to be manually reviewed in order to assess it's emotional properties.
 
 \section{Architecture}
 
@@ -25,7 +25,7 @@ There are three main modules:
 \item Animation Generator
 \end{itemize}
 
-The Text Analysis module parses the text and analyses emotion using some API. It takes a script as an input and passess the parsed and analyzed text to the Animation Clip Matcher.
+The Text Analysis module parses the text and analyses emotion using some API. It takes a script as an input and passes the parsed and analysed text to the Animation Clip Matcher.
 
 The Animation Clip Matcher uses the motion capture database to find the best animation clips to accompany the speech. The Animation Clip Matcher must take into account the emotion analysis of the text and find animations with similar emotional score. Another important constraint is the time of the animation. The animated clips have different lengths and a chosen clip must not be significantly longer than the spoken/read text. In case the animated clip is shorter, the Matcher must choose more than one matching clip. The Matcher outputs a JSON file which specifies all dialogue lines; it states which characters perform which emotional gesture actions and where is the animation file located.
 
@@ -40,7 +40,7 @@ The full diagram of the system can be seen in figure ~\ref{fig:architecture}.
 
 \section{Character Armature and Model}
 
-As the system is designed to be used in games, one of the main requirements was for the system to handle various character models. Because in a game each character is represented by a different model, this is a necesity. The model itself is relatively irrelevant - it must hovewer support the same or similar enough armature to the armature the system was designed around. The armature is shown in detail in figure ~\ref{fig:armature}. For an armature to be supported, the bones might have corresponding names. Any extra bones or bones with unmatching names will be left unanimated.
+As the system is designed to be used in games, one of the main requirements was for the system to handle various character models. Because in a game each character is represented by a different model, this is a necessity. The model itself is relatively irrelevant - it must however support the same or similar enough armature to the armature the system was designed around. The armature is shown in detail in figure ~\ref{fig:armature}. For an armature to be supported, the bones might have corresponding names. Any extra bones or bones with unmatching names will be left not animated.
 
 \begin{figure}[!ht]
 \centerline{\fbox{\includegraphics[width = 20em]{img/armature.png}}}
@@ -76,7 +76,7 @@ The purpose of the showcase generator is to help categorize and store the animat
 
 The input of the system is as follows:
 
-The input is a file that represents a dialogue. Each character that participates in the scene must ble clearly stated. Each dialogue line must have a dialog line must have a character clearly associated with it. Character names are specified after five tabs. Dialogue Lines are specified after three tabs. Each file must end with "ENDSCRIPT" with no indentation.
+The input is a file that represents a dialogue. Each character that participates in the scene must be clearly stated. Each dialogue line must have a dialogue line must have a character clearly associated with it. Character names are specified after five tabs. Dialogue Lines are specified after three tabs. Each file must end with "ENDSCRIPT" with no indentation.
 
 I used this format as this format is often used to represent movie scripts. One can find hundreds of scripts saved in this format on The Internet Movie Script Database (\url{www.imsdb.com}). The example input can be seen in figure ~\ref{fig:inputscript}.
 
@@ -89,14 +89,14 @@ I used this format as this format is often used to represent movie scripts. One 
 
 \section{Emotion Analysis} 
 \label{sec:emoanal}
-As aforementioned, there are many ways to perform emotion analysis of the text. I have chosen to use IBM Watson Tone analyzer for this task as it offers a state-of-the-art service accessible for prototyping (a lot of tools offering high quality emotional analysis are bult for commercial purposes and not available without paying high fees).
+As aforementioned, there are many ways to perform emotion analysis of the text. I have chosen to use IBM Watson Tone analyser for this task as it offers a state-of-the-art service accessible for prototyping (a lot of tools offering high quality emotional analysis are built for commercial purposes and not available without paying high fees).
 
 The module takes each dialogue line and sends to IBM Watson Tone Analyzer for analysis. Watson's REST API is used to accomplish that. Watson returns all the emotions with values between 0 and 1 found in the text. Each dialogue line now has emotional values assigned to it.
 
 \section{Database}
 \label{sec:dbdesign}
 
-The motion capture database consists of two main parts: the files that contain the animated clips and a database that holds the metadata about the animations and character models.
+The motion capture database consists of two main parts: the files that contain the animated clips and a database that holds the meta-data about the animations and character models.
 
 The animation data is stored in FBX files - one animated action per file. The folder structure can be customized - for the purposes of this project the animations are stored in a way that describes the emotions they convey \footnote{For example: animations > anger > subtle > disbelief1.fbx}. The folder structure is irrelevant as long as it stays consistent with the entries in the SQL database. 
 
@@ -139,13 +139,13 @@ Additionally, the matcher will ensure that the animation is not too monotonous. 
 \section{Animation Generator (Importer)}
 \label{sec:generatordesign}
 
-As a forementioned, in this project I have used Blender to support the animation generator model. The generator is a Blender addon.  It can either be used as a script, or be installed as an addon to be fully and permanently available within Blender.
+As aforementioned, in this project I have used Blender to support the animation generator model. The generator is a Blender add-on.  It can either be used as a script, or be installed as an add-on to be fully and permanently available within Blender.
 
-The generator first reads the JSON file prepared by previous modules and loads required animation clips from files. The user needs assign a 3D character model to each character participating in the dialogue. The required 3D character models are animated and the camera is positioned accordingly to the model's metadata stored in the database. The animated characters are positioned to directly face each other (the program currently supports only up to two characters in one scene). Each animated action is assigned to a corresponding character model and then pushed on a separate NLA strip (figure ~\ref{fig:nla}). The program keeps track of how many frames are being used so that newly added actions begin just when the previous actions have ended.
+The generator first reads the JSON file prepared by previous modules and loads required animation clips from files. The user needs assign a 3D character model to each character participating in the dialogue. The required 3D character models are animated and the camera is positioned accordingly to the model's meta-data stored in the database. The animated characters are positioned to directly face each other (the program currently supports only up to two characters in one scene). Each animated action is assigned to a corresponding character model and then pushed on a separate NLA strip (figure ~\ref{fig:nla}). The program keeps track of how many frames are being used so that newly added actions begin just when the previous actions have ended.
 
 To setup some basic background and feel, a floor (plane) is added beneath the characters and two directional lights cast light down from above the characters.
 
-The camera is added to the scene and positioned using the metadata retrievec from the database. At the start of each character's actions the camera is positioned and rotated to focus at the character performing an action.
+The camera is added to the scene and positioned using the meta-data retrieved from the database. At the start of each character's actions the camera is positioned and rotated to focus at the character performing an action.
 
 Subtitles are added as Video Editor Sequence Strips spanning between frames that correspond to the animation (figure ~\ref{fig:substrips}).
 
