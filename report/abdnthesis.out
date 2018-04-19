@@ -47,17 +47,26 @@
 \BOOKMARK [0][-]{chapter.6}{Testing and Performance }{}% 47
 \BOOKMARK [1][-]{section.6.1}{Animation Generator}{chapter.6}% 48
 \BOOKMARK [1][-]{section.6.2}{Performance}{chapter.6}% 49
-\BOOKMARK [0][-]{appendix.A}{User Manual }{}% 50
-\BOOKMARK [1][-]{section.A.1}{Requirements and installation }{appendix.A}% 51
-\BOOKMARK [2][-]{subsection.A.1.1}{Software and Libraries}{section.A.1}% 52
-\BOOKMARK [2][-]{subsection.A.1.2}{Install Generator as Blender Addon }{section.A.1}% 53
-\BOOKMARK [1][-]{section.A.2}{Generating animations }{appendix.A}% 54
-\BOOKMARK [1][-]{section.A.3}{Using Custom Animation and Models}{appendix.A}% 55
-\BOOKMARK [1][-]{section.A.4}{Importing More Animations From EMBD}{appendix.A}% 56
-\BOOKMARK [1][-]{section.A.5}{Generate a Showcase }{appendix.A}% 57
-\BOOKMARK [0][-]{appendix.B}{Maintenance Manual }{}% 58
-\BOOKMARK [1][-]{section.B.1}{Installation and requirements}{appendix.B}% 59
-\BOOKMARK [1][-]{section.B.2}{Space and Memory requirements}{appendix.B}% 60
-\BOOKMARK [1][-]{section.B.3}{Temporary Files}{appendix.B}% 61
-\BOOKMARK [1][-]{section.B.4}{Files and Directories}{appendix.B}% 62
-\BOOKMARK [1][-]{section.B.5}{Known Issues}{appendix.B}% 63
+\BOOKMARK [0][-]{chapter.7}{Evaluation }{}% 50
+\BOOKMARK [1][-]{section.7.1}{Problems with evaluation}{chapter.7}% 51
+\BOOKMARK [1][-]{section.7.2}{Survey}{chapter.7}% 52
+\BOOKMARK [2][-]{subsection.7.2.1}{Methodology}{section.7.2}% 53
+\BOOKMARK [1][-]{section.7.3}{Other findings }{chapter.7}% 54
+\BOOKMARK [0][-]{chapter.8}{Results }{}% 55
+\BOOKMARK [1][-]{section.8.1}{Other findings }{chapter.8}% 56
+\BOOKMARK [0][-]{appendix.A}{User Manual }{}% 57
+\BOOKMARK [1][-]{section.A.1}{Requirements and installation }{appendix.A}% 58
+\BOOKMARK [2][-]{subsection.A.1.1}{Software and Libraries}{section.A.1}% 59
+\BOOKMARK [2][-]{subsection.A.1.2}{Install Generator as Blender Addon }{section.A.1}% 60
+\BOOKMARK [1][-]{section.A.2}{Generating animations }{appendix.A}% 61
+\BOOKMARK [1][-]{section.A.3}{Using Custom Animation and Models}{appendix.A}% 62
+\BOOKMARK [1][-]{section.A.4}{Importing More Animations From EMBD}{appendix.A}% 63
+\BOOKMARK [1][-]{section.A.5}{Generate a Showcase }{appendix.A}% 64
+\BOOKMARK [0][-]{appendix.B}{Maintenance Manual }{}% 65
+\BOOKMARK [1][-]{section.B.1}{Installation and requirements}{appendix.B}% 66
+\BOOKMARK [1][-]{section.B.2}{Space and Memory requirements}{appendix.B}% 67
+\BOOKMARK [1][-]{section.B.3}{Temporary Files}{appendix.B}% 68
+\BOOKMARK [1][-]{section.B.4}{Files and Directories}{appendix.B}% 69
+\BOOKMARK [1][-]{section.B.5}{Known Issues}{appendix.B}% 70
+\BOOKMARK [0][-]{appendix.C}{Other }{}% 71
+\BOOKMARK [1][-]{section.C.1}{The questionnaire }{appendix.C}% 72

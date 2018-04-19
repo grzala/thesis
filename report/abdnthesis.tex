@@ -18,6 +18,7 @@
 
 \usepackage[numbers]{natbib}
 \usepackage{hyperref}
+\usepackage{pdfpages}
 \usepackage{float}
 \setlength{\bibsep}{0pt}
 \bibliographystyle{apalike}
@@ -48,7 +49,7 @@
 %% \includeonly{} command with a list of the file/chapter names that
 %% you wish to include.  NB, this must be in the preamble.
 
-\includeonly{introduction,background,analysis,faq, design, requirements, testingperf, usermanual, maintenance}
+\includeonly{introduction,background,analysis,faq, design, requirements, testingperf, usermanual, maintenance, evaluation, results, otherappend}
 
 \def\sfthing#1#2{\def#1{\mbox{{\small\normalfont\sffamily #2}}}}
 
@@ -89,10 +90,8 @@
 \include{requirements}
 \include{design}
 \include{testingperf}
-%\include{implementation}
-%\include{evaluation}
-%\include{discussion}
-%\include{conclusion}
+\include{evaluation}
+\include{results}
 
 
 \bibliography{mybib}
@@ -101,5 +100,6 @@
 \appendix
 \include{usermanual}
 \include{maintenance}
+\include{otherappend}
 
 \end{document}
