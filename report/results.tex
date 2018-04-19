@@ -1,3 +1,36 @@
 \chapter{Results \label{chap:results}}
 
+\section{Survey}
+
+
+
 \section{Other findings \label{sec:otherfindings}}
+In previous sections I mentioned that the scenes chosen for the questionnaire are not \textit{fully} representative of all the dialogue scenes in the game. When a scene satisfies some conditions, the software clearly under-performs. Below are some of such cases that I discovered.
+
+\subsection{Mismatch between animation database and the `feel` of the game}
+The software produces undesirable results when there is a clear mismatch between the provided gestures and the `feel` of the game. By `feel` I mean the general topic and overtone of the game. For instance, a game such as any in the Mass Effect series has a very strict and militaristic feel. While characters still converse in a more casual environment a certain level of professionalism is always required of them. A game as Yooka-Laylee also contains a number of dialogue scenes, but the general feel of the game is childish and cartoon-like. The conversation happen in a much more quirky and exaggerated way.
+
+I was not able to use the EMBD with the Mass Effect games. The EMBD provides very casual, relaxed gestures while almost every character in the Mass Effect game is military. While without context the scenes looked good, when keeping in mind that the scene happens in a militaristic environment one can immediately see that while the characters move and gesticulate in a natural manner, this is not appropriate in a current situation.
+
+This however is not an inherent problem with the software as it allows for using a custom animation database. It could potentially be even extended to support a different set of animations for each important character to underline their personality even more. However because I used only EMBD for this project I am unable to test how if the software would be successful with scenes that have different contexts.
+
+\subsection{Exposition dialogue}
+In media such as books, films and games exposition is pretty common. Exposition is an aspect narration that focuses on introducing character's backstories, prior plot events, context and other background information. Because typically games feature less narration than books or films most of exposition is handled through dialogue.
+
+The exposition dialogue is already often unnatural and seems out of place. The software generating those scenes made them seem even less natural. During exposition dialogue the character's should remain rather neutral as often they will be describing events that happened in the past or that they have no direct connection with. The software however will find emotions in this dialogue and make characters overjoyed or fearing while there is nothing happening that would provoke such emotion. In many such dialogue scenes the software was simply over-sensitive.
+
+
+\subsection{Sarcasm and ambiguity}
+NLP has struggled with sarcasm for a long time. IBM Watson Tone Analyzer seems to be no closer to solving this problem. The dialogue that contain sarcasm are simply misinterpreted and the final scenes look terribly out of place. For instance a character saying `Oh, I'm so scared!` can be either scared, or indifferent and boasting about their courage. This might depend on the context and the tone of their voice. The software will however always associate this with fear and the resulting scene might use animations that convey opposite emotions to those that were meant to be conveyed.
+
+By looking at many dialogue scenes it became apparent that there is no way to overcome this problem using NLP only as there are too many variables outside of the text that define it (context, setting, personality of the character, recent interactions between characters involved in the scene). The tone of the voice might provide more information that would help solve this problem.
+
+
+
+
+
+
+
+
+
+

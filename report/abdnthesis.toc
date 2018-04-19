@@ -53,27 +53,30 @@
 \contentsline {subsection}{\numberline {7.2.1}Methodology}{39}{subsection.7.2.1}
 \contentsline {subsubsection}{Preparation}{39}{section*.25}
 \contentsline {subsubsection}{The questionnaire}{40}{section*.26}
-\contentsline {subsubsection}{Interview process}{41}{section*.27}
 \contentsline {section}{\numberline {7.3}Other findings }{41}{section.7.3}
 \contentsline {chapter}{\numberline {8}Results }{42}{chapter.8}
-\contentsline {section}{\numberline {8.1}Other findings }{42}{section.8.1}
-\contentsline {chapter}{\numberline {A}User Manual }{45}{appendix.A}
-\contentsline {section}{\numberline {A.1}Requirements and installation }{45}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Software and Libraries}{45}{subsection.A.1.1}
-\contentsline {subsubsection}{Required software}{45}{section*.29}
-\contentsline {subsubsection}{Libraries}{45}{section*.30}
-\contentsline {subsection}{\numberline {A.1.2}Install Generator as Blender Addon }{46}{subsection.A.1.2}
-\contentsline {section}{\numberline {A.2}Generating animations }{46}{section.A.2}
-\contentsline {subsubsection}{Analyze script }{47}{section*.32}
-\contentsline {subsubsection}{Generate Animation}{47}{section*.34}
-\contentsline {section}{\numberline {A.3}Using Custom Animation and Models}{49}{section.A.3}
-\contentsline {section}{\numberline {A.4}Importing More Animations From EMBD}{50}{section.A.4}
-\contentsline {section}{\numberline {A.5}Generate a Showcase }{50}{section.A.5}
-\contentsline {chapter}{\numberline {B}Maintenance Manual }{52}{appendix.B}
-\contentsline {section}{\numberline {B.1}Installation and requirements}{52}{section.B.1}
-\contentsline {section}{\numberline {B.2}Space and Memory requirements}{52}{section.B.2}
-\contentsline {section}{\numberline {B.3}Temporary Files}{52}{section.B.3}
-\contentsline {section}{\numberline {B.4}Files and Directories}{52}{section.B.4}
-\contentsline {section}{\numberline {B.5}Known Issues}{53}{section.B.5}
-\contentsline {chapter}{\numberline {C}Other }{54}{appendix.C}
-\contentsline {section}{\numberline {C.1}The questionnaire }{54}{section.C.1}
+\contentsline {section}{\numberline {8.1}Survey}{42}{section.8.1}
+\contentsline {section}{\numberline {8.2}Other findings }{42}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Mismatch between animation database and the `feel` of the game}{42}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Exposition dialogue}{42}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}Sarcasm and ambiguity}{43}{subsection.8.2.3}
+\contentsline {chapter}{\numberline {A}User Manual }{46}{appendix.A}
+\contentsline {section}{\numberline {A.1}Requirements and installation }{46}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Software and Libraries}{46}{subsection.A.1.1}
+\contentsline {subsubsection}{Required software}{46}{section*.28}
+\contentsline {subsubsection}{Libraries}{46}{section*.29}
+\contentsline {subsection}{\numberline {A.1.2}Install Generator as Blender Addon }{47}{subsection.A.1.2}
+\contentsline {section}{\numberline {A.2}Generating animations }{47}{section.A.2}
+\contentsline {subsubsection}{Analyze script }{48}{section*.31}
+\contentsline {subsubsection}{Generate Animation}{48}{section*.33}
+\contentsline {section}{\numberline {A.3}Using Custom Animation and Models}{50}{section.A.3}
+\contentsline {section}{\numberline {A.4}Importing More Animations From EMBD}{51}{section.A.4}
+\contentsline {section}{\numberline {A.5}Generate a Showcase }{51}{section.A.5}
+\contentsline {chapter}{\numberline {B}Maintenance Manual }{53}{appendix.B}
+\contentsline {section}{\numberline {B.1}Installation and requirements}{53}{section.B.1}
+\contentsline {section}{\numberline {B.2}Space and Memory requirements}{53}{section.B.2}
+\contentsline {section}{\numberline {B.3}Temporary Files}{53}{section.B.3}
+\contentsline {section}{\numberline {B.4}Files and Directories}{53}{section.B.4}
+\contentsline {section}{\numberline {B.5}Known Issues}{54}{section.B.5}
+\contentsline {chapter}{\numberline {C}Other }{55}{appendix.C}
+\contentsline {section}{\numberline {C.1}The questionnaire }{55}{section.C.1}
