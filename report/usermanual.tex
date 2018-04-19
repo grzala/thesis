@@ -6,16 +6,18 @@ Before using the software, several requirements must be fulfilled.
 
 \subsection{Software and Libraries}
 \subsubsection{Required software}
+\smallskip
 \begin{itemize}
 	\item Python 2.7
 	\item Pip
-	\item Blender version 2.79 or newer
+	\item Blender version 2.79 or newer\footnote{Blender can be obtained from the official Blender website:  \url{http://www.blender.org/}}
 \end{itemize}
 
 \subsubsection{Libraries}
-Only for Linux systems: Download and install library python-dev (or python-devel)
+\smallskip
+\textbf{Only for Linux systems: Download and install library python-dev (or python-devel) before following the instructions below}
 
-Following python libraries must be installed:
+\noindent Following python libraries must be installed (using pip, easy-install, or any other python packet manager):
 \begin{itemize}
 	\item setuptools
 	\item watson-developer-cloud
@@ -47,7 +49,7 @@ The following steps are optional. Installing the module as addon will enable the
 	\item Exit user preferences
 \end{enumerate}
 
-\noindent The module is now installed as an add-on. In the 3D-view (default view) on the bottom of the right-hand side menu there should appear a tab called `Generate NLP anim` (figure ~\ref{fig:installedaddon}).
+\noindent The module is now installed as an add-on. In the 3D-view (default view) on the bottom of the left-hand side menu there should appear a tab called `Generate NLP anim` (figure ~\ref{fig:installedaddon}).
 	
 \begin{figure}[!ht]
 	\centerline{\fbox{\includegraphics[width = 30em]{img/appendix/installedaddon.png}}}
@@ -55,10 +57,10 @@ The following steps are optional. Installing the module as addon will enable the
 \end{figure}
 
 \section{Generating animations \label{sec:generatormanual}}
-\noindent Now that all the requirements are met, the animation can be generated. There are two main steps to generating. Firstly, use the analyzer module to create a JSON file instructions for the generator. Secondly, use the generator to assemble the animation.
+\noindent Now that all the requirements are met, the animation can be generated. There are two main steps to generating. Firstly, use the analyzer module to create a scene.json file\footnote{scene.json is a JSON file which contains instructions for the generator module that describe how to assemble the animation.}. Secondly, use the generator to assemble the animation.
 
 \subsubsection{Analyze script \label{sec:analyze-script}}
-\noindent The input script must resemble the script in figure ~\ref{inputscript2}
+\noindent The input script must resemble the script in figure ~\ref{fig:inputscript2}
 
 \begin{figure}[!ht]
 	\centerline{\fbox{\includegraphics[width = 30em]{img/script.png}}}
@@ -68,7 +70,7 @@ The following steps are optional. Installing the module as addon will enable the
 \noindent The characters must be specified after 5 tabs. The dialogue text is specified after 3 tabs. The file must end with an `ENDSCRIPT` with no indentation. For reference please refer to either:
 \begin{itemize}
 	\item Example script files in folder `movies`
-	\item Movie scripts hosted on \url{www.imsdb.com}
+	\item Movie scripts hosted on \url{http://www.imsdb.com}
 \end{itemize}
 
 \noindent The script now can be process using the following command:
@@ -78,7 +80,7 @@ The following steps are optional. Installing the module as addon will enable the
 \noindent The program will output a file called `scene.json`. This file is used to generate the animation.
 
 \subsubsection{Generate Animation}
-\noindent If you did not follow section ~\ref{sec:installaddon}, please follow these steps:
+\noindent If you did not install the module as a Blender add-on (if you skipped section ~\ref{sec:installaddon}), please follow these steps:
 \begin{enumerate}
 	\item Open the file `rendered.blend` with Blender
 	\item Click `Run Script` on the bottom of the scripting view (figure ~\ref{fig:withoutaddon})
@@ -116,11 +118,15 @@ Please follow these steps only if you installed the generator as an add-on:
 \section{Using Custom Animation and Models}
 This section describes how to extend or replace the animation database.
 
-To insert a new animation file, ensure that the file is saved as .fbx file and contains only one animation (action). Please make sure that the armature is compatible with the one found in `EMBD importer/armature.fbx` file.
+To insert a new animation file, ensure that the file is saved as .fbx file and contains only one animation (action). Please make sure that the armature\footnote{Armature is a skeleton; A set of bones that can be animated. If you are unsure of what an armature is, you should avoid using custom animations and models.} is compatible with the one found in `EMBD importer/armature.fbx` file.
 
-To continue you will need to install `DB Browser for Sqlite`. Use that program to open the file `db/animation.db`. Browse the table `animations` and add a new record. Provide a name for the animation file (please note the names must be unique) and a path to the animation file. You must also fill the emotion values for the animation (set to 0.0 if the emotion is not carried by the animation).
+To continue you will need to install `DB Browser for Sqlite`\footnote{The DB browser for Sqlite can be obtained from the sqlitebrowser official website:  \url{http://www.sqlitebrowser.org}}. Use that program to open the file `db/animation.db`. Browse the table `animations` and add a new record. Provide a name for the animation file (please note the names must be unique) and a path to the animation file. You must also fill the emotion values for the animation (set to 0.0 if the emotion is not carried by the animation).
 
-To insert a new model, browse the `models` table. Again, provide a unique name and a file path for the .fbx model. You will also need to provide information on how to position and rotate the camera to focus it on the characters face (relative to the origin of the character model).
+To insert a new model, browse the `models` table. Again, provide a unique name and a file path for the .fbx model. You will also need to provide information on how to position and rotate the camera to focus it on the characters face (relative to the origin of the character model\footnote{The origin of a character model is usually a point on the floor between the character's feet (directly below the spine).}). You will need to provide six values in total.
+\begin{itemize}
+	\item Offset on axis X, Y and Z (positive Z means upwards, negative Y is forwards and positive X is to the right) in Blender units (distance).
+	\item Rotation on axis X, Y and Z in degrees.
+\end{itemize}
 
 \noindent You can use your own database file as long as the database keeps the following structure:
 \begin{itemize}
