@@ -57,29 +57,29 @@
 \contentsline {section}{\numberline {7.3}Other findings }{42}{section.7.3}
 \contentsline {chapter}{\numberline {8}Results }{43}{chapter.8}
 \contentsline {section}{\numberline {8.1}Survey}{43}{section.8.1}
-\contentsline {chapter}{\numberline {9}Discussion }{45}{chapter.9}
-\contentsline {section}{\numberline {9.1}Other findings }{45}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Mismatch between animation database and the `feel' of the game}{45}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}Exposition dialogue}{45}{subsection.9.1.2}
-\contentsline {subsection}{\numberline {9.1.3}Sarcasm and ambiguity}{46}{subsection.9.1.3}
-\contentsline {chapter}{\numberline {10}Conclusions }{47}{chapter.10}
-\contentsline {chapter}{\numberline {A}User Manual }{50}{appendix.A}
-\contentsline {section}{\numberline {A.1}Requirements and installation }{50}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Software and Libraries}{50}{subsection.A.1.1}
-\contentsline {subsubsection}{Required software}{50}{section*.30}
-\contentsline {subsubsection}{Libraries}{50}{section*.31}
-\contentsline {subsection}{\numberline {A.1.2}Install Generator as Blender Addon }{51}{subsection.A.1.2}
-\contentsline {section}{\numberline {A.2}Generating animations }{51}{section.A.2}
-\contentsline {subsubsection}{Analyze script }{52}{section*.33}
-\contentsline {subsubsection}{Generate Animation}{52}{section*.35}
-\contentsline {section}{\numberline {A.3}Using Custom Animation and Models}{54}{section.A.3}
-\contentsline {section}{\numberline {A.4}Importing More Animations From EMBD}{55}{section.A.4}
-\contentsline {section}{\numberline {A.5}Generate a Showcase }{55}{section.A.5}
-\contentsline {chapter}{\numberline {B}Maintenance Manual }{57}{appendix.B}
-\contentsline {section}{\numberline {B.1}Installation and requirements}{57}{section.B.1}
-\contentsline {section}{\numberline {B.2}Space and Memory requirements}{57}{section.B.2}
-\contentsline {section}{\numberline {B.3}Temporary Files}{57}{section.B.3}
-\contentsline {section}{\numberline {B.4}Files and Directories}{57}{section.B.4}
-\contentsline {section}{\numberline {B.5}Known Issues}{58}{section.B.5}
-\contentsline {chapter}{\numberline {C}Other }{59}{appendix.C}
-\contentsline {section}{\numberline {C.1}The questionnaire }{59}{section.C.1}
+\contentsline {chapter}{\numberline {9}Discussion }{46}{chapter.9}
+\contentsline {section}{\numberline {9.1}Other findings }{46}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Mismatch between animation database and the `feel' of the game}{46}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Exposition dialogue}{46}{subsection.9.1.2}
+\contentsline {subsection}{\numberline {9.1.3}Sarcasm and ambiguity}{47}{subsection.9.1.3}
+\contentsline {chapter}{\numberline {10}Conclusions }{48}{chapter.10}
+\contentsline {chapter}{\numberline {A}User Manual }{51}{appendix.A}
+\contentsline {section}{\numberline {A.1}Requirements and installation }{51}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Software and Libraries}{51}{subsection.A.1.1}
+\contentsline {subsubsection}{Required software}{51}{section*.33}
+\contentsline {subsubsection}{Libraries}{51}{section*.34}
+\contentsline {subsection}{\numberline {A.1.2}Install Generator as Blender Addon }{52}{subsection.A.1.2}
+\contentsline {section}{\numberline {A.2}Generating animations }{52}{section.A.2}
+\contentsline {subsubsection}{Analyze script }{53}{section*.36}
+\contentsline {subsubsection}{Generate Animation}{53}{section*.38}
+\contentsline {section}{\numberline {A.3}Using Custom Animation and Models}{55}{section.A.3}
+\contentsline {section}{\numberline {A.4}Importing More Animations From EMBD}{56}{section.A.4}
+\contentsline {section}{\numberline {A.5}Generate a Showcase }{56}{section.A.5}
+\contentsline {chapter}{\numberline {B}Maintenance Manual }{58}{appendix.B}
+\contentsline {section}{\numberline {B.1}Installation and requirements}{58}{section.B.1}
+\contentsline {section}{\numberline {B.2}Space and Memory requirements}{58}{section.B.2}
+\contentsline {section}{\numberline {B.3}Temporary Files}{58}{section.B.3}
+\contentsline {section}{\numberline {B.4}Files and Directories}{58}{section.B.4}
+\contentsline {section}{\numberline {B.5}Known Issues}{59}{section.B.5}
+\contentsline {chapter}{\numberline {C}Other }{60}{appendix.C}
+\contentsline {section}{\numberline {C.1}The questionnaire }{60}{section.C.1}
