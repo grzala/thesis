@@ -1,4 +1,29 @@
 \chapter{Discussion \label{chap:discussion}}
+This section discusses and evaluates the findings accumulated during the development and evaluation of the software.
+
+\section{Survey results}
+
+\subsection{Realism}
+According to the results of the survey the realism of the generated animations is rather disappointing. The animations managed however to be relatively as realistic as an animation from a quite recent game, meaning they might be good enough to be used in a game (given how little it takes to generate them). The very important aspect is that the generated animation were not seen as realistic, but were seen as correct (matching speech with emotions and body language). People dissatisfied with the recreated animations said that the movements of characters are `weird' and that the software is too sensitive with characters overreacting to the actual situation. 
+
+The survey successfully carried out its first objective, showing that the NLP approach did not produce animations more (or much less) realistic than the originals. There are a few explanations to that. The possible causes have been described in section ~\ref{sec:riskanal}.
+
+The lack of realism was probably not caused by the emotion analysis. The interviewees rather agreed that the emotions in the speech match the body language. The results suggest that the problems lies within the movements itself. 
+
+Both the motion capture data quality and the uncanny valley principle are possible causes of those results. It is impossible to say now which one is more important. A similar study which uses a different motion database could be helpful in determining that.
+
+It is also possible that the results are skewed because of the crudeness of the entire scene. The models are rather bulky and poorly detailed, untextured, there is no background or audio. That is because the software focuses solely on the animation. However, the interviewees are not used to watching animation being developed and might instinctively see such a scene as less realistic and be unable to look at the animation fully objectively. 
+
+The generated scenes reach an acceptable level of realism, however they are not realistic enough to deem the NLP method of generating animation to be better than other, traditional ones. 
+
+\subsection{Preference}
+Surprisingly, although the generated animations were not highly realistic, they were often preferred to the original ones. It seems that the recreated animation may have been over the top, while in the original scenes there was not much going on (the gestures being very subtle and ambiguous). It seems that the participants found the slightly overdone body language more enjoyable and less boring than the blandness and genericness of the originals.
+
+Realism itself is often not a key aspect to a game's success. It might be a great advantage for a game to feature scenes that are similarly or slightly less realistic than the norm when those animations are more engaging. This might be particularly true when a given game is not trying to be realistic (it might be over the top and cartoony on purpose).
+
+
+\subsection{Adjustments}
+The results regarding adjustments of the animation were not surprising. The software was never intended to produce perfect animation which needs minimal adjustments before shipping (there is hardly any software capable of that). Moderate adjustments of the animation are perfectly acceptable. If this software was ever to become fully commercially viable, it would be a good idea to further develop the animation generation. Better camera work, smooth blending of the movements, etc. can be done automatically and would further minimize the need for manual adjustments.
 
 
 \section{Other findings \label{sec:otherfindings}}
@@ -21,5 +46,33 @@ The exposition dialogue is already often unnatural and seems out of place. The s
 NLP has struggled with sarcasm for a long time. IBM Watson Tone Analyzer seems to be no closer to solving this problem. The dialogue that contain sarcasm are simply misinterpreted and the final scenes look terribly out of place. For instance a character saying `Oh, I'm so scared!' can be either scared, or indifferent and boasting about their courage. This might depend on the context and the tone of their voice. The software will however always associate this with fear and the resulting scene might use animations that convey opposite emotions to those that were meant to be conveyed.
 
 By looking at many dialogue scenes it became apparent that there is no way to overcome this problem using NLP only as there are too many variables outside of the text that define it (context, setting, personality of the character, recent interactions between characters involved in the scene). The tone of voice might provide more information that would help solve this problem.
+
+
+\section{Summary}
+The following is a breakdown of what the software managed and failed to achieve.
+
+\noindent Successes:
+\begin{itemize}
+	\item The software is able to generate scenes quickly with minimal amount of manual work required.
+	\item The animations do not need extensive manual polish before being used in a game.
+	\item The software is flexible and capable of using custom character models and animation data.
+	\item The software is cross-platform and the animations can be exported to a multitude of file formats.
+	\item The generated scenes are often more enjoyable than the actual scenes in games.
+\end{itemize}
+
+\noindent Failures:
+\begin{itemize}
+	\item Generated scenes are not any more realistic than those featured in modern games.
+	\item The software under-performs when dealing with sarcasm, exposition or ambiguity.
+\end{itemize}
+
+\noindent Other key points:
+\begin{itemize}
+	\item The lack of realism may be caused by the data provided by EMBD.
+	\item The animation generation process can be improved further using methods already known to the industry.
+	\item The NLP approach might in the future be combines with other methods (such as emotion analysis of the audio) to produce even better results.
+\end{itemize}
+
+
 
 

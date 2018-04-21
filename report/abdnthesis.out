@@ -55,24 +55,31 @@
 \BOOKMARK [0][-]{chapter.8}{Results }{}% 55
 \BOOKMARK [1][-]{section.8.1}{Survey}{chapter.8}% 56
 \BOOKMARK [0][-]{chapter.9}{Discussion }{}% 57
-\BOOKMARK [1][-]{section.9.1}{Other findings }{chapter.9}% 58
-\BOOKMARK [2][-]{subsection.9.1.1}{Mismatch between animation database and the `feel' of the game}{section.9.1}% 59
-\BOOKMARK [2][-]{subsection.9.1.2}{Exposition dialogue}{section.9.1}% 60
-\BOOKMARK [2][-]{subsection.9.1.3}{Sarcasm and ambiguity}{section.9.1}% 61
-\BOOKMARK [0][-]{chapter.10}{Conclusions }{}% 62
-\BOOKMARK [0][-]{appendix.A}{User Manual }{}% 63
-\BOOKMARK [1][-]{section.A.1}{Requirements and installation }{appendix.A}% 64
-\BOOKMARK [2][-]{subsection.A.1.1}{Software and Libraries}{section.A.1}% 65
-\BOOKMARK [2][-]{subsection.A.1.2}{Install Generator as Blender Addon }{section.A.1}% 66
-\BOOKMARK [1][-]{section.A.2}{Generating animations }{appendix.A}% 67
-\BOOKMARK [1][-]{section.A.3}{Using Custom Animation and Models}{appendix.A}% 68
-\BOOKMARK [1][-]{section.A.4}{Importing More Animations From EMBD}{appendix.A}% 69
-\BOOKMARK [1][-]{section.A.5}{Generate a Showcase }{appendix.A}% 70
-\BOOKMARK [0][-]{appendix.B}{Maintenance Manual }{}% 71
-\BOOKMARK [1][-]{section.B.1}{Installation and requirements}{appendix.B}% 72
-\BOOKMARK [1][-]{section.B.2}{Space and Memory requirements}{appendix.B}% 73
-\BOOKMARK [1][-]{section.B.3}{Temporary Files}{appendix.B}% 74
-\BOOKMARK [1][-]{section.B.4}{Files and Directories}{appendix.B}% 75
-\BOOKMARK [1][-]{section.B.5}{Known Issues}{appendix.B}% 76
-\BOOKMARK [0][-]{appendix.C}{Other }{}% 77
-\BOOKMARK [1][-]{section.C.1}{The questionnaire }{appendix.C}% 78
+\BOOKMARK [1][-]{section.9.1}{Survey results}{chapter.9}% 58
+\BOOKMARK [2][-]{subsection.9.1.1}{Realism}{section.9.1}% 59
+\BOOKMARK [2][-]{subsection.9.1.2}{Preference}{section.9.1}% 60
+\BOOKMARK [2][-]{subsection.9.1.3}{Adjustments}{section.9.1}% 61
+\BOOKMARK [1][-]{section.9.2}{Other findings }{chapter.9}% 62
+\BOOKMARK [2][-]{subsection.9.2.1}{Mismatch between animation database and the `feel' of the game}{section.9.2}% 63
+\BOOKMARK [2][-]{subsection.9.2.2}{Exposition dialogue}{section.9.2}% 64
+\BOOKMARK [2][-]{subsection.9.2.3}{Sarcasm and ambiguity}{section.9.2}% 65
+\BOOKMARK [1][-]{section.9.3}{Summary}{chapter.9}% 66
+\BOOKMARK [0][-]{chapter.10}{Conclusion and Future work }{}% 67
+\BOOKMARK [1][-]{section.10.1}{Conclusion}{chapter.10}% 68
+\BOOKMARK [1][-]{section.10.2}{Future work}{chapter.10}% 69
+\BOOKMARK [0][-]{appendix.A}{User Manual }{}% 70
+\BOOKMARK [1][-]{section.A.1}{Requirements and installation }{appendix.A}% 71
+\BOOKMARK [2][-]{subsection.A.1.1}{Software and Libraries}{section.A.1}% 72
+\BOOKMARK [2][-]{subsection.A.1.2}{Install Generator as Blender Addon }{section.A.1}% 73
+\BOOKMARK [1][-]{section.A.2}{Generating animations }{appendix.A}% 74
+\BOOKMARK [1][-]{section.A.3}{Using Custom Animation and Models}{appendix.A}% 75
+\BOOKMARK [1][-]{section.A.4}{Importing More Animations From EMBD}{appendix.A}% 76
+\BOOKMARK [1][-]{section.A.5}{Generate a Showcase }{appendix.A}% 77
+\BOOKMARK [0][-]{appendix.B}{Maintenance Manual }{}% 78
+\BOOKMARK [1][-]{section.B.1}{Installation and requirements}{appendix.B}% 79
+\BOOKMARK [1][-]{section.B.2}{Space and Memory requirements}{appendix.B}% 80
+\BOOKMARK [1][-]{section.B.3}{Temporary Files}{appendix.B}% 81
+\BOOKMARK [1][-]{section.B.4}{Files and Directories}{appendix.B}% 82
+\BOOKMARK [1][-]{section.B.5}{Known Issues}{appendix.B}% 83
+\BOOKMARK [0][-]{appendix.C}{Other }{}% 84
+\BOOKMARK [1][-]{section.C.1}{The questionnaire }{appendix.C}% 85
