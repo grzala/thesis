@@ -69,23 +69,23 @@ The following steps are optional. Installing the module as addon will enable the
 
 \noindent The characters must be specified after 5 tabs. The dialogue text is specified after 3 tabs. The file must end with an `ENDSCRIPT` with no indentation. For reference please refer to either:
 \begin{itemize}
-	\item Example script files in folder `movies`
+	\item Example script files in folder `movies'
 	\item Movie scripts hosted on \url{http://www.imsdb.com}
 \end{itemize}
 
 \noindent The script now can be process using the following command:
 
-\indent `python analyzer/script\_analyze.py path\_to\_dialogue\_script db/animation.db`
+\indent `python analyzer/script\_analyze.py path\_to\_dialogue\_script db/animation.db'
 
-\noindent The program will output a file called `scene.json`. This file is used to generate the animation.
+\noindent The program will output a file called `scene.json'. This file is used to generate the animation.
 
 \subsubsection{Generate Animation}
 \noindent If you did not install the module as a Blender add-on (if you skipped section ~\ref{sec:installaddon}), please follow these steps:
 \begin{enumerate}
-	\item Open the file `rendered.blend` with Blender
+	\item Open the file `rendered.blend' with Blender
 	\item Click `Run Script` on the bottom of the scripting view (figure ~\ref{fig:withoutaddon})
-	\item The tab called `Generate NLP anim` should appear on the right hand side menu of the 3D view
-	\item Click on the `Generate NLP anim` tab
+	\item The tab called `Generate NLP anim' should appear on the right hand side menu of the 3D view
+	\item Click on the `Generate NLP anim' tab
 \end{enumerate}
 
 \begin{figure}[H]
@@ -96,21 +96,21 @@ The following steps are optional. Installing the module as addon will enable the
 Please follow these steps only if you installed the generator as an add-on:
 \begin{itemize}
 	\item Open Blender
-	\item Press `File > Save` and save the file in a preferred location
+	\item Press `File > Save' and save the file in a preferred location
 	\item \textbf{Important:} close Blender and reopen the saved file
-	\item Open `Generate NLP anim` tab
+	\item Open `Generate NLP anim' tab
 \end{itemize}
 
 \noindent After finishing the above instructions, do the following to finalize the animation:
 \begin{enumerate}
-	\item Press `Clean` at the top of the menu
-	\item Choose the directory `mocap` for `Animations Directory`
-	\item Choose the directory `models` for `Models Directory`
-	\item Choose the file `db/animation.db` for `Database`
-	\item For `Dialogue` choose the `scene.json` file you created when following the section ~\ref{sec:analyze-script}
-	\item Press `Prepare` and wait until a `Finalize` menu appears below the `Prepare` button
+	\item Press `Clean' at the top of the menu
+	\item Choose the directory `mocap' for `Animations Directory'
+	\item Choose the directory `models' for `Models Directory'
+	\item Choose the file `db/animation.db' for `Database'
+	\item For `Dialogue' choose the `scene.json' file you created when following the section ~\ref{sec:analyze-script}
+	\item Press `Prepare' and wait until a `Finalize' menu appears below the `Prepare' button
 	\item Assign models for the characters from the drop-down lists
-	\item Press `Assemble` and wait until done
+	\item Press `Assemble' and wait until done
 \end{enumerate}
 
 \noindent The animation is now finalized. It can now be viewed, edited or rendered. Please refer to Blender official documentation and tutorials for more information on this.
@@ -118,11 +118,11 @@ Please follow these steps only if you installed the generator as an add-on:
 \section{Using Custom Animation and Models}
 This section describes how to extend or replace the animation database.
 
-To insert a new animation file, ensure that the file is saved as .fbx file and contains only one animation (action). Please make sure that the armature\footnote{Armature is a skeleton; A set of bones that can be animated. If you are unsure of what an armature is, you should avoid using custom animations and models.} is compatible with the one found in `EMBD importer/armature.fbx` file.
+To insert a new animation file, ensure that the file is saved as .fbx file and contains only one animation (action). Please make sure that the armature\footnote{Armature is a skeleton; A set of bones that can be animated. If you are unsure of what an armature is, you should avoid using custom animations and models.} is compatible with the one found in `EMBD importer/armature.fbx' file.
 
-To continue you will need to install `DB Browser for Sqlite`\footnote{The DB browser for Sqlite can be obtained from the sqlitebrowser official website:  \url{http://www.sqlitebrowser.org}}. Use that program to open the file `db/animation.db`. Browse the table `animations` and add a new record. Provide a name for the animation file (please note the names must be unique) and a path to the animation file. You must also fill the emotion values for the animation (set to 0.0 if the emotion is not carried by the animation).
+To continue you will need to install `DB Browser for Sqlite'\footnote{The DB browser for Sqlite can be obtained from the sqlitebrowser official website:  \url{http://www.sqlitebrowser.org}}. Use that program to open the file `db/animation.db'. Browse the table `animations' and add a new record. Provide a name for the animation file (please note the names must be unique) and a path to the animation file. You must also fill the emotion values for the animation (set to 0.0 if the emotion is not carried by the animation).
 
-To insert a new model, browse the `models` table. Again, provide a unique name and a file path for the .fbx model. You will also need to provide information on how to position and rotate the camera to focus it on the characters face (relative to the origin of the character model\footnote{The origin of a character model is usually a point on the floor between the character's feet (directly below the spine).}). You will need to provide six values in total.
+To insert a new model, browse the `models' table. Again, provide a unique name and a file path for the .fbx model. You will also need to provide information on how to position and rotate the camera to focus it on the characters face (relative to the origin of the character model\footnote{The origin of a character model is usually a point on the floor between the character's feet (directly below the spine).}). You will need to provide six values in total.
 \begin{itemize}
 	\item Offset on axis X, Y and Z (positive Z means upwards, negative Y is forwards and positive X is to the right) in Blender units (distance).
 	\item Rotation on axis X, Y and Z in degrees.
@@ -130,7 +130,7 @@ To insert a new model, browse the `models` table. Again, provide a unique name a
 
 \noindent You can use your own database file as long as the database keeps the following structure:
 \begin{itemize}
-	\item `animations` table:
+	\item `animations' table:
 	
 	\begin{itemize}
 		\item id (Integer, unique, primary key)
@@ -168,15 +168,15 @@ If you wish to import more animations from EMBD you can use the EMBD importer to
 
 \noindent To use the importer tool
 \begin{enumerate}
-	\item Open file `EMBD importer/importer.blend` with Blender
+	\item Open file `EMBD importer/importer.blend' with Blender
 	\item In the text editor on the left scroll to the bottom
 	\item There you will find arrays with links to EMBD animations
 	\item Visit \url{http://ebmdb.tuebingen.mpg.de/index.php}
 	\item Browse the EMBD website in search of desired animations
 	\item Copy the links to BVH files and paste them in the arrays in the script
-	\item Press `Run Script` on the bottom panel
+	\item Press `Run Script' on the bottom panel
 	\item \textbf{Important:} The process might take a long time depending on the amount of required animations - please do not interrupt or close Blender even when the system labels the process as unresponsive
-	\item The imported files can be found in the folder `imported`
+	\item The imported files can be found in the folder `imported'
 \end{enumerate}
 
 
@@ -185,8 +185,8 @@ Since all animations must be reviewed manually in order to assign their emotion 
 
 \noindent To generate a showcase:
 \begin{enumerate}
-	\item Run the command `python analyzer/generate\_showcase.py path\_to\_directory\_with\_animations`
-	\item The program will create a number of json files (showcase0.json, showcase1.json, etc) in the `showcases` folder
+	\item Run the command `python analyzer/generate\_showcase.py path\_to\_directory\_with\_animations'
+	\item The program will create a number of json files (showcase0.json, showcase1.json, etc) in the `showcases' folder
 	\item Each showcase file contains instructions for the generate to create an animation consisting of up to 10 animation (splitting the scene into 10 clips each makes it easier to render and use)
 	\item Use the showcase files as scene files with the generator module (section ~\ref{sec:generatormanual})
 	\item Render the animation

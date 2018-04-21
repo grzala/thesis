@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.3)  19 APR 2018 23:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.3)  21 APR 2018 22:33
 entering extended mode
 **./abdnthesis.tex
 (abdnthesis.tex
@@ -312,7 +312,26 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip57
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrextend.sty"
+Package: scrextend 2018/03/30 v3.25 KOMA-Script package (extend other classes w
+ith features of KOMA-Script classes)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrkbase.sty"
+Package: scrkbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty"
+Package: scrbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty"
+Package: scrlfile 2018/03/30 v3.25 KOMA-Script package (loading files)
+)))
+
+LaTeX Warning: Command \@footnotemark  has changed.
+               Check if current package is valid.
+
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
 Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -394,25 +413,25 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \TeXr@lab=\toks25
 ) (abdnthesis.aux
 (introduction.aux) (background.aux) (analysis.aux) (requirements.aux)
-(design.aux) (testingperf.aux) (evaluation.aux) (results.aux) (usermanual.aux)
-(maintenance.aux) (otherappend.aux))
+(design.aux) (testingperf.aux) (evaluation.aux) (results.aux) (discussion.aux)
+(conclusions.aux) (usermanual.aux) (maintenance.aux) (otherappend.aux))
 \openout1 = `abdnthesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 64.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -448,7 +467,7 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 63.
+Package hyperref Info: Link coloring OFF on input line 64.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -458,9 +477,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count124
 )
-LaTeX Info: Redefining \ref on input line 63.
-LaTeX Info: Redefining \pageref on input line 63.
-LaTeX Info: Redefining \nameref on input line 63.
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
 
 (abdnthesis.out) (abdnthesis.out)
 \@outlinefile=\write3
@@ -476,13 +495,13 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 68.
-<abdnshield.pdf, id=307, 48.18pt x 65.59047pt>
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 69.
+<abdnshield.pdf, id=315, 48.18pt x 65.59047pt>
 File: abdnshield.pdf Graphic file (type pdf)
 <use abdnshield.pdf>
-Package pdftex.def Info: abdnshield.pdf  used on input line 68.
+Package pdftex.def Info: abdnshield.pdf  used on input line 69.
 (pdftex.def)             Requested size: 56.9055pt x 77.46913pt.
  [1
 
@@ -490,9 +509,12 @@ Package pdftex.def Info: abdnshield.pdf  used on input line 68.
 ld.pdf>]
 [2
 
+
 ] [3
 
+
 ] [4
+
 
 ] (abdnthesis.toc
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 2.
@@ -532,22 +554,25 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
  [5
 
+
 ] [6])
 \tf@toc=\write4
 \openout4 = `abdnthesis.toc'.
 
  [7]
-(abdnthesis.lof)
+(abdnthesis.lof [8
+
+
+])
 \tf@lof=\write5
 \openout5 = `abdnthesis.lof'.
 
- [8
-
-] (abdnthesis.lot)
+ [9] (abdnthesis.lot)
 \tf@lot=\write6
 \openout6 = `abdnthesis.lot'.
 
- [9
+ [10
+
 
 ]
 \openout2 = `introduction.aux'.
@@ -578,15 +603,17 @@ Overfull \hbox (29.50256pt too wide) in paragraph at lines 10--10
 cher-[]3s-[]dialogue-[]scenes-[]was-[]animated-[]by-[]an-[]algorithm/$[]| 
  []
 
-[10
+[11
 
 
-]) [11]
+
+]) [12]
 \openout2 = `background.aux'.
 
  (background.tex
 Chapter 2.
-[12
+[13
+
 
 
 
@@ -599,27 +626,27 @@ TextsandFrameworkofMotionDatabase$[]
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 37.
-[13] [14]
-<img/wheel.png, id=563, 641.39626pt x 650.43pt>
+[14] [15]
+<img/wheel.png, id=579, 641.39626pt x 650.43pt>
 File: img/wheel.png Graphic file (type png)
 <use img/wheel.png>
 Package pdftex.def Info: img/wheel.png  used on input line 63.
 (pdftex.def)             Requested size: 328.49991pt x 333.13414pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 64.
- [15 <./img/wheel.png>] [16]
-<img/emo1.png, id=589, 707.64375pt x 194.22563pt>
+ [16 <./img/wheel.png>] [17]
+<img/emo1.png, id=605, 707.64375pt x 194.22563pt>
 File: img/emo1.png Graphic file (type png)
 <use img/emo1.png>
 Package pdftex.def Info: img/emo1.png  used on input line 120.
 (pdftex.def)             Requested size: 328.49991pt x 90.16283pt.
- [17 <./img/emo1.png>]
-<img/uncanny.png, id=607, 497.86pt x 341.275pt>
+ [18 <./img/emo1.png>]
+<img/uncanny.png, id=623, 497.86pt x 341.275pt>
 File: img/uncanny.png Graphic file (type png)
 <use img/uncanny.png>
 Package pdftex.def Info: img/uncanny.png  used on input line 138.
 (pdftex.def)             Requested size: 124.46469pt x 85.31853pt.
-<img/toyrobot.jpg, id=608, 356.33125pt x 356.33125pt>
+<img/toyrobot.jpg, id=624, 356.33125pt x 356.33125pt>
 File: img/toyrobot.jpg Graphic file (type jpg)
 <use img/toyrobot.jpg>
 Package pdftex.def Info: img/toyrobot.jpg  used on input line 143.
@@ -627,37 +654,39 @@ Package pdftex.def Info: img/toyrobot.jpg  used on input line 143.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18 <./img/uncanny.png>]
-<img/uncannyrobot.png, id=616, 305.64188pt x 361.35pt>
+ [19 <./img/uncanny.png>]
+<img/uncannyrobot.png, id=633, 305.64188pt x 361.35pt>
 File: img/uncannyrobot.png Graphic file (type png)
 <use img/uncannyrobot.png>
 Package pdftex.def Info: img/uncannyrobot.png  used on input line 148.
 (pdftex.def)             Requested size: 122.25458pt x 144.53743pt.
-<img/realrobot.png, id=617, 261.22594pt x 261.97874pt>
+<img/realrobot.png, id=634, 261.22594pt x 261.97874pt>
 File: img/realrobot.png Graphic file (type png)
 <use img/realrobot.png>
 Package pdftex.def Info: img/realrobot.png  used on input line 153.
 (pdftex.def)             Requested size: 117.55057pt x 117.88934pt.
- [19 <./img/toyrobot.jpg> <./img/uncannyrobot.png (PNG copy)> <./img/realrobot.
-png (PNG copy)>]) [20]
+ [20 <./img/toyrobot.jpg> <./img/uncannyrobot.png (PNG copy)> <./img/realrobot.
+png (PNG copy)>]) [21]
 \openout2 = `analysis.aux'.
 
  (analysis.tex
 Chapter 3.
-[21
+[22
 
 
 
-] [22] [23]) [24]
+
+] [23] [24]) [25]
 \openout2 = `requirements.aux'.
 
  (requirements.tex
 Chapter 4.
-[25
+[26
 
 
 
-]) [26]
+
+]) [27]
 \openout2 = `design.aux'.
 
  (design.tex
@@ -665,51 +694,52 @@ Chapter 5.
 
 Underfull \vbox (badness 1137) has occurred while \output is active []
 
- [27
+ [28
+
 
 
 
 ]
-<img/architecture.png, id=672, 553.06625pt x 482.80376pt>
+<img/architecture.png, id=688, 553.06625pt x 482.80376pt>
 File: img/architecture.png Graphic file (type png)
 <use img/architecture.png>
 Package pdftex.def Info: img/architecture.png  used on input line 37.
 (pdftex.def)             Requested size: 328.49991pt x 286.76717pt.
-<img/armature.png, id=674, 421.575pt x 871.255pt>
+<img/armature.png, id=690, 421.575pt x 871.255pt>
 File: img/armature.png Graphic file (type png)
 <use img/armature.png>
 Package pdftex.def Info: img/armature.png  used on input line 46.
 (pdftex.def)             Requested size: 218.99994pt x 452.60321pt.
 
-[28] [29 <./img/architecture.png>] [30 <./img/armature.png>]
-<img/script.png, id=703, 316.93407pt x 201.75375pt>
+[29] [30 <./img/architecture.png>] [31 <./img/armature.png>]
+<img/script.png, id=720, 316.93407pt x 201.75375pt>
 File: img/script.png Graphic file (type png)
 <use img/script.png>
 Package pdftex.def Info: img/script.png  used on input line 85.
 (pdftex.def)             Requested size: 328.49991pt x 209.13243pt.
-<img/db.png, id=706, 414.04688pt x 153.57375pt>
+<img/db.png, id=723, 414.04688pt x 153.57375pt>
 File: img/db.png Graphic file (type png)
 <use img/db.png>
 Package pdftex.def Info: img/db.png  used on input line 106.
 (pdftex.def)             Requested size: 328.49991pt x 121.84683pt.
- [31 <./img/script.png>]
-<img/dbmodel.png, id=715, 508.14844pt x 127.97812pt>
+ [32 <./img/script.png>]
+<img/dbmodel.png, id=731, 508.14844pt x 127.97812pt>
 File: img/dbmodel.png Graphic file (type png)
 <use img/dbmodel.png>
 Package pdftex.def Info: img/dbmodel.png  used on input line 113.
 (pdftex.def)             Requested size: 328.49991pt x 82.73564pt.
- [32 <./img/db.png> <./img/dbmodel.png>]
-<img/matcher.png, id=725, 539.01375pt x 837.88031pt>
+ [33 <./img/db.png> <./img/dbmodel.png>]
+<img/matcher.png, id=741, 539.01375pt x 837.88031pt>
 File: img/matcher.png Graphic file (type png)
 <use img/matcher.png>
 Package pdftex.def Info: img/matcher.png  used on input line 132.
 (pdftex.def)             Requested size: 328.49991pt x 510.64598pt.
-<img/nla.png, id=728, 499.11469pt x 200.24812pt>
+<img/nla.png, id=744, 499.11469pt x 200.24812pt>
 File: img/nla.png Graphic file (type png)
 <use img/nla.png>
 Package pdftex.def Info: img/nla.png  used on input line 153.
 (pdftex.def)             Requested size: 328.49991pt x 131.80055pt.
-<img/substrips.png, id=729, 539.76656pt x 103.88812pt>
+<img/substrips.png, id=745, 539.76656pt x 103.88812pt>
 File: img/substrips.png Graphic file (type png)
 <use img/substrips.png>
 Package pdftex.def Info: img/substrips.png  used on input line 157.
@@ -717,17 +747,17 @@ Package pdftex.def Info: img/substrips.png  used on input line 157.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33]
+ [34]
 Overfull \vbox (18.954pt too high) has occurred while \output is active []
 
 
-[34 <./img/matcher.png> <./img/nla.png>]
-<img/finalblend.png, id=742, 719.68875pt x 469.00218pt>
+[35 <./img/matcher.png> <./img/nla.png>]
+<img/finalblend.png, id=758, 719.68875pt x 469.00218pt>
 File: img/finalblend.png Graphic file (type png)
 <use img/finalblend.png>
 Package pdftex.def Info: img/finalblend.png  used on input line 165.
 (pdftex.def)             Requested size: 328.49991pt x 214.08334pt.
-<img/finalrend.png, id=743, 752.0597pt x 468.24937pt>
+<img/finalrend.png, id=759, 752.0597pt x 468.24937pt>
 File: img/finalrend.png Graphic file (type png)
 <use img/finalrend.png>
 Package pdftex.def Info: img/finalrend.png  used on input line 169.
@@ -735,24 +765,25 @@ Package pdftex.def Info: img/finalrend.png  used on input line 169.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35 <./img/substrips.png> <./img/finalblend.png> <./img/finalrend.png>]
-<img/ui_main.png, id=752, 243.91125pt x 469.755pt>
+ [36 <./img/substrips.png> <./img/finalblend.png> <./img/finalrend.png>]
+<img/ui_main.png, id=768, 243.91125pt x 469.755pt>
 File: img/ui_main.png Graphic file (type png)
 <use img/ui_main.png>
 Package pdftex.def Info: img/ui_main.png  used on input line 180.
 (pdftex.def)             Requested size: 197.09995pt x 379.60349pt.
- [36 <./img/ui_main.png (PNG copy)>]
-<img/ui_finalize.png, id=758, 187.45032pt x 264.99pt>
+ [37 <./img/ui_main.png (PNG copy)>]
+<img/ui_finalize.png, id=775, 187.45032pt x 264.99pt>
 File: img/ui_finalize.png Graphic file (type png)
 <use img/ui_finalize.png>
 Package pdftex.def Info: img/ui_finalize.png  used on input line 189.
 (pdftex.def)             Requested size: 197.09995pt x 278.64801pt.
-) [37 <./img/ui_finalize.png (PNG copy)>]
+) [38 <./img/ui_finalize.png (PNG copy)>]
 \openout2 = `testingperf.aux'.
 
  (testingperf.tex
 Chapter 6.
-) [38
+) [39
+
 
 
 
@@ -761,20 +792,51 @@ Chapter 6.
 
  (evaluation.tex
 Chapter 7.
-[39
+[40
 
 
 
-] [40]) [41]
+
+] [41]) [42]
 \openout2 = `results.aux'.
 
  (results.tex
 Chapter 8.
-[42
+<img/results/realism.png, id=807, 483.30562pt x 299.61937pt>
+File: img/results/realism.png Graphic file (type png)
+<use img/results/realism.png>
+Package pdftex.def Info: img/results/realism.png  used on input line 12.
+(pdftex.def)             Requested size: 273.74992pt x 169.71501pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43
 
 
 
-]) [43] (abdnthesis.bbl
+
+])
+[44 <./img/results/realism.png (PNG copy)>]
+\openout2 = `discussion.aux'.
+
+ (discussion.tex
+Chapter 9.
+[45
+
+
+
+
+]) [46]
+\openout2 = `conclusions.aux'.
+
+ (conclusions.tex
+Chapter 10.
+) [47
+
+
+
+
+] (abdnthesis.bbl
 Underfull \hbox (badness 4024) in paragraph at lines 22--27
 []\T1/ptm/m/n/10.95 Chang, L. (2015).  Ibm's wat-son may now be able to tell ho
 w snarky your
@@ -794,20 +856,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--43
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44
+ [48
+
 
 
 ])
-[45]
+[49]
 \openout2 = `usermanual.aux'.
 
  (usermanual.tex
 Appendix A.
-[46
+[50
+
 
 
 ]
-<img/appendix/installedaddon.png, id=828, 995.21812pt x 506.6428pt>
+<img/appendix/installedaddon.png, id=861, 995.21812pt x 506.6428pt>
 File: img/appendix/installedaddon.png Graphic file (type png)
 <use img/appendix/installedaddon.png>
 Package pdftex.def Info: img/appendix/installedaddon.png  used on input line 55
@@ -817,25 +881,25 @@ File: img/script.png Graphic file (type png)
 <use img/script.png>
 Package pdftex.def Info: img/script.png  used on input line 66.
 (pdftex.def)             Requested size: 328.49991pt x 209.13243pt.
- [47 <./img/appendix/installedaddon.png (PNG copy)>]
-<img/appendix/withoutaddon.png, id=848, 997.47656pt x 543.53062pt>
+ [51 <./img/appendix/installedaddon.png (PNG copy)>]
+<img/appendix/withoutaddon.png, id=881, 997.47656pt x 543.53062pt>
 File: img/appendix/withoutaddon.png Graphic file (type png)
 <use img/appendix/withoutaddon.png>
 Package pdftex.def Info: img/appendix/withoutaddon.png  used on input line 92.
 (pdftex.def)             Requested size: 328.49991pt x 179.00073pt.
- [48]
+ [52]
 Underfull \hbox (badness 2894) in paragraph at lines 123--123
 [][][]\T1/ptm/m/n/9 The DB browser for Sqlite can be ob-tained from the sqlite-
 browser of-fi-cial web-site: []$\T1/cmtt/m/n/9 http : / / www .
  []
 
-[49 <./img/appendix/withoutaddon.png (PNG copy)>] [50]
+[53 <./img/appendix/withoutaddon.png (PNG copy)>] [54]
 Overfull \hbox (17.69766pt too wide) in paragraph at lines 188--189
 []\T1/ptm/m/n/10.95 Run the com-mand `python an-a-lyzer/generate_showcase.py pa
-th_to_directory_with_animations` 
+th_to_directory_with_animations' 
  []
 
-[51]) [52]
+[55]) [56]
 \openout2 = `maintenance.aux'.
 
  (maintenance.tex
@@ -849,11 +913,12 @@ Overfull \hbox (4.3392pt too wide) in paragraph at lines 61--61
 []|\T1/ptm/m/n/10 generate_showcase.py| 
  []
 
-[53
+[57
 
 
 
-]) [54]
+
+]) [58]
 \openout2 = `otherappend.aux'.
 
  (otherappend.tex
@@ -862,7 +927,7 @@ Appendix C.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=926, page=1, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=959, page=1, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 1>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page1 used on input l
@@ -875,7 +940,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=927, page=2, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=960, page=2, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 2>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page2 used on input l
@@ -888,7 +953,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=928, page=3, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=961, page=3, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 3>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page3 used on input l
@@ -901,7 +966,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=929, page=4, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=962, page=4, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 4>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page4 used on input l
@@ -914,7 +979,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=930, page=5, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=963, page=5, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 5>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page5 used on input l
@@ -927,7 +992,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=931, page=6, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=964, page=6, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 6>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page6 used on input l
@@ -936,40 +1001,35 @@ ine 31.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [55
+) [59
 
 
 
-] [56 <./img/appendix/questionnaire.pdf>] [57 <./img/appendix/questionnaire.pdf
->] [58 <./img/appendix/questionnaire.pdf>] [59 <./img/appendix/questionnaire.pd
-f>] [60 <./img/appendix/questionnaire.pdf>] [61 <./img/appendix/questionnaire.p
+
+] [60 <./img/appendix/questionnaire.pdf>] [61 <./img/appendix/questionnaire.pdf
+>] [62 <./img/appendix/questionnaire.pdf>] [63 <./img/appendix/questionnaire.pd
+f>] [64 <./img/appendix/questionnaire.pdf>] [65 <./img/appendix/questionnaire.p
 df>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
  (abdnthesis.aux (introduction.aux) (background.aux) (analysis.aux)
 (requirements.aux) (design.aux) (testingperf.aux) (evaluation.aux) (results.aux
-) (usermanual.aux) (maintenance.aux) (otherappend.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
-
-
-Package rerunfilecheck Warning: File `abdnthesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `abdnthesis.out':
-(rerunfilecheck)             Before: EAF9D3EFF73088ED8BB246A31CA4EBFA;5101
-(rerunfilecheck)             After:  3528B6AC935D61CC5A538420121B6436;5122.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
+) (discussion.aux) (conclusions.aux) (usermanual.aux) (maintenance.aux)
+(otherappend.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
+Package rerunfilecheck Info: File `abdnthesis.out' has not changed.
+(rerunfilecheck)             Checksum: C4DBD9AC43AFB752728959A82EC137AB;5220.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 9970 strings out of 493305
- 145968 string characters out of 3138872
- 241674 words of memory out of 3000000
- 12995 multiletter control sequences out of 15000+200000
+ 10824 strings out of 493305
+ 161579 string characters out of 3138872
+ 276540 words of memory out of 3000000
+ 13811 multiletter control sequences out of 15000+200000
  75084 words of font info for 113 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,18n,45p,1062b,462s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,18n,51p,1062b,462s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\grzala\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \ectt1095.pk> <C:\Users\grzala\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ectt0900.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.en
@@ -977,9 +1037,9 @@ c}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on abdnthesis.pdf (61 pages, 1404567 bytes).
+Output written on abdnthesis.pdf (65 pages, 1419310 bytes).
 PDF statistics:
- 1171 PDF objects out of 1200 (max. 8388607)
- 266 named destinations out of 1000 (max. 500000)
- 744 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1204 PDF objects out of 1440 (max. 8388607)
+ 275 named destinations out of 1000 (max. 500000)
+ 765 words of extra memory for PDF output out of 10000 (max. 10000000)
 

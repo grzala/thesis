@@ -18,6 +18,7 @@
 
 \usepackage[numbers]{natbib}
 \usepackage{hyperref}
+\usepackage{scrextend}
 \usepackage{pdfpages}
 \usepackage{float}
 \setlength{\bibsep}{0pt}
@@ -49,7 +50,7 @@
 %% \includeonly{} command with a list of the file/chapter names that
 %% you wish to include.  NB, this must be in the preamble.
 
-\includeonly{introduction,background,analysis,faq, design, requirements, testingperf, usermanual, maintenance, evaluation, results, otherappend}
+\includeonly{introduction,background,analysis,faq, design, requirements, testingperf, usermanual, maintenance, evaluation, results, otherappend, conclusions, discussion}
 
 \def\sfthing#1#2{\def#1{\mbox{{\small\normalfont\sffamily #2}}}}
 
@@ -92,6 +93,8 @@
 \include{testingperf}
 \include{evaluation}
 \include{results}
+\include{discussion}
+\include{conclusions}
 
 
 \bibliography{mybib}
