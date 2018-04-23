@@ -24,14 +24,14 @@
 %% o One and a half spacing is the default.
 
 
-\def \fileversion{2.3}
-\def \filedate{2013/08/11}
+\def \fileversion{1.0}
+\def \filedate{2018/04/24}
 
 \newcommand \@doctor{Doctor of Philosophy}
 \newcommand \@masterphil{Master of Philosophy}
 \newcommand \@mastersci{Master of Science}
 \newcommand \@bachelor{Bachelor of Science}
-\newcommand \@degree@string{\@doctor}
+\newcommand \@degree@string{\@bachelor}
 
 % This is used to specify the department/school of the student
 \def\school#1{\gdef\@school{#1}}
@@ -57,12 +57,6 @@
 
 \DeclareOption{singlespace}{\singlesp@true}
 \DeclareOption{doublespace}{\doublesp@true}
-\DeclareOption{bsc}{%
-    \renewcommand\@degree@string{\@bachelor}
-    \titleboxptrue}
-\DeclareOption{BSc}{%
-    \renewcommand\@degree@string{\@bachelor}
-    \titleboxptrue}
 \DeclareOption{msc}{%
     \renewcommand\@degree@string{\@mastersci}
     \titleboxptrue}
@@ -77,6 +71,12 @@
     \renewcommand\@degree@string{\@doctor}}
 \DeclareOption{PhD}{%
     \renewcommand\@degree@string{\@doctor}}
+\DeclareOption{bsc}{%
+	\renewcommand\@degree@string{\@bachelor}
+	\titleboxptrue}
+\DeclareOption{BSc}{%
+	\renewcommand\@degree@string{\@bachelor}
+	\titleboxptrue}
 \DeclareOption{twocolumn}{%
     \ClassError{abdnthesis}{Option `twocolumn' not supported}{}}
 
@@ -402,7 +402,7 @@
     \begin{center}%
     A dissertation submitted in partial fulfilment \\
     of the requirements for the degree of \\
-    \textbf{\@degree@string} \\
+    \textbf{\@bachelor} \\
     of the \\
     \textbf{University of Aberdeen}.\\[2em]
     \includegraphics[width=2cm]{abdnshield}

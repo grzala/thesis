@@ -69,7 +69,8 @@
 \contentsline {section}{\numberline {9.3}Summary}{48}{section.9.3}
 \contentsline {chapter}{\numberline {10}Conclusion and Future work }{50}{chapter.10}
 \contentsline {section}{\numberline {10.1}Conclusion}{50}{section.10.1}
-\contentsline {section}{\numberline {10.2}Future work}{50}{section.10.2}
+\contentsline {section}{\numberline {10.2}Potential use outside of games}{50}{section.10.2}
+\contentsline {section}{\numberline {10.3}Future work}{50}{section.10.3}
 \contentsline {chapter}{\numberline {A}User Manual }{54}{appendix.A}
 \contentsline {section}{\numberline {A.1}Requirements and installation }{54}{section.A.1}
 \contentsline {subsection}{\numberline {A.1.1}Software and Libraries}{54}{subsection.A.1.1}
