@@ -66,6 +66,13 @@ Mori, M. (1970).
 \newblock
   \url{https://spectrum.ieee.org/automaton/robotics/humanoids/the-uncanny-valley}.
 
+\bibitem[Mutlu et~al., 2009]{mutlurobots}
+Mutlu, B., Shiwa, T., Kanda, T., Ishiguro, H., and Hagita, N. (2009).
+\newblock Footing in human-robot conversations: How robots might shape
+  participant roles using gaze cues.
+\newblock In {\em Proceedings of the 4th ACM/IEEE International Conference on
+  Human Robot Interaction}, HRI '09, pages 61--68, New York, NY, USA. ACM.
+
 \bibitem[Oshita, 2009]{animmc}
 Oshita, M. (2009).
 \newblock Generating animation from natural language texts and framework of

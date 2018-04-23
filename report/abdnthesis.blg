@@ -6,8 +6,13 @@ A level-1 auxiliary file: analysis.aux
 A level-1 auxiliary file: requirements.aux
 A level-1 auxiliary file: design.aux
 A level-1 auxiliary file: testingperf.aux
+A level-1 auxiliary file: evaluation.aux
+A level-1 auxiliary file: results.aux
+A level-1 auxiliary file: discussion.aux
+A level-1 auxiliary file: conclusions.aux
 A level-1 auxiliary file: usermanual.aux
 A level-1 auxiliary file: maintenance.aux
+A level-1 auxiliary file: otherappend.aux
 Database file #1: mybib.bib
 Warning--empty journal in pcgamerwitcher
 (There was 1 warning)
