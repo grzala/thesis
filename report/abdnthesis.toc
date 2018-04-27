@@ -60,11 +60,11 @@
 \contentsline {chapter}{\numberline {9}Discussion }{48}{chapter.9}
 \contentsline {section}{\numberline {9.1}Survey results}{48}{section.9.1}
 \contentsline {subsection}{\numberline {9.1.1}Realism}{48}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}Preference}{48}{subsection.9.1.2}
+\contentsline {subsection}{\numberline {9.1.2}Preference}{49}{subsection.9.1.2}
 \contentsline {subsection}{\numberline {9.1.3}Adjustments}{49}{subsection.9.1.3}
 \contentsline {section}{\numberline {9.2}Other findings }{49}{section.9.2}
 \contentsline {subsection}{\numberline {9.2.1}Mismatch between animation database and the `feel' of the game}{49}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}Exposition dialogue}{49}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.2}Exposition dialogue}{50}{subsection.9.2.2}
 \contentsline {subsection}{\numberline {9.2.3}Sarcasm and ambiguity}{50}{subsection.9.2.3}
 \contentsline {section}{\numberline {9.3}Summary}{50}{section.9.3}
 \contentsline {chapter}{\numberline {10}Conclusion and Future work }{52}{chapter.10}

@@ -12,7 +12,7 @@ The lack of realism was probably not caused by the emotion analysis. The intervi
 
 Both the motion capture data quality and the uncanny valley principle are possible causes of those results. It is impossible to say now which one is more important. A similar study which uses a different motion database could be helpful in determining that.
 
-It is also possible that the results are skewed because of the crudeness of the entire scene. The models are rather bulky and poorly detailed, untextured, there is no background or audio. That is because the software focuses solely on the animation. However, the interviewees are not used to watching animation being developed and might instinctively see such a scene as less realistic and be unable to look at the animation fully objectively. 
+It is also possible that the results are skewed because of the crudeness of the entire scene. The models are rather bulky and poorly detailed, untextured, there is no background or audio. That is because the software focuses solely on the animation. However, the interviewees are not used to watching animation being developed and might instinctively see such a scene as less realistic and be unable to look at the animation fully objectively. Given enough time and resources these issues could be addressed by adding detail to the scene by professional artists and the system should be then evaluated by a truly random audience (not dominated by CS students).
 
 The generated scenes reach an acceptable level of realism, however they are not realistic enough to deem the NLP method of generating animation to be better than other, traditional ones. 
 
@@ -41,11 +41,15 @@ In media such as books, films and games exposition is pretty common. Exposition 
 
 The exposition dialogue is already often unnatural and seems out of place. The software generating those scenes made them seem even less natural. During exposition dialogue the character's should remain rather neutral as often they will be describing events that happened in the past or that they have no direct connection with. The software however will find emotions in this dialogue and make characters overjoyed or fearing while there is nothing happening that would provoke such emotion. In many such dialogue scenes the software was simply over-sensitive.
 
+This problem could potentially be solved if the exposition dialogue was tagged in the script by the writers. The emotions extracted from the text could be decreased by some factor to make them less intense. This of course assumes an increase in manual work required as the exposition dialogue would have to be manually tagged.
+
 
 \subsection{Sarcasm and ambiguity}
 NLP has struggled with sarcasm for a long time. IBM Watson Tone Analyzer seems to be no closer to solving this problem. The dialogue that contain sarcasm are simply misinterpreted and the final scenes look terribly out of place. For instance a character saying `Oh, I'm so scared!' can be either scared, or indifferent and boasting about their courage. This might depend on the context and the tone of their voice. The software will however always associate this with fear and the resulting scene might use animations that convey opposite emotions to those that were meant to be conveyed.
 
 By looking at many dialogue scenes it became apparent that there is no way to overcome this problem using NLP only as there are too many variables outside of the text that define it (context, setting, personality of the character, recent interactions between characters involved in the scene). The tone of voice might provide more information that would help solve this problem.
+
+Similarly to the exposition problem, the sarcasm problem can also be solved by tagging it in the script. When using sarcasm the writers could indicate that and provide the intended emotion. That assumes a slight increase in the amount of work required and that all sarcasm present in the script is recognized and tagged.
 
 
 \section{Summary}
@@ -54,7 +58,7 @@ The following is a breakdown of what the software managed and failed to achieve.
 \noindent Successes:
 \begin{itemize}
 	\item The software is able to generate scenes quickly with minimal amount of manual work required.
-	\item The animations do not need extensive manual polish before being used in a game.
+	\item The animations do not need extensive manual polish before being used in a game. The software needs to provide smoother movements and blending between gestures. 
 	\item The software is flexible and capable of using custom character models and animation data.
 	\item The software is cross-platform and the animations can be exported to a multitude of file formats.
 	\item The generated scenes are often more enjoyable than the actual scenes in games.
