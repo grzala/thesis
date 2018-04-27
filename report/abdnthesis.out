@@ -33,8 +33,8 @@
 \BOOKMARK [1][-]{section.5.2}{Emotions}{chapter.5}% 33
 \BOOKMARK [1][-]{section.5.3}{Architecture}{chapter.5}% 34
 \BOOKMARK [1][-]{section.5.4}{Character Armature and Model}{chapter.5}% 35
-\BOOKMARK [1][-]{section.5.5}{EMBD Importer and Showcase Generator}{chapter.5}% 36
-\BOOKMARK [2][-]{subsection.5.5.1}{EMDB Importer}{section.5.5}% 37
+\BOOKMARK [1][-]{section.5.5}{EBMD Importer and Showcase Generator}{chapter.5}% 36
+\BOOKMARK [2][-]{subsection.5.5.1}{EDMB Importer}{section.5.5}% 37
 \BOOKMARK [2][-]{subsection.5.5.2}{Showcase Generator }{section.5.5}% 38
 \BOOKMARK [1][-]{section.5.6}{Input}{chapter.5}% 39
 \BOOKMARK [1][-]{section.5.7}{Emotion Analysis}{chapter.5}% 40
@@ -70,17 +70,21 @@
 \BOOKMARK [1][-]{section.10.3}{Future work}{chapter.10}% 70
 \BOOKMARK [0][-]{appendix.A}{User Manual }{}% 71
 \BOOKMARK [1][-]{section.A.1}{Requirements and installation }{appendix.A}% 72
-\BOOKMARK [2][-]{subsection.A.1.1}{Software and Libraries}{section.A.1}% 73
-\BOOKMARK [2][-]{subsection.A.1.2}{Install Generator as Blender Addon }{section.A.1}% 74
-\BOOKMARK [1][-]{section.A.2}{Generating animations }{appendix.A}% 75
-\BOOKMARK [1][-]{section.A.3}{Using Custom Animation and Models}{appendix.A}% 76
-\BOOKMARK [1][-]{section.A.4}{Importing More Animations From EMBD}{appendix.A}% 77
-\BOOKMARK [1][-]{section.A.5}{Generate a Showcase }{appendix.A}% 78
-\BOOKMARK [0][-]{appendix.B}{Maintenance Manual }{}% 79
-\BOOKMARK [1][-]{section.B.1}{Installation and requirements}{appendix.B}% 80
-\BOOKMARK [1][-]{section.B.2}{Space and Memory requirements}{appendix.B}% 81
-\BOOKMARK [1][-]{section.B.3}{Temporary Files}{appendix.B}% 82
-\BOOKMARK [1][-]{section.B.4}{Files and Directories}{appendix.B}% 83
-\BOOKMARK [1][-]{section.B.5}{Known Issues}{appendix.B}% 84
-\BOOKMARK [0][-]{appendix.C}{Other }{}% 85
-\BOOKMARK [1][-]{section.C.1}{The questionnaire }{appendix.C}% 86
+\BOOKMARK [2][-]{subsection.A.1.1}{IBM Watson Tone Analyzer Setup}{section.A.1}% 73
+\BOOKMARK [2][-]{subsection.A.1.2}{Software and Libraries}{section.A.1}% 74
+\BOOKMARK [2][-]{subsection.A.1.3}{Install Generator as Blender Addon }{section.A.1}% 75
+\BOOKMARK [1][-]{section.A.2}{Generating animations }{appendix.A}% 76
+\BOOKMARK [1][-]{section.A.3}{Using Custom Animation and Models}{appendix.A}% 77
+\BOOKMARK [1][-]{section.A.4}{Importing More Animations From EBMD}{appendix.A}% 78
+\BOOKMARK [1][-]{section.A.5}{Generate a Showcase }{appendix.A}% 79
+\BOOKMARK [0][-]{appendix.B}{Maintenance Manual }{}% 80
+\BOOKMARK [1][-]{section.B.1}{Installation and requirements}{appendix.B}% 81
+\BOOKMARK [1][-]{section.B.2}{Space and Memory requirements}{appendix.B}% 82
+\BOOKMARK [1][-]{section.B.3}{Temporary Files}{appendix.B}% 83
+\BOOKMARK [1][-]{section.B.4}{Files and Directories}{appendix.B}% 84
+\BOOKMARK [1][-]{section.B.5}{Known Issues}{appendix.B}% 85
+\BOOKMARK [0][-]{appendix.C}{Other }{}% 86
+\BOOKMARK [1][-]{section.C.1}{Useful Links}{appendix.C}% 87
+\BOOKMARK [1][-]{section.C.2}{The questionnaire }{appendix.C}% 88
+\BOOKMARK [1][-]{section.C.3}{Sample generated scene used in the questionnaire }{appendix.C}% 89
+\BOOKMARK [1][-]{section.C.4}{Interviewees' comments about the recreated animations }{appendix.C}% 90

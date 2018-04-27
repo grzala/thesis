@@ -11,7 +11,7 @@ After this step is completed, the file must be interpreted into a final scene. T
 
 \section{Emotions}
 
-For my project I have decided to only use the following emotions: joy, fear, disgust, anger and sadness. Traditionally, surprise is also part of the six basic emotions model by Paul Ekman and Wallace V. Friesen. However, IBM Watson Tone Analyzer, that I am using for sentiment analysis, is unable to detect surprise in the text (more on that in section ~\ref{sec:emoanal}) - therefore I had to abstain from using this emotion in this project. The emotions are expressed as decimal numbers between 0 and 1 - this identifies whether a given emotion is present in a specific motion clip or text and how intense that emotion is. It also allows to create a mixture of emotions in order to represent more complex emotions. The EMBD describes the animations in terms of their emotion category, but provides no value (the EMDB will not differentiate between an angry gesture, and a \textit{very} angry gesture). Therefore each animation clip has to be manually reviewed in order to assess it's emotional properties.
+For my project I have decided to only use the following emotions: joy, fear, disgust, anger and sadness. Traditionally, surprise is also part of the six basic emotions model by Paul Ekman and Wallace V. Friesen. However, IBM Watson Tone Analyzer, that I am using for sentiment analysis, is unable to detect surprise in the text (more on that in section ~\ref{sec:emoanal}) - therefore I had to abstain from using this emotion in this project. The emotions are expressed as decimal numbers between 0 and 1 - this identifies whether a given emotion is present in a specific motion clip or text and how intense that emotion is. It also allows to create a mixture of emotions in order to represent more complex emotions. The EBMD describes the animations in terms of their emotion category, but provides no value (the EMDB will not differentiate between an angry gesture, and a \textit{very} angry gesture). Therefore each animation clip has to be manually reviewed in order to assess it's emotional properties.
 
 \section{Architecture}
 
@@ -48,12 +48,12 @@ As the system is designed to be used in games, one of the main requirements was 
 \end{figure}
 
 
-\section{EMBD Importer and Showcase Generator}
+\section{EBMD Importer and Showcase Generator}
 The following are small tools created to help automate / bootstrap the process of acquisition and categorization of the animations.
 
 
-\subsection{EMDB Importer}
-The EMDB importer's purpose is to help prepare the animations obtained from EMBD to work with the system. The EMDB animations have a few issues making them incompatible with the system - The armatures are a little different with unmatching bone names, many animations were recorder while actors were seating \footnote{Leg animation is irrelevant for this system.} and are saved in BVH files \footnote{BVH files are suitable for motion capture, but can be more problematic for generic animation than FBX.}.
+\subsection{EDMB Importer}
+The EBMD importer's purpose is to help prepare the animations obtained from EBMD to work with the system. The EBMD animations have a few issues making them incompatible with the system - The armatures are a little different with unmatching bone names, many animations were recorder while actors were seating \footnote{Leg animation is irrelevant for this system.} and are saved in BVH files \footnote{BVH files are suitable for motion capture, but can be more problematic for generic animation than FBX.}.
 
 \medskip
 \noindent To import an animation, the importer must follow through the following steps:

@@ -1,149 +1,14 @@
 [
     {
-        "text": " How do you feel?", 
-        "character": "AMARI", 
-        "clip": [
-            {
-                "name": "neutral_neutral_20", 
-                "joy": 0.0, 
-                "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.5952380952380952, 
-                "file": "neutral/neutral20.fbx", 
-                "Frames": 96, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 95
-            }
-        ], 
-        "tones": {
-            "joy": 0.0, 
-            "sadness": 0.0, 
-            "disgust": 0.0, 
-            "anger": 0.0, 
-            "surprise": 0.0, 
-            "fear": 0.0
-        }
-    }, 
-    {
-        "text": " I'm okay, doctor. Thank you.", 
-        "character": "ISAAC", 
-        "clip": [
-            {
-                "name": "joy_elevated_5", 
-                "joy": 0.5, 
-                "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.7053432380952381, 
-                "file": "joy/elevated/elevated5.fbx", 
-                "Frames": 90, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 57
-            }
-        ], 
-        "tones": {
-            "joy": 0.574237, 
-            "sadness": 0.012247, 
-            "disgust": 0.010734, 
-            "anger": 0.039503, 
-            "surprise": 0.0, 
-            "fear": 0.034555
-        }
-    }, 
-    {
-        "text": " That's good, but I want you to keep monitoring yourself. We have to be sure there's no long-term damage.", 
-        "character": "AMARI", 
-        "clip": [
-            {
-                "name": "joy_elevated_3", 
-                "joy": 0.75, 
-                "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.4609653015625, 
-                "file": "joy/elevated/elevated3.fbx", 
-                "Frames": 155, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 55
-            }
-        ], 
-        "tones": {
-            "joy": 0.322235, 
-            "sadness": 0.212706, 
-            "disgust": 0.033703, 
-            "anger": 0.136518, 
-            "surprise": 0.0, 
-            "fear": 0.100151
-        }
-    }, 
-    {
-        "text": " Are you ready to talk about what happened in there?", 
-        "character": "AMARI", 
-        "clip": [
-            {
-                "name": "fear_subtle_closed_6", 
-                "joy": 0.0, 
-                "anger": 0.0, 
-                "sadness": 0.0, 
-                "score": 0.6684641758241759, 
-                "file": "fear/subtle/closed6.fbx", 
-                "Frames": 143, 
-                "surprise": 0.0, 
-                "fear": 0.55, 
-                "disgust": 0.0, 
-                "id": 66
-            }
-        ], 
-        "tones": {
-            "joy": 0.279716, 
-            "sadness": 0.273691, 
-            "disgust": 0.014401, 
-            "anger": 0.100907, 
-            "surprise": 0.0, 
-            "fear": 0.350472
-        }
-    }, 
-    {
-        "text": " I saw Kellog's life. The man who ruined my family. The man I killed.", 
-        "character": "ISAAC", 
-        "clip": [
-            {
-                "name": "sad_subtle_helpless_2", 
-                "joy": 0.0, 
-                "anger": 0.6000000000000001, 
-                "sadness": 0.7, 
-                "score": 0.7426172833333332, 
-                "file": "sadness/subtle/helpless2.fbx", 
-                "Frames": 164, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 106
-            }
-        ], 
-        "tones": {
-            "joy": 0.007877, 
-            "sadness": 0.465155, 
-            "disgust": 0.376153, 
-            "anger": 0.387355, 
-            "surprise": 0.0, 
-            "fear": 0.103004
-        }
-    }, 
-    {
-        "text": " That's right. He was a human being just like the rest of us, and he had reasons for being what he was, however cruel.", 
-        "character": "AMARI", 
+        "text": " I'm tired of your yapping.  All you  ever do is complain, you never try to  make things better. ", 
+        "character": "BENDER", 
         "clip": [
             {
                 "name": "angry_subtle_shrug_2", 
                 "joy": 0.0, 
                 "anger": 0.65, 
                 "sadness": 0.0, 
-                "score": 0.588158067, 
+                "score": 0.6393621788283659, 
                 "file": "anger/subtle/shrug2.fbx", 
                 "Frames": 278, 
                 "surprise": 0.0, 
@@ -153,51 +18,24 @@
             }
         ], 
         "tones": {
-            "joy": 0.01615875, 
-            "sadness": 0.486379, 
-            "disgust": 0.228638, 
-            "anger": 0.345337, 
+            "joy": 0.089372, 
+            "sadness": 0.291655, 
+            "disgust": 0.148438, 
+            "anger": 0.294045, 
             "surprise": 0.0, 
-            "fear": 0.04213
+            "fear": 0.057132
         }
     }, 
     {
-        "text": " How does that make you feel?", 
-        "character": "AMARI", 
-        "clip": [
-            {
-                "name": "sad_subtle_grieve_4\n", 
-                "joy": 0.0, 
-                "anger": 0.0, 
-                "sadness": 0.55, 
-                "score": 0.6958086363636363, 
-                "file": "sadness/subtle/grieve4.fbx", 
-                "Frames": 88, 
-                "surprise": 0.0, 
-                "fear": 0.0, 
-                "disgust": 0.0, 
-                "id": 113
-            }
-        ], 
-        "tones": {
-            "joy": 0.311444, 
-            "sadness": 0.392223, 
-            "disgust": 0.065545, 
-            "anger": 0.080703, 
-            "surprise": 0.0, 
-            "fear": 0.157247
-        }
-    }, 
-    {
-        "text": " It wasn't all his fault. I cannot blame him for everything that happened.", 
-        "character": "ISAAC", 
+        "text": " Well I'm running away from this dead end family! I know  there's a place for people like me with  new ideas. There has to be!", 
+        "character": "BENDER", 
         "clip": [
             {
                 "name": "sad_subtle_resigned_3", 
                 "joy": 0.0, 
                 "anger": 0.0, 
                 "sadness": 0.5, 
-                "score": 0.73916610625, 
+                "score": 0.3272155046875, 
                 "file": "sadness/subtle/resigned3.fbx", 
                 "Frames": 143, 
                 "surprise": 0.0, 
@@ -207,39 +45,120 @@
             }
         ], 
         "tones": {
-            "joy": 0.01269875, 
-            "sadness": 0.482222, 
-            "disgust": 0.112181, 
-            "anger": 0.328144, 
+            "joy": 0.402649, 
+            "sadness": 0.36711, 
+            "disgust": 0.144056, 
+            "anger": 0.119059, 
             "surprise": 0.0, 
-            "fear": 0.204245
+            "fear": 0.098326
         }
     }, 
     {
-        "text": " If I were a priest, I would say forgiveness is a good thing.", 
-        "character": "AMARI", 
+        "text": " Fine, get going!", 
+        "character": "FARNSWORTH", 
         "clip": [
             {
-                "name": "joy_elevated_4", 
-                "joy": 0.6000000000000001, 
+                "name": "joy_elevated_5", 
+                "joy": 0.5, 
                 "anger": 0.0, 
                 "sadness": 0.0, 
-                "score": 0.7871189375000001, 
-                "file": "joy/elevated/elevated4.fbx", 
-                "Frames": 133, 
+                "score": 0.5063009523809524, 
+                "file": "joy/elevated/elevated5.fbx", 
+                "Frames": 90, 
                 "surprise": 0.0, 
                 "fear": 0.0, 
                 "disgust": 0.0, 
-                "id": 56
+                "id": 57
             }
         ], 
         "tones": {
-            "joy": 0.54691, 
-            "sadness": 0.174378, 
-            "disgust": 0.044515, 
-            "anger": 0.169379, 
+            "joy": 0.50322, 
+            "sadness": 0.171213, 
+            "disgust": 0.056721, 
+            "anger": 0.071304, 
             "surprise": 0.0, 
-            "fear": 0.093012
+            "fear": 0.086933
+        }
+    }, 
+    {
+        "text": " Oh I'm going! You're gonna be all \"Where's  Bender? I miss Bender!\"", 
+        "character": "BENDER", 
+        "clip": [
+            {
+                "name": "sad_subtle_resigned_4", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.5, 
+                "score": 0.6498381187500001, 
+                "file": "sadness/subtle/resigned4.fbx", 
+                "Frames": 138, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 100
+            }
+        ], 
+        "tones": {
+            "joy": 0.021006, 
+            "sadness": 0.510888, 
+            "disgust": 0.020837, 
+            "anger": 0.192677, 
+            "surprise": 0.0, 
+            "fear": 0.482241
+        }
+    }, 
+    {
+        "text": " We won't know that until you leave.", 
+        "character": "FARNSWORTH", 
+        "clip": [
+            {
+                "name": "sad_subtle_grieve_4\n", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.55, 
+                "score": 0.890414525, 
+                "file": "sadness/subtle/grieve4.fbx", 
+                "Frames": 88, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 113
+            }
+        ], 
+        "tones": {
+            "joy": 0.058663, 
+            "sadness": 0.475106, 
+            "disgust": 0.107412, 
+            "anger": 0.174906, 
+            "surprise": 0.0, 
+            "fear": 0.122391
+        }
+    }, 
+    {
+        "text": " Oh, I'm leaving!", 
+        "character": "BENDER", 
+        "clip": [
+            {
+                "name": "sad_subtle_helpless_4", 
+                "joy": 0.0, 
+                "anger": 0.0, 
+                "sadness": 0.65, 
+                "score": 0.6394649878934624, 
+                "file": "sadness/subtle/helpless4.fbx", 
+                "Frames": 59, 
+                "surprise": 0.0, 
+                "fear": 0.0, 
+                "disgust": 0.0, 
+                "id": 109
+            }
+        ], 
+        "tones": {
+            "joy": 0.025604, 
+            "sadness": 0.581496, 
+            "disgust": 0.067634, 
+            "anger": 0.18261, 
+            "surprise": 0.0, 
+            "fear": 0.280877
         }
     }
 ]
