@@ -1,17 +1,17 @@
 \chapter{Requirements Specification\label{chap:requirements}}
 
-\noindent This section describes functional and non-functional requirements of the proposed software. The software must be developed accordingly to the requirements  and must satisfy all of them in order to be truly successful.
+\noindent This section describes functional and non-functional requirements of the proposed software. The software must be developed in accordance to the requirements and must satisfy all of them in order to be truly successful.
 
 
 \section{Functional Requirements}
 
 \begin{enumerate}
 
-\item {\bf Analysis of a semi-structured script} - The software takes a semi structured script as input. The structure of a script must resemble a structure of a film script. The script provides 2 kinds of information - characters involved and lines of dialogue spoken by them. The software must be able to extract emotions from the dialogue lines.
+\item {\bf Analysis of a semi-structured script} - The software takes a semi-structured script as input. The structure of a script must resemble a structure of a film script. The script provides two kinds of information - characters involved in the scene and lines of dialogue spoken by them. The software must be able to extract emotions from the dialogue lines.
 
 \item {\bf Store motion capture data with regards to emotions} - The software must store and tag the motion capture clips with relevant meta-data about what kind of emotions they represent. The database must be easily and quickly searchable.
 
-\item {\bf Find relevant animation clips} - The software must take information about character's emotions and actions and choose animation clip that best represents character's behaviour. The chosen clips must reflect character's emotions, but also need to be of correct length to match the speed of the speech, as well as not repeat too often. The system must be compatible with Emotional Body Motion Database published by the Max Planck Institute for Biological Cybernetics.
+\item {\bf Find relevant animation clips} - The software must take information about character's emotions and choose animation clips that best represent character's intentions. The chosen clips must reflect character's emotions, but also need to be of correct length to match the speed of the speech. The clips should not repeat too often to avoid monotony. The system must be compatible with the Emotional Body Motion Database published by the Max Planck Institute for Biological Cybernetics.
 
 \item {\bf Assemble the final scene} -  The software must be able to output the final animated dialogue scene. The outputted scene must be fully editable, enabling various adjustments before rendering. The final scene must also be exportable to other formats so it can be used with game engines or other editing software.
 
@@ -24,8 +24,8 @@
 \item The user should be able to use the software with a custom motion-capture database (Usability).
 \item The user should be able to assign different character models to different characters (Usability).
 \item The user should be able to fully customize and edit the final scene (Usability).
-\item The software is designed to automatically create big amounts of animated scenes. The time of generating a scene is not a high priority, but it must be reasonable (Performance).
+\item The software is destined to automatically create large amounts of animated scenes. The time of generating a scene is not a high priority, but it must be reasonable (Performance).
 \item The software must support common animation file formats (fbx, bvh) (Portability).
-\item The software must be modular enough so that different parts of it can be replaced with ease .It must be possible to replace emotion analysis software and 3D animation editing software with other software (Portability).
-\item The output animation must be perceived well by the audience and judged to be acceptable for use in a game given minor adjustments (Quality).
+\item The software must be modular enough so that different parts of it can be replaced with ease. It must be possible to replace emotion analysis API and 3D animation editing software with other software (Portability).
+\item The output animation must be perceived well by the audience and judged to be acceptable for use in a game given some manual adjustments (Quality).
 \end{itemize}

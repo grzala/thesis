@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.3)  1 MAY 2018 23:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.3)  2 MAY 2018 00:43
 entering extended mode
 **./abdnthesis.tex
 (abdnthesis.tex
@@ -703,10 +703,7 @@ Chapter 4.
 
  (design.tex
 Chapter 5.
-
-Underfull \vbox (badness 1137) has occurred while \output is active []
-
- [28
+[28
 
 
 
@@ -715,84 +712,80 @@ Underfull \vbox (badness 1137) has occurred while \output is active []
 <img/architecture.png, id=793, 553.06625pt x 482.80376pt>
 File: img/architecture.png Graphic file (type png)
 <use img/architecture.png>
-Package pdftex.def Info: img/architecture.png  used on input line 37.
+Package pdftex.def Info: img/architecture.png  used on input line 39.
 (pdftex.def)             Requested size: 328.49991pt x 286.76717pt.
-<img/armature.png, id=795, 421.575pt x 871.255pt>
+<img/armature.png, id=796, 421.575pt x 871.255pt>
 File: img/armature.png Graphic file (type png)
 <use img/armature.png>
-Package pdftex.def Info: img/armature.png  used on input line 46.
+Package pdftex.def Info: img/armature.png  used on input line 48.
 (pdftex.def)             Requested size: 218.99994pt x 452.60321pt.
-
-[29] [30 <./img/architecture.png>] [31 <./img/armature.png>]
-<img/script.png, id=825, 316.93407pt x 201.75375pt>
+ [29] [30 <./img/architecture.png>] [31 <./img/armature.png>]
+<img/script.png, id=827, 316.93407pt x 201.75375pt>
 File: img/script.png Graphic file (type png)
 <use img/script.png>
 Package pdftex.def Info: img/script.png  used on input line 85.
 (pdftex.def)             Requested size: 328.49991pt x 209.13243pt.
-<img/db.png, id=828, 414.04688pt x 153.57375pt>
+<img/db.png, id=831, 414.04688pt x 153.57375pt>
 File: img/db.png Graphic file (type png)
 <use img/db.png>
 Package pdftex.def Info: img/db.png  used on input line 106.
 (pdftex.def)             Requested size: 328.49991pt x 121.84683pt.
  [32 <./img/script.png>]
-<img/dbmodel.png, id=837, 508.14844pt x 127.97812pt>
+<img/dbmodel.png, id=840, 508.14844pt x 127.97812pt>
 File: img/dbmodel.png Graphic file (type png)
 <use img/dbmodel.png>
 Package pdftex.def Info: img/dbmodel.png  used on input line 113.
 (pdftex.def)             Requested size: 328.49991pt x 82.73564pt.
  [33 <./img/db.png> <./img/dbmodel.png>]
-<img/matcher.png, id=847, 539.01375pt x 837.88031pt>
+<img/matcher.png, id=850, 539.01375pt x 837.88031pt>
 File: img/matcher.png Graphic file (type png)
 <use img/matcher.png>
 Package pdftex.def Info: img/matcher.png  used on input line 132.
 (pdftex.def)             Requested size: 328.49991pt x 510.64598pt.
-<img/nla.png, id=850, 499.11469pt x 200.24812pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34 <./img/matcher.png>]
+<img/nla.png, id=858, 499.11469pt x 200.24812pt>
 File: img/nla.png Graphic file (type png)
 <use img/nla.png>
 Package pdftex.def Info: img/nla.png  used on input line 153.
 (pdftex.def)             Requested size: 328.49991pt x 131.80055pt.
-<img/substrips.png, id=851, 539.76656pt x 103.88812pt>
+<img/substrips.png, id=859, 539.76656pt x 103.88812pt>
 File: img/substrips.png Graphic file (type png)
 <use img/substrips.png>
 Package pdftex.def Info: img/substrips.png  used on input line 157.
 (pdftex.def)             Requested size: 328.49991pt x 63.2274pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34]
-Overfull \vbox (18.954pt too high) has occurred while \output is active []
-
-
-[35 <./img/matcher.png> <./img/nla.png>]
-<img/finalblend.png, id=864, 719.68875pt x 469.00218pt>
+ [35 <./img/nla.png> <./img/substrips.png>]
+<img/finalblend.png, id=868, 719.68875pt x 469.00218pt>
 File: img/finalblend.png Graphic file (type png)
 <use img/finalblend.png>
 Package pdftex.def Info: img/finalblend.png  used on input line 165.
 (pdftex.def)             Requested size: 328.49991pt x 214.08334pt.
-<img/finalrend.png, id=865, 752.0597pt x 468.24937pt>
+<img/finalrend.png, id=869, 752.0597pt x 468.24937pt>
 File: img/finalrend.png Graphic file (type png)
 <use img/finalrend.png>
 Package pdftex.def Info: img/finalrend.png  used on input line 169.
 (pdftex.def)             Requested size: 328.49991pt x 204.53706pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [36 <./img/substrips.png> <./img/finalblend.png> <./img/finalrend.png>]
-<img/ui_main.png, id=874, 243.91125pt x 469.755pt>
+<img/ui_main.png, id=871, 243.91125pt x 469.755pt>
 File: img/ui_main.png Graphic file (type png)
 <use img/ui_main.png>
 Package pdftex.def Info: img/ui_main.png  used on input line 180.
 (pdftex.def)             Requested size: 197.09995pt x 379.60349pt.
- [37 <./img/ui_main.png (PNG copy)>]
-<img/ui_finalize.png, id=881, 187.45032pt x 264.99pt>
+ [36 <./img/finalblend.png> <./img/finalrend.png>]
+<img/ui_finalize.png, id=879, 187.45032pt x 264.99pt>
 File: img/ui_finalize.png Graphic file (type png)
 <use img/ui_finalize.png>
 Package pdftex.def Info: img/ui_finalize.png  used on input line 189.
 (pdftex.def)             Requested size: 197.09995pt x 278.64801pt.
-) [38 <./img/ui_finalize.png (PNG copy)>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37 <./img/ui_main.png (PNG copy)>]) [38 <./img/ui_finalize.png (PNG copy)>]
 \openout2 = `testingperf.aux'.
 
- (testingperf.tex
+
+(testingperf.tex
 Chapter 6.
 [39
 
@@ -814,7 +807,7 @@ Chapter 7.
 
  (results.tex
 Chapter 8.
-<img/results/realism.png, id=932, 769.37437pt x 446.41782pt>
+<img/results/realism.png, id=935, 769.37437pt x 446.41782pt>
 File: img/results/realism.png Graphic file (type png)
 <use img/results/realism.png>
 Package pdftex.def Info: img/results/realism.png  used on input line 13.
@@ -825,17 +818,17 @@ Package pdftex.def Info: img/results/realism.png  used on input line 13.
 
 
 ]
-<img/results/improves.png, id=940, 781.41937pt x 422.32782pt>
+<img/results/improves.png, id=943, 781.41937pt x 422.32782pt>
 File: img/results/improves.png Graphic file (type png)
 <use img/results/improves.png>
 Package pdftex.def Info: img/results/improves.png  used on input line 22.
 (pdftex.def)             Requested size: 459.89987pt x 248.55905pt.
-<img/results/prefer.png, id=941, 785.18344pt x 422.32782pt>
+<img/results/prefer.png, id=944, 785.18344pt x 422.32782pt>
 File: img/results/prefer.png Graphic file (type png)
 <use img/results/prefer.png>
 Package pdftex.def Info: img/results/prefer.png  used on input line 27.
 (pdftex.def)             Requested size: 459.89987pt x 247.37332pt.
-<img/results/adjustments.png, id=942, 685.05937pt x 420.82219pt>
+<img/results/adjustments.png, id=945, 685.05937pt x 420.82219pt>
 File: img/results/adjustments.png Graphic file (type png)
 <use img/results/adjustments.png>
 Package pdftex.def Info: img/results/adjustments.png  used on input line 35.
@@ -896,7 +889,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  (usermanual.tex
 Appendix A.
-<img/appendix/credentials.png, id=1007, 823.075pt x 118.4425pt>
+<img/appendix/credentials.png, id=1010, 823.075pt x 118.4425pt>
 File: img/appendix/credentials.png Graphic file (type png)
 <use img/appendix/credentials.png>
 Package pdftex.def Info: img/appendix/credentials.png  used on input line 13.
@@ -906,7 +899,7 @@ Package pdftex.def Info: img/appendix/credentials.png  used on input line 13.
 
 
  <./img/appendix/credentials.png>]
-<img/appendix/installedaddon.png, id=1019, 995.21812pt x 506.6428pt>
+<img/appendix/installedaddon.png, id=1022, 995.21812pt x 506.6428pt>
 File: img/appendix/installedaddon.png Graphic file (type png)
 <use img/appendix/installedaddon.png>
 Package pdftex.def Info: img/appendix/installedaddon.png  used on input line 66
@@ -917,7 +910,7 @@ File: img/script.png Graphic file (type png)
 Package pdftex.def Info: img/script.png  used on input line 77.
 (pdftex.def)             Requested size: 328.49991pt x 209.13243pt.
  [58] [59 <./img/appendix/installedaddon.png (PNG copy)>]
-<img/appendix/withoutaddon.png, id=1046, 997.47656pt x 543.53062pt>
+<img/appendix/withoutaddon.png, id=1049, 997.47656pt x 543.53062pt>
 File: img/appendix/withoutaddon.png Graphic file (type png)
 <use img/appendix/withoutaddon.png>
 Package pdftex.def Info: img/appendix/withoutaddon.png  used on input line 103.
@@ -968,7 +961,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--12
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=1127, page=1, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=1130, page=1, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 1>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page1 used on input l
@@ -981,7 +974,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=1128, page=2, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=1131, page=2, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 2>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page2 used on input l
@@ -994,7 +987,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=1129, page=3, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=1132, page=3, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 3>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page3 used on input l
@@ -1007,7 +1000,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=1130, page=4, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=1133, page=4, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 4>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page4 used on input l
@@ -1020,7 +1013,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=1131, page=5, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=1134, page=5, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 5>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page5 used on input l
@@ -1033,7 +1026,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=1132, page=6, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=1135, page=6, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 6>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page6 used on input l
@@ -1042,13 +1035,13 @@ ine 44.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/appendix/sample/horizon1.png, id=1135, 1723.43875pt x 946.53625pt>
+<img/appendix/sample/horizon1.png, id=1138, 1723.43875pt x 946.53625pt>
 File: img/appendix/sample/horizon1.png Graphic file (type png)
 <use img/appendix/sample/horizon1.png>
 Package pdftex.def Info: img/appendix/sample/horizon1.png  used on input line 5
 5.
 (pdftex.def)             Requested size: 328.49991pt x 180.40703pt.
-<img/appendix/sample/horizonrender1.png, id=1136, 1693.32625pt x 953.5625pt>
+<img/appendix/sample/horizonrender1.png, id=1139, 1693.32625pt x 953.5625pt>
 File: img/appendix/sample/horizonrender1.png Graphic file (type png)
 <use img/appendix/sample/horizonrender1.png>
 Package pdftex.def Info: img/appendix/sample/horizonrender1.png  used on input 
@@ -1057,13 +1050,13 @@ line 56.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/appendix/sample/horizon2.png, id=1137, 1686.3pt x 939.51pt>
+<img/appendix/sample/horizon2.png, id=1140, 1686.3pt x 939.51pt>
 File: img/appendix/sample/horizon2.png Graphic file (type png)
 <use img/appendix/sample/horizon2.png>
 Package pdftex.def Info: img/appendix/sample/horizon2.png  used on input line 6
 1.
 (pdftex.def)             Requested size: 328.49991pt x 183.01018pt.
-<img/appendix/sample/horizonrender2.png, id=1138, 1684.2925pt x 948.54375pt>
+<img/appendix/sample/horizonrender2.png, id=1141, 1684.2925pt x 948.54375pt>
 File: img/appendix/sample/horizonrender2.png Graphic file (type png)
 <use img/appendix/sample/horizonrender2.png>
 Package pdftex.def Info: img/appendix/sample/horizonrender2.png  used on input 
@@ -1072,13 +1065,13 @@ line 62.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/appendix/sample/horizon3.png, id=1139, 1682.285pt x 939.51pt>
+<img/appendix/sample/horizon3.png, id=1142, 1682.285pt x 939.51pt>
 File: img/appendix/sample/horizon3.png Graphic file (type png)
 <use img/appendix/sample/horizon3.png>
 Package pdftex.def Info: img/appendix/sample/horizon3.png  used on input line 6
 7.
 (pdftex.def)             Requested size: 328.49991pt x 183.45459pt.
-<img/appendix/sample/horizonrender3.png, id=1140, 1689.31125pt x 949.5475pt>
+<img/appendix/sample/horizonrender3.png, id=1143, 1689.31125pt x 949.5475pt>
 File: img/appendix/sample/horizonrender3.png Graphic file (type png)
 <use img/appendix/sample/horizonrender3.png>
 Package pdftex.def Info: img/appendix/sample/horizonrender3.png  used on input 
@@ -1087,13 +1080,13 @@ line 68.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/appendix/sample/horizon4.png, id=1141, 1694.33pt x 944.52875pt>
+<img/appendix/sample/horizon4.png, id=1144, 1694.33pt x 944.52875pt>
 File: img/appendix/sample/horizon4.png Graphic file (type png)
 <use img/appendix/sample/horizon4.png>
 Package pdftex.def Info: img/appendix/sample/horizon4.png  used on input line 7
 3.
 (pdftex.def)             Requested size: 328.49991pt x 183.12305pt.
-<img/appendix/sample/horizonrender4.png, id=1142, 1685.29625pt x 943.525pt>
+<img/appendix/sample/horizonrender4.png, id=1145, 1685.29625pt x 943.525pt>
 File: img/appendix/sample/horizonrender4.png Graphic file (type png)
 <use img/appendix/sample/horizonrender4.png>
 Package pdftex.def Info: img/appendix/sample/horizonrender4.png  used on input 
@@ -1128,8 +1121,8 @@ Package rerunfilecheck Info: File `abdnthesis.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
  ) 
 Here is how much of TeX's memory you used:
- 10961 strings out of 493305
- 164555 string characters out of 3138872
+ 10962 strings out of 493305
+ 164567 string characters out of 3138872
  279731 words of memory out of 3000000
  13893 multiletter control sequences out of 15000+200000
  77887 words of font info for 115 fonts, out of 3000000 for 9000
@@ -1142,9 +1135,9 @@ c}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on abdnthesis.pdf (77 pages, 4454203 bytes).
+Output written on abdnthesis.pdf (77 pages, 4455055 bytes).
 PDF statistics:
- 1416 PDF objects out of 1440 (max. 8388607)
- 316 named destinations out of 1000 (max. 500000)
+ 1419 PDF objects out of 1440 (max. 8388607)
+ 317 named destinations out of 1000 (max. 500000)
  961 words of extra memory for PDF output out of 10000 (max. 10000000)
 
