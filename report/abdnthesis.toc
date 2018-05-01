@@ -4,18 +4,18 @@
 \contentsline {chapter}{\numberline {2}Background and Related Work }{13}{chapter.2}
 \contentsline {section}{\numberline {2.1}Background}{13}{section.2.1}
 \contentsline {section}{\numberline {2.2}Existing Systems}{13}{section.2.2}
-\contentsline {section}{\numberline {2.3}Related Work}{13}{section.2.3}
+\contentsline {section}{\numberline {2.3}Related Work}{14}{section.2.3}
 \contentsline {section}{\numberline {2.4}Emotion Analysis}{14}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Sentiment Analysis}{14}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}Sentiment Analysis}{15}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Emotions}{15}{subsection.2.4.2}
 \contentsline {section}{\numberline {2.5}Animation Software}{16}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Maya}{17}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Blender}{17}{subsection.2.5.2}
 \contentsline {subsection}{\numberline {2.5.3}Unreal Engine}{17}{subsection.2.5.3}
 \contentsline {subsection}{\numberline {2.5.4}Unity 3D}{17}{subsection.2.5.4}
-\contentsline {subsection}{\numberline {2.5.5}Final Choice}{17}{subsection.2.5.5}
+\contentsline {subsection}{\numberline {2.5.5}Final Choice}{18}{subsection.2.5.5}
 \contentsline {section}{\numberline {2.6}Motion Database}{18}{section.2.6}
-\contentsline {section}{\numberline {2.7}Uncanny Valley}{18}{section.2.7}
+\contentsline {section}{\numberline {2.7}Uncanny Valley}{19}{section.2.7}
 \contentsline {subsection}{\numberline {2.7.1}What is the uncanny valley}{19}{subsection.2.7.1}
 \contentsline {subsection}{\numberline {2.7.2}Why uncanny valley matters in games and animation}{20}{subsection.2.7.2}
 \contentsline {chapter}{\numberline {3}Analysis }{22}{chapter.3}
