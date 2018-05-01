@@ -1,6 +1,6 @@
 \chapter{Analysis \label{chap:analysis}}
 
-The methodology used to develop the project, technologies involved in the development and a breakdown of risks that concern the project are described in this chapter..
+The methodology used to develop the project, technologies involved in the development and a breakdown of risks that concern the project are described in this chapter.
 
 
 \section{Methodology}
@@ -10,48 +10,48 @@ The activities required in order to develop the project are listed below:
 \begin{itemize}
 \item Develop a project plan.
 \item Review literature and existing software, learn about other approaches, analyze related research.
-\item Review technology. Find out about software may be useful to this project and learn how to use it.
-\item Analyze risks. Specify what might be the potential pitfalls that may deem this product unsuccessful.
-\item Prototype a module that uses processes the script and outputs a structured file that can be used to generate the animated scene.
-\item Obtain a sufficient amount of animated clips. Create a custom downloader/importer if necessary.
-\item Tag and classify animation clips. Categorize clips by emotion, length, etc.
+\item Review technology: Find out about software that may be useful to this project and learn how to use it.
+\item Analyze risks: Specify the potential pitfalls that may deem this product unsuccessful.
+\item Prototype a module that processes the script and outputs a structured file that can be used to generate the animated scene.
+\item Obtain a sufficient amount of motion-capture clips. Create a custom downloader/importer if necessary.
+\item Tag and classify animated clips: Categorize clips by emotion, length, etc.
 \item Prototype a Blender extension that uses the created structured files to output an animated scene.
 \item Iterate on the existing software adding new features.
 \item Obtain more animated clips, classify and store them.
-\item Evaluate the prototype with real audience.
+\item Evaluate the prototype with real audience and analyse the results.
 \end{itemize}
 
 The minimum working prototype will be developed first. When all three modules are ready and in place, more features will be added iteratively. The software will work better if many animation clips are available, therefore as many clips as possible will be obtained and classified.
 
-The generated animation must be evaluated with help of a real audience. How animation is perceived is subjective and cannot be decided by one person only. The evaluators will be asked to watch animated dialogue clips from various games and then watch this dialogue recreated using the proposed software. The evaluators will be asked to fill an evaluation survey. This way it will be possible to determined the usefulness and successfulness of the proposed software.
+The generated animation must be evaluated with help of a real audience. How animation is perceived is subjective and cannot be decided by one person only. The evaluators will be asked to watch animated dialogue clips from various games and then watch this a recreation of this scene created by the proposed software. The evaluators will be asked to fill an evaluation survey. This way it will be possible to determined the usefulness and successfulness of the software.
 
 
 \section{Technologies and Resources}
 
 \begin{enumerate}
-\item \textbf{Emotion analysis} - The first module of the project focuses on NLP. This module should be extract emotions and actions from the script. The most important tool used will be IBM Watson Tone Analyser. If that tool turns out to be for any reason ineffective or imperfect, a customary tool (naive Bayes classifier or a keyword classifier) can be built for that task.
+\item \textbf{Emotion analysis} - The first module of the project focuses on NLP. This module must be able to extract emotions from the script. This project will rely on the IBM Watson Tone Analyser to perform the emotion analysis. If that tool turns out to be for any reason ineffective or imperfect, a customary tool (naive Bayes classifier, keyword classifier, etc. - any software that can enable prototyping if Watson can't be used) can be built for that task.
 
-\item \textbf{Motion capture} - The EBMD (emotional body motion database) will be used to source the animations of body movement and gestures. The database provides the recordings as BVH files which is convenient as most animation software (such as Blender or Maya) can import BVH files. The emotional meta-data about the animated clips will be stored in an SQLite database. Storing the data using this method will allow the data to be easily and quickly searchable while less complicated than using a full fledged database software (such as MySQL od PostgreSQL) (very few tables are needed, there is no need to use advanced DB software).
+\item \textbf{Motion capture} - The EBMD (emotional body motion database) will be used to source the animations of body movement and gestures. The database provides the recordings as BVH files, which is convenient as most animation software (such as Blender or Maya) can import BVH files. The emotional meta-data about the animated clips will be stored in an SQLite database. Storing the data using this method will allow the data to be easily and quickly searchable while less complicated than using a full fledged database software (such as MySQL or PostgreSQL) (very few tables are needed, there is no need to use advanced DB software).
 
 \item \textbf{Animation software} - As aforementioned in section ~\ref{sec:animchoice}, the animation software that satisfies all the specified requirements is Blender. Blender supports all the necessary modelling and animation features. It also supports creating extensions allowing the animation to be created and assembled by code.
 
-\item \textbf{Programming} - Python 3 will be used to implement the software. Python is the only language supported for add-on development for Blender. For other modules that do not rely on Blender, Python was chosen due to its development speed and in order to keep consistency among modules.
+\item \textbf{Programming} - Python programming language will be used to implement the software. Python is the only language supported for add-on development in Blender. Other modules that do not rely on Blender wil use Python because to its development speed and in order to keep consistency among modules.
 
 \end{enumerate}
 
 \section{Risk Analysis}
 \label{sec:riskanal}
 
-This subsection evaluates on ways in which this project can fail. Since reception of animation is subjective it may be hard to pinpoint what exactly went wrong with the software. It is possible that the audience will decide that the animations are not good enough but they will not be able to describe why. Because of that it is important to understand those outline those issues before conducting any tests.
+This subsection evaluates on ways in which this project can fail. Since the reception of an animation is subjective, it may be hard to identify potential faults of the software. It is possible that the audience will decide that the animations are not good enough but they will not be able to describe why. Because of that it is important to understand and outline potential issues before conducting any tests.
 
 \bigskip
 \subsection{Failure due to emotion analysis}
-The first way in which the software may fail is due to the emotion analysis component. If the final animation does not reflect by body language the emotions of the characters it may mean that the dialogue were not analysed properly, meaning that the results provided by emotion analysis are simply not accurate enough.
+The first way in which the software may fail is due to the emotion analysis component. If the final animation does not reflect, by the body language, the emotions of the characters, it may mean that the dialogue was not analysed properly, meaning that the results provided by emotion analysis are simply not accurate enough.
 
-In this project I will be using IBM Watson which is a pretty good benchmark regarding emotion analysis. It is safe to say that is Watson is unable to perform the task well enough there is no software that would be. If a failure is identified to be caused by the emotion analysis, this might mean that:
+In this project I will be using IBM Watson which is a pretty good benchmark regarding emotion analysis. It is safe to say that if Watson is unable to perform the task well enough, there is no software that is. If a failure is identified to be caused by the emotion analysis, this might mean that:
 \begin{itemize}
 \item The NLP methods are not yet advanced enough to perform this task. This project will remain infeasible until we see an improvement in emotion analysis techniques.
-\item NLP alone is not enough to solve this problem. Other approaches should be used alongside NLP emotion analysis, such as analysis of the tone of the recorded voice or emotional analysis of facial expressions of the voice actors.
+\item NLP alone is not enough to solve this problem. Other methods should be used alongside NLP emotion analysis, such as analysis of the tone of the recorded voice, or emotional analysis of facial expressions of the voice actors.
 \end{itemize}
 
 Since there is no significant research done regarding combining emotion analysis and animation, there is no way to know for certain whether this approach will work. Because of that the risk of such a failure is moderately high.
@@ -59,15 +59,15 @@ Since there is no significant research done regarding combining emotion analysis
 
 \bigskip
 \subsection{Failure due to the motion capture data quality}
-The software proposed by this paper can only ever be as good as the motion capture data provided. While the software will be designed to work with custom motion capture databases, the EBMD is used for this project. This means that if the clips provided by EBMD are too ambiguous - that the recorded body language do not convey the emotion clearly enough, or that the recorded movements are unnatural, too subtle or too over emphasised, the output animation will not be perceived as successful. In this case this might not be the problem of the software or the approach at all - the failure is generated only and specifically by the motion capture recordings.
+The software proposed by this paper can only ever be as good as the motion capture data provided. While the software will be designed to work with custom motion capture databases, the EBMD is used for this project. This means that if the clips provided by EBMD are too ambiguous - that the recorded body language does not convey the emotions clearly enough, or that the recorded movements are unnatural, too subtle or too over-emphasised, the output animation will not be perceived as successful. In this case, the fault might not lie in the software or the approach at all - the failure appears only and specifically because of the motion capture recordings.
 
-The EBMD provides quite some meta-data regarding each clip. Among the meta-data provided there is information about what emotion the movement tries to convey and what emotion was perceived by the audience when watching the clip. Because of that the risk of failure due to motion capture data quality is fairly low as the animation should in general unambiguously convey the intended emotion. There is however still a risk that the motions will be perceived as conveying correct emotion, but being too unnatural and unrealistic.
+The EBMD provides some meta-data alongside each clip. Among the meta-data provided, there is information about what emotion the movement tries to convey and what emotion was perceived by the audience when watching the clip. Because of that the risk of failure due to motion capture data quality is fairly low as the animation should in general unambiguously convey the intended emotion. There is however still a risk that the motions will be perceived as conveying correct emotion, but being too unnatural and unrealistic.
 
 \bigskip
 \subsection{Failure due to the uncanny valley principle}
-The uncanny valley principle poses a high threat to the project. The final animation satisfying the uncanny valley principle is possibly the worst scenario in which the project may fail. This failure is easiest determined by comparing the final animation with other games. Two types of game animation will be shown to the audience - animation is advanced and generally considered good, and animation that is basic, unrealistic, seemingly random and monotonous. If the audience judges the animations generated by this software to be worse than both of these animation types then it probably means that the animations comply with the uncanny valley principle. It means that while the animation generally is realistic and matches the intended emotion of the speech, the animation still feels unnatural and it might have been better to go with a much simpler approach, such as keeping the characters mostly static.
+The uncanny valley principle poses a high threat to the project. The final animation satisfying the uncanny valley principle is possibly the worst scenario of failure for this project. This failure is easiest determined by comparing the final animation with other games. Two types of game animation will be shown to the audience - animation that is advanced and generally considered good and animation that is basic, unrealistic and seemingly random. If the audience judges the animations generated by this software to be worse than both of these animation types then it probably means that the animations comply with the uncanny valley principle. It means that while the animation is generally realistic and matches the intended emotion of the speech, the animation still feels unnatural and it might have been better to go with a much simpler approach, such as keeping the characters mostly static.
 
-If the uncanny valley is achieved by the output animation, this might mean a few things. If the uncanny valley effect was created by the nature of the EBMD recordings, this means that replacing the database with a different might just solve the problem. However, it might mean that the NLP emotion analysis approach to generating animation is inherently flawed. It might just prove that text data alone is never enough to produce convincing animation and while this method might be useful in combination with other methods, emotion analysis approach will always produce unconvincing animation.
+If the uncanny valley is achieved by the output animation, this might mean a few things. If the uncanny valley effect was created by the nature of the EBMD recordings, this means that replacing the database with a different one might just solve the problem. However, it might mean that the NLP emotion analysis approach to generating animation is inherently flawed. It might just prove that text data alone is never enough to produce convincing animation and while this method might be useful in combination with other methods, emotion analysis approach will always produce unconvincing animation.
 
 
 
