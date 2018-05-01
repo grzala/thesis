@@ -2,10 +2,27 @@
 
 This section describes testing and potential issues of the developed software.
 
+\section{Components}
+The testing of the components was an ongoing activity during development - the creation of the software alternated between phases of development and testing. The components were fed typical and erroneous inputs and their outputs were verified for correctness. The testing phase continued until all discovered issues were taken care of and the development could continue.
+
+\section{Analyzer}
+There are a few issues that the user should focus on before providing input to the first module. Firstly, the input must be in English as the emotion analysis is set to only use the English language. The user should make sure that the text they intend to analyse is in English and does not contain non-English characters.
+
+Secondly, the user must make sure that the character names and their dialogue lines are correctly indented. The module was designed to be able to analyse scripts copied directly from the Internet Movie Script DataBase. Those scripts often have other information (non-relevant to this software) specified at different indentation levels. The software simply ignores that information - therefore if any of the important information is specified at wrong indentation level it will be ignored.
+
+\section{Matcher}
+The testing of the matcher aimed to make sure that the matcher outputs animations of correct emotional sentiment and length. There is no other way to do that than to test it empirically. The module was fed with emotional values and text lengths. Whether the output animation matched the emotions provided and its length felt natural (just enough time to read the subtitles, as one would while watching a film) was assessed manually. The module (along with the database) was fine-tuned until it gave satisfying results.
+
 \section{Animation Generator}
-There are some serious limitations to testing of this module. It is hard for a computer to decide whether the animation looks natural. Some animations imported from EMDB experience import problems which results in an animation with broken and unnatural movements. While manually analysing the emotional values of the animations, it was important to check each animations for movements that may have been incorrectly imported. Such animations cannot be used with the software.
+There are some serious limitations to testing of this module. It is hard for a computer to decide whether the animation looks natural. Some animations imported from EMDB experience import problems which results in an animation with broken and unnatural movements. While manually analysing the emotional values of the animations, it was important to check each animation for movements that may have been incorrectly imported. Such animations cannot be used with the software.
 
-The animation generator is now able to handle only up to two characters in the scene (although the module was designed with extensibility in mind). If a scene JSON file contains information on more than two characters (or no characters at all) the scene will not be assembled and an error message will be displayed instead. In case the scene file is corrupted and cannot be parsed the user will also be presented with an error message.
+The animation generator is able to handle only up to two characters in the scene (although the module was designed with extensibility in mind). If a scene JSON file contains information on more than two characters (or no characters at all) the scene will not be assembled and an error message will be displayed instead. In case the scene file is corrupted and cannot be parsed the user will also be presented with an error message. The JSON file can become corrupted if a user does manual changes to it or if the input of the script analysis module is in a wrong format.
 
-\section{Performance}
-One of the important requirements of the software was the speed of execution. For creating an animation consisting of 6 dialogue lines using the first module takes up to 18 seconds. The matcher module is so quick that it's execution does not influence the total execution time. The generator module takes another four seconds on average. This results in an execution speed of about 3.6 seconds per dialogue line. This fulfils the requirement as the time required to assemble an animation is incomparably less than doing that manually and is not a limitation for an animator working on the scene.
+\section{Scalability}
+The system was tested with inputs of at least fifty lines of dialogue. The system was able to generate the scenes successfully and in reasonable time (more on time of execution in section ~\ref{sec:perf}). A user would rarely need to generate a single scene so long and would rather produce a multitude of shorter ones. However
+
+\section{Samples}
+Sample inputs and outputs of the system can be accessed using this link: \videoshost
+
+\section{Performance \label{sec:perf}}
+One of the important requirements of the software was the speed of execution. For creating an animation consisting of 6 dialogue lines (an average dialogue length used while testing the software) using the first module takes up to 18 seconds. The matcher module is so quick that it's execution does not influence the total execution time. The generator module takes another four seconds on average. This results in an execution speed of about 3.6 seconds per dialogue line. This fulfils the requirement as the time required to assemble an animation is incomparably less than doing that manually and is not a limitation for an animator working on the scene.

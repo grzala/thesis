@@ -1,7 +1,7 @@
-dissert/main/showcases
+code/showcases
 
-dissert/main/showcases/*
-dissert/db/tmp/*
-dissert/db/imported/*
+code/showcases/*
+code/"EMBD importer"/db/tmp/*
+code/"EMBD importer"/db/imported/*
 
-dissert/main/showcases/zgame/*
+code/showcases/zgame/*

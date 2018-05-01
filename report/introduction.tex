@@ -1,42 +1,42 @@
 \chapter{Introduction\label{chap:introduction}}
 
-The game industry now is bigger than ever before and still growing. Along with technological advancements as well as rise in popularity, games themselves become bigger and more polished. With increasing size and quality, the number of man-hours rises drastically. A lot of work is being put into creating tools that enable faster creation of content. However, there is still a lot left to be optimized and automated.
+The game industry now is bigger than ever before and still growing. Along with technological advancements as well as a rise in popularity games themselves have become bigger and more polished. With increasing size and quality the number of man-hours required to build a game rises drastically. A lot of work is being put into creating tools that enable faster creation of content. However, there is still a lot left to be optimized and automated.
 
-One domain of game development that suffers that drains lots of man-hours into monotonous processes that could potentially be automated is animation. Most games will rarely animate everything by hand as there is too much content to cover. While some animated content needs to be very polished - usually called cutscenes (action sequences, parts of game that greatly influence the plot development), some animation might be cruder (dialogue sequences). Games like RPGs will feature a lot of dialogue - during the dialogue the characters cannot stand still as it would negatively impact player's immersion in the game world. The characters must move and perform gestures that naturally underline their speech. These animations cannot be all done by hand because of the sheer amount of content needed. For instance:
+One domain of game development that drains lots of man-hours into monotonous processes that could potentially be automated is animation. Most studios will rarely animate everything by hand as there is simply too much content to cover. While some animated content needs to be very polished (cutscenes - action sequences, parts of game that greatly influence the plot development), some animation might be cruder (dialogue sequences). Games like the RPGs\footnote{RPG - Role-playing game.} will feature a lot of dialogue - during the dialogue the characters cannot just stand still as it would negatively impact player's immersion in the game world. The characters must move and perform gestures that underline their speech in a natural manner. These animations cannot be all done by hand because of their sheer cumulative length. For instance:
 
 \begin{itemize}
-	\item Mass Effect Andromeda and Fallout:  New Vegas features 65,000 lines of dialogue\footnote{\url{https://www.pcgamer.com/mass-effect-andromeda-has-over-1200-speaking-characters/}}\footnote{\url{https://www.pcinvasion.com/fallout-new-vegas-will-have-65000-lines-of-dialogue}}.
+	\item Mass Effect Andromeda and Fallout:  New Vegas feature 65,000 lines of dialogue\footnote{\url{https://www.pcgamer.com/mass-effect-andromeda-has-over-1200-speaking-characters/}}\footnote{\url{https://www.pcinvasion.com/fallout-new-vegas-will-have-65000-lines-of-dialogue}}.
 	
-	\item The Witcher 3 features roughly 35 hours of dialogues\footnote{\url{https://www.pcgamer.com/most-of-the-witcher-3s-dialogue-scenes-was-animated-by-an-algorithm/}}.
+	\item The Witcher 3 features roughly 35 hours of dialogue scenes\footnote{\url{https://www.pcgamer.com/most-of-the-witcher-3s-dialogue-scenes-was-animated-by-an-algorithm/}}.
 	
 \end{itemize}
 
-The main challenge is to make the dialogue scenes (and other automatically generated animation) look indistinguishable from cutscenes. In many games, player will be shown good, well-polished animation that immediately switches to poor, clunky and unrealistic animation. The less perfected dialogue scenes break the immersion of the player and negatively impact the overall experience. Easier, faster and better quality methods of generating dialogue scenes would be a great asset to the gaming industry.
+The main challenge is to make the dialogue scenes (and other automatically generated animation) look indistinguishable from the cutscenes (usually manually created and well-polished). In many games a player will experience watching well-polished animation that immediately switches to poor, clunky and unrealistic animation. The lesser in quality dialogue scenes break the immersion of the player and negatively impact the overall experience. Easier, faster and better quality methods of generating dialogue scenes would be a great asset to the gaming industry.
 
 \section{Motivation}
 
 The purpose of this project is to develop a tool that helps generate animated dialogue scenes and minimizes the amount of manual work by using natural language processing. Generating the scenes directly from script would pose several benefits:
 
 \begin{itemize}
-	\item The script is written to outline the plot of the game. The same script could be fed into a program to generate the animations.
-	\item The script is semi-structured natural language. By allowing natural language, the program helps shorten the gap between artists and writers and animators and technicians.
-	\item The program can be used for prototyping scenes quickly and easily.
-	\item The program can be used by people who know nothing about animation.
+	\item A script is often written to design the plot of a game. The same script could be fed into a program to generate the animations.
+	\item The script is semi-structured natural language. Using natural language would help shorten the gap between artists, writers, animators and technicians.
+	\item Such tool can be used to prototype scenes quickly and easily.
+	\item Such tool program can be used by people who know nothing about animation.
 \end{itemize}
 
-The program I propose would create prototype animation with almost no amount of work required. This can be used to either save time or to use the saved time to manually adjust the animations.
+The program I propose would create prototype animation with almost no amount of manual work required. Requiring less manual labour than other approaches would make this tool a very cost efficient way to create realistic dialogue scenes.
 
 \section{Objectives}
 
-The Projects Objectives are as following:
+The Projects Objectives are as follows:
 
 \noindent {\bf Develop a tool able to interpret a natural language script}
 
-\noindent The tool must be able to read a semi-structured script and recognize dialogue lines, emotions of the characters and actions performed by them.
+\noindent The tool must be able to read a semi-structured script and recognize dialogue lines and emotions of the characters.
 
 \noindent {\bf Develop a tool able to blend a final dialogue scene}
 
 \noindent The tool must be able to output a fully editable dialogue scene. The scene is assembled using pre-made motion capture clips.
 
 \bigskip
-The scenes created by the software will be very crude and unpolished. Scenes generated by the tool will need to be polished manually, the amount of polish can be decided by assessing the importance of a given scene. However there is a chance that the scene quality will be much inferior to scenes generated by similar tools that use different approaches. Therefore an important question this project tries to answer is whether taking the NLP approach to animation is feasible in the games industry given current technology.
+The scenes created by the software will be very crude and unpolished. Scenes generated by the tool will need to be polished manually - the amount of polish required can be decided by assessing the importance of a given scene. However there is a chance that the scene quality will be much inferior to scenes generated by similar tools that use different approaches. Therefore an important question this project tries to answer is whether taking the NLP approach to animation is feasible in the games industry given current technology.

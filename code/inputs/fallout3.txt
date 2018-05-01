@@ -1,0 +1,19 @@
+					DAD
+			Son... You've saved me. I was afraid I'd be trapped in here forever.
+
+					DAD
+			It's so good to see you, but... what are you DOING here?
+
+					SON
+			I came here to find you.
+
+					DAD
+			Well I'm glad you did. This certainly wasn't how I expected thins to turn out.
+
+					SON
+			Good thing I showed up to save you.
+
+					DAD
+			It certainly is! It's nice to feel like I'm on two legs again.
+
+ENDSCRIPT

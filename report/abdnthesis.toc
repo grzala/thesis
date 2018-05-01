@@ -45,53 +45,58 @@
 \contentsline {section}{\numberline {5.10}Animation Generator (Importer)}{34}{section.5.10}
 \contentsline {section}{\numberline {5.11}User Interface}{37}{section.5.11}
 \contentsline {chapter}{\numberline {6}Testing and Performance }{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}Animation Generator}{39}{section.6.1}
-\contentsline {section}{\numberline {6.2}Performance}{39}{section.6.2}
-\contentsline {chapter}{\numberline {7}Evaluation }{40}{chapter.7}
-\contentsline {section}{\numberline {7.1}Problems with evaluation}{40}{section.7.1}
-\contentsline {section}{\numberline {7.2}Survey}{40}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Methodology}{40}{subsection.7.2.1}
-\contentsline {subsubsection}{Preparation}{40}{section*.25}
-\contentsline {subsubsection}{The questionnaire}{41}{section*.26}
-\contentsline {subsubsection}{Objectives}{42}{section*.27}
-\contentsline {section}{\numberline {7.3}Other findings }{43}{section.7.3}
-\contentsline {chapter}{\numberline {8}Results }{44}{chapter.8}
-\contentsline {section}{\numberline {8.1}Survey}{44}{section.8.1}
-\contentsline {chapter}{\numberline {9}Discussion }{48}{chapter.9}
-\contentsline {section}{\numberline {9.1}Survey results}{48}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Realism}{48}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}Preference}{49}{subsection.9.1.2}
-\contentsline {subsection}{\numberline {9.1.3}Adjustments}{49}{subsection.9.1.3}
-\contentsline {section}{\numberline {9.2}Other findings }{49}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}Mismatch between animation database and the `feel' of the game}{49}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}Exposition dialogue}{50}{subsection.9.2.2}
-\contentsline {subsection}{\numberline {9.2.3}Sarcasm and ambiguity}{50}{subsection.9.2.3}
-\contentsline {section}{\numberline {9.3}Summary}{50}{section.9.3}
-\contentsline {chapter}{\numberline {10}Conclusion and Future work }{52}{chapter.10}
-\contentsline {section}{\numberline {10.1}Conclusion}{52}{section.10.1}
-\contentsline {section}{\numberline {10.2}Potential use outside of games}{52}{section.10.2}
-\contentsline {section}{\numberline {10.3}Future work}{53}{section.10.3}
-\contentsline {chapter}{\numberline {A}User Manual }{56}{appendix.A}
-\contentsline {section}{\numberline {A.1}Requirements and installation }{56}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}IBM Watson Tone Analyzer Setup}{56}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {A.1.2}Software and Libraries}{56}{subsection.A.1.2}
-\contentsline {subsubsection}{Required software}{56}{section*.34}
-\contentsline {subsubsection}{Libraries}{57}{section*.35}
-\contentsline {subsection}{\numberline {A.1.3}Install Generator as Blender Addon }{57}{subsection.A.1.3}
-\contentsline {section}{\numberline {A.2}Generating animations }{57}{section.A.2}
-\contentsline {subsubsection}{Analyze script }{58}{section*.37}
-\contentsline {subsubsection}{Generate Animation}{58}{section*.39}
-\contentsline {section}{\numberline {A.3}Using Custom Animation and Models}{60}{section.A.3}
-\contentsline {section}{\numberline {A.4}Importing More Animations From EBMD}{61}{section.A.4}
-\contentsline {section}{\numberline {A.5}Generate a Showcase }{61}{section.A.5}
-\contentsline {chapter}{\numberline {B}Maintenance Manual }{63}{appendix.B}
-\contentsline {section}{\numberline {B.1}Installation and requirements}{63}{section.B.1}
-\contentsline {section}{\numberline {B.2}Space and Memory requirements}{63}{section.B.2}
-\contentsline {section}{\numberline {B.3}Temporary Files}{63}{section.B.3}
-\contentsline {section}{\numberline {B.4}Files and Directories}{63}{section.B.4}
-\contentsline {section}{\numberline {B.5}Known Issues}{64}{section.B.5}
-\contentsline {chapter}{\numberline {C}Other }{65}{appendix.C}
-\contentsline {section}{\numberline {C.1}Useful Links}{65}{section.C.1}
-\contentsline {section}{\numberline {C.2}The questionnaire }{65}{section.C.2}
-\contentsline {section}{\numberline {C.3}Sample generated scene used in the questionnaire }{65}{section.C.3}
-\contentsline {section}{\numberline {C.4}Interviewees' comments about the recreated animations }{65}{section.C.4}
+\contentsline {section}{\numberline {6.1}Components}{39}{section.6.1}
+\contentsline {section}{\numberline {6.2}Analyzer}{39}{section.6.2}
+\contentsline {section}{\numberline {6.3}Matcher}{39}{section.6.3}
+\contentsline {section}{\numberline {6.4}Animation Generator}{39}{section.6.4}
+\contentsline {section}{\numberline {6.5}Scalability}{40}{section.6.5}
+\contentsline {section}{\numberline {6.6}Samples}{40}{section.6.6}
+\contentsline {section}{\numberline {6.7}Performance }{40}{section.6.7}
+\contentsline {chapter}{\numberline {7}Evaluation }{41}{chapter.7}
+\contentsline {section}{\numberline {7.1}Problems with evaluation}{41}{section.7.1}
+\contentsline {section}{\numberline {7.2}Survey}{41}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Methodology}{41}{subsection.7.2.1}
+\contentsline {subsubsection}{Preparation}{41}{section*.25}
+\contentsline {subsubsection}{The questionnaire}{42}{section*.26}
+\contentsline {subsubsection}{Objectives}{43}{section*.27}
+\contentsline {section}{\numberline {7.3}Other findings }{44}{section.7.3}
+\contentsline {chapter}{\numberline {8}Results }{45}{chapter.8}
+\contentsline {section}{\numberline {8.1}Survey}{45}{section.8.1}
+\contentsline {chapter}{\numberline {9}Discussion }{49}{chapter.9}
+\contentsline {section}{\numberline {9.1}Survey results}{49}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Realism}{49}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Preference}{50}{subsection.9.1.2}
+\contentsline {subsection}{\numberline {9.1.3}Adjustments}{50}{subsection.9.1.3}
+\contentsline {section}{\numberline {9.2}Other findings }{50}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Mismatch between animation database and the `feel' of the game}{50}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Exposition dialogue}{51}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.3}Sarcasm and ambiguity}{51}{subsection.9.2.3}
+\contentsline {section}{\numberline {9.3}Summary}{51}{section.9.3}
+\contentsline {chapter}{\numberline {10}Conclusion and Future work }{53}{chapter.10}
+\contentsline {section}{\numberline {10.1}Conclusion}{53}{section.10.1}
+\contentsline {section}{\numberline {10.2}Potential use outside of games}{53}{section.10.2}
+\contentsline {section}{\numberline {10.3}Future work}{54}{section.10.3}
+\contentsline {chapter}{\numberline {A}User Manual }{57}{appendix.A}
+\contentsline {section}{\numberline {A.1}Requirements and installation }{57}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}IBM Watson Tone Analyzer Setup}{57}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Software and Libraries}{57}{subsection.A.1.2}
+\contentsline {subsubsection}{Required software}{57}{section*.34}
+\contentsline {subsubsection}{Libraries}{58}{section*.35}
+\contentsline {subsection}{\numberline {A.1.3}Install Generator as Blender Addon }{58}{subsection.A.1.3}
+\contentsline {section}{\numberline {A.2}Generating animations }{58}{section.A.2}
+\contentsline {subsubsection}{Analyze script }{59}{section*.37}
+\contentsline {subsubsection}{Generate Animation}{59}{section*.39}
+\contentsline {section}{\numberline {A.3}Using Custom Animation and Models}{61}{section.A.3}
+\contentsline {section}{\numberline {A.4}Importing More Animations From EBMD}{62}{section.A.4}
+\contentsline {section}{\numberline {A.5}Generate a Showcase }{62}{section.A.5}
+\contentsline {chapter}{\numberline {B}Maintenance Manual }{64}{appendix.B}
+\contentsline {section}{\numberline {B.1}Installation and requirements}{64}{section.B.1}
+\contentsline {section}{\numberline {B.2}Space and Memory requirements}{64}{section.B.2}
+\contentsline {section}{\numberline {B.3}Temporary Files}{64}{section.B.3}
+\contentsline {section}{\numberline {B.4}Files and Directories}{64}{section.B.4}
+\contentsline {section}{\numberline {B.5}Known Issues}{65}{section.B.5}
+\contentsline {chapter}{\numberline {C}Other }{66}{appendix.C}
+\contentsline {section}{\numberline {C.1}Useful Links}{66}{section.C.1}
+\contentsline {section}{\numberline {C.2}The questionnaire }{66}{section.C.2}
+\contentsline {section}{\numberline {C.3}Sample generated scene used in the questionnaire }{66}{section.C.3}
+\contentsline {section}{\numberline {C.4}Interviewees' comments about the recreated animations }{66}{section.C.4}
