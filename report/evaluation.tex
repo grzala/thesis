@@ -2,7 +2,7 @@
 This chapter describes how the system was evaluated and explains why such a method of evaluation was chosen. The evaluation aims to determine whether the created system was successful or not and due to what reasons. 
 
 \section{Problems with evaluation}
-Evaluation of animation is quite problematic in nature. The main issue is that how an animation is perceived is very subjective - it is near impossible to computationally determine whether an animation looks natural, whether an animation goes in pair with the speech and if the whole `feel` of the dialogue scene is good. It is then important for the animation to be judged by people. I myself however am not fit to decide that - I have spent far too much time creating the animated scenes and watching both failed and successful results. Because of that I am obviously seriously biased and cannot judge the animations from an objective standpoint.
+Evaluation of animation is quite problematic in nature. The main issue is, that how an animation is perceived is very subjective - it is near impossible to computationally determine whether an animation looks natural, whether an animation goes in pair with the speech and if the whole `feel` of the dialogue scene is good. It is then important for the animation to be judged by people. I myself however am not fit to do that - I have spent far too much time creating the animated scenes and watching both failed and successful results. Because of that I am obviously seriously biased and cannot judge the animations from an objective standpoint.
 
 
 \section{Survey}
@@ -10,17 +10,17 @@ In order to account for my bias, I have decided to use interview people about th
 
 
 \subsection{Methodology}
-People may find it hard to provide opinion about quality of an animation if they have nothing to base their answer upon (especially if they are not animators or developers). There needs to be some sort of a benchmark or a control sample to enable people to judge the animations more efficiently.
+People may find it hard to provide an opinion about the quality of an animation if they have nothing to base their answer upon (especially if they are not animators or developers). There needs to be some sort of a benchmark, or a control sample to enable people to judge the animations more efficiently.
 
 To account for that I have chosen the following approach: I would first find a dialogue scene in a relatively popular, successful game and recreate it using the developed software. The participants would be shown both the original and recreated scene and describe how they compare - they would be asked to decide whether using the software has improved or decreased the quality of the scene. 
 
 \medskip
 \subsubsection{Preparation}
-I have chosen three games from which I extracted the dialogue scenes. I did not want to extract a few dialogue scenes from one game in order to provide variety, but I also did not want to use more than three games as it would make the questionnaire too long and make the participant loose interest or become confused.
+I have chosen three games from which I extracted the dialogue scenes. I did not want to extract a few dialogue scenes from one game in order to provide variety, but I also did not want to use more than three games as this would make the questionnaire too long and make the participants loose interest or become confused.
 
-The three games are all of the RPG genre and differ mostly by the year of release - I have used a relatively old game, relatively new game and a state-of-the-art game - for if the software is deemed to produce animation of lower quality than the state-of-the-art game, comparing it to an old game may help decide whether the software simply needs improvements or if it the approach itself is wrong.
+The three games are all of the RPG genre and differ by their year of release - I have used a relatively old game, relatively new game and a state-of-the-art game - for if the software is deemed to produce animation of lower quality than the state-of-the-art game, comparing it to an old game may help decide whether the software simply needs improvements, or if the approach itself is wrong.
 
-Not simply any game could have been chosen. In my project I have to rely on EBMD to generate the animations - and the motion capture data provided by the database is not suitable for any game. For example, if a game features a lot of soldier to soldier military interactions it is expected that the characters will behave in a more serious, less expressive manner (I evaluate on that in section ~\ref{sec:otherfindings}). The EBMD does not supply such animations that would be useful in this situation and using a wrong game would cause unnecessary confusion of the participants (for such games a custom motion database can be used with the software). The chosen games must feature some of more relaxed, natural conversations. This certainly tightens the pool of games usable for the evaluation, but I believe that the chosen games are a rather representative sample of the RPG genre.
+Not simply any game could have been chosen. In my project I have to rely on EBMD to generate the animations - and the motion capture data provided by the database is not suitable for any game. For example, if a game features a lot of soldier to soldier military interactions, it is expected that the characters will behave in a more serious, less expressive manner (I evaluate on that in section ~\ref{sec:otherfindings}). The EBMD does not supply animations that would be useful such a situation and using a wrong game would cause unnecessary confusion of the participants. The chosen games must feature relatively relaxed, natural conversations. This certainly tightens the pool of games and scenes usable for the evaluation, but I believe that the chosen games are a rather representative sample of the RPG genre.
 
 The chosen games are:
 \begin{itemize}
@@ -32,7 +32,7 @@ The chosen games are:
 The dialogues from the games were chosen randomly, however there were some constraints that limited the choice:
 \begin{itemize}
 	\item The scene cannot feature more than two characters (The software was designed with extendibility in mind, however at the moment it does not support more than two characters).
-	\item The dialogue has to convey some emotions (dialogues which result in only neutral gestures are not truly representative of the software).
+	\item The dialogue has to convey some emotions (dialogues which feature strictly neutral emotions are not truly representative of the software).
 	\item The dialogue cannot be exposition dialogue (Why that is the case and what exactly is \textit{exposition dialogue} I explain in sections ~\ref{sec:evalotherfindings} and ~\ref{sec:otherfindings}).
 \end{itemize}
 
@@ -42,13 +42,13 @@ Before conducting an interview it is important to know whether the interviewee h
 
 \medskip
 \subsubsection{The questionnaire}
-The questionnaire consists of four sections. The first section provides a little detail about what the software is trying to achieve and what is expected of the participant. This section also asks whether the participant considers themselves to be knowledgeable about games or animations. This is the only question in that might be viewed as personal.
+The questionnaire consists of four sections. The first section provides some details about what the software is trying to achieve and what is expected of the participant. This section also asks whether the participant considers themselves to be knowledgeable about games or animations.
 
-The other sections all ask the same set of questions about different pairs of videos\footnote{The animations and videos can be accessed at \videoshost. A sample dialogue transcript with still images of the scene can be found in appendix section ~\ref{sec:samplescene}.}. At the start of each section the participant will be shown two videos - an original and a recreated dialogue scene. After watching both of them they will be asked a couple of questions that help determine whether they find the videos realistic, whether the animations correspond to the conveyed gestures and whether they think that using the software improves the scenes. The participants are able to evaluate in more detail on the answers if they wish so. The questions that are designed to be answered on a linear scale resemble the Likert scale\footnote{The Likert scale is a psychometric scale created by a psychologist Rensis Likert. It is commonly used in questionnaires in order to determine whether the participants agree or disagree with given statements.}.
+The other sections all ask the same set of questions about different pairs of videos\footnote{The animations and videos can be accessed at \videoshost. A sample dialogue transcript with still images of the scene can be found in appendix section ~\ref{sec:samplescene}.}. At the start of each section, the participant will be shown two videos - an original and a recreated dialogue scenes. After watching both of them they will be asked a couple of questions that determines whether they find the videos realistic, whether the animations correspond to the conveyed gestures and whether they think that using the software improves the scenes. The participants are able to evaluate in more detail on the answers if they wish to do so. The questions that are designed to be answered on a linear scale that resembles the Likert scale\footnote{The Likert scale is a psychometric scale created by a psychologist Rensis Likert. It is commonly used in questionnaires in order to determine whether the participants agree or disagree with given statements.}.
 
-The original dialogue scenes were modified in two ways. Firstly, apart from the in-game subtitles another set of subtitles was added for accessibility purposes. The added subtitles were the same as the original subtitles but bigger and easier to read. Secondly, the videos were muted. Audio is completely irrelevant to this project. I could not procure audio for the recreated scenes\footnote{Simply overlaying the audio from the original scene over the recreated scene is not a good solution either. The audio was not created with the recreated scene in mind and the recreated scene did not take audio into account. Because of that, the characters would perform body motion that puts stress on one part of a sentence while audio would put stress on a different part of a sentence. This makes the audio unusable with a scene as it would make the scene feel completely unrealistic.} therefore the recreated scenes are mute. People watching first a scene with audio and then a scene without audio would focus too much on that difference instead on the difference in animation. Therefore it is best to remove any sound from all the videos.
+The original dialogue scenes were modified in two ways. Firstly, apart from the in-game subtitles, another set of subtitles was added for accessibility purposes. The added subtitles were the same as the original subtitles, but bigger and easier to read. Secondly, the videos were muted. Audio is completely irrelevant to this project. I could not procure audio for the recreated scenes\footnote{Simply overlaying the audio from the original scene over the recreated scene is not a good solution either. The audio was not created with the recreated scene in mind and the recreated scene did not take audio into account. Because of that, the characters would perform body motion that puts stress on one part of a sentence while audio would put stress on a different part of a sentence. This makes the audio unusable with a scene as it would make the scene feel completely unrealistic.} therefore the recreated scenes are mute. People watching first a scene with audio and then a scene without audio would focus too much on that difference instead on the difference in animation. Therefore, it is best to remove any sound from all the videos.
 
-The surveys were conducted as an one-on-one interview if possible. If the participants were unavailable or preferred not to do this personally an online version of the questionnaire was provided. The participation in the questionnaire was fully voluntary. The participants were presented with a consent form before answering the questions and were provided with the details of the software and how the study is going to be conducted. No aspect of the software or the study was hidden from the participants and they were able to both request more details or quit any time they wished to do so.
+The surveys were conducted as a one-on-one interview if possible. If the participants were unavailable or preferred not to do this personally, an online version of the questionnaire was provided. The participation in the questionnaire was fully voluntary. The participants were presented with a consent form before answering the questions and were provided with the details of the software and how the study is going to be conducted. No aspect of the software or the study was hidden from the participants and they were able to both request more details or quit any time they wished.
 
 As mentioned before, the preferred approach was a supervised survey as it is important that the participants correctly understand what the project is about and what it is trying to achieve. The survey was targeted mostly at my colleagues (Bachelor computing science students), as certain level of computing science and application development expertise is desirable. That is because people who are unacquainted with prototyping and development might focus too much on how unpolished the animation is (since it is only a prototype and the animations are rather crude - there is no background in the scene, no audio and no texturing/graphics) than on the gestures and dialogue itself.
 
@@ -56,25 +56,25 @@ The full questionnaire can be found in the appendices in section ~\ref{sec:appqu
 
 \medskip
 \subsubsection{Objectives}
-The survey has following objectives:
+The survey has the following objectives:
 
 \begin{addmargin}[2em]{2em}
-	\noindent \textit{To test whether using the NLP approach for animation generation has created scenes that are more realistic and natural than the original scenes}
+	\noindent \textit{To test whether using the NLP approach for animation generation has created scenes that are more realistic and natural than the original scenes.}
 	
 	\medskip
 	
-	\noindent \textit{To test whether the animations generated using the NLP method are preferable to those created by traditional methods}
+	\noindent \textit{To test whether the animations generated using the NLP method are preferable to those created by traditional methods.}
 	\medskip
 	
-	\noindent \textit{Determine how much manual adjustment is required before the animations generated by the software are satisfying}
+	\noindent \textit{Determine how much manual adjustment is required before the animations generated by the software are satisfactory.}
 \end{addmargin}
 
 
 
 \section{Other findings \label{sec:evalotherfindings}}
-Apart from the findings of the questionnaire I also wish to describe my own realisations that I devised during the development of the software. I know that I cannot use them to decide the successfulness of the software because of my bias towards it, however I think there are a few aspects worth mentioning that will not be found by the questionnaire participants.
+Apart from the findings of the questionnaire, I also wish to describe my own realisations that I devised during the development of the software. I know that I cannot use them to decide the successfulness of the software because of my bias towards it, however, I think that there are a few aspects worth mentioning that will not be discovered by the questionnaire participants.
 
-As I was testing the software many times and I tried to recreate many scenes from RPG games I have noticed that the software does not perform as well if certain conditions are not satisfied. For example: the general `feel' of the game must match the gestures provided by the motion database, the software does not perform with scenes that contain exposition or sarcasm and more. I will explain those issues in more detail in section ~\ref{sec:otherfindings}.
+As I was testing the software many times and I tried to recreate many scenes from RPG games I have noticed that the software does not perform well if certain conditions are not satisfied. For example: the general `feel' of the game must match the gestures provided by the motion database, the software does not perform well with scenes that contain exposition or sarcasm. I will explain those issues in more detail in section ~\ref{sec:otherfindings}.
 
 
 

@@ -4,7 +4,7 @@ This section discusses and evaluates the findings accumulated during the develop
 \section{Survey results}
 
 \subsection{Realism}
-According to the results of the survey the realism of the generated animations is rather disappointing. The animations managed however to be relatively as realistic as an animation from a quite recent game, meaning they might be good enough to be used in a game (given how little it takes to generate them). The very important aspect is that the generated animation were not seen as realistic, but were seen as correct (matching speech with emotions and body language). People dissatisfied with the recreated animations said that the movements of characters are `weird' and that the software is too sensitive with characters overreacting to the actual situation. 
+According to the results of the survey the realism of the generated animations is rather disappointing. The animations managed however to be relatively as realistic as an animation from a quite recent game, meaning they might be good enough to be used in a game (given how little it takes to generate them). The very important aspect is that the generated animation were not seen as realistic, but were seen as correct (matching speech with emotions and body language). It is interesting that people often preferred the recreated scenes even when they were less realistic than the originals. Interviewees dissatisfied with the recreated animations said that the movements of characters are `weird' and that the software is too sensitive, with characters overreacting to the actual situation. 
 
 The survey successfully carried out its first objective, showing that the NLP approach did not produce animations more (or much less) realistic than the originals. There are a few explanations to that. The possible causes have been described in section ~\ref{sec:riskanal}.
 
@@ -12,42 +12,42 @@ The lack of realism was probably not caused by the emotion analysis. The intervi
 
 Both the motion capture data quality and the uncanny valley principle are possible causes of those results. It is impossible to say now which one is more important. A similar study which uses a different motion database could be helpful in determining that.
 
-It is also possible that the results are skewed because of the crudeness of the entire scene. The models are rather bulky and poorly detailed, untextured, there is no background or audio. That is because the software focuses solely on the animation. However, the interviewees are not used to watching animation being developed and might instinctively see such a scene as less realistic and be unable to look at the animation fully objectively. Given enough time and resources these issues could be addressed by adding detail to the scene by professional artists and the system should be then evaluated by a truly random audience (not dominated by CS students).
+It is also possible that the results are skewed because of the crudeness of the entire scene. The models are rather bulky and poorly detailed, untextured, there is no background or audio. That is because the software focuses solely on the animation. However, the interviewees are not used to watching animation being developed and might instinctively see such a scene as less realistic and be unable to look at the animation fully objectively. Given enough time and resources these issues could be addressed by adding detail to the scene by professional artists and the system should be then evaluated by a truly random audience (not dominated by CS students, with a greater amount of participants).
 
 The generated scenes reach an acceptable level of realism, however they are not realistic enough to deem the NLP method of generating animation to be better than other, traditional ones. 
 
 \subsection{Preference}
-Surprisingly, although the generated animations were not highly realistic, they were often preferred to the original ones. It seems that the recreated animation may have been over the top, while in the original scenes there was not much going on (the gestures being very subtle and ambiguous). It seems that the participants found the slightly overdone body language more enjoyable and less boring than the blandness and genericness of the originals.
+Surprisingly, although the generated animations were not highly realistic, they were often preferred to the original ones. It seems that the recreated animation may have been over the top, while in the original scenes there was simply not much going on (the gestures being very subtle and ambiguous). It seems that the participants found the slightly overdone body language more enjoyable and less boring than the blandness and genericness of the originals.
 
 Realism itself is often not a key aspect to a game's success. It might be a great advantage for a game to feature scenes that are similarly or slightly less realistic than the norm when those animations are more engaging. This might be particularly true when a given game is not trying to be realistic (it might be over the top and cartoony on purpose).
 
 
 \subsection{Adjustments}
-The results regarding adjustments of the animation were not surprising. The software was never intended to produce perfect animation which needs minimal adjustments before shipping (there is hardly any software capable of that). Moderate adjustments of the animation are perfectly acceptable. If this software was ever to become fully commercially viable, it would be a good idea to further develop the animation generation. Better camera work, smooth blending of the movements, etc. can be done automatically and would further minimize the need for manual adjustments.
+The results regarding adjustments of the animation were not surprising. The software was never intended to produce perfect animation which needs no adjustments before shipping (there is hardly any software capable of that). Moderate adjustments of the animation are perfectly acceptable. If this software was ever to become fully commercially viable, it would be a good idea to further develop the animation generation. Better camera work, smooth blending of the movements, etc. can be done automatically and would further minimize the need for manual adjustments.
 
 
 \section{Other findings \label{sec:otherfindings}}
-In previous sections I mentioned that the scenes chosen for the questionnaire are not \textit{fully} representative of all the dialogue scenes in the game. When a scene satisfies some conditions, the software clearly under-performs. Below are some of such cases that I discovered.
+In previous sections I mentioned that the scenes chosen for the questionnaire are not \textit{fully} representative of all the dialogue scenes in a game. When a scene satisfies some conditions, the software clearly under-performs. Below are some of such cases that I discovered.
 
 \subsection{Mismatch between animation database and the `feel' of the game}
-The software produces undesirable results when there is a clear mismatch between the provided gestures and the `feel' of the game. By `feel' I mean the general topic and overtone of the game. For instance, a game such as any in the Mass Effect series has a very strict and militaristic feel. While characters still converse in a more casual environment a certain level of professionalism is always required of them. A game as Yooka-Laylee also contains a number of dialogue scenes, but the general feel of the game is childish and cartoon-like. The conversation happen in a much more quirky and exaggerated way.
+The software produces undesirable results when there is a clear mismatch between the provided gestures and the `feel' of the game. By `feel' I mean the general topic and overtone of the game. For instance, a game such as any in the Mass Effect series has a very strict and militaristic feel. While characters still converse in a more casual environment, a certain level of professionalism is always required of them. A game such as `Yooka-Laylee' also contains a fair number of dialogue scenes, but the general feel of the game is childish and cartoon-like. The conversations happen in a much more quirky and exaggerated way.
 
-I was not able to use the EBMD with the Mass Effect games. The EBMD provides very casual, relaxed gestures while almost every character in the Mass Effect game is military. While without context the scenes looked good, when keeping in mind that the scene happens in a militaristic environment one can immediately see that while the characters move and gesticulate in a natural manner, this is not appropriate in a current situation.
+I was not able to use the EBMD with the Mass Effect games. The EBMD provides very casual, relaxed gestures when almost every character in the Mass Effect game is military. While without context the scenes looked good, when keeping in mind that the scene happens in a militaristic environment one can immediately see that while the characters move and gesticulate in a natural manner, this is not appropriate in a current situation.
 
-This however is not an inherent problem with the software as it allows for using a custom animation database. It could potentially be even extended to support a different set of animations for each important character to underline their personality even more. However because I used only EBMD for this project I am unable to test how if the software would be successful with scenes that have different contexts.
+This however is not an inherent problem with the software, as it allows for using a custom animation database. It could potentially be even extended to support a different set of animations for each important character in order to underline their personality even more. However, because I used only EBMD for this project, I am unable to test how successful would the software be with scenes that have different contexts.
 
 \subsection{Exposition dialogue}
-In media such as books, films and games exposition is pretty common. Exposition is an aspect narration that focuses on introducing character's backstories, prior plot events, context and other background information. Because typically games feature less narration than books or films most of exposition is handled through dialogue.
+In media such as books, films and games exposition is pretty common. Exposition is an aspect of narration that focuses on introducing character's backstories, prior plot events, context and other background information. Because typically games feature less narration than books or films, most of the exposition is handled through the dialogue.
 
-The exposition dialogue is already often unnatural and seems out of place. The software generating those scenes made them seem even less natural. During exposition dialogue the character's should remain rather neutral as often they will be describing events that happened in the past or that they have no direct connection with. The software however will find emotions in this dialogue and make characters overjoyed or fearing while there is nothing happening that would provoke such emotion. In many such dialogue scenes the software was simply over-sensitive.
+The exposition dialogue is already often unnatural and seems out of place. The software generating those scenes made them seem even less natural. During exposition dialogue, the characters should remain rather neutral, as often they will be describing events that happened in the past, or that they have no direct connection with. The software however will find emotions in such dialogue and make characters overjoyed or fearing while there is nothing happening that would provoke those emotions. In many such dialogue scenes the software was simply over-sensitive.
 
 This problem could potentially be solved if the exposition dialogue was tagged in the script by the writers. The emotions extracted from the text could be decreased by some factor to make them less intense. This of course assumes an increase in manual work required as the exposition dialogue would have to be manually tagged.
 
 
 \subsection{Sarcasm and ambiguity}
-NLP has struggled with sarcasm for a long time. IBM Watson Tone Analyzer seems to be no closer to solving this problem. The dialogue that contain sarcasm are simply misinterpreted and the final scenes look terribly out of place. For instance a character saying `Oh, I'm so scared!' can be either scared, or indifferent and boasting about their courage. This might depend on the context and the tone of their voice. The software will however always associate this with fear and the resulting scene might use animations that convey opposite emotions to those that were meant to be conveyed.
+NLP has struggled with sarcasm for a long time. IBM Watson Tone Analyzer seems to be no closer to solving this problem. The dialogues that contain sarcasm are simply misinterpreted and the final scenes look terribly out of place. For instance, a character saying `Oh, I'm so scared!' can be either scared, or indifferent and boasting about their courage. This might depend on the context and the tone of their voice. The software will however always associate this with fear and the resulting scene might use animations that convey opposite emotions to those that were meant to be conveyed.
 
-By looking at many dialogue scenes it became apparent that there is no way to overcome this problem using NLP only as there are too many variables outside of the text that define it (context, setting, personality of the character, recent interactions between characters involved in the scene). The tone of voice might provide more information that would help solve this problem.
+By looking at many dialogue scenes, it became apparent that there is no way to overcome this problem using NLP only, as there are simply too many variables outside of the text that define possibility of sarcasm (context, setting, personality of the character, recent interactions between characters involved in the scene, shared history between conversing characters). The tone of voice might provide more information that would help solve this problem.
 
 Similarly to the exposition problem, the sarcasm problem can also be solved by tagging it in the script. When using sarcasm the writers could indicate that and provide the intended emotion. That assumes a slight increase in the amount of work required and that all sarcasm present in the script is recognized and tagged.
 
@@ -58,7 +58,7 @@ The following is a breakdown of what the software managed and failed to achieve.
 \noindent Successes:
 \begin{itemize}
 	\item The software is able to generate scenes quickly with minimal amount of manual work required.
-	\item The animations do not need extensive manual polish before being used in a game. The software needs to provide smoother movements and blending between gestures. 
+	\item The animations do not need extensive manual polish before being used in a game (The software needs to provide smoother movements and blending between gestures).
 	\item The software is flexible and capable of using custom character models and animation data.
 	\item The software is cross-platform and the animations can be exported to a multitude of file formats.
 	\item The generated scenes are often more enjoyable than the actual scenes in games.
@@ -74,7 +74,7 @@ The following is a breakdown of what the software managed and failed to achieve.
 \begin{itemize}
 	\item The lack of realism may be caused by the data provided by EBMD.
 	\item The animation generation process can be improved further using methods already known to the industry.
-	\item The NLP approach might in the future be combines with other methods (such as emotion analysis of the audio) to produce even better results.
+	\item The NLP approach might in the future be combined with other methods (such as emotion analysis of the audio) to produce even better results.
 \end{itemize}
 
 

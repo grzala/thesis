@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.3)  2 MAY 2018 00:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.3)  2 MAY 2018 02:08
 entering extended mode
 **./abdnthesis.tex
 (abdnthesis.tex
@@ -818,17 +818,17 @@ Package pdftex.def Info: img/results/realism.png  used on input line 13.
 
 
 ]
-<img/results/improves.png, id=943, 781.41937pt x 422.32782pt>
+<img/results/improves.png, id=944, 781.41937pt x 422.32782pt>
 File: img/results/improves.png Graphic file (type png)
 <use img/results/improves.png>
 Package pdftex.def Info: img/results/improves.png  used on input line 22.
 (pdftex.def)             Requested size: 459.89987pt x 248.55905pt.
-<img/results/prefer.png, id=944, 785.18344pt x 422.32782pt>
+<img/results/prefer.png, id=945, 785.18344pt x 422.32782pt>
 File: img/results/prefer.png Graphic file (type png)
 <use img/results/prefer.png>
 Package pdftex.def Info: img/results/prefer.png  used on input line 27.
 (pdftex.def)             Requested size: 459.89987pt x 247.37332pt.
-<img/results/adjustments.png, id=945, 685.05937pt x 420.82219pt>
+<img/results/adjustments.png, id=946, 685.05937pt x 420.82219pt>
 File: img/results/adjustments.png Graphic file (type png)
 <use img/results/adjustments.png>
 Package pdftex.def Info: img/results/adjustments.png  used on input line 35.
@@ -840,16 +840,12 @@ s.png (PNG copy)>]
 
  (discussion.tex
 Chapter 9.
-
-Underfull \vbox (badness 2326) has occurred while \output is active []
-
- [49
+[49
 
 
 
 
-]
-[50] [51]) [52]
+] [50] [51]) [52]
 \openout2 = `conclusions.aux'.
 
  (conclusions.tex
@@ -889,7 +885,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  (usermanual.tex
 Appendix A.
-<img/appendix/credentials.png, id=1010, 823.075pt x 118.4425pt>
+<img/appendix/credentials.png, id=1011, 823.075pt x 118.4425pt>
 File: img/appendix/credentials.png Graphic file (type png)
 <use img/appendix/credentials.png>
 Package pdftex.def Info: img/appendix/credentials.png  used on input line 13.
@@ -899,7 +895,7 @@ Package pdftex.def Info: img/appendix/credentials.png  used on input line 13.
 
 
  <./img/appendix/credentials.png>]
-<img/appendix/installedaddon.png, id=1022, 995.21812pt x 506.6428pt>
+<img/appendix/installedaddon.png, id=1023, 995.21812pt x 506.6428pt>
 File: img/appendix/installedaddon.png Graphic file (type png)
 <use img/appendix/installedaddon.png>
 Package pdftex.def Info: img/appendix/installedaddon.png  used on input line 66
@@ -910,7 +906,7 @@ File: img/script.png Graphic file (type png)
 Package pdftex.def Info: img/script.png  used on input line 77.
 (pdftex.def)             Requested size: 328.49991pt x 209.13243pt.
  [58] [59 <./img/appendix/installedaddon.png (PNG copy)>]
-<img/appendix/withoutaddon.png, id=1049, 997.47656pt x 543.53062pt>
+<img/appendix/withoutaddon.png, id=1050, 997.47656pt x 543.53062pt>
 File: img/appendix/withoutaddon.png Graphic file (type png)
 <use img/appendix/withoutaddon.png>
 Package pdftex.def Info: img/appendix/withoutaddon.png  used on input line 103.
@@ -961,7 +957,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--12
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=1130, page=1, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=1131, page=1, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 1>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page1 used on input l
@@ -974,7 +970,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=1131, page=2, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=1132, page=2, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 2>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page2 used on input l
@@ -987,7 +983,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=1132, page=3, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=1133, page=3, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 3>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page3 used on input l
@@ -1000,7 +996,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=1133, page=4, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=1134, page=4, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 4>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page4 used on input l
@@ -1013,7 +1009,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=1134, page=5, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=1135, page=5, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 5>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page5 used on input l
@@ -1026,7 +1022,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./img/appendix/questionnaire.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/appendix/questionnaire.pdf, id=1135, page=6, 614.295pt x 794.97pt>
+<img/appendix/questionnaire.pdf, id=1136, page=6, 614.295pt x 794.97pt>
 File: img/appendix/questionnaire.pdf Graphic file (type pdf)
 <use img/appendix/questionnaire.pdf, page 6>
 Package pdftex.def Info: img/appendix/questionnaire.pdf , page6 used on input l
@@ -1035,13 +1031,13 @@ ine 44.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/appendix/sample/horizon1.png, id=1138, 1723.43875pt x 946.53625pt>
+<img/appendix/sample/horizon1.png, id=1139, 1723.43875pt x 946.53625pt>
 File: img/appendix/sample/horizon1.png Graphic file (type png)
 <use img/appendix/sample/horizon1.png>
 Package pdftex.def Info: img/appendix/sample/horizon1.png  used on input line 5
 5.
 (pdftex.def)             Requested size: 328.49991pt x 180.40703pt.
-<img/appendix/sample/horizonrender1.png, id=1139, 1693.32625pt x 953.5625pt>
+<img/appendix/sample/horizonrender1.png, id=1140, 1693.32625pt x 953.5625pt>
 File: img/appendix/sample/horizonrender1.png Graphic file (type png)
 <use img/appendix/sample/horizonrender1.png>
 Package pdftex.def Info: img/appendix/sample/horizonrender1.png  used on input 
@@ -1050,13 +1046,13 @@ line 56.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/appendix/sample/horizon2.png, id=1140, 1686.3pt x 939.51pt>
+<img/appendix/sample/horizon2.png, id=1141, 1686.3pt x 939.51pt>
 File: img/appendix/sample/horizon2.png Graphic file (type png)
 <use img/appendix/sample/horizon2.png>
 Package pdftex.def Info: img/appendix/sample/horizon2.png  used on input line 6
 1.
 (pdftex.def)             Requested size: 328.49991pt x 183.01018pt.
-<img/appendix/sample/horizonrender2.png, id=1141, 1684.2925pt x 948.54375pt>
+<img/appendix/sample/horizonrender2.png, id=1142, 1684.2925pt x 948.54375pt>
 File: img/appendix/sample/horizonrender2.png Graphic file (type png)
 <use img/appendix/sample/horizonrender2.png>
 Package pdftex.def Info: img/appendix/sample/horizonrender2.png  used on input 
@@ -1065,13 +1061,13 @@ line 62.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/appendix/sample/horizon3.png, id=1142, 1682.285pt x 939.51pt>
+<img/appendix/sample/horizon3.png, id=1143, 1682.285pt x 939.51pt>
 File: img/appendix/sample/horizon3.png Graphic file (type png)
 <use img/appendix/sample/horizon3.png>
 Package pdftex.def Info: img/appendix/sample/horizon3.png  used on input line 6
 7.
 (pdftex.def)             Requested size: 328.49991pt x 183.45459pt.
-<img/appendix/sample/horizonrender3.png, id=1143, 1689.31125pt x 949.5475pt>
+<img/appendix/sample/horizonrender3.png, id=1144, 1689.31125pt x 949.5475pt>
 File: img/appendix/sample/horizonrender3.png Graphic file (type png)
 <use img/appendix/sample/horizonrender3.png>
 Package pdftex.def Info: img/appendix/sample/horizonrender3.png  used on input 
@@ -1080,13 +1076,13 @@ line 68.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/appendix/sample/horizon4.png, id=1144, 1694.33pt x 944.52875pt>
+<img/appendix/sample/horizon4.png, id=1145, 1694.33pt x 944.52875pt>
 File: img/appendix/sample/horizon4.png Graphic file (type png)
 <use img/appendix/sample/horizon4.png>
 Package pdftex.def Info: img/appendix/sample/horizon4.png  used on input line 7
 3.
 (pdftex.def)             Requested size: 328.49991pt x 183.12305pt.
-<img/appendix/sample/horizonrender4.png, id=1145, 1685.29625pt x 943.525pt>
+<img/appendix/sample/horizonrender4.png, id=1146, 1685.29625pt x 943.525pt>
 File: img/appendix/sample/horizonrender4.png Graphic file (type png)
 <use img/appendix/sample/horizonrender4.png>
 Package pdftex.def Info: img/appendix/sample/horizonrender4.png  used on input 
@@ -1127,7 +1123,7 @@ Here is how much of TeX's memory you used:
  13893 multiletter control sequences out of 15000+200000
  77887 words of font info for 115 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,18n,51p,1197b,462s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,18n,51p,1200b,462s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\grzala\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \ectt1095.pk> <C:\Users\grzala\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ectt0900.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.en
@@ -1135,9 +1131,9 @@ c}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on abdnthesis.pdf (77 pages, 4455055 bytes).
+Output written on abdnthesis.pdf (77 pages, 4455836 bytes).
 PDF statistics:
- 1419 PDF objects out of 1440 (max. 8388607)
+ 1420 PDF objects out of 1440 (max. 8388607)
  317 named destinations out of 1000 (max. 500000)
  961 words of extra memory for PDF output out of 10000 (max. 10000000)
 
