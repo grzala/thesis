@@ -1,11 +1,11 @@
 \chapter{User Manual \label{chap:usermanual}}
-The system is designed to be cross platform, however it is advised to use Windows as it is the only system on which the project was thoroughly tested.
+The system is designed to be cross platform, however, it is advised to use Windows as it is the only system on which the project was thoroughly tested.
 
 \section{Requirements and installation \label{sec:requirements}}
 Before using the software, several requirements must be fulfilled.
 
 \subsection{IBM Watson Tone Analyzer Setup}
-Before continuing with any of the sections you must setup the Tone Analyzer service. To do that please visit the following link: \url{https://www.ibm.com/watson/services/tone-analyzer/}. You will need to create an IBM account and log in. after logging in add a new Tone Analyzer service and create a new set of API credentials that can access it. Please refer to the official guide for more details: \url{https://console.bluemix.net/docs/services/tone-analyzer/getting-started.html#getting-started-tutorial}.
+Before continuing with any of the sections you must setup the Tone Analyzer service. To do that please visit the following link: \url{https://www.ibm.com/watson/services/tone-analyzer/}. You will need to create an IBM account and log in. After logging in add a new Tone Analyzer service and create a new set of API credentials that can access it. Please refer to the official guide for more details: \url{https://console.bluemix.net/docs/services/tone-analyzer/getting-started.html#getting-started-tutorial}.
 
 When you setup your Tone Analyzer service, open file `analyzer/tone.py'. Please find the declaration of the `tone\_analyzer' variable in the beginning of the file. You should see a snippet of code resembling the one that can be seen in figure ~\ref{fig:credentials}. Replace the username and password with your credentials (Changing the API version might cause potential problems and unexpected behaviour) and save the file.
 
@@ -19,14 +19,14 @@ When you setup your Tone Analyzer service, open file `analyzer/tone.py'. Please 
 \subsubsection{Required software}
 \smallskip
 \begin{itemize}
-	\item Python 2.7
+	\item Python 2.7 \footnote{Python can be obtained from the official Python website: \url{https://www.python.org/}}
 	\item Pip
 	\item Blender version 2.79 or newer\footnote{Blender can be obtained from the official Blender website:  \url{http://www.blender.org/}}
 \end{itemize}
 
 \subsubsection{Libraries}
 \smallskip
-\textbf{Only for Linux systems: Download and install library python-dev (or python-devel) before following the instructions below}
+\textbf{Only for Linux systems: Download and install package python-dev (or python-devel) before following the instructions below}
 
 \noindent Following python libraries must be installed (using pip, easy-install, or any other python packet manager):
 \begin{itemize}
